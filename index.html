@@ -4,20 +4,18 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="footer-col  footer-col-1">
+    <img src="img/mercury.svg" />
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="text">
+    Mercury is a C library for implementing Remote Procedure Call, optimized
+    for High-Performance Computing Systems. Mercury has support for remote
+    function calls which include large data arguments. Since code generation
+    is done using the C preprocessor, no external tool is required.
+  </p>
+  <p class="text">
+    See <a href="{{ site.baseurl }}{% post_url 2015-07-13-getting-started %}">here</a> for a quick introduction on how to use Mercury in your projects!
+  </p>
 
 </div>

@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Engineers and scientists working in a heterogeneous computing environment often want to distribute the various tasks of an application -- such as computation, storage, analysis, or visualization -- to different types of resources and libraries. Often, a technique known as remote procedure call (RPC) is used that allows local calls to be transparently executed onto remote resources.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+Using RPC on a high-performance computing system presents two limitations, however: the inability to take advantage of the native network transport and the inability to transfer large amounts of data.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+To avoid these limitations, we define Mercury -- an RPC interface specifically designed for high-performance computing. Mercury builds on a small, easily ported network abstraction layer, providing operations closely matched to the capabilities of high-performance network environments. Unlike most other RPC frameworks, Mercury directly supports handling remote calls containing large data arguments. Moreover, Mercury’s network protocol is designed to scale to thousands of clients.
+
+|![ANL](http://trac.mcs.anl.gov/projects/mercury/chrome/site/your_project_logo.png)|![The HDF Group](http://www.hdfgroup.org/images/hdf_logo.jpg)|

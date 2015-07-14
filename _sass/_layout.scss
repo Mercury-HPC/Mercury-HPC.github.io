@@ -29,6 +29,9 @@
 
     .menu-icon {
         display: none;
+        height: 16px;
+        width: 16px;
+        float: right;
     }
 
     .page-link {
@@ -133,6 +136,7 @@
 .footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
+    text-align: right;
 }
 
 @include media-query($on-laptop) {
