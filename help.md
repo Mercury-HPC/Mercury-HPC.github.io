@@ -6,6 +6,7 @@ permalink: /help/
 
 ## Bug Reports
 
+* [![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury)
 * [GitHub issues](https://github.com/mercury-hpc/mercury/issues)
 
 ## Contribute
