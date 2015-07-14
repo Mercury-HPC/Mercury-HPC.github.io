@@ -10,4 +10,13 @@ Using RPC on a high-performance computing system presents two limitations, howev
 
 To avoid these limitations, we define Mercury -- an RPC interface specifically designed for high-performance computing. Mercury builds on a small, easily ported network abstraction layer, providing operations closely matched to the capabilities of high-performance network environments. Unlike most other RPC frameworks, Mercury directly supports handling remote calls containing large data arguments. Moreover, Mercury’s network protocol is designed to scale to thousands of clients.
 
-|![ANL](http://trac.mcs.anl.gov/projects/mercury/chrome/site/your_project_logo.png)|![The HDF Group](http://www.hdfgroup.org/images/hdf_logo.jpg)|
+## Collaborators
+
+<div class="footer-col  footer-col-1">
+  <img height="70px" src="http://trac.mcs.anl.gov/projects/mercury/chrome/site/your_project_logo.png" />
+</div>
+
+<div class="footer-col  footer-col-1">
+  <img height="70px" src="http://www.hdfgroup.org/images/hdf_logo.jpg" />
+</div>
+
