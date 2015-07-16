@@ -9,4 +9,11 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/js/toc/toc.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#toc').toc({ noBackToTopLinks: true, title: 'Table of Contents', showEffect: 'slideDown', headers: 'h1, h2' });
+  });
+</script>
 </head>

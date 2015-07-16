@@ -4,4 +4,35 @@ title: Documentation
 permalink: /documentation/
 ---
 
-* [Doxygen](ftp://ftp.mcs.anl.gov/pub/mercury/documents/doxygen_doc/index.html)
+## Introduction
+
+## Overview
+
+<figure>
+  <img src="/assets/overview.svg" alt="Caption to image" width="500px">
+  <figcaption>
+    Caption to image
+  </figcaption>
+</figure>
+
+## Network Abstraction Layer
+
+## Mercury RPC Layer
+
+{% highlight C linenos %}
+MERCURY_GEN_PROC( open_in_t, ((hg_const_string_t)(path)) ((hg_int32_t)(flags)) ((hg_uint32_t)(mode)) )
+MERCURY_GEN_PROC( open_out_t, ((hg_int32_t)(ret)) )
+{% endhighlight %}
+
+## Mercury Bulk Layer
+
+## Conclusion
+
+## See also
+<ul>
+  {% for post in site.categories.documentation  reversed %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  <li>[Doxygen](ftp://ftp.mcs.anl.gov/pub/mercury/documents/doxygen_doc/index.html)</li>
+</ul>
+

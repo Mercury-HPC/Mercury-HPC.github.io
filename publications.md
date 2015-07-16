@@ -4,11 +4,11 @@ title: Publications
 permalink: /publications/
 ---
 
-# Conference Proceedings
+## Conference Proceedings
 
 * J. Soumagne, D. Kimpe, J. Zounmevo, M. Chaarawi, Q.Koziol, A. Afsahi, and R. Ross, Mercury: Enabling Remote Procedure Call for High-Performance Computing, IEEE International Conference on Cluster Computing, Sep 2013. [[DOI][doi_paper]] [[slides][slides_paper]]
 
-# Misc
+## Presentations
 
 * HDF Seminar Presentation. [[slides][slides_pres]]
 
