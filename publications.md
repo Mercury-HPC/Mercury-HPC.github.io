@@ -10,9 +10,11 @@ permalink: /publications/
 
 ## Presentations
 
-* HDF Seminar Presentation. [[slides][slides_pres]]
+* HDF Seminar Presentation. [[slides][slides_hdf]]
+* INRIA Joint-lab Workshop. [[slides][slides_inria]]
 
 [doi_paper]: http://dx.doi.org/10.1109/CLUSTER.2013.6702617
 [slides_paper]: ftp://ftp.mcs.anl.gov/pub/mercury/documents/cluster2013_slides_121.pdf
-[slides_pres]: ftp://ftp.mcs.anl.gov/pub/mercury/documents/2013-06-28-Mercury_THG_internal.pdf
+[slides_hdf]: ftp://ftp.mcs.anl.gov/pub/mercury/documents/2013-06-28-Mercury_THG_internal.pdf
+[slides_inria]: https://wiki.ncsa.illinois.edu/download/attachments/29164828/dkimpe-mercury.pdf
 

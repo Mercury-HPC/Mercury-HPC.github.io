@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Downloads
-permalink: /downloads/
+title: Download
+permalink: /download/
 ---
 
 Mercury is distributed under a [BSD-like license][license].
+
+## Releases
 
 Filename                           | Date       | Size    | Arch | Type
 ---------------------------------- | ---------- | ------- | ---- | ----
@@ -19,3 +21,12 @@ Filename                           | Date       | Size    | Arch | Type
 [0.8.1]: ftp://ftp.mcs.anl.gov/pub/mercury/releases/mercury-0.8.1.tar.bz2
 [0.8.0]: ftp://ftp.mcs.anl.gov/pub/mercury/releases/mercury-0.8.0.tar.bz2
 
+## Current development distribution
+
+The mercury repository is hosted on GitHub at:
+[https://github.com/mercury-hpc/mercury](https://github.com/mercury-hpc/mercury)
+
+To get the source (read-only access), simply run:
+{% highlight bash %}
+git clone --recurse-submodules https://github.com/mercury-hpc/mercury.git 
+{% endhighlight %}

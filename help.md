@@ -4,28 +4,6 @@ title: Help
 permalink: /help/
 ---
 
-## Bug Reports
-
-* [![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury)
-* [GitHub issues](https://github.com/mercury-hpc/mercury/issues)
-
-## Contribute
-
-We welcome all contributions to Mercury!
-
-* Code Patches
-* Requests for new features
-* Feedback on using Mercury and suggestions for improvements
-
-All of the above can be sent to the mailing list.
-
-We have many things planned for Mercury and limited developer time available;
-Please contact us if you want to learn more about RPC on HPC systems or if
-you are looking for an interesting project to contribute to. We require the
-following Contributor License Agreement (CLA) to be filled out:
-[mercury_cla.docx](ftp://ftp.mcs.anl.gov/pub/mercury/documents/mercury_cla.docx)
-.
-
 ## Mailing Lists
 
 There are three mailing lists described below that users may wish to subscribe to:
@@ -42,3 +20,43 @@ There are three mailing lists described below that users may wish to subscribe t
 
   This list gets e-mails issued from commits pushed to the branches of Git repository.
 
+## Issue Tracking
+
+Current and past issues can be found on:
+
+* [https://github.com/mercury-hpc/mercury/issues](https://github.com/mercury-hpc/mercury/issues)
+
+If your issue is not listed, you may first check that the latest build passes by
+looking at the Travis continuous integration service:
+
+* Platform | Result
+-------- | ------
+Linux x86_64    | [![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury)
+
+Or for more details you may also look at the continuous and/or nightly builds
+that are reported to the CDash Dashboard: <a href="http://cdash.hdfgroup.org/index.php?project=Mercury"><img src="http://cdash.hdfgroup.org/images/cdash.gif" alt="alt text" style="width: 24px"/></a>
+
+## Contribute
+
+We welcome all contributions to Mercury!
+
+* Code Patches
+* Requests for new features
+* Feedback on using Mercury and suggestions for improvements
+
+Please feel free to send any of the above to the mercury development mailing
+list.
+
+<p>
+We have many things planned for Mercury and limited developer time available;
+contact us if you want to learn more about RPC on HPC systems or if
+you are looking for an interesting project to contribute to. We require the
+following Contributor License Agreement (<a href="ftp://ftp.mcs.anl.gov/pub/mercury/documents/mercury_cla.docx">CLA</a>) to be filled out and sent
+to:
+<script language="JavaScript">
+var username = "mercury-legal";
+var hostname = "anl.gov";
+var linktext = username + "@" + hostname;
+document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+</script>
+</p>
