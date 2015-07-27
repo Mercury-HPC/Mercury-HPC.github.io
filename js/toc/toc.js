@@ -47,7 +47,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = settings.title + "<hr/><"+settings.listType+">";
+      html = settings.title + "<hr/>" + "<div id=\"toc_content\">" + "<"+settings.listType+">";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
@@ -78,7 +78,7 @@
     for(i = this_level; i > 1; i--) {
         html += "</li></"+settings.listType+">"
     }
-    html += "</"+settings.listType+"><hr/>";
+    html += "</"+settings.listType+"><hr/></div>";
     if (!settings.noBackToTopLinks) {
       $(document).on('click', '.back-to-top', function() {
         $(window).scrollTop(0);
