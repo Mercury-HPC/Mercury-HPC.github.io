@@ -3,7 +3,7 @@ title: Mercury
 email: mercury@lists.mcs.anl.gov
 description: > # this means to ignore newlines until "baseurl:"
   RPC for High-Performance Computing
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/projects/mercury" # the subpath of your site, e.g. /blog/
 url: "http://mercury-hpc.github.io" # the base hostname & protocol for your site
 github_username:  mercury-hpc
 gems:
