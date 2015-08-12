@@ -5,8 +5,8 @@ permalink: /about/
 ---
 
 Engineers and scientists working in a heterogeneous computing environment
-often want to distribute the various tasks of an application -- such as
-computation, storage, analysis, or visualization -- to different types of
+often want to distribute the various tasks of an application---such as
+computation, storage, analysis, or visualization---to different types of
 resources and libraries. Often, a technique known as remote procedure call
 (RPC) is used that allows local calls to be transparently executed onto remote
 resources.
@@ -15,7 +15,7 @@ Using RPC on a high-performance computing system presents two limitations,
 however: the inability to take advantage of the native network transport and
 the inability to transfer large amounts of data.
 
-To avoid these limitations, we define Mercury -- an RPC interface specifically
+To avoid these limitations, we define Mercury---an RPC interface specifically
 designed for high-performance computing. Mercury builds on a small, easily
 ported network abstraction layer, providing operations closely matched to the
 capabilities of high-performance network environments. Unlike most other RPC
