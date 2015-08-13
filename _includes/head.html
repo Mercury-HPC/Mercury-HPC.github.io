@@ -18,6 +18,17 @@
       $("#toc_header").click(function(){
         $("#toc_content").toggle('normal');
       });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.site-scrollup').fadeIn();
+        } else {
+            $('.site-scrollup').fadeOut();
+        }
+      });
+      $('.site-scrollup').click(function () {
+        $("html, body").animate({scrollTop: 0}, 600);
+        return false;
+      });
     });
   </script>
 </head>
