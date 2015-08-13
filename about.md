@@ -26,10 +26,10 @@ thousands of clients.
 ## Collaborators
 
 <div class="footer-col  footer-col-1">
-  <img height="70px" src="http://trac.mcs.anl.gov/projects/mercury/chrome/site/your_project_logo.png" />
+  <img height="70px" src="/assets/anl_logo.png" />
 </div>
 
 <div class="footer-col  footer-col-1">
-  <img height="70px" src="http://www.hdfgroup.org/images/hdf_logo.jpg" />
+  <img height="70px" src="/assets/hdf_logo.svg" />
 </div>
 
