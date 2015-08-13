@@ -92,13 +92,16 @@ It can then be destroyed using:
 na_return_t NA_Context_destroy(na_class_t *na_class, na_context_t *context);
 {% endhighlight %}
 
-After the interface initialized, one may also get its own address, using:
+To connect to a target and start sending RPCs, one must first get the
+address of the target. The most convenient way (can also be manually passed
+if the address is fixed) of doing it is to first call
+on the target:
 
 {% highlight C %}
 na_return_t NA_Addr_self(na_class_t *na_class, na_addr_t *addr);
 {% endhighlight %}
 
-Convert it to a string using:
+Convert that address to a string using:
 
 {% highlight C %}
 na_return_t NA_Addr_to_string(na_class_t *na_class, char *buf, na_size_t buf_size, na_addr_t addr);
@@ -123,10 +126,10 @@ All addresses must then be freed using:
 na_return_t NA_Addr_free(na_class_t *na_class, na_addr_t addr);
 {% endhighlight %}
 
+There is then enough information to use the [RPC layer](#rpc-layer).
 Other routines such as `NA_Msg_send_unexpected()`, `NA_Msg_send_expected()`,
 `NA_Msg_recv_unexpected()`, `NA_Msg_recv_expected()`, `NA_Put()`, `NA_Get()`, etc,
 are used internally. There should not be any need to use them directly.
-
 
 ### Available Plugins
 
@@ -138,11 +141,11 @@ are used internally. There should not be any need to use them directly.
   verbs, uGNI and shared memory. Plugin shows best performance but is more
   experimental.
 * _MPI_: static connection and disconnection, although connection can be
-  established using either `MPI_Comm_split` or `MPI_Comm_connect`. Plugin provides
+  established using either `MPI_Comm_split()` or `MPI_Comm_connect()`. Plugin provides
   relatively good performance depending on the underlying transport used by the
   MPI implementation. Remote memory access is emulated on top of point-to-point
   messaging.
-* _SSM_: experimental and unsupported.
+* _SSM_: experimental and not supported for now.
 
 Plugins can be selected by passing a string of the form: `plugin+protocol://host:port`.
 Below is a table summarizing the values that are available for each plugin:
@@ -155,9 +158,248 @@ mpi    | default
 
 ## RPC Layer
 
+{% highlight C %}
+hg_class_t *HG_Init(na_class_t *na_class, na_context_t *na_context, hg_bulk_class_t *hg_bulk_class);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Finalize(hg_class_t *hg_class);
+{% endhighlight %}
+
+{% highlight C %}
+hg_context_t *HG_Context_create(hg_class_t *hg_class);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Context_destroy(hg_context_t *context);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Create(hg_class_t *hg_class, hg_context_t *context, na_addr_t addr, hg_id_t id, hg_handle_t *handle);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Destroy(hg_handle_t handle);
+{% endhighlight %}
+
+{% highlight C %}
+struct hg_info {
+    hg_class_t *hg_class;               /* HG class */
+    hg_context_t *context;              /* HG context */
+    hg_bulk_class_t *hg_bulk_class;     /* HG Bulk class */
+    hg_bulk_context_t *bulk_context;    /* HG Bulk context */
+    na_addr_t addr;                     /* NA address */
+    hg_id_t id;                         /* RPC ID */
+};
+
+struct hg_info *HG_Get_info(hg_handle_t handle);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Progress(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Trigger(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout, unsigned int max_count, unsigned int *actual_count);
+{% endhighlight %}
+
+{% highlight C %}
+hg_id_t HG_Register(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in_proc_cb, hg_proc_cb_t out_proc_cb, hg_rpc_cb_t rpc_cb);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Get_input(hg_handle_t handle, void *in_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Free_input(hg_handle_t handle, void *in_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Get_output(hg_handle_t handle, void *out_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Free_output(hg_handle_t handle, void *out_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Forward(hg_handle_t handle, hg_cb_t callback, void *arg, void *in_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Respond(hg_handle_t handle, hg_cb_t callback, void *arg, void *out_struct);
+{% endhighlight %}
+
 ## Bulk Layer
 
+{% highlight C %}
+hg_return_t HG_Bulk_create(hg_bulk_class_t *hg_bulk_class, hg_uint32_t count, void **buf_ptrs, const hg_size_t *buf_sizes, hg_uint8_t flags, hg_bulk_t *handle);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Bulk_free(hg_bulk_t handle);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Bulk_access(hg_bulk_t handle, hg_size_t offset, hg_size_t size, hg_uint8_t flags, hg_uint32_t max_count, void **buf_ptrs, hg_size_t *buf_sizes, hg_uint32_t *actual_count);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Bulk_transfer(hg_bulk_context_t *context, hg_bulk_cb_t callback, void *arg, hg_bulk_op_t op, na_addr_t origin_addr, hg_bulk_t origin_handle, hg_size_t origin_offset, hg_bulk_t local_handle, hg_size_t local_offset, hg_size_t size, hg_op_id_t *op_id);
+{% endhighlight %}
+
 ## High-level RPC Layer
+
+For convenience the high-level RPC layer provides macros and routines that can
+reduce the amount of code required to send an RPC call with mercury. For macros,
+mercury makes use of the [Boost preprocessor library](http://www.boost.org/doc/libs/release/libs/preprocessor/) so that users can generate all the boilerplate code that
+is necessary to serialize and deserialize function arguments.
+
+### Generate proc routines
+
+The first macro, called `MERCURY_GEN_PROC`, generates both structures and proc functions
+to serialize arguments. The structure fields contain either input arguments or
+output arguments. The generated proc routine uses pre-existing types to serialize
+and deserialize the field.
+
+{% highlight C %}
+MERCURY_GEN_PROC(struct_type_name, fields)
+{% endhighlight %}
+
+#### Example:
+
+The following function has two input arguments, one output argument and one
+return value.
+
+{% highlight C %}
+int rpc_open(const char *path, rpc_handle_t handle, int *event_id);
+{% endhighlight %}
+
+The following macro can then be used to generate boilerplate code for the input
+argument (please refer to the [predefined types](#predefined-types) section for
+a list of the existing types that can be passed to this macro):
+
+{% highlight C linenos %}
+MERCURY_GEN_PROC( rpc_open_in_t, ((hg_const_string_t)(path)) ((rpc_handle_t)(handle)) )
+
+/* Will generate an rpc_open_in_t struct */
+
+typedef struct {
+    hg_const_string_t path;
+    rpc_handle_t handle;
+} rpc_open_in_t;
+
+/* and an hg_proc_rpc_open_in_t function */
+
+hg_return_t
+hg_proc_rpc_open_in_t(hg_proc_t proc, void *data)
+{
+    hg_return_t ret;
+    rpc_open_in_t *struct_data = (rpc_open_in_t *) data;
+
+    ret = hg_proc_hg_const_string_t(proc, &struct_data->path);
+    if (ret != HG_SUCCESS) {
+      /* error */
+    }
+    ret = hg_proc_rpc_handle_t(proc, &struct_data->handle);
+    if (ret != HG_SUCCESS) {
+      /* error */
+    }
+    return ret;
+}
+{% endhighlight %}
+
+Note the parentheses that separate the name of the field and its type. Each
+field is then separated by another pair of parentheses. This follows the sequence
+data type of the Boost preprocessor library.
+
+### Generate proc routines for existing structures
+
+In some cases, however, the argument types are not known by mercury, which is
+the case of the previous example with the `rpc_handle_t` type. For these cases,
+another macro, called `MERCURY_GEN_STRUCT_PROC`, can be used. It defines a
+serialization function for an existing struct or type---this assumes that the
+type can be mapped to already existing types, if not, users can create their
+own proc function and use the `hg_proc_raw` routine that takes a stream of bytes.
+
+{% highlight C %}
+MERCURY_GEN_STRUCT_PROC(struct_type_name, fields)
+{% endhighlight %}
+
+#### Example:
+
+The following function has one non-standard type, `rpc_handle_t`.
+
+{% highlight C linenos %}
+int rpc_open(const char *path, rpc_handle_t handle, int *event_id);
+
+typedef struct {
+    hg_uint64_t cookie;
+} rpc_handle_t;
+{% endhighlight %}
+
+The following macro can then be used to generate boilerplate code for the type
+by defining its fields.
+
+{% highlight C linenos %}
+MERCURY_GEN_STRUCT_PROC( rpc_handle_t, ((hg_uint64_t)(cookie)) )
+
+/* Will generate an hg_proc_rpc_handle_t function */
+
+static hg_return_t
+hg_proc_rpc_handle_t(hg_proc_t proc, void *data)
+{
+    hg_return_t ret;
+    rpc_handle_t *struct_data = (rpc_handle_t *) data;
+
+    ret = hg_proc_hg_uint64_t(proc, &struct_data->cookie);
+    if (ret != HG_SUCCESS) {
+      /* error */
+    }
+    return ret;
+}
+{% endhighlight %}
+
+### Predefined types
+
+Mercury uses standard types so that the size of the type is fixed when
+serializing and deserializing it. For convenience mercury types can also be
+used to serialize bulk handles for example, but also strings, etc.
+
+Standard type | Mercury type
+------------- | ------------
+`int8_t`      | All standard types prefixed with `hg_`
+`uint8_t`     | `hg_bool_t`
+`int16_t`     | `hg_ptr_t`
+`uint16_t`    | `hg_size_t`
+`int32_t`     | `hg_id_t`
+`uint32_t`    | `hg_bulk_t`
+`int64_t`     | `hg_const_string_t`
+`uint64_t`    | `hg_string_t`
+
+### Register RPC
+
+In conjunction with the previous macros, the following macro makes the registration
+of RPC calls more convenient by mapping the types to the generated proc functions.
+
+{% highlight C %}
+MERCURY_REGISTER(hg_class, func_name, in_struct_type_name, out_struct_type_name, rpc_cb)
+{% endhighlight %}
+
+#### Example:
+
+{% highlight C %}
+int rpc_open(const char *path, rpc_handle_t handle, int *event_id);
+{% endhighlight %}
+
+One can use the `MERCURY_REGISTER` macro and pass the types of the input/output
+structures directly. In cases where no input or no output arguments are present,
+the `void` type can be passed to the macro.
+
+{% highlight C %}
+rpc_open_id_g = MERCURY_REGISTER(hg_class, "rpc_open", rpc_open_in_t, rpc_open_out_t, rpc_open_cb);
+{% endhighlight %}
 
 ## See also
 <ul>
