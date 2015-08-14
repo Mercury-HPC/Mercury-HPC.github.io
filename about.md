@@ -26,10 +26,10 @@ thousands of clients.
 ## Collaborators
 
 <div class="footer-col  footer-col-1">
-  <img height="70px" src="/assets/anl_logo.png" />
+  <img height="70px" src="/assets/anl_logo.png" alt="ANL Logo" />
 </div>
 
 <div class="footer-col  footer-col-1">
-  <img height="70px" src="/assets/hdf_logo.svg" />
+  <img height="70px" src="/assets/hdf_logo.svg" alt="HDF Logo" />
 </div>
 
