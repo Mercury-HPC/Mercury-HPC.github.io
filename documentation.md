@@ -44,8 +44,9 @@ mechanism.
 
 The _network abstraction_ (NA) layer is used by both the RPC layer and the bulk layer.
 It provides a minimal set of function calls that abstract the underlying network
-fabric, and that can be used to provide:
-connection/disconnection to/from a target, point-to-point messaging,
+fabric and that can be used to provide:
+connection/disconnection to/from a target, point-to-point messaging with both
+unexpected and expected messaging,
 remote memory access. The API is non-blocking and uses a callback mechanism
 so that upper layers can provide asynchronous execution more easily: when progress
 is made (either internally or after a call to `NA_Progress()`) and an operation
@@ -60,7 +61,7 @@ can be easily added and selected at runtime.
 Typically, the first step before being able to use the mercury layer is to
 initialize the NA interface and select an underlying plugin that will be used
 by the upper layers. Initializing the NA interface with a specified `info_string`
-string results in the creation of a new `na_class_t` object. Please refer to
+results in the creation of a new `na_class_t` object. Please refer to
 the [available plugins](#available-plugins) section for more information on the
 `info_string` format. Additionally, it is possible to specify whether the
 `na_class_t` object will be listening (for incoming connections) or
@@ -93,30 +94,33 @@ na_return_t NA_Context_destroy(na_class_t *na_class, na_context_t *context);
 {% endhighlight %}
 
 To connect to a target and start sending RPCs, one must first get the
-address of the target. The most convenient way (can also be manually passed
-if the address is fixed) of doing it is to first call
-on the target:
+address of the target. The most convenient way (it can also be manually passed
+if the address is fixed) of doing it is to first call on the target:
 
 {% highlight C %}
 na_return_t NA_Addr_self(na_class_t *na_class, na_addr_t *addr);
 {% endhighlight %}
 
-Convert that address to a string using:
+And then convert that address to a string using:
 
 {% highlight C %}
 na_return_t NA_Addr_to_string(na_class_t *na_class, char *buf, na_size_t buf_size, na_addr_t addr);
 {% endhighlight %}
 
-And communicate it to other processes (e.g., using a file), which can then look
-it up using:
+The string can then be communicated to other processes (e.g., using a file),
+which can then look up the target using:
 
 {% highlight C %}
 na_return_t NA_Addr_lookup_wait(na_class_t *na_class, const char *name, na_addr_t *addr);
 {% endhighlight %}
 
-Or the non-blocking callback version:
+Or the non-blocking callback version (`NA_Progress()` and `NA_Trigger()` need to
+be called in this case and the resulting address can be retrieved when the user
+callback is executed):
 
 {% highlight C %}
+typedef na_return_t (*na_cb_t)(const struct na_cb_info *callback_info);
+
 na_return_t NA_Addr_lookup(na_class_t *na_class, na_context_t *context, na_cb_t callback, void *arg, const char *name, na_op_id_t *op_id);
 {% endhighlight %}
 
@@ -129,7 +133,7 @@ na_return_t NA_Addr_free(na_class_t *na_class, na_addr_t addr);
 There is then enough information to use the [RPC layer](#rpc-layer).
 Other routines such as `NA_Msg_send_unexpected()`, `NA_Msg_send_expected()`,
 `NA_Msg_recv_unexpected()`, `NA_Msg_recv_expected()`, `NA_Put()`, `NA_Get()`, etc,
-are used internally. There should not be any need to use them directly.
+are used internally. There should not be any need for using them directly.
 
 ### Available Plugins
 
@@ -141,10 +145,10 @@ are used internally. There should not be any need to use them directly.
   verbs, uGNI and shared memory. Plugin shows best performance but is more
   experimental.
 * _MPI_: static connection and disconnection, although connection can be
-  established using either `MPI_Comm_split()` or `MPI_Comm_connect()`. Plugin provides
-  relatively good performance depending on the underlying transport used by the
-  MPI implementation. Remote memory access is emulated on top of point-to-point
-  messaging.
+  established using either `MPI_Comm_split()` or `MPI_Comm_connect()`. Plugin
+  provides relatively good performance depending on the underlying transport
+  used by the MPI implementation. Remote memory access is emulated on top of
+  point-to-point messaging.
 * _SSM_: experimental and not supported for now.
 
 Plugins can be selected by passing a string of the form: `plugin+protocol://host:port`.
@@ -158,21 +162,83 @@ mpi    | default
 
 ## RPC Layer
 
+The [RPC layer](#rpc-layer) provides users with the necessary components for
+sending and receiving RPCs. This layer is composed of two sub-layers: a core RPC
+layer, which defines an RPC operation as a buffer that is sent to a target
+and triggers a callback associated to that operation; and a higher-level RPC
+layer, which includes serialization and deserialization of function arguments.
+
+Every RPC call results in the serialization of function parameters into a
+memory buffer (its size generally being limited to one kilobyte, depending on
+the interconnect). This buffer is then sent to the target using the network
+abstraction layer interface. One of the key requirements is to limit memory
+copies at any stage of the transfer, especially when transferring large amounts
+of data. Therefore, if the data sent is small, it is serialized and sent by using
+small messages (unexpected and expected messages); otherwise
+a description of the memory region that is to be
+transferred is sent within this same small message to the target, which can
+then start pulling the data (if the data is the input of the remote call) or
+pushing the data (if the data is the output of the remote call).
+
+Limiting the
+size of the initial RPC request to the target also helps in scalability, since
+it avoids unnecessary server resource consumption if large numbers of origins
+are concurrently accessing the same target. Depending on the degree of control
+desired, all these steps can be transparently handled by Mercury or directly
+exposed to the user.
+
+### Interface
+
+The first step before starting using this layer is to create an NA class and
+an NA context with the routines presented in the
+[network abstraction layer](#network-abstraction-layer) section.
+Similarly to the NA layer, initializing the HG interface results in the
+creation of a new `hg_class_t` object. Additionally, the interface can use a
+specific `hg_bulk_class_t` object to transfer serialized arguments that do not
+fit in an unexpected message. If this parameter is not specified, an
+`hg_bulk_class_t` object is internally created using the provided NA class and
+context.
+
 {% highlight C %}
 hg_class_t *HG_Init(na_class_t *na_class, na_context_t *na_context, hg_bulk_class_t *hg_bulk_class);
 {% endhighlight %}
+
+The `hg_class_t` object can later be released after a call to:
 
 {% highlight C %}
 hg_return_t HG_Finalize(hg_class_t *hg_class);
 {% endhighlight %}
 
+Once the interface has been initialized, a context of execution must be
+created, which (similarly to the NA layer) internally associates a specific
+completion queue to the operations:
+
 {% highlight C %}
 hg_context_t *HG_Context_create(hg_class_t *hg_class);
 {% endhighlight %}
 
+It can then be destroyed using:
+
 {% highlight C %}
 hg_return_t HG_Context_destroy(hg_context_t *context);
 {% endhighlight %}
+
+Before sending an RPC, the HG class needs a way of identifying so that a
+callback corresponding to that RPC can be executed on the target. Additionally
+the functions to serialize and deserialize the function arguments associated
+to that RPC must be provided. This is done through the `HG_Register` function.
+Note that this step can be simplified by using the
+[high-level RPC layer](#high-level-rpc-layer). Registration must be done on
+both origin and target with the same `func_name` identifier.
+
+{% highlight C %}
+typedef hg_return_t (*hg_proc_cb_t)(hg_proc_t proc, void *data);
+typedef hg_return_t (*hg_rpc_cb_t)(hg_handle_t handle);
+
+hg_id_t HG_Register(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in_proc_cb, hg_proc_cb_t out_proc_cb, hg_rpc_cb_t rpc_cb);
+{% endhighlight %}
+
+#### Origin
 
 {% highlight C %}
 hg_return_t HG_Create(hg_class_t *hg_class, hg_context_t *context, na_addr_t addr, hg_id_t id, hg_handle_t *handle);
@@ -181,6 +247,50 @@ hg_return_t HG_Create(hg_class_t *hg_class, hg_context_t *context, na_addr_t add
 {% highlight C %}
 hg_return_t HG_Destroy(hg_handle_t handle);
 {% endhighlight %}
+
+{% highlight C %}
+typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
+
+hg_return_t HG_Forward(hg_handle_t handle, hg_cb_t callback, void *arg, void *in_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Get_output(hg_handle_t handle, void *out_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Free_output(hg_handle_t handle, void *out_struct);
+{% endhighlight %}
+
+#### Target
+
+{% highlight C %}
+hg_return_t HG_Get_input(hg_handle_t handle, void *in_struct);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Free_input(hg_handle_t handle, void *in_struct);
+{% endhighlight %}
+
+{% highlight C %}
+typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
+
+hg_return_t HG_Respond(hg_handle_t handle, hg_cb_t callback, void *arg, void *out_struct);
+{% endhighlight %}
+
+#### Progress
+
+{% highlight C %}
+hg_return_t HG_Progress(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout);
+{% endhighlight %}
+
+{% highlight C %}
+hg_return_t HG_Trigger(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout, unsigned int max_count, unsigned int *actual_count);
+{% endhighlight %}
+
+## Bulk Layer
+
+### Interface
 
 {% highlight C %}
 struct hg_info {
@@ -194,44 +304,6 @@ struct hg_info {
 
 struct hg_info *HG_Get_info(hg_handle_t handle);
 {% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Progress(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout);
-{% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Trigger(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout, unsigned int max_count, unsigned int *actual_count);
-{% endhighlight %}
-
-{% highlight C %}
-hg_id_t HG_Register(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in_proc_cb, hg_proc_cb_t out_proc_cb, hg_rpc_cb_t rpc_cb);
-{% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Get_input(hg_handle_t handle, void *in_struct);
-{% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Free_input(hg_handle_t handle, void *in_struct);
-{% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Get_output(hg_handle_t handle, void *out_struct);
-{% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Free_output(hg_handle_t handle, void *out_struct);
-{% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Forward(hg_handle_t handle, hg_cb_t callback, void *arg, void *in_struct);
-{% endhighlight %}
-
-{% highlight C %}
-hg_return_t HG_Respond(hg_handle_t handle, hg_cb_t callback, void *arg, void *out_struct);
-{% endhighlight %}
-
-## Bulk Layer
 
 {% highlight C %}
 hg_return_t HG_Bulk_create(hg_bulk_class_t *hg_bulk_class, hg_uint32_t count, void **buf_ptrs, const hg_size_t *buf_sizes, hg_uint8_t flags, hg_bulk_t *handle);
@@ -394,7 +466,7 @@ int rpc_open(const char *path, rpc_handle_t handle, int *event_id);
 {% endhighlight %}
 
 One can use the `MERCURY_REGISTER` macro and pass the types of the input/output
-structures directly. In cases where no input or no output arguments are present,
+structures directly. In cases where no input or no output argument is present,
 the `void` type can be passed to the macro.
 
 {% highlight C %}
@@ -406,6 +478,7 @@ rpc_open_id_g = MERCURY_REGISTER(hg_class, "rpc_open", rpc_open_in_t, rpc_open_o
   {% for post in site.categories.documentation  reversed %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
+  <li><a href="http://dx.doi.org/10.1109/CLUSTER.2013.6702617">Cluster 2013 paper</a></li>
   <li><a href="ftp://ftp.mcs.anl.gov/pub/mercury/documents/doxygen_doc/index.html">Doxygen documentation</a></li>
 </ul>
 
