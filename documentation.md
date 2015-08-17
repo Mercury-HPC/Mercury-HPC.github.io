@@ -182,7 +182,7 @@ pushing the data (if the data is the output of the remote call).
 
 Limiting the
 size of the initial RPC request to the target also helps in scalability, since
-it avoids unnecessary server resource consumption if large numbers of origins
+it avoids unnecessary server resource consumption if large numbers of processes
 are concurrently accessing the same target. Depending on the degree of control
 desired, all these steps can be transparently handled by Mercury or directly
 exposed to the user.
@@ -223,10 +223,10 @@ It can then be destroyed using:
 hg_return_t HG_Context_destroy(hg_context_t *context);
 {% endhighlight %}
 
-Before sending an RPC, the HG class needs a way of identifying so that a
-callback corresponding to that RPC can be executed on the target. Additionally
+Before sending an RPC, the HG class needs a way of identifying it so that a
+callback corresponding to that RPC can be executed on the target. Additionally,
 the functions to serialize and deserialize the function arguments associated
-to that RPC must be provided. This is done through the `HG_Register` function.
+to that RPC must be provided. This is done through the `HG_Register()` function.
 Note that this step can be simplified by using the
 [high-level RPC layer](#high-level-rpc-layer). Registration must be done on
 both origin and target with the same `func_name` identifier.
@@ -238,15 +238,34 @@ typedef hg_return_t (*hg_rpc_cb_t)(hg_handle_t handle);
 hg_id_t HG_Register(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in_proc_cb, hg_proc_cb_t out_proc_cb, hg_rpc_cb_t rpc_cb);
 {% endhighlight %}
 
+As mentioned previously, there is no distinction between client and server since
+a client may also act as a server for other processes. It is therefore
+important to not make that distinction in the interface and only use the distinction
+of _origin_ and _target_.
+
 #### Origin
+
+In a typical scenario, the origin will initiate an RPC call by using the RPC ID
+defined after a call to `HG_Register()`. Using the `HG_Create()` call will define
+a new `hg_handle_t` object that can be used (and re-used) to set/get input/output
+arguments.
 
 {% highlight C %}
 hg_return_t HG_Create(hg_class_t *hg_class, hg_context_t *context, na_addr_t addr, hg_id_t id, hg_handle_t *handle);
 {% endhighlight %}
 
+This handle can be destroyed with `HG_Destroy()`---a reference count prevents
+resources from being released while the handle is still in use.
+
 {% highlight C %}
 hg_return_t HG_Destroy(hg_handle_t handle);
 {% endhighlight %}
+
+The second step is to pack the input arguments within a structure, for which
+a serialization function is provided with the `HG_Register()` call. The
+`HG_Forward()` can then be used to send that structure describing the input
+arguments. This function is non-blocking. When it completes, the associated
+callback will be executed after to call to `HG_Trigger()`.
 
 {% highlight C %}
 typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
@@ -254,23 +273,52 @@ typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
 hg_return_t HG_Forward(hg_handle_t handle, hg_cb_t callback, void *arg, void *in_struct);
 {% endhighlight %}
 
+When `HG_Forward()` completes, the RPC has been remotely executed and a
+response with the output results has been sent back. This output can then be
+retrieved with the following function:
+
 {% highlight C %}
 hg_return_t HG_Get_output(hg_handle_t handle, void *out_struct);
 {% endhighlight %}
+
+Retrieving the output may result in the creation of memory objects, which
+must then be released by calling:
 
 {% highlight C %}
 hg_return_t HG_Free_output(hg_handle_t handle, void *out_struct);
 {% endhighlight %}
 
+To be safe, it is therefore recommended to make a copy of the results before
+calling `HG_Free_output()`.
+
 #### Target
+
+On the target, the RPC callback passed to the `HG_Register()` function must be
+defined.
+
+{% highlight C %}
+typedef hg_return_t (*hg_rpc_cb_t)(hg_handle_t handle);
+{% endhighlight %}
+
+When the callback is called, there is a newly received RPC. The input arguments
+can then be retrieved with:
 
 {% highlight C %}
 hg_return_t HG_Get_input(hg_handle_t handle, void *in_struct);
 {% endhighlight %}
 
+Retrieving the input may result in the creation of memory objects, which
+must then be released by calling:
+
 {% highlight C %}
 hg_return_t HG_Free_input(hg_handle_t handle, void *in_struct);
 {% endhighlight %}
+
+When the input has been retrieved, the arguments contained in the input structure
+can be passed to the actual function call (e.g., if that's an RPC `open()`, the
+`open()` function can now be called). When the execution is done, an output structure
+can then be filled with the return value and/or the output arguments of the function.
+It can then be sent back using:
 
 {% highlight C %}
 typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
@@ -278,19 +326,55 @@ typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
 hg_return_t HG_Respond(hg_handle_t handle, hg_cb_t callback, void *arg, void *out_struct);
 {% endhighlight %}
 
+This call is also non-blocking. When it completes, the associated callback is
+placed onto a completion queue. It can then be triggered after a call to `HG_Trigger()`.
+
 #### Progress
+
+Mercury uses a callback model. Callbacks are passed to non-blocking functions
+and are pushed to a completion queue when the operation completes. Explicit
+progress is made by calling `HG_Progress()`. `HG_Progress()` returns when
+an operation completes or `timeout` is reached.
 
 {% highlight C %}
 hg_return_t HG_Progress(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout);
 {% endhighlight %}
 
+When an operation completes, the associated callback is placed onto a completion
+queue. Calling `HG_Trigger()` allows the callback execution to be separately
+controlled from the main progress loop.
+
 {% highlight C %}
 hg_return_t HG_Trigger(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout, unsigned int max_count, unsigned int *actual_count);
 {% endhighlight %}
 
+In some cases, one may want to call `HG_Progress()` then `HG_Trigger()` or have
+their execution in parallel by using separate threads.
+
 ## Bulk Layer
 
+In addition to the previous layer, some RPC may require the transfer of larger
+amounts of data. For these RPCs, the bulk layer can be used. It is built on top of
+the RMA protocol defined in the network abstraction layer.
+
+The origin process exposes a memory region to the target by creating a bulk
+descriptor (which contains virtual memory address information, size of the
+memory region that is being exposed, and other parameters that depend on the
+underlying network implementation).
+The bulk descriptor can then be serialized and sent to the target along
+with the RPC request arguments (using the RPC layer). When the target gets
+the input parameters, it can deserialize the bulk descriptor, get the size of
+the memory buffer that has to be transferred, and initiate the transfer.
+Only the target initiates one-sided transfers so that it can, as well as
+controlling the data flow, protect its memory from concurrent accesses.
+
 ### Interface
+
+The interface uses its own bulk class and execution context, which are
+similar to the ones defined by the RPC layer. One can hence create new classes
+and contexts if the NA class/context that need to be used are different, but
+for convenience they can also be retrieved from the RPC layer by using the
+`HG_Get_info()` call:
 
 {% highlight C %}
 struct hg_info {
@@ -305,17 +389,33 @@ struct hg_info {
 struct hg_info *HG_Get_info(hg_handle_t handle);
 {% endhighlight %}
 
+To initiate a bulk transfer, one needs to create a bulk descriptor on both the
+origin and on the target, which will then be passed to the `HG_Bulk_transfer()`
+call.
+
 {% highlight C %}
 hg_return_t HG_Bulk_create(hg_bulk_class_t *hg_bulk_class, hg_uint32_t count, void **buf_ptrs, const hg_size_t *buf_sizes, hg_uint8_t flags, hg_bulk_t *handle);
 {% endhighlight %}
+
+The bulk descriptor can be released by using:
 
 {% highlight C %}
 hg_return_t HG_Bulk_free(hg_bulk_t handle);
 {% endhighlight %}
 
+For convenience, memory pointers from an existing bulk descriptor can be accessed with:
+
 {% highlight C %}
 hg_return_t HG_Bulk_access(hg_bulk_t handle, hg_size_t offset, hg_size_t size, hg_uint8_t flags, hg_uint32_t max_count, void **buf_ptrs, hg_size_t *buf_sizes, hg_uint32_t *actual_count);
 {% endhighlight %}
+
+When the bulk descriptor from the origin has been received, the target
+can initiate the bulk transfer to/from its own bulk descriptor. Virtual offsets
+can be used to transfer data pieces from a non-contiguous block transparently.
+The call is non-blocking. When the operation completes, the defined callback
+is placed onto the context's completion queue. If the context used is the same
+as the RPC layer's one, progress can be made when calling `HG_Progress()`, otherwise
+separate progress needs to be made by calling `HG_Bulk_progress()`.
 
 {% highlight C %}
 hg_return_t HG_Bulk_transfer(hg_bulk_context_t *context, hg_bulk_cb_t callback, void *arg, hg_bulk_op_t op, na_addr_t origin_addr, hg_bulk_t origin_handle, hg_size_t origin_offset, hg_bulk_t local_handle, hg_size_t local_offset, hg_size_t size, hg_op_id_t *op_id);
