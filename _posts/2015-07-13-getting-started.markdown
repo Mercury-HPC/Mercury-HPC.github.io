@@ -2,7 +2,6 @@
 layout: post
 title:  "Getting started!"
 date:   2015-07-13 17:14:42
-categories: documentation
 ---
 
 ## Title 1
