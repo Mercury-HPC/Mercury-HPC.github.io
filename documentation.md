@@ -4,8 +4,8 @@ title: Documentation
 permalink: /documentation/
 ---
 
-Documentation reflects mercury API as of v0.9.0 and can be used as an introduction to
-the mercury library. Please look at the [see also](#see-also) section for
+Documentation reflects Mercury's API as of v0.9.0 and can be used as an introduction to
+the Mercury library. Please look at the [see also](#see-also) section for
 additional documentation.
 
 ## Overview
@@ -58,7 +58,7 @@ can be easily added and selected at runtime.
 
 ### Interface
 
-Typically, the first step before being able to use the mercury layer is to
+Typically, the first step before being able to use the Mercury layer is to
 initialize the NA interface and select an underlying plugin that will be used
 by the upper layers. Initializing the NA interface with a specified `info_string`
 results in the creation of a new `na_class_t` object. Please refer to
@@ -138,7 +138,7 @@ are used internally. There should not be any need for using them directly.
 ### Available Plugins
 
 * _BMI_: flexible connection and disconnection. Provides stable TCP implementation,
-  other protocols are not supported. Plugin is very stable but it may
+  other protocols are not supported. Plugin is stable but it may
   not perform as well as other plugins. Remote memory access is emulated on top
   of point-to-point messaging.
 * _CCI_: flexible connection and disconnection. Provides support for TCP, UDP,
@@ -162,7 +162,7 @@ mpi    | default
 
 ## RPC Layer
 
-The [RPC layer](#rpc-layer) provides users with the necessary components for
+The _RPC layer_ provides users with the necessary components for
 sending and receiving RPCs. This layer is composed of two sub-layers: a core RPC
 layer, which defines an RPC operation as a buffer that is sent to a target
 and triggers a callback associated to that operation; and a higher-level RPC
@@ -229,7 +229,7 @@ the functions to serialize and deserialize the function arguments associated
 to that RPC must be provided. This is done through the `HG_Register()` function.
 Note that this step can be simplified by using the
 [high-level RPC layer](#high-level-rpc-layer). Registration must be done on
-both origin and target with the same `func_name` identifier.
+both the origin and the target with the same `func_name` identifier.
 
 {% highlight C %}
 typedef hg_return_t (*hg_proc_cb_t)(hg_proc_t proc, void *data);
@@ -239,9 +239,8 @@ hg_id_t HG_Register(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in
 {% endhighlight %}
 
 As mentioned previously, there is no distinction between client and server since
-a client may also act as a server for other processes. It is therefore
-important to not make that distinction in the interface and only use the distinction
-of _origin_ and _target_.
+a client may also act as a server for other processes. Therefore the interface
+only use the distinction of _origin_ and _target_.
 
 #### Origin
 
@@ -263,9 +262,9 @@ hg_return_t HG_Destroy(hg_handle_t handle);
 
 The second step is to pack the input arguments within a structure, for which
 a serialization function is provided with the `HG_Register()` call. The
-`HG_Forward()` can then be used to send that structure describing the input
-arguments. This function is non-blocking. When it completes, the associated
-callback will be executed after to call to `HG_Trigger()`.
+`HG_Forward()` function can then be used to send that structure (which describes
+the input arguments). This function is non-blocking. When it completes, the associated
+callback can be executed after to call to `HG_Trigger()`.
 
 {% highlight C %}
 typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
@@ -273,9 +272,10 @@ typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
 hg_return_t HG_Forward(hg_handle_t handle, hg_cb_t callback, void *arg, void *in_struct);
 {% endhighlight %}
 
-When `HG_Forward()` completes, the RPC has been remotely executed and a
-response with the output results has been sent back. This output can then be
-retrieved with the following function:
+When `HG_Forward()` completes (i.e., when the user callback can be triggered),
+the RPC has been remotely executed and a response with the output results has
+been sent back. This output can then be retrieved (usually within the callback)
+with the following function:
 
 {% highlight C %}
 hg_return_t HG_Get_output(hg_handle_t handle, void *out_struct);
@@ -332,17 +332,16 @@ placed onto a completion queue. It can then be triggered after a call to `HG_Tri
 #### Progress
 
 Mercury uses a callback model. Callbacks are passed to non-blocking functions
-and are pushed to a completion queue when the operation completes. Explicit
-progress is made by calling `HG_Progress()`. `HG_Progress()` returns when
+and are pushed to the context's completion queue when the operation completes.
+Explicit progress is made by calling `HG_Progress()`. `HG_Progress()` returns when
 an operation completes or `timeout` is reached.
 
 {% highlight C %}
 hg_return_t HG_Progress(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout);
 {% endhighlight %}
 
-When an operation completes, the associated callback is placed onto a completion
-queue. Calling `HG_Trigger()` allows the callback execution to be separately
-controlled from the main progress loop.
+When an operation completes, calling `HG_Trigger()` allows the callback
+execution to be separately controlled from the main progress loop.
 
 {% highlight C %}
 hg_return_t HG_Trigger(hg_class_t *hg_class, hg_context_t *context, unsigned int timeout, unsigned int max_count, unsigned int *actual_count);
@@ -353,8 +352,8 @@ their execution in parallel by using separate threads.
 
 ## Bulk Layer
 
-In addition to the previous layer, some RPC may require the transfer of larger
-amounts of data. For these RPCs, the bulk layer can be used. It is built on top of
+In addition to the previous layer, some RPCs may require the transfer of larger
+amounts of data. For these RPCs, the _bulk layer_ can be used. It is built on top of
 the RMA protocol defined in the network abstraction layer.
 
 The origin process exposes a memory region to the target by creating a bulk
@@ -390,7 +389,7 @@ struct hg_info *HG_Get_info(hg_handle_t handle);
 {% endhighlight %}
 
 To initiate a bulk transfer, one needs to create a bulk descriptor on both the
-origin and on the target, which will then be passed to the `HG_Bulk_transfer()`
+origin and the target, which will then be passed to the `HG_Bulk_transfer()`
 call.
 
 {% highlight C %}
@@ -412,7 +411,7 @@ hg_return_t HG_Bulk_access(hg_bulk_t handle, hg_size_t offset, hg_size_t size, h
 When the bulk descriptor from the origin has been received, the target
 can initiate the bulk transfer to/from its own bulk descriptor. Virtual offsets
 can be used to transfer data pieces from a non-contiguous block transparently.
-The call is non-blocking. When the operation completes, the defined callback
+The call is non-blocking. When the operation completes, the user callback
 is placed onto the context's completion queue. If the context used is the same
 as the RPC layer's one, progress can be made when calling `HG_Progress()`, otherwise
 separate progress needs to be made by calling `HG_Bulk_progress()`.
@@ -423,9 +422,9 @@ hg_return_t HG_Bulk_transfer(hg_bulk_context_t *context, hg_bulk_cb_t callback, 
 
 ## High-level RPC Layer
 
-For convenience the high-level RPC layer provides macros and routines that can
-reduce the amount of code required to send an RPC call with mercury. For macros,
-mercury makes use of the [Boost preprocessor library](http://www.boost.org/doc/libs/release/libs/preprocessor/) so that users can generate all the boilerplate code that
+For convenience, the high-level RPC layer provides macros and routines that can
+reduce the amount of code required to send an RPC call with Mercury. For macros,
+Mercury makes use of the [Boost preprocessor library](http://www.boost.org/doc/libs/release/libs/preprocessor/) so that users can generate all the boilerplate code that
 is necessary to serialize and deserialize function arguments.
 
 ### Generate proc routines
@@ -488,7 +487,7 @@ data type of the Boost preprocessor library.
 
 ### Generate proc routines for existing structures
 
-In some cases, however, the argument types are not known by mercury, which is
+In some cases, however, the argument types are not known by Mercury, which is
 the case of the previous example with the `rpc_handle_t` type. For these cases,
 another macro, called `MERCURY_GEN_STRUCT_PROC`, can be used. It defines a
 serialization function for an existing struct or type---this assumes that the
@@ -535,8 +534,8 @@ hg_proc_rpc_handle_t(hg_proc_t proc, void *data)
 
 ### Predefined types
 
-Mercury uses standard types so that the size of the type is fixed when
-serializing and deserializing it. For convenience mercury types can also be
+Mercury uses standard types so that the size of the type is fixed between platforms
+when serializing and deserializing it. For convenience, Mercury types can also be
 used to serialize bulk handles for example, but also strings, etc.
 
 Standard type | Mercury type
