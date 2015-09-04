@@ -65,9 +65,22 @@
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
 
-    /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
-    .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
-    .lineno::-moz-selection {background-color: transparent;}/* Mozilla specific */
-    .lineno::selection {background-color: transparent;} /* Other major browsers */
-    .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
+    /* Make line numbers unselectable */
+    .lineno {
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        color: #ccc;
+        display: inline-block;
+        padding: 0 5px;
+        border-right: 1px solid #ccc;
+    }
+    .lineno::-moz-selection {
+        background-color: transparent;
+    } /* Mozilla specific */
+    .lineno::selection {
+        background-color: transparent;
+    } /* Other major browsers */
 }

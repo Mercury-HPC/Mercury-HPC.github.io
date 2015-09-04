@@ -220,8 +220,27 @@
 /**
  * Table of content
  */
-.top-level-header {
-    display: inline;
+.toc-header {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    font-weight: 300;
+}
+
+.toc-cross {
+    float: right;
+    color: $grey-color-dark;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+}
+
+.toc-cross.active {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 /**

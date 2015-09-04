@@ -13,10 +13,11 @@
   <script src="/js/toc/toc.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#toc').toc({ noBackToTopLinks: true, title: '<div id="toc_header"><h4>+ Table of Contents</h4></div>', showEffect: 'none', headers: 'h1, h2' });
+      $('#toc').toc({ noBackToTopLinks: true, title: '<div class="toc-header" id="toc_header">Table of Contents<div class="toc-cross">+</div></div>', showEffect: 'none', headers: 'h1, h2' });
       $("#toc_content").hide();
       $("#toc_header").click(function(){
         $("#toc_content").toggle('normal');
+        $('.toc-cross').toggleClass('active');
       });
       $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
