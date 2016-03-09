@@ -264,7 +264,7 @@ The second step is to pack the input arguments within a structure, for which
 a serialization function is provided with the `HG_Register()` call. The
 `HG_Forward()` function can then be used to send that structure (which describes
 the input arguments). This function is non-blocking. When it completes, the associated
-callback can be executed after to call to `HG_Trigger()`.
+callback can be executed by calling `HG_Trigger()`.
 
 {% highlight C %}
 typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
