@@ -14,13 +14,15 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }
 
 
@@ -110,7 +112,7 @@ tr:nth-of-type(odd) {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: $base-font-weight;
 }
 
 /**
@@ -168,7 +170,7 @@ pre,
 code {
     font-size: 12px;
     border: 1px solid $grey-color;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #eef;
 }
 
@@ -184,6 +186,32 @@ pre {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+    }
+
+    pre {
+        border: 0;
+        margin-bottom: 0px;
+    }
+
+    table {
+        margin-bottom: 0px;
+        background-color: transparent;
+    }
+
+    table, th, td {
+        border: 0;
+    }
+
+    th {
+        background-color: transparent;
+    }
+
+    th, td {
+        padding: 0px;
+    }
+
+    tr:nth-of-type(odd) {
+        background-color: transparent;
     }
 }
 

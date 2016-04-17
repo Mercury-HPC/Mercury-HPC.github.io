@@ -5,6 +5,10 @@
     background: #fff;
     @extend %vertical-rhythm;
 
+    .highlighter-rouge & {
+      background: #eef;
+    }
+
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
     .k     { font-weight: bold } // Keyword
@@ -72,15 +76,21 @@
         -moz-user-select: none;
         -ms-user-select: none;
         -o-user-select: none;
-        color: #ccc;
+        color: #aaa;
         display: inline-block;
         padding: 0 5px;
-        border-right: 1px solid #ccc;
     }
+
     .lineno::-moz-selection {
         background-color: transparent;
-    } /* Mozilla specific */
+    }
+
     .lineno::selection {
         background-color: transparent;
-    } /* Other major browsers */
+    }
+
+    .gutter {
+        border-right: 1px solid #aaa;
+    }
 }
+

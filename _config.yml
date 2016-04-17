@@ -10,4 +10,7 @@ gems:
   - jemoji
 
 # Build settings
+highlighter: rouge
 markdown: kramdown
+kramdown:
+  input: GFM
