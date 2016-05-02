@@ -4,9 +4,9 @@ title: Documentation
 permalink: /documentation/
 ---
 
-Documentation reflects Mercury's API as of v0.9.0 and can be used as an introduction to
-the Mercury library. Please look at the [see also](#see-also) section for
-additional documentation.
+Documentation reflects Mercury's API as of the upcoming v0.9.0 and can be used
+as an introduction to the Mercury library. Please look at the
+[see also](#see-also) section for additional documentation.
 
 ## Overview
 
@@ -35,19 +35,21 @@ By definition, an RPC call is initiated by one process, referred to as
 _origin_, and forwarded to another process, which will execute the call,
 and referred to as _target_. Each side uses an RPC
 _processor_ to serialize and deserialize parameters sent through the interface.
-Calling functions with relatively small arguments results in using the short
+Calling functions with relatively small arguments results in using a short
 messaging mechanism exposed by the network abstraction layer, whereas functions
-containing large data arguments additionally use the remote memory access (RMA)
+containing large data arguments additionally use a remote memory access (RMA)
 mechanism.
 
 ## Network Abstraction Layer
 
-The _network abstraction_ (NA) layer is used by both the RPC layer and the bulk layer.
+The _network abstraction_ (NA) layer is internally used by both the RPC layer
+and the bulk layer (it is therefore not expected to be directly used by
+a regular mercury user, who may jump to the [RPC layer](#rpc-layer) section).
 It provides a minimal set of function calls that abstract the underlying network
 fabric and that can be used to provide:
-connection/disconnection to/from a target, point-to-point messaging with both
-unexpected and expected messaging,
-remote memory access. The API is non-blocking and uses a callback mechanism
+target address lookup, point-to-point messaging with both unexpected and
+expected messaging, remote memory access, progress and cancellation.
+The API is non-blocking and uses a callback mechanism
 so that upper layers can provide asynchronous execution more easily: when progress
 is made (either internally or after a call to `NA_Progress()`) and an operation
 completes, the user callback is placed onto a completion queue. The callback
@@ -58,9 +60,9 @@ can be easily added and selected at runtime.
 
 ### Interface
 
-Typically, the first step before being able to use the Mercury layer is to
-initialize the NA interface and select an underlying plugin that will be used
-by the upper layers. Initializing the NA interface with a specified `info_string`
+Typically, the first step consists of
+initializing the NA interface and selecting an underlying plugin that will be
+used. Initializing the NA interface with a specified `info_string`
 results in the creation of a new `na_class_t` object. Please refer to
 the [available plugins](#available-plugins) section for more information on the
 `info_string` format. Additionally, it is possible to specify whether the
@@ -93,7 +95,7 @@ It can then be destroyed using:
 na_return_t NA_Context_destroy(na_class_t *na_class, na_context_t *context);
 {% endhighlight %}
 
-To connect to a target and start sending RPCs, one must first get the
+To connect to a target and start communication, one must first get the
 address of the target. The most convenient way (it can also be manually passed
 if the address is fixed) of doing it is to first call on the target:
 
@@ -108,15 +110,7 @@ na_return_t NA_Addr_to_string(na_class_t *na_class, char *buf, na_size_t buf_siz
 {% endhighlight %}
 
 The string can then be communicated to other processes (e.g., using a file),
-which can then look up the target using:
-
-{% highlight C %}
-na_return_t NA_Addr_lookup_wait(na_class_t *na_class, const char *name, na_addr_t *addr);
-{% endhighlight %}
-
-Or the non-blocking callback version (`NA_Progress()` and `NA_Trigger()` need to
-be called in this case and the resulting address can be retrieved when the user
-callback is executed):
+which can then look up the target using the non-blocking function:
 
 {% highlight C %}
 typedef na_return_t (*na_cb_t)(const struct na_cb_info *callback_info);
@@ -124,13 +118,15 @@ typedef na_return_t (*na_cb_t)(const struct na_cb_info *callback_info);
 na_return_t NA_Addr_lookup(na_class_t *na_class, na_context_t *context, na_cb_t callback, void *arg, const char *name, na_op_id_t *op_id);
 {% endhighlight %}
 
+This function takes a user callback. `NA_Progress()` and `NA_Trigger()` need to
+be called in this case and the resulting address can be retrieved when the user
+callback is executed.
 All addresses must then be freed using:
 
 {% highlight C %}
 na_return_t NA_Addr_free(na_class_t *na_class, na_addr_t addr);
 {% endhighlight %}
 
-There is then enough information to use the [RPC layer](#rpc-layer).
 Other routines such as `NA_Msg_send_unexpected()`, `NA_Msg_send_expected()`,
 `NA_Msg_recv_unexpected()`, `NA_Msg_recv_expected()`, `NA_Put()`, `NA_Get()`, etc,
 are used internally. There should not be any need for using them directly.
@@ -149,7 +145,6 @@ are used internally. There should not be any need for using them directly.
   provides relatively good performance depending on the underlying transport
   used by the MPI implementation. Remote memory access is emulated on top of
   point-to-point messaging.
-* _SSM_: experimental and not supported for now.
 
 Plugins can be selected by passing a string of the form: `plugin+protocol://host:port`.
 Below is a table summarizing the values that are available for each plugin:
@@ -165,7 +160,7 @@ mpi    | default
 The _RPC layer_ provides users with the necessary components for
 sending and receiving RPCs. This layer is composed of two sub-layers: a core RPC
 layer, which defines an RPC operation as a buffer that is sent to a target
-and triggers a callback associated to that operation; and a higher-level RPC
+and triggers a callback associated to that operation; and a higher level RPC
 layer, which includes serialization and deserialization of function arguments.
 
 Every RPC call results in the serialization of function parameters into a
@@ -189,21 +184,23 @@ exposed to the user.
 
 ### Interface
 
-The first step before starting using this layer is to create an NA class and
-an NA context with the routines presented in the
-[network abstraction layer](#network-abstraction-layer) section.
-Similarly to the NA layer, initializing the HG interface results in the
-creation of a new `hg_class_t` object. Additionally, the interface can use a
-specific `hg_bulk_class_t` object to transfer serialized arguments that do not
-fit in an unexpected message. If this parameter is not specified, an
-`hg_bulk_class_t` object is internally created using the provided NA class and
-context.
+Two choices are offered to start using this layer, either by passing
+an existing an NA class and an NA context (created by the routines presented
+in the [network abstraction layer](#network-abstraction-layer) section):
 
 {% highlight C %}
-hg_class_t *HG_Init(na_class_t *na_class, na_context_t *na_context, hg_bulk_class_t *hg_bulk_class);
+hg_class_t *HG_Init_na(na_class_t *na_class, na_context_t *na_context);
 {% endhighlight %}
 
-The `hg_class_t` object can later be released after a call to:
+Or by letting Mercury initialize its own NA class and context internally:
+
+{% highlight C %}
+hg_class_t *HG_Init(const char *info_string, hg_bool_t listen);
+{% endhighlight %}
+
+Similarly to the NA layer, initializing the HG interface results in the
+creation of a new `hg_class_t` object. The `hg_class_t` object can later be
+released after a call to:
 
 {% highlight C %}
 hg_return_t HG_Finalize(hg_class_t *hg_class);
@@ -239,10 +236,29 @@ hg_id_t HG_Register(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in
 {% endhighlight %}
 
 As mentioned previously, there is no distinction between client and server since
-a client may also act as a server for other processes. Therefore the interface
-only use the distinction of _origin_ and _target_.
+it may be desirable for a client to also act as a server for other processes.
+Therefore the interface only use the distinction of _origin_ and _target_.
 
 #### Origin
+
+In a typical scenario, the origin will first lookup a target and get an
+address. This can be achieved by:
+
+{% highlight C %}
+typedef hg_return_t (*hg_cb_t)(const struct hg_cb_info *callback_info);
+
+hg_return_t HG_Addr_lookup(hg_context_t *context, hg_cb_t callback, void *arg, const char *name, hg_op_id_t *op_id);
+{% endhighlight %}
+
+This function takes a user callback. `HG_Progress()` and `HG_Trigger()` need to
+be called in this case and the resulting address can be retrieved when the user
+callback is executed. Connection to the target may occur at this time, though that
+behavior is left upon the NA plugin implementation.
+All addresses must then be freed using:
+
+{% highlight C %}
+hg_return_t HG_Addr_free(hg_class_t *hg_class, hg_addr_t addr);
+{% endhighlight %}
 
 In a typical scenario, the origin will initiate an RPC call by using the RPC ID
 defined after a call to `HG_Register()`. Using the `HG_Create()` call will define
@@ -250,7 +266,7 @@ a new `hg_handle_t` object that can be used (and re-used) to set/get input/outpu
 arguments.
 
 {% highlight C %}
-hg_return_t HG_Create(hg_class_t *hg_class, hg_context_t *context, na_addr_t addr, hg_id_t id, hg_handle_t *handle);
+hg_return_t HG_Create(hg_context_t *context, hg_addr_t addr, hg_id_t id, hg_handle_t *handle);
 {% endhighlight %}
 
 This handle can be destroyed with `HG_Destroy()`---a reference count prevents
@@ -300,8 +316,8 @@ defined.
 typedef hg_return_t (*hg_rpc_cb_t)(hg_handle_t handle);
 {% endhighlight %}
 
-When the callback is called, there is a newly received RPC. The input arguments
-can then be retrieved with:
+When the callback is called, a new RPC has been received. The input arguments
+can hence be retrieved with:
 
 {% highlight C %}
 hg_return_t HG_Get_input(hg_handle_t handle, void *in_struct);
@@ -348,7 +364,7 @@ hg_return_t HG_Trigger(hg_class_t *hg_class, hg_context_t *context, unsigned int
 {% endhighlight %}
 
 In some cases, one may want to call `HG_Progress()` then `HG_Trigger()` or have
-their execution in parallel by using separate threads.
+them execute in parallel by using separate threads.
 
 ## Bulk Layer
 
@@ -369,31 +385,14 @@ controlling the data flow, protect its memory from concurrent accesses.
 
 ### Interface
 
-The interface uses its own bulk class and execution context, which are
-similar to the ones defined by the RPC layer. One can hence create new classes
-and contexts if the NA class/context that need to be used are different, but
-for convenience they can also be retrieved from the RPC layer by using the
-`HG_Get_info()` call:
-
-{% highlight C %}
-struct hg_info {
-    hg_class_t *hg_class;               /* HG class */
-    hg_context_t *context;              /* HG context */
-    hg_bulk_class_t *hg_bulk_class;     /* HG Bulk class */
-    hg_bulk_context_t *bulk_context;    /* HG Bulk context */
-    na_addr_t addr;                     /* NA address */
-    hg_id_t id;                         /* RPC ID */
-};
-
-struct hg_info *HG_Get_info(hg_handle_t handle);
-{% endhighlight %}
-
+The interface uses the class and execution context that are defined by the
+RPC layer.
 To initiate a bulk transfer, one needs to create a bulk descriptor on both the
 origin and the target, which will then be passed to the `HG_Bulk_transfer()`
 call.
 
 {% highlight C %}
-hg_return_t HG_Bulk_create(hg_bulk_class_t *hg_bulk_class, hg_uint32_t count, void **buf_ptrs, const hg_size_t *buf_sizes, hg_uint8_t flags, hg_bulk_t *handle);
+hg_return_t HG_Bulk_create(hg_class_t *hg_class, hg_uint32_t count, void **buf_ptrs, const hg_size_t *buf_sizes, hg_uint8_t flags, hg_bulk_t *handle);
 {% endhighlight %}
 
 The bulk descriptor can be released by using:
@@ -412,12 +411,25 @@ When the bulk descriptor from the origin has been received, the target
 can initiate the bulk transfer to/from its own bulk descriptor. Virtual offsets
 can be used to transfer data pieces from a non-contiguous block transparently.
 The call is non-blocking. When the operation completes, the user callback
-is placed onto the context's completion queue. If the context used is the same
-as the RPC layer's one, progress can be made when calling `HG_Progress()`, otherwise
-separate progress needs to be made by calling `HG_Bulk_progress()`.
+is placed onto the context's completion queue.
 
 {% highlight C %}
-hg_return_t HG_Bulk_transfer(hg_bulk_context_t *context, hg_bulk_cb_t callback, void *arg, hg_bulk_op_t op, na_addr_t origin_addr, hg_bulk_t origin_handle, hg_size_t origin_offset, hg_bulk_t local_handle, hg_size_t local_offset, hg_size_t size, hg_op_id_t *op_id);
+hg_return_t HG_Bulk_transfer(hg_context_t *context, hg_bulk_cb_t callback, void *arg, hg_bulk_op_t op, hg_addr_t origin_addr, hg_bulk_t origin_handle, hg_size_t origin_offset, hg_bulk_t local_handle, hg_size_t local_offset, hg_size_t size, hg_op_id_t *op_id);
+{% endhighlight %}
+
+Note that for convenience, as the transfer needs to be realized within the
+RPC callback, the routine `HG_Get_info()` enables easy retrieval of classes,
+contexts and source address:
+
+{% highlight C %}
+struct hg_info {
+    hg_class_t *hg_class;               /* HG class */
+    hg_context_t *context;              /* HG context */
+    hg_addr_t addr;                     /* HG address */
+    hg_id_t id;                         /* RPC ID */
+};
+
+struct hg_info *HG_Get_info(hg_handle_t handle);
 {% endhighlight %}
 
 ## High-level RPC Layer
