@@ -83,7 +83,8 @@ li {
  * Tables
  */
 table {
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse;
     background-color: transparent;
@@ -169,17 +170,18 @@ blockquote {
 pre,
 code {
     font-size: 12px;
-    border: 1px solid $grey-color;
     border-radius: 3px;
     background-color: #eef;
 }
 
 code {
     padding: 1px 5px;
+    border: 0;
 }
 
 pre {
     padding: 8px 12px;
+    border: 1px solid $grey-color;
     overflow-x: auto;
 
     > code {
