@@ -171,20 +171,21 @@ pre,
 code {
     font-size: 12px;
     border-radius: 3px;
-    background-color: $pre-color;
 }
 
 code {
+    background-color: $code-color;
     padding: 1px 5px;
     border: 0;
 }
 
 pre {
     padding: 8px 12px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $code-color;
     overflow-x: auto;
 
     > code {
+        background-color: #fff;
         border: 0;
         padding-right: 0;
         padding-left: 0;
