@@ -149,15 +149,21 @@ are used internally. There should not be any need for using them directly.
 Below is a table summarizing the protocols and expected format for each plugin
 ([] means optional).
 
-plugin | protocol             | initialization format                              |  lookup format
+plugin | protocol             | initialization format*                             |  lookup format
 ------ | --------             | ---------------------                              |  -------------
-bmi    | tcp                  | "bmi+tcp://\<port\>"                               | "bmi+tcp://\<hostname\>:\<port\>"
-cci    | tcp, verbs, gni      | "cci+\<protocol\>\[://\<port\>\]"                  | "cci+\<protocol\>://\<hostname\>:\<port\>"
-cci    | sm                   | "cci+sm\[://\<32-bit int id\>/\<32-bit int id\>\]" | "cci+sm://\<32-bit int id\>/\<32-bit int id\>"
-mpi    | dynamic, static      | "mpi+\<protocol\>"                                 | "mpi+\<protocol\>:\<port string\>"
+bmi    | tcp                  | "bmi+tcp://\<port\>"                               | "\[bmi+\]tcp://\<hostname\>:\<port\>"
+cci    | tcp, verbs, gni      | "cci+\<protocol\>\[://\<port\>\]"                  | "\[cci+\]\<protocol\>://\<hostname\>:\<port\>"
+cci    | sm                   | "cci+sm\[://\<32-bit int id\>/\<32-bit int id\>\]" | "\[cci+\]sm://\<cci shmem path\*\*\>/\<32-bit int id\>/\<32-bit int id\>"
+mpi    | dynamic, static\*\*\*    | "mpi+\<protocol\>"                             | "\[mpi+\]\<protocol\>://\<port string\>"
 
-Note that MPI static mode requires all mercury processes to be started in the
-same mpirun invocation.
+\* When not being initialized in listening mode, the port specification should
+be elided.
+
+\*\* The default CCI config uses `/tmp/cci/sm/\<hostname\>`. This is not
+configurable on a per-endpoint basis. When in doubt, use `HG_Addr_to_string`.
+
+\*\*\* MPI static mode requires all mercury processes to be started in the same
+mpirun invocation.
 
 ## RPC Layer
 
