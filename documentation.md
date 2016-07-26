@@ -593,8 +593,8 @@ rpc_open_id_g = MERCURY_REGISTER(hg_class, "rpc_open", rpc_open_in_t, rpc_open_o
 
 ## See also
 <ul>
-  {% for post in site.categories.documentation  reversed %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% for post in site.categories.documentation reversed %}
+    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
   {% endfor %}
   <li><a href="http://dx.doi.org/10.1109/CLUSTER.2013.6702617">Cluster 2013 paper</a></li>
   <li><a href="{{ site.baseurl }}/doxygen/index.html">Doxygen documentation</a></li>
