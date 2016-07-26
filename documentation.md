@@ -147,23 +147,20 @@ are used internally. There should not be any need for using them directly.
   point-to-point messaging.
 
 Below is a table summarizing the protocols and expected format for each plugin
-([] means optional).
+([ ] means optional).
 
-plugin | protocol             | initialization format*                             |  lookup format
------- | --------             | ---------------------                              |  -------------
-bmi    | tcp                  | "bmi+tcp://\<port\>"                               | "\[bmi+\]tcp://\<hostname\>:\<port\>"
-cci    | tcp, verbs, gni      | "cci+\<protocol\>\[://\<port\>\]"                  | "\[cci+\]\<protocol\>://\<hostname\>:\<port\>"
-cci    | sm                   | "cci+sm\[://\<32-bit int id\>/\<32-bit int id\>\]" | "\[cci+\]sm://\<cci shmem path\*\*\>/\<32-bit int id\>/\<32-bit int id\>"
-mpi    | dynamic, static\*\*\*    | "mpi+\<protocol\>"                             | "\[mpi+\]\<protocol\>://\<port string\>"
+plugin | protocol             | initialization format[*](#init_format)  |  lookup format
+------ | --------             | ---------------------          |  -------------
+bmi    | tcp                  | `bmi+tcp://<port>`             | `[bmi+]tcp://<hostname>:<port>`
+cci    | tcp, verbs, gni      | `cci+<protocol>[://<port>]`    | `[cci+]<protocol>://<hostname>:<port>`
+cci    | sm                   | `cci+sm[://<id>/<id>]`         | `[cci+]sm://<cci shmem path>/<id>/<id>`[**](#cci_config)
+mpi    | dynamic, static[***](#mpi_static)  | `mpi+<protocol>` | `[mpi+]<protocol>://<port>`
 
-\* When not being initialized in listening mode, the port specification should
-be elided.
+<a name="init_format">*</a> When not being initialized in listening mode, the port specification should be elided.
 
-\*\* The default CCI config uses `/tmp/cci/sm/\<hostname\>`. This is not
-configurable on a per-endpoint basis. When in doubt, use `HG_Addr_to_string`.
+<a name="cci_config">**</a> The default CCI config uses `/tmp/cci/sm/<hostname>`. This is not configurable on a per-endpoint basis. When in doubt, use `HG_Addr_to_string()`. `<id>` is a 32-bit integer.
 
-\*\*\* MPI static mode requires all mercury processes to be started in the same
-mpirun invocation.
+<a name="mpi_static">***</a> MPI static mode requires all mercury processes to be started in the same mpirun invocation.
 
 ## RPC Layer
 
