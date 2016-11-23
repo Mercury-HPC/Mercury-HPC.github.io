@@ -25,11 +25,17 @@ thousands of clients.
 
 ## Collaborators
 
-<div class="footer-col  footer-col-1">
-  <img height="70px" src="/assets/anl_logo.png" alt="ANL Logo" />
-</div>
-
-<div class="footer-col  footer-col-1">
-  <img height="70px" src="/assets/hdf_logo.svg" alt="HDF Logo" />
-</div>
+<pre style="border: 0; padding: 0; overflow-x: visible;">
+<table><colgroup><col style="width: 33%" /><col style="width: 33%" /><col style="width: 33%" /></colgroup><tbody><tr>
+<td>
+<figure><img width="80%" src="/assets/anl_logo.png" alt="ANL Logo" /></figure>
+</td>
+<td>
+<figure><img width="60%" src="/assets/intel_logo.svg" alt="Intel Logo" /></figure>
+</td>
+<td>
+<figure><img width="100%" src="/assets/hdf_logo.svg" alt="HDF Logo" /></figure>
+</td>
+</tr></tbody></table>
+</pre>
 
