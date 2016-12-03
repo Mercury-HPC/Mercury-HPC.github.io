@@ -7,30 +7,30 @@ categories: documentation
 
 Mchecksum is a library created in the context of Mercury for checksumming RPC
 headers as well as RPC function arguments. In Mercury, checksums are not computed for
-bulk data transfers and it is left upon the user to decide.
-However, because mchecksum is a separate library, it can also be used by applications to
-verify data integrity. Mchecksum provides
-a simple interface and uses a system of plugins to provide various hash methods
-as well as abstracting the ckecksum that is to be computed.
+bulk data transfers and it is left upon the user to decide whether to verify
+transfers or not. Because mchecksum is a separate library, it can be
+independently used by applications to verify data integrity. Mchecksum provides
+a simple interface and uses a system of plugins to abstract and provide various
+hash methods.
 
 ## Interface
 
 A checksum object is created using the `mchecksum_init()` function with a
-valid hash method (see the [available plugins](#available-plugins) section
+valid hash method (see the [available plugins](#available-plugins) section for
 a list of plugins and the `hash_method` format).
 
 {% highlight C %}
 int mchecksum_init(const char *hash_method, mchecksum_object_t *checksum);
 {% endhighlight %}
 
-The checksum a destroy with a call to `mchecksum_destroy()`.
+The checksum object is destroyed with a call to `mchecksum_destroy()`.
 
 {% highlight C %}
 int mchecksum_destroy(mchecksum_object_t checksum);
 {% endhighlight %}
 
-The checksum can be reset with `mchecksum_reset()` to prevent an extra allocation
-when the checksum needs to be re-used.
+The checksum can be reset with `mchecksum_reset()`, which prevents an extra
+allocation when the checksum needs to be re-used.
 
 {% highlight C %}
 int mchecksum_reset(mchecksum_object_t checksum);
@@ -44,9 +44,9 @@ size_t mchecksum_get_size(mchecksum_object_t checksum);
 
 The computed checksum hash can be retrieved with a call to `mchecksum_get()`.
 If `MCHECKSUM_FINALIZE` is passed, the checksum is finalized and no more data
-can be added to that checksum, the only valid call to follow is either
+can be added to that checksum, the only valid calls to follow are either
 `mchecksum_reset()` or `mchecksum_destroy()`. If `MCHECKSUM_NOFINALIZE` is passed,
-more data can be added to this checksum later.
+more data can be later added to this checksum.
 
 {% highlight C %}
 int mchecksum_get(mchecksum_object_t checksum, void *buf, size_t size, int finalize);
@@ -64,7 +64,8 @@ int mchecksum_update(mchecksum_object_t checksum, const void *data, size_t size)
 ## Available Plugins
 
 Below is a list of the currently available plugins as well as the corresponding
-initialization string format that is passed to `mchecksum_init()`. Note that
+initialization string that must be passed to the `mchecksum_init()` call.
+Note that
 CRC32 and ADLER32 are available through the [ZLIB](http://www.zlib.net/) library and CRC32C is available
 with and without SSE4.2 optimization.
 
@@ -78,7 +79,7 @@ ADLER32| `adler32`
 
 ## Performance Comparison
 
-Below is a performance comparison of the various hash methods.
+Below is a performance comparison of the hash methods defined through mchecksum.
 
 <figure>
   <img src="/assets/mchecksum.svg" alt="mchecksum performance comparison" width="90%">
