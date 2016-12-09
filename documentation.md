@@ -151,8 +151,8 @@ Below is a table summarizing the protocols and expected format for each plugin
 
 plugin | protocol             | initialization format[*](#init_format)  |  lookup format
 ------ | --------             | ---------------------          |  -------------
-bmi    | tcp                  | `bmi+tcp://<port>`             | `[bmi+]tcp://<hostname>:<port>`
-cci    | tcp, verbs, gni      | `cci+<protocol>[://<port>]`    | `[cci+]<protocol>://<hostname>:<port>`
+bmi    | tcp                  | `bmi+tcp[://<hostname>:<port>]`| `[bmi+]tcp://<hostname>:<port>`
+cci    | tcp, verbs, gni      | `cci+<protocol>[://<hostname>:<port>]`    | `[cci+]<protocol>://<hostname>:<port>`
 cci    | sm                   | `cci+sm[://<id>/<id>]`         | `[cci+]sm://<cci shmem path>/<id>/<id>`[**](#cci_config)
 mpi    | dynamic, static[***](#mpi_static)  | `mpi+<protocol>` | `[mpi+]<protocol>://<port>`
 
