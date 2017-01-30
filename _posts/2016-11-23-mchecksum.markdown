@@ -68,6 +68,9 @@ initialization string that must be passed to the `mchecksum_init()` call.
 Note that
 CRC32 and ADLER32 are available through the [ZLIB](http://www.zlib.net/) library and CRC32C is available
 with and without SSE4.2 optimization.
+When using the [ISA-L](https://github.com/01org/isa-l) library, improved
+performance can be achieved for CRC16 and CRC32C by using the `PCLMULQDQ` CPU
+instruction (when supported).
 
 Plugin | Initialization Format
 ------ | ---------------------

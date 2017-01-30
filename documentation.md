@@ -4,7 +4,7 @@ title: Documentation
 permalink: /documentation/
 ---
 
-Documentation reflects Mercury's API as of the upcoming v0.9.0 and can be used
+Documentation reflects Mercury's API as of v0.9.0 and can be used
 as an introduction to the Mercury library. Please look at the
 [see also](#see-also) section for additional documentation.
 
@@ -44,11 +44,11 @@ mechanism.
 
 The _network abstraction_ (NA) layer is internally used by both the RPC layer
 and the bulk layer (it is therefore not expected to be directly used by
-a regular mercury user, who may jump to the [RPC layer](#rpc-layer) section).
+a regular mercury user, who may directly jump to the [RPC layer](#rpc-layer) section).
 It provides a minimal set of function calls that abstract the underlying network
 fabric and that can be used to provide:
-target address lookup, point-to-point messaging with both unexpected and
-expected messaging, remote memory access, progress and cancellation.
+*target address lookup*, *point-to-point messaging* with both unexpected and
+expected messaging, *remote memory access*, *progress* and *cancellation*.
 The API is non-blocking and uses a callback mechanism
 so that upper layers can provide asynchronous execution more easily: when progress
 is made (either internally or after a call to `NA_Progress()`) and an operation
@@ -137,14 +137,20 @@ are used internally. There should not be any need for using them directly.
   other protocols are not supported. Plugin is stable but it may
   not perform as well as other plugins. Remote memory access is emulated on top
   of point-to-point messaging.
-* _CCI_: flexible connection and disconnection. Provides support for TCP, UDP,
-  verbs, uGNI and shared memory. Plugin shows best performance but is more
-  experimental.
 * _MPI_: static connection and disconnection, although connection can be
   established using either `MPI_Comm_split()` or `MPI_Comm_connect()`. Plugin
   provides relatively good performance depending on the underlying transport
   used by the MPI implementation. Remote memory access is emulated on top of
   point-to-point messaging.
+* _SM_: shared-memory plugin. Plugin is stable and shows good performance for
+  local node communication. Remote memory access is done through
+  cross-memory attach ([CMA][cma]) on Linux. See this
+  [page]({% post_url 2017-01-30-shared-memory %}) for design details
+  about that plugin (Transparent usage of this plugin has not been implemented yet).
+* _CCI_: flexible connection and disconnection. Provides support for TCP, UDP,
+  verbs, uGNI and shared memory. Plugin shows good performance and supports
+  InfiniBand as well as Cray<sup>®</sup> Gemini/Aries interconnect but is more
+  experimental.
 
 Below is a table summarizing the protocols and expected format for each plugin
 ([ ] means optional).
@@ -152,15 +158,19 @@ Below is a table summarizing the protocols and expected format for each plugin
 plugin | protocol             | initialization format[*](#init_format)  |  lookup format
 ------ | --------             | ---------------------          |  -------------
 bmi    | tcp                  | `bmi+tcp[://<hostname>:<port>]`| `[bmi+]tcp://<hostname>:<port>`
-cci    | tcp, verbs, gni      | `cci+<protocol>[://<hostname>:<port>]`    | `[cci+]<protocol>://<hostname>:<port>`
-cci    | sm                   | `cci+sm[://<id>/<id>]`         | `[cci+]sm://<cci shmem path>/<id>/<id>`[**](#cci_config)
-mpi    | dynamic, static[***](#mpi_static)  | `mpi+<protocol>` | `[mpi+]<protocol>://<port>`
+mpi    | dynamic, static[**](#mpi_static)  | `mpi+<protocol>` | `[mpi+]<protocol>://<port>`
+na     | sm                   | `na+sm[://<PID>/<ID>]`         | `[na+]sm://<PID>/<ID>`
+cci    | tcp, verbs, gni <br/> sm | `cci+<protocol>[://<hostname>:<port>]` <br/> `cci+sm[://<PID>/<ID>]` | `[cci+]<protocol>://<hostname>:<port>` <br/> `[cci+]sm://<cci shmem path>/<PID>/<ID>`[***](#cci_config)
 
-<a name="init_format">*</a> When not being initialized in listening mode, the port specification should be elided.
+<a name="init_format">*</a> When not being initialized in listening mode, the
+port specification should be elided.
 
-<a name="cci_config">**</a> The default CCI config uses `/tmp/cci/sm/<hostname>`. This is not configurable on a per-endpoint basis. When in doubt, use `HG_Addr_to_string()`. `<id>` is a 32-bit integer.
+<a name="mpi_static">**</a> MPI static mode requires all mercury processes to
+be started in the same mpirun invocation.
 
-<a name="mpi_static">***</a> MPI static mode requires all mercury processes to be started in the same mpirun invocation.
+<a name="cci_config">***</a> The default CCI config uses `/tmp/cci/sm/<hostname>`.
+This is not configurable on a per-endpoint basis. When in doubt, use
+`HG_Addr_to_string() or NA_Addr_to_string()`. `<ID>` is a 32-bit integer.
 
 ## RPC Layer
 
@@ -171,7 +181,7 @@ and triggers a callback associated to that operation; and a higher level RPC
 layer, which includes serialization and deserialization of function arguments.
 
 Every RPC call results in the serialization of function parameters into a
-memory buffer (its size generally being limited to one kilobyte, depending on
+memory buffer (its size generally being limited to a couple of kilobytes, depending on
 the interconnect). This buffer is then sent to the target using the network
 abstraction layer interface. One of the key requirements is to limit memory
 copies at any stage of the transfer, especially when transferring large amounts
@@ -192,7 +202,7 @@ exposed to the user.
 ### Interface
 
 Two choices are offered to start using this layer, either by passing
-an existing an NA class and an NA context (created by the routines presented
+an existing NA class and an NA context (created by the routines presented
 in the [network abstraction layer](#network-abstraction-layer) section):
 
 {% highlight C %}
@@ -227,24 +237,34 @@ It can then be destroyed using:
 hg_return_t HG_Context_destroy(hg_context_t *context);
 {% endhighlight %}
 
-Before sending an RPC, the HG class needs a way of identifying it so that a
+Before an RPC can be sent, the HG class needs a way of identifying it so that a
 callback corresponding to that RPC can be executed on the target. Additionally,
 the functions to serialize and deserialize the function arguments associated
-to that RPC must be provided. This is done through the `HG_Register()` function.
+to that RPC must be provided. This is done through the `HG_Register_name()` function.
 Note that this step can be simplified by using the
 [high-level RPC layer](#high-level-rpc-layer). Registration must be done on
 both the origin and the target with the same `func_name` identifier.
+Alternatively `HG_Register()` can be used to pass a user-defined unique
+identifier and avoid internal hashing of the provided function name.
 
 {% highlight C %}
 typedef hg_return_t (*hg_proc_cb_t)(hg_proc_t proc, void *data);
 typedef hg_return_t (*hg_rpc_cb_t)(hg_handle_t handle);
 
-hg_id_t HG_Register(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in_proc_cb, hg_proc_cb_t out_proc_cb, hg_rpc_cb_t rpc_cb);
+hg_id_t HG_Register_name(hg_class_t *hg_class, const char *func_name, hg_proc_cb_t in_proc_cb, hg_proc_cb_t out_proc_cb, hg_rpc_cb_t rpc_cb);
+{% endhighlight %}
+
+In the case where an RPC does not require a response, one can indicate that
+no response is expected (and therefore avoid waiting for a message to be sent
+back) by using the following call (on an already registered RPC):
+
+{% highlight C %}
+hg_return_t HG_Registered_disable_response(hg_class_t *hg_class, hg_id_t id, hg_bool_t disable);
 {% endhighlight %}
 
 As mentioned previously, there is no distinction between client and server since
 it may be desirable for a client to also act as a server for other processes.
-Therefore the interface only use the distinction of _origin_ and _target_.
+Therefore the interface only uses the distinction of _origin_ and _target_.
 
 #### Origin
 
@@ -260,7 +280,8 @@ hg_return_t HG_Addr_lookup(hg_context_t *context, hg_cb_t callback, void *arg, c
 This function takes a user callback. `HG_Progress()` and `HG_Trigger()` need to
 be called in this case and the resulting address can be retrieved when the user
 callback is executed. Connection to the target may occur at this time, though that
-behavior is left upon the NA plugin implementation.
+behavior is left upon the NA plugin implementation and protocol (which may or
+may not be connectionless).
 All addresses must then be freed using:
 
 {% highlight C %}
@@ -312,7 +333,9 @@ hg_return_t HG_Free_output(hg_handle_t handle, void *out_struct);
 {% endhighlight %}
 
 To be safe, it is therefore recommended to make a copy of the results before
-calling `HG_Free_output()`.
+calling `HG_Free_output()`. Note that in the case of an RPC with no response,
+completion occurs after the RPC has been successfully sent (i.e., there is
+no output to retrieve).
 
 #### Target
 
@@ -350,9 +373,11 @@ hg_return_t HG_Respond(hg_handle_t handle, hg_cb_t callback, void *arg, void *ou
 {% endhighlight %}
 
 This call is also non-blocking. When it completes, the associated callback is
-placed onto a completion queue. It can then be triggered after a call to `HG_Trigger()`.
+placed onto a completion queue. It can then be triggered after a call to
+`HG_Trigger()`. Note that in the case of an RPC with no response, calling
+`HG_Respond()` will return an error.
 
-#### Progress
+#### Progress and Cancellation
 
 Mercury uses a callback model. Callbacks are passed to non-blocking functions
 and are pushed to the context's completion queue when the operation completes.
@@ -373,11 +398,22 @@ hg_return_t HG_Trigger(hg_class_t *hg_class, hg_context_t *context, unsigned int
 In some cases, one may want to call `HG_Progress()` then `HG_Trigger()` or have
 them execute in parallel by using separate threads.
 
+Note also that in cases where it is desirable to cancel an HG operation,
+one can call `HG_Cancel()` on a HG handle to cancel an on-going
+`HG_Forward()` or `HG_Respond()` operation. Please refer to this
+[page]({% post_url 2016-07-26-cancellation %}) for additional details
+regarding cancellation of operations.
+
+{% highlight C %}
+hg_return_t HG_Cancel(hg_handle_t handle);
+{% endhighlight %}
+
 ## Bulk Layer
 
 In addition to the previous layer, some RPCs may require the transfer of larger
-amounts of data. For these RPCs, the _bulk layer_ can be used. It is built on top of
-the RMA protocol defined in the network abstraction layer.
+amounts of data. For these RPCs, the _bulk layer_ can be used. It is built on
+top of the RMA protocol defined in the network abstraction layer and prevents
+intermediate memory copies.
 
 The origin process exposes a memory region to the target by creating a bulk
 descriptor (which contains virtual memory address information, size of the
@@ -389,6 +425,13 @@ the input parameters, it can deserialize the bulk descriptor, get the size of
 the memory buffer that has to be transferred, and initiate the transfer.
 Only the target initiates one-sided transfers so that it can, as well as
 controlling the data flow, protect its memory from concurrent accesses.
+
+As no explicit ack message is sent on transfer completion, the origin process
+can only assume that accesses to its local memory are completed once it
+receives the RPC response from the target. Therefore, in the case of an RPC
+with no response, extreme care should be taken when initiating a bulk transfer
+by ensuring that the origin gets notified when its exposed memory can be safely
+released/accessed.
 
 ### Interface
 
@@ -510,7 +553,7 @@ In some cases, however, the argument types are not known by Mercury, which is
 the case of the previous example with the `rpc_handle_t` type. For these cases,
 another macro, called `MERCURY_GEN_STRUCT_PROC`, can be used. It defines a
 serialization function for an existing struct or type---this assumes that the
-type can be mapped to already existing types, if not, users can create their
+type can be mapped to already existing types; if not, users can create their
 own proc function and use the `hg_proc_raw` routine that takes a stream of bytes.
 
 {% highlight C %}
@@ -599,4 +642,6 @@ rpc_open_id_g = MERCURY_REGISTER(hg_class, "rpc_open", rpc_open_in_t, rpc_open_o
   <li><a href="http://dx.doi.org/10.1109/CLUSTER.2013.6702617">Cluster 2013 paper</a></li>
   <li><a href="{{ site.baseurl }}/doxygen/index.html">Doxygen documentation</a></li>
 </ul>
+
+[cma]: https://lwn.net/Articles/405284/
 
