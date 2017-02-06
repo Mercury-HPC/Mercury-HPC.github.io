@@ -155,20 +155,24 @@ are used internally. There should not be any need for using them directly.
 Below is a table summarizing the protocols and expected format for each plugin
 ([ ] means optional).
 
-plugin | protocol             | initialization format[*](#init_format)  |  lookup format
+plugin | protocol             | initialization format[<sup>1</sup>](#init_format)  |  lookup format
 ------ | --------             | ---------------------          |  -------------
 bmi    | tcp                  | `bmi+tcp[://<hostname>:<port>]`| `[bmi+]tcp://<hostname>:<port>`
-mpi    | dynamic, static[**](#mpi_static)  | `mpi+<protocol>` | `[mpi+]<protocol>://<port>`
+mpi    | dynamic, static[<sup>2</sup>](#mpi_static)  | `mpi+<protocol>` | `[mpi+]<protocol>://<port>`
 na     | sm                   | `na+sm[://<PID>/<ID>]`         | `[na+]sm://<PID>/<ID>`
-cci    | tcp, verbs, gni <br/> sm | `cci+<protocol>[://<hostname>:<port>]` <br/> `cci+sm[://<PID>/<ID>]` | `[cci+]<protocol>://<hostname>:<port>` <br/> `[cci+]sm://<cci shmem path>/<PID>/<ID>`[***](#cci_config)
+cci    | tcp, verbs, gni <br/> sm | `cci+<protocol>[://<hostname>:<port>]`[<sup>3</sup>](#cci_config) <br/> `cci+sm[://<PID>/<ID>]` | `[cci+]<protocol>://<hostname>:<port>` <br/> `[cci+]sm://<cci shmem path>/<PID>/<ID>`[<sup>4</sup>](#cci_sm_config)
 
-<a name="init_format">*</a> When not being initialized in listening mode, the
+<a name="init_format"><sup>1</sup></a> When not being initialized in listening mode, the
 port specification should be elided.
 
-<a name="mpi_static">**</a> MPI static mode requires all mercury processes to
+<a name="mpi_static"><sup>2</sup></a> MPI static mode requires all mercury processes to
 be started in the same mpirun invocation.
 
-<a name="cci_config">***</a> The default CCI config uses `/tmp/cci/sm/<hostname>`.
+<a name="cci_config"><sup>3</sup></a> Note that CCI ignores for now the hostname that is passed. Instead please use a `cci.ini` file as well as the `CCI_CONFIG` environment
+variable to select the network interface to use. See the CCI `README` files for more
+details.
+
+<a name="cci_sm_config"><sup>4</sup></a> The default CCI config uses `/tmp/cci/sm/<hostname>`.
 This is not configurable on a per-endpoint basis. When in doubt, use
 `HG_Addr_to_string() or NA_Addr_to_string()`. `<ID>` is a 32-bit integer.
 
