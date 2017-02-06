@@ -136,7 +136,36 @@ CMake option.
 
 ## Performance
 
-TBD
+Below is a performance comparison of the shared-memory plugin when using both
+polling and busy waiting mechanisms. The first plot shows the RPC performance
+compared to existing plugins when using one single RPC in-flight:
+
+<figure>
+  <img src="/assets/shared-memory/rpc-1.svg" alt="1 RPC in-flight" width="80%">
+</figure>
+
+The second plot shows the RPC performance
+compared to existing plugins when using 16 RPCs in-flight:
+
+<figure>
+  <img src="/assets/shared-memory/rpc-16.svg" alt="16 RPCs in-flight" width="80%">
+</figure>
+
+The third plot shows the bulk transfer performance
+compared to existing plugins when doing a 16 MB contiguous transfer:
+
+<figure>
+  <img src="/assets/shared-memory/contiguous.svg" alt="Contiguous" width="80%">
+</figure>
+
+The fourth plot shows the bulk transfer performance
+compared to existing plugins when doing a 16 MB non-contiguous transfer of
+1024 pieces:
+
+<figure>
+  <img src="/assets/shared-memory/non-contiguous.svg" alt="Contiguous" width="80%">
+</figure>
+
 
 ## Conclusion and Future work
 Implementation of a first version of this shared memory plugin has been done and
