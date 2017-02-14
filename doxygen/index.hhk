@@ -5,8 +5,6 @@
 </OBJECT>
 <UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#a369266c24eacffb87046522897a570d5"><param name="Name" value="_GNU_SOURCE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a397683d7a6c4c6c1c0879de8e0b8fa9a"><param name="Name" value="_TAILQ_ENTRY"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a9d932e6c433aff92a2c8239a658ea121"><param name="Name" value="_TAILQ_HEAD"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__info__recv__unexpected.html#a71db9e8f84c764236133f92090c5e587"><param name="Name" value="actual_buf_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info__lookup.html#a8daba68b9cc2c05e1a5bf163d99df8bc"><param name="Name" value="addr"></OBJECT>
   <UL>
@@ -26,6 +24,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info.html#a7b0e578502e505f16f72341fb6ce9140"><param name="Name" value="hg_cb_info"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__info.html#abf89cb673692ab2b37708f8fab28a5aa"><param name="Name" value="na_cb_info"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__thread__work.html#aae0451ea0670c3aae12b9895cf17ffe6"><param name="Name" value="args"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#aafc02513cea5bb1ee1a0ddb2b2f1904d"><param name="Name" value="callback"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#a16cfb48110cd73f9284b1dd415136cf5"><param name="Name" value="callback_info"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a212bed6b8ec43f8117838fa15157b20a"><param name="Name" value="cancel"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a32656f7bb203646f4b41ff3921a60869"><param name="Name" value="check_protocol"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#af9db78f35cabf525982d8440acc860c1"><param name="Name" value="class_name"></OBJECT>
@@ -59,12 +60,13 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__header__request.html#adf2c90337cb7d3795ff8fcbdc08e7bd0"><param name="Name" value="hg_header_request"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__header__response.html#a205c6627b72adf32e18da7a7590d1513"><param name="Name" value="hg_header_response"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#a7e29ccf4ca9f746c65a13e2b6d0903ba"><param name="Name" value="func_map"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__thread__work.html#a3e7e37a0e6bcfa52d8726eb6bda08de8"><param name="Name" value="func"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structmchecksum__class.html#a4ec6f6839300ab7106a137c0f1e87096"><param name="Name" value="get"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structmchecksum__class.html#a4ec6f6839300ab7106a137c0f1e87096"><param name="Name" value="mchecksum_class"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a93c136bd57a31f002a18ce90a24bc8e8"><param name="Name" value="na_class"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a01d1e886552f6e58126c7ba7305679ad"><param name="Name" value="get_poll_fd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structmchecksum__class.html#ada5a91ef5e0e3da7312e1767cfddd51f"><param name="Name" value="get_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info__forward.html#a38621b54182ea8eef339045e2294fbc4"><param name="Name" value="handle"></OBJECT>
   <UL>
@@ -79,13 +81,25 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a02a83635f7dd9a71b6d4d7ddb032f883"><param name="Name" value="HG_Addr_lookup"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a4aa92b8a72bcf7a1465561ed07055243"><param name="Name" value="HG_ADDR_NULL"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a92502142b44c7107f460feef6148fe93"><param name="Name" value="HG_Addr_self"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a3fb4d796458103fbc306c24b150aea07"><param name="Name" value="hg_addr_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a6d3e6cbcdc462cf6223709f7ecfb3ff1"><param name="Name" value="hg_addr_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ac6d6e0f9abd6d026e70e3473a612da45"><param name="Name" value="HG_Addr_to_string"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a233e28e55ee0e5eec66f8b703569a0e8"><param name="Name" value="hg_atomic_and32"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#ad45e089e4ade7397ce7e4450d80b300b"><param name="Name" value="hg_atomic_cas32"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a8d8c41d5d0a49de8d2fedbaeb5b603ef"><param name="Name" value="hg_atomic_cas64"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a204e0a11261259ea289e0134547088b4"><param name="Name" value="hg_atomic_decr32"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a1e3bbdc2538c22d70d2673b984b414f8"><param name="Name" value="hg_atomic_decr64"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a57321e03cb8ad36dab026be90baa6b91"><param name="Name" value="hg_atomic_fence"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#abc5c35a19ff9968f55298e4831dc691a"><param name="Name" value="hg_atomic_get32"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a3f3cd85b7a8082548b0c95d238bb27cd"><param name="Name" value="hg_atomic_get64"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a11d3ef817bdf3b9ccdeb0e5453a226c3"><param name="Name" value="hg_atomic_incr32"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a4bb1971105007610a57ec359f87e6751"><param name="Name" value="hg_atomic_incr64"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#aa6a5a48f1b46b13730fd6d49ce558f07"><param name="Name" value="hg_atomic_or32"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#ab005e1597120a093774962b070a1765a"><param name="Name" value="hg_atomic_queue_dequeue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#a1558ff96a97ad90698c2d12a9caa2d5e"><param name="Name" value="hg_atomic_queue_enqueue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#a95dc4f7316c30f3b564659adf07e5034"><param name="Name" value="hg_atomic_queue_init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a056b12b706aaf20025953afe40ded7d8"><param name="Name" value="hg_atomic_set32"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a77bab8388b5e097885467aa4e2bdbd90"><param name="Name" value="hg_atomic_set64"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a580c10fa10f68b49e7e2a0f9fbaa8c37"><param name="Name" value="hg_atomic_xor32"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__private_8h.html#aef1a85b93b1c6b80233b06a5f4921366a83f9dd6acd2dc4817e03256484a8578e"><param name="Name" value="HG_BULK"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__bulk_8h.html#a6d44a5f149f015a11259b97dae27ac2d"><param name="Name" value="HG_Bulk_access"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#abf780e996556564efcc9f356f59b2f39"><param name="Name" value="HG_BULK_BUF"></OBJECT>
@@ -111,7 +125,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#aee7af22a2f1248bd2a5fc13061ff9d60"><param name="Name" value="HG_BULK_READWRITE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#ad2ac1d0a32eb27abb7c47bf83a5115e8"><param name="Name" value="HG_BULK_REGISTER"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__bulk_8h.html#a33943def99b56b7195b69684e39cf4dc"><param name="Name" value="HG_Bulk_serialize"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a9c6a30105e34660e3417a00c7e852101"><param name="Name" value="hg_bulk_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812"><param name="Name" value="hg_bulk_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__bulk_8h.html#ac202f2259a982480e3e0cfc99daa9e02"><param name="Name" value="HG_Bulk_transfer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#a50d25118cd0cfc460a1dcbbada0856fb"><param name="Name" value="HG_BULK_TRANSFER"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2031319746c173de3d88694e8154b527"><param name="Name" value="HG_BULK_WRITE_ONLY"></OBJECT>
@@ -149,22 +163,17 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a1904bbd83ac601dc3b6994992292e69d"><param name="Name" value="hg_cb_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a06196787414e952a3385aafef936ac65"><param name="Name" value="hg_cb_type_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1bac22dc929a4200d56fd8271338bfc7cdd"><param name="Name" value="HG_CHECKSUM_ERROR"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html"><param name="Name" value="hg_class"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#a7e29ccf4ca9f746c65a13e2b6d0903ba"><param name="Name" value="func_map"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__info.html#a369944572490e8710adf1a6851eac8f6"><param name="Name" value="hg_info"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#ac9b21936a2688b977d3de7a04595587b"><param name="Name" value="na_class"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#aaef49c34a936a3205004adfe2923f304"><param name="Name" value="na_context"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#ade11e366257b364039e3eee94d17c384"><param name="Name" value="na_ext_init"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#aee3550c9617ddf21d71c62de734ad123"><param name="Name" value="request_max_tag"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#a5c52d94a21c883e98053c3a7bbe10845"><param name="Name" value="request_tag"></OBJECT>
-  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a48fe93cfebeb69686bb5ed85a4415171"><param name="Name" value="HG_CHECKSUM_MAX_SIZE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__info.html#a369944572490e8710adf1a6851eac8f6"><param name="Name" value="hg_class"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a72d8f9d1612da700e453615fd97fd384"><param name="Name" value="HG_CLASS_DEFAULT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a74feaaa076fd272232b78f8d6028c718"><param name="Name" value="HG_Class_get_input_eager_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ae6315d908949e87b4aa41bfc139a4d60"><param name="Name" value="HG_Class_get_name"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#afeb55d18acac76e9db55f06faee2de07"><param name="Name" value="HG_Class_get_output_eager_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a73d49843a7da836cdbfbb3cc62daa701"><param name="Name" value="HG_Class_get_protocol"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0005c35bfc1220783ac3e1bf1eb7e678"><param name="Name" value="hg_class_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html"><param name="Name" value="hg_completion_entry"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html#a340543f1c85c4a356caa7c5dd234fd07"><param name="Name" value="HG_QUEUE_ENTRY"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html#a5da124664591cdd8191c60ecb1869054"><param name="Name" value="op_id"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html#abf3d9fd388b92790e5a6f46e54431e1a"><param name="Name" value="op_type"></OBJECT>
   </UL>
@@ -180,7 +189,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ade95839e5ea81de105a0471274deb167"><param name="Name" value="HG_Core_addr_self"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a56a9f4bd3d301a27742b5e53e0ce5ff6"><param name="Name" value="HG_Core_addr_to_string"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#af97b814f0b9de2d0bacaf3af46d79359"><param name="Name" value="HG_Core_cancel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a00f57b4b1e9b3a23c1e3c3533374d76c"><param name="Name" value="HG_Core_class_get_input_eager_size"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ad65a986c86e5f23d75f07a1e121deb3f"><param name="Name" value="HG_Core_class_get_na"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aceb42f43d128a53b24fa6430168a8fbf"><param name="Name" value="HG_Core_class_get_name"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a5075501e988ba9d495003d411283f821"><param name="Name" value="HG_Core_class_get_output_eager_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aa2f83c2efaa4c84b5a8f622ef67c944f"><param name="Name" value="HG_Core_class_get_protocol"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a62910c80c92971e15e607b14e7db41d9"><param name="Name" value="HG_Core_context_create"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a50be40edf2cb1ee88e9da5d5174a58d7"><param name="Name" value="HG_Core_context_destroy"></OBJECT>
@@ -193,22 +205,29 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a7e714d556849f6b5afb843d0b4c460d2"><param name="Name" value="HG_Core_get_input"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a5347c28d17c45ce0b463f7078c5d6237"><param name="Name" value="HG_Core_get_output"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a76f6513c934759ff64ff327ad2abfc9d"><param name="Name" value="HG_Core_init"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a2e40873d851945dc0c2cec65aca96210"><param name="Name" value="HG_Core_init_na"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a6beeef14fb9ff3fd59578398b385f07a"><param name="Name" value="HG_Core_init_na"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ac211650e3980baa72b737488ebf06a5a"><param name="Name" value="HG_Core_progress"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a266f5e730b014ac27ea05e809ce0f67b"><param name="Name" value="HG_Core_ref_incr"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aaebe5630c224b192b7f40114e4dd7f51"><param name="Name" value="HG_Core_register"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ae11ac8828cc33cc87af7b6bbf3a5f6e8"><param name="Name" value="HG_Core_register_data"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ada1f168ca330bcd809a019cb23aeb673"><param name="Name" value="HG_Core_registered"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a64d424eea32582f3367c28826226c5b7"><param name="Name" value="HG_Core_registered_data"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aeebf92a204b5799271c0e49d5464c97d"><param name="Name" value="HG_Core_registered_disable_response"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#af0cc8b2a2593a20362c1e295c9ed42c5"><param name="Name" value="HG_Core_respond"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#af950978669f933b7fdcc518067c33561"><param name="Name" value="HG_Core_trigger"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#af3e8f73a5a9830b13e77448656be0d23"><param name="Name" value="hg_cpu_set_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af19f339d321cd7cfa47904191b62c73ea284fb5b608a5c8d89279c92462a8b3b3"><param name="Name" value="HG_CRC16"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af19f339d321cd7cfa47904191b62c73ea581da39e66f7218cd1f3fc220091ec11"><param name="Name" value="HG_CRC32"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af19f339d321cd7cfa47904191b62c73ea13cf118b2b76689f85a73a6c6d70e002"><param name="Name" value="HG_CRC64"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ac0577eddc73f36c5ed5228972d0125d0"><param name="Name" value="HG_Create"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44aa281d106ff8e87dc3527e9291c5b28fcd"><param name="Name" value="HG_DECODE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ae3fb23a033dbaed9bb02cf5f94e3ee8d"><param name="Name" value="HG_Destroy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44aae4656e02d1fc141f95501f5355733ccc"><param name="Name" value="HG_ENCODE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a856b9a07d1da6dc31b4277764b774caa"><param name="Name" value="HG_Error_to_string"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#a57c2da9f99b2898b110564065faf9900"><param name="Name" value="hg_event_create"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#afd374677485b86ba3ab80168982118bc"><param name="Name" value="hg_event_destroy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#a7e289231674f70a0cbb60a438ee27507"><param name="Name" value="hg_event_get"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#ada44d6460f3ea58e179b1b31e8da9b07"><param name="Name" value="hg_event_set"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a32ffacded7ef556c16313f7554db9594"><param name="Name" value="HG_Finalize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#abf379bf48a05af80461b34589a2cbdca"><param name="Name" value="HG_Forward"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44aa5ebbaebc8d331fbe6c0f89050ae96255"><param name="Name" value="HG_FREE"></OBJECT>
@@ -238,7 +257,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#a1c703b1c97bfd9fc0e3593b6c32319c5"><param name="Name" value="HG_GET_STRUCT_PARAM"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#a3e47526e1e5d0ec3a58c513ddb8abceb"><param name="Name" value="HG_GET_STRUCT_PARAMS"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a7726f901cab9638b080d4b9bdaf10ef8"><param name="Name" value="HG_HANDLE_NULL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#aca546b2eac0b9c17112f6cd55f6e602f"><param name="Name" value="hg_handle_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#aacf08af4368af10a0fb5f23cfd224614"><param name="Name" value="hg_handle_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hash__string_8h.html#a6fa716b93b325793b55adb9aada8a025"><param name="Name" value="hg_hash_string"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hash__table_8h.html#ae68c23541f5e86168ee73be13d7d6b38"><param name="Name" value="hg_hash_table_entry_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hash__table_8h.html#a14c229bfb2fc4cc0f3338f74a95ac23b"><param name="Name" value="hg_hash_table_equal_func_t"></OBJECT>
@@ -289,7 +308,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a61051f1d8c7c5f224bd365839e93a507"><param name="Name" value="HG_Hl_finalize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a9c00fbb2ddce908728624d8cfb6e5881"><param name="Name" value="HG_Hl_forward_wait"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a3383dfb919e7978dd9ec40f296db383f"><param name="Name" value="HG_Hl_init"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a54336d455c88925246062d56124431dc"><param name="Name" value="HG_Hl_init_na"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a97ea920e2f2d4af53661bb136c4b4e96"><param name="Name" value="HG_Hl_init_na"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2efc47df4b6329c0c7290001bf42f7e6"><param name="Name" value="hg_id_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a6e8c8d7058d40f491595962b16b54bd3"><param name="Name" value="HG_IDENTIFIER"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__info.html"><param name="Name" value="hg_info"></OBJECT>
@@ -300,28 +319,36 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__info.html#a7571f334df9f4c57450a334f72ddc358"><param name="Name" value="id"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a8d5c5000047da3db2c12f6196f687c4a"><param name="Name" value="HG_Init"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a5eabc4203cd9936e658d3eb0e740f9bd"><param name="Name" value="HG_Init_na"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#af495a5215a035a9be959026b3ca28771"><param name="Name" value="HG_Init_na"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1baee162a6c05d0682dcb2c525b48c0d04e"><param name="Name" value="HG_INVALID_PARAM"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a27ba5871f714804a58776491c56ed48b"><param name="Name" value="hg_list_data"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a74e977ae5db5b34c033823f022519a61"><param name="Name" value="hg_list_entry_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a5e980fcb00f847e795eb05c8b21282a3"><param name="Name" value="hg_list_equal_func_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a7e4321e8ab141c7a13106ca20176ae50"><param name="Name" value="hg_list_find_data"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a243577cc21210323a0715d81c1b03a9b"><param name="Name" value="hg_list_first"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aae9e2774fb5d2ff6536bd3306cc32b1d"><param name="Name" value="hg_list_free"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#af179821ac36e3dcc02608285b0b0b61f"><param name="Name" value="hg_list_insert_after"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#ad2d79a572851189370faa51d8bf62d07"><param name="Name" value="hg_list_insert_before"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#af451088899fc79a7a90d42376ffabea5"><param name="Name" value="hg_list_insert_head"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a25f66f05a36561e202a1ee5ee9cc9e80"><param name="Name" value="hg_list_is_empty"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a335b6fecb492f56c3ed45d58e853df8d"><param name="Name" value="hg_list_new"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#abcdd6710cea6675faf99a15e48258f2c"><param name="Name" value="hg_list_next"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a6412140f602d1502e1a0ee57c9a79be1"><param name="Name" value="HG_LIST_NULL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aa2b042b50ff87d6e0bbb077bb00cd14d"><param name="Name" value="hg_list_remove_data"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a8bb35010ee9f6f2de9c9a671ba283b7a"><param name="Name" value="hg_list_remove_entry"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a4b133b5079a1e4da853b778d3cb6964a"><param name="Name" value="hg_list_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a6b57237ef9728a7d2fe4d93b6445db03"><param name="Name" value="hg_list_value_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#a75bc6434427f0eaf73858e8c8588e397"><param name="Name" value="HG_LOG_DEBUG"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#aa68e938980066a56d8644ab63abde922"><param name="Name" value="HG_LOG_ERROR"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#ae44a1aacf10d471f0826271468a245dd"><param name="Name" value="HG_LOG_WARNING"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a94589d879381c6262c6070bbbd5445dc"><param name="Name" value="HG_LIST_ENTRY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a82603fde8b2ece647c0b52b2c5f53775"><param name="Name" value="HG_LIST_FIRST"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aaf601d6709563c1fb2808402da7a6a15"><param name="Name" value="HG_LIST_FOREACH"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aa47012396f12fa8e25c118265aad2ff9"><param name="Name" value="HG_LIST_HEAD"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aedfa714fb51863acd77258e3529b6a84"><param name="Name" value="HG_LIST_HEAD_DECL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#af7bd4c16e6874384093de14b5cb6c96e"><param name="Name" value="HG_LIST_HEAD_INIT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a78664afeb7465cb297a473421352c672"><param name="Name" value="HG_LIST_HEAD_INITIALIZER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#ad56edfd738d545de8dee2816eab30c14"><param name="Name" value="HG_LIST_INIT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a84ffd2643d3d0d450b2c6b74fc002780"><param name="Name" value="HG_LIST_INSERT_AFTER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a7a66b1bb3bf77e768342d37bdb5481ff"><param name="Name" value="HG_LIST_INSERT_BEFORE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aa8e6fd56becdfb0ce206d8f37de2a402"><param name="Name" value="HG_LIST_INSERT_HEAD"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aef71aaf244454cb7b71df14e924916c8"><param name="Name" value="HG_LIST_IS_EMPTY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a5b6d9bca76ad3bcbbef586867c4f1329"><param name="Name" value="HG_LIST_NEXT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a87e7960ba45477130ba9387e7631d46b"><param name="Name" value="HG_LIST_REMOVE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#ac3ddd7847000f1cf2a7ca15fad547a20"><param name="Name" value="HG_LOG_DEBUG"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#aa8a369f94cede33d6434e1191b39157e"><param name="Name" value="HG_LOG_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ab54cc3fcaa165aafeb2809ed1664ebd4"><param name="Name" value="hg_log_set_func"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ae0dc8ed6202917e2ed9c4405c098e7f0"><param name="Name" value="hg_log_set_stream_debug"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a40a524febc3de4cf2667362c9fce7c62"><param name="Name" value="hg_log_set_stream_error"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ab6989434e0ddca9c1ce5e4d8276328f3"><param name="Name" value="hg_log_set_stream_warning"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a72141b454b3b01e611ecab71c0b9709ea81bbc1ffe6a48c11659c65c43f70aa99"><param name="Name" value="HG_LOG_TYPE_DEBUG"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a72141b454b3b01e611ecab71c0b9709ea8565b65ab4b73927f3bd76f881180c54"><param name="Name" value="HG_LOG_TYPE_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a72141b454b3b01e611ecab71c0b9709eaf8cede266fc7d972777198f7c1d25f4c"><param name="Name" value="HG_LOG_TYPE_WARNING"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#a927f020d18f9dd97223b6d2485141df2"><param name="Name" value="HG_LOG_WARNING"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ac857876896be1523c2079c5cf48be837"><param name="Name" value="hg_log_write"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a8b6a773471cf655d2a7e81e5b5c4f85b"><param name="Name" value="HG_LOG_WRITE_DEBUG"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ab4f65e8d40de9e146305de540ed0def8"><param name="Name" value="HG_LOG_WRITE_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#aeb3fd3b6e27d01ee8cad9047a1cdba29"><param name="Name" value="HG_LOG_WRITE_WARNING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af7bbe6aaaa33ae7d204580f163cf72ab"><param name="Name" value="HG_MAX_IDLE_TIME"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba4a784c083e600184eb42918e7d4e83e6"><param name="Name" value="HG_NA_ERROR"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1baac30bb26f2145c26f0a859bf89464361"><param name="Name" value="HG_NO_MATCH"></OBJECT>
@@ -329,16 +356,26 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba5796fd1b4b4637dfcd8c592cdd17ee6c"><param name="Name" value="HG_NOMEM_ERROR"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a9a6880fa648124dc951079786be6c8d7"><param name="Name" value="HG_OP_ID_IGNORE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a76ae448b23dd29e5f2cfed35fd0ad6ff"><param name="Name" value="HG_OP_ID_NULL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a1de1680602a6dbf234a637a008ca8c57"><param name="Name" value="hg_op_id_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a9bacf50ba781f43f7880ff205365778a"><param name="Name" value="hg_op_id_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1baa508d2f25e990b0475ea58846cf32019"><param name="Name" value="HG_OTHER_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#aa31fc6c6921725c6f2af63f2d8191ef5"><param name="Name" value="hg_poll_add"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a960c52003d4cfff26e6aa0e74f28f5ba"><param name="Name" value="hg_poll_cb_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a7d9dcc766804e32e4784ebd4f56590c1"><param name="Name" value="hg_poll_create"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a9c06ed7430aeb551a3bd0ba517bbfade"><param name="Name" value="hg_poll_destroy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#afe4fd2641f7f6b836819747c6f3fa998"><param name="Name" value="hg_poll_get_fd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#aa7234ca04b19e3dbb65153e574e2bc62"><param name="Name" value="hg_poll_remove"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a82a4d722e7637929fb1fae2c1d2d939e"><param name="Name" value="hg_poll_set_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a0685ed661e611da3001c99747a4d4fb0"><param name="Name" value="hg_poll_wait"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a753e9d063f18c7b459d5654e6f686627"><param name="Name" value="HG_POLLIN"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#af6eedc34a39074574e5a0e9bd418fd54"><param name="Name" value="HG_POLLOUT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a3804e494ed8493de4b80eb586a57a5f1"><param name="Name" value="hg_proc_buf_alloc"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a428ccf330a707d458fed13247c7e2967"><param name="Name" value="hg_proc_buf_free"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a76b5a0235f57d0f55501e8a8aa70f6eb"><param name="Name" value="hg_proc_buf_memcpy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a67f49f8d938cc3b1df4c7a1ba6ccb701"><param name="Name" value="hg_proc_buf_memcpy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#abdf6db27ea06522ea6a12e18e0bf5b9c"><param name="Name" value="hg_proc_cb_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6f593169a4e7ec0f27ffb05183007d25"><param name="Name" value="hg_proc_create"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a7da74701a3e772779b07975408b93ec7"><param name="Name" value="hg_proc_create"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a645e25b0aee48a4973ce45b3899ae3d1"><param name="Name" value="hg_proc_create_set"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a75948c706e17dde7443071f5db07ab2d"><param name="Name" value="hg_proc_flush"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a617fbd9dac39f86d3d8afcb2cbd46187"><param name="Name" value="hg_proc_free"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a1cf9716e133dbb4374012f8a6c25fd11"><param name="Name" value="hg_proc_get_buf_ptr"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a80abddcdab673cb05b5613f69df4cee6"><param name="Name" value="hg_proc_get_class"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ac19187217546265147fbfaaca37c0a53"><param name="Name" value="hg_proc_get_extra_buf"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a314cb23529006d1fc13668b51783f3a3"><param name="Name" value="hg_proc_get_extra_size"></OBJECT>
@@ -346,31 +383,35 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ab1c64bdb22e92ab2f63614ecf56e8426"><param name="Name" value="hg_proc_get_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6ccd2a8a3930fdf666974506148fd9dc"><param name="Name" value="hg_proc_get_size_left"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a09c6fd841915acb0393afc174cd36ca9"><param name="Name" value="hg_proc_get_size_used"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#ac2707f7bf52a3bd8807ef7c78a314253"><param name="Name" value="HG_PROC_HEADER_BULK_EXTRA"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a11117683fae254ba135c0a0cf74f0cfb"><param name="Name" value="HG_PROC_HEADER_INLINE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#af0468ae2b0f0b8140a55239b3fd3a793"><param name="Name" value="HG_PROC_HEADER_NO_RESPONSE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#adc6445d45edebfddf9b7a1261773eb6f"><param name="Name" value="hg_proc_header_request"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a0060deb64d202237c47d4104926975d5"><param name="Name" value="hg_proc_header_request_finalize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a8798668b62332e267c710f3a38523d2b"><param name="Name" value="hg_proc_header_request_get_size"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#afc83894de562cb2e1a609c97b2957d4a"><param name="Name" value="hg_proc_header_request_init"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a50fd598a717738d88764acf96506e179"><param name="Name" value="hg_proc_header_request_init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a915deb778908caeec8e63e866b221d6f"><param name="Name" value="hg_proc_header_request_verify"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a364a880b80e30124c71a7bc359fa9d16"><param name="Name" value="hg_proc_header_response"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a01e818878c6f2bb90788cadd5766285e"><param name="Name" value="hg_proc_header_response_finalize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#aff3f84fd8cb1a1bfed21afe5401e92b6"><param name="Name" value="hg_proc_header_response_get_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a9e091d80a4788ad35cf24e230976652f"><param name="Name" value="hg_proc_header_response_init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a919b90af082c5ce2ec2042e91494cf3b"><param name="Name" value="hg_proc_header_response_verify"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#aae026966f1666380e8edf7aa179881b2"><param name="Name" value="hg_proc_hg_bool_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#afc8b89fad315d70d74b272c5197e4c00"><param name="Name" value="hg_proc_hg_bulk_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#ace95026eb3061081eeab6d6e49d915be"><param name="Name" value="hg_proc_hg_const_string_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8bc1c9c703b6ac04ca0c68e9ccdf3b99"><param name="Name" value="hg_proc_hg_bulk_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#af4fddd8074051d0ee7eec27922b1d71a"><param name="Name" value="hg_proc_hg_const_string_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a0f5e8896a776fabefdd5c5426dc489af"><param name="Name" value="hg_proc_hg_id_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a7f3da56cc100d1a3ab5be0be9f15c951"><param name="Name" value="hg_proc_hg_int16_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a82ce829112268cc76e4463a50d9a46bd"><param name="Name" value="hg_proc_hg_int32_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8ec86f29d550a645da3b648f7458d256"><param name="Name" value="hg_proc_hg_int64_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a2d0be34c477ebc09bdfb0362467e3d6d"><param name="Name" value="hg_proc_hg_int8_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a09ffb9a2e311656c25ba2b8f1c367337"><param name="Name" value="hg_proc_hg_int16_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#adc626089fcb68fb4ef97d371ed05d895"><param name="Name" value="hg_proc_hg_int32_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ac145b84a74f9f3c960aed01ed95c72b9"><param name="Name" value="hg_proc_hg_int64_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a19dcead0ad7e373b427b0c20a1fe8c58"><param name="Name" value="hg_proc_hg_int8_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ac41cb095a4942a33dd7d90fd238bef07"><param name="Name" value="hg_proc_hg_ptr_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#abbfa5af70e046582ac8dd4c3cb5c9474"><param name="Name" value="hg_proc_hg_size_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#a8de11b8425f813e428efd65fef3dee69"><param name="Name" value="hg_proc_hg_string_object_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#ab0b4a90759cd422e9792c8dc77637512"><param name="Name" value="hg_proc_hg_string_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#adafce970d9ab9995a45b4728bfdeedd6"><param name="Name" value="hg_proc_hg_uint16_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a4539c9f7ba0e3225b3348a2ceb5a1e10"><param name="Name" value="hg_proc_hg_uint32_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a2fb97cf0f77c49c9a3e14ba79c380815"><param name="Name" value="hg_proc_hg_uint64_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#af24220a7557916a011a8bd5a2b0476bf"><param name="Name" value="hg_proc_hg_uint8_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#a015e72e20794ea59b882b8c70806586d"><param name="Name" value="hg_proc_hg_string_object_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#aebd22a9367a73dd241663a3dc033ae77"><param name="Name" value="hg_proc_hg_string_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#aa73411a6932b6c5dda36e4acdc995ee9"><param name="Name" value="hg_proc_hg_uint16_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a351e796f43edd5d4d556779036120ccb"><param name="Name" value="hg_proc_hg_uint32_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a2036c5e811f4d1958c53af1b86520284"><param name="Name" value="hg_proc_hg_uint64_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a5724018b5e48cfde8188b026aee67b38"><param name="Name" value="hg_proc_hg_uint8_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a054fb66168196ca340ebf2c4cbb797f2"><param name="Name" value="HG_PROC_INLINE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a400be8861f1211c9425bf983cf630fde"><param name="Name" value="hg_proc_int16_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#abb2256b04b6a30c89eeda6e2c0091e6d"><param name="Name" value="hg_proc_int32_t"></OBJECT>
@@ -378,12 +419,14 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a4725826d3be5b5a10c0b3dd7889dca0f"><param name="Name" value="hg_proc_int8_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6d35c13c497161ea454655d2ce342bad"><param name="Name" value="hg_proc_memcpy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a1671ed6f05dc05400bf4f92333674c51"><param name="Name" value="HG_PROC_NULL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a9cd7db1292247ea90cdac056659edd9e"><param name="Name" value="hg_proc_raw"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8541db7b7c8ab698a5b7774cb168a54c"><param name="Name" value="hg_proc_set_buf_ptr"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6a9686a3aff0cd187ccc8cfc4d4e94e8"><param name="Name" value="hg_proc_raw"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a76435fe31846fd54f97aca6d6f879d93"><param name="Name" value="hg_proc_reset"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a9ec79e2a5ba3c2d0ccbe2c15f297b6db"><param name="Name" value="hg_proc_restore_ptr"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#aad720b315153f23bbd7d4a95b85bc0fd"><param name="Name" value="hg_proc_save_ptr"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a041827c813425b536399242659ad4d21"><param name="Name" value="hg_proc_set_extra_buf_is_mine"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a017c3d477d4af8f778e876e9922fd180"><param name="Name" value="hg_proc_set_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#a0959f1e0623a5dae1ddd8a854c819611"><param name="Name" value="HG_PROC_STRING_INLINE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a3b6b4b6542f8be50787a450434578c37"><param name="Name" value="hg_proc_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a84fa83f9e32feba27f54627b9f897e1e"><param name="Name" value="hg_proc_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8e0d997b9982f64b82655c0319e49429"><param name="Name" value="hg_proc_uint16_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a9b3e994c8799c092446907a1189f7243"><param name="Name" value="hg_proc_uint32_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ad1911364849b6eeda88ca1cfb85b4dcc"><param name="Name" value="hg_proc_uint64_t"></OBJECT>
@@ -392,22 +435,33 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a2bf2fe101198fbbe0df37fc5306d0639"><param name="Name" value="HG_Progress"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba4f336860a972faf59e8e1c4a4b2ccec6"><param name="Name" value="HG_PROTOCOL_ERROR"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a9583d8856401253f024fde0682760a97"><param name="Name" value="HG_PROTOCOL_VERSION"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a0cf2a9b2b40276e353eed5f2f86f48b8"><param name="Name" value="hg_queue_free"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a18d89aa5907bd09b6ec4e6beb472f77f"><param name="Name" value="hg_queue_is_empty"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a8d623467d5139b38b2d2a6f1b484ab1c"><param name="Name" value="hg_queue_new"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a9770092d36b6f24c7ef0699b76dd6a0c"><param name="Name" value="HG_QUEUE_NULL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a463eb1a6b1b54910a3c082561d41e8b2"><param name="Name" value="hg_queue_peek_head"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a74fa3d3d99b67dcd61b0260871a1fc19"><param name="Name" value="hg_queue_peek_tail"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ab5e5ed14f7fb5b3b22f0384164268a67"><param name="Name" value="hg_queue_pop_head"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ada3920eaecf393b1a38bddf671dfe307"><param name="Name" value="hg_queue_pop_tail"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a0fd9519d670037473546265acc205902"><param name="Name" value="hg_queue_push_head"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a079637628218e02c9091e416c5d44715"><param name="Name" value="hg_queue_push_tail"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#af341f4c38e837e8c1c7d28d334a71cbe"><param name="Name" value="hg_queue_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#aef5a559c1b0167a46c2120b77bd9e8d2"><param name="Name" value="hg_queue_value_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html#a340543f1c85c4a356caa7c5dd234fd07"><param name="Name" value="HG_QUEUE_ENTRY"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html#a340543f1c85c4a356caa7c5dd234fd07"><param name="Name" value="hg_completion_entry"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__thread__work.html#aca6ab2ab102b5df33ded9c36a8a264c0"><param name="Name" value="hg_thread_work"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ab482469a25ad0944bd59ad681b2deeb5"><param name="Name" value="mercury_queue.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#a27c01ad2f201ff07d0c9e917017d2495"><param name="Name" value="na_cb_completion_data"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a4ffaf25429c52845de7e897ccc4da91b"><param name="Name" value="HG_QUEUE_FIRST"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#aafe4c5543660abf1fa233b339584c345"><param name="Name" value="HG_QUEUE_FOREACH"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a571ecc70b361fd8585f9c7a00bef09a1"><param name="Name" value="HG_QUEUE_HEAD"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#abef5bfc5316d3904bf805c7da168510b"><param name="Name" value="HG_QUEUE_HEAD_DECL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a1ea455ed8e227a9c006af278b0ccb242"><param name="Name" value="HG_QUEUE_HEAD_INIT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#adba6b05a1da368bb4eaedb0ca485f391"><param name="Name" value="HG_QUEUE_HEAD_INITIALIZER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ad7b24fe927f6ff361e6004cb89ad5103"><param name="Name" value="HG_QUEUE_INIT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#a18d89aa5907bd09b6ec4e6beb472f77f"><param name="Name" value="hg_queue_is_empty"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ab2311132b7695fac5c8b8c04fc4a019e"><param name="Name" value="HG_QUEUE_IS_EMPTY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ae7997114ccc7fc1a3315d208ec3abafd"><param name="Name" value="HG_QUEUE_NEXT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#aaf19a5d7a8c8657d838249d7fc260a9c"><param name="Name" value="HG_QUEUE_POP_HEAD"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a4c26683b98d42961fc2db0e9e1b437aa"><param name="Name" value="HG_QUEUE_PUSH_TAIL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#af0a1a84461c5f2c24d348ee75fed027d"><param name="Name" value="HG_QUEUE_REMOVE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a3514afb5eb3996124fdc52c1f10c9c0b"><param name="Name" value="HG_Ref_incr"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a45674372caf61f467524e124301f5409"><param name="Name" value="HG_Register"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ae2d2fbe93d9ab69dd6e8d511681d622b"><param name="Name" value="HG_Register_data"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a2b36b379837f20c6cff36783a515feed"><param name="Name" value="HG_Register_name"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a7d4d9e40416a66f0c693e1903fecc304"><param name="Name" value="HG_Registered"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a94da447f0f468bb64f0459f2a66676ff"><param name="Name" value="HG_Registered_data"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a50e8af669092c486ffa6d34816e8bb46"><param name="Name" value="HG_Registered_disable_response"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#ad250741e0ad46c8f796c4f2537ae7153"><param name="Name" value="HG_REQUEST_CLASS_DEFAULT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a8f995c0b1ada12183f7971c89ef1a58e"><param name="Name" value="hg_request_class_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a47fe22b34b575c72d13d8c602e5eb1a1"><param name="Name" value="hg_request_complete"></OBJECT>
@@ -418,6 +472,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#aab9c5102a844759cbd4ccdb2fb35ab1e"><param name="Name" value="hg_request_get_data"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a3ca20810dc8fc7bebf851fcd14543efe"><param name="Name" value="hg_request_init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a120d6528f9ffb4df8bbff827eaa19299"><param name="Name" value="hg_request_progress_func_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a58c322c98c5adfadbeae3c369ff5c2fd"><param name="Name" value="hg_request_reset"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#aecfe8d32ee5ab07fc74f4ba8baacf85d"><param name="Name" value="hg_request_set_data"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a472f39cbebcf8b6573694eafce287661"><param name="Name" value="hg_request_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a242f71e211ede19597e36e7235fb79cd"><param name="Name" value="hg_request_trigger_func_t"></OBJECT>
@@ -430,6 +485,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#acd4e1cfa6c817259575a4d29688a7ab9"><param name="Name" value="HG_SET_STRUCT_PARAM"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#a05d006fa1108da307b6f38d4ef796a17"><param name="Name" value="HG_SET_STRUCT_PARAMS"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba702153577cde686dc426a89817e201ea"><param name="Name" value="HG_SIZE_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#adef3591d63572c2d8e6290bb269f5077"><param name="Name" value="HG_SIZE_MAX"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c"><param name="Name" value="hg_size_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__string__object.html"><param name="Name" value="hg_string_object"></OBJECT>
   <UL>
@@ -472,13 +528,20 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__mutex_8h.html#ae240030ba9db9afd0becd7665bc74c97"><param name="Name" value="hg_thread_mutex_unlock"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#a38575a02b7ad9ff114de1e7f50e1d11d"><param name="Name" value="hg_thread_pool_destroy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#a2b26ad1c68a52f18b7289e9e74f79c11"><param name="Name" value="hg_thread_pool_init"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#a7180a49fe5245886b7ad4cabc4daac79"><param name="Name" value="hg_thread_pool_post"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#ab0753a4ad75988fa8172dc21ee0ccd20"><param name="Name" value="hg_thread_pool_post"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b"><param name="Name" value="hg_thread_pool_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#ad4892d8c5ffcb1b8b21ce2fa2f819576"><param name="Name" value="hg_thread_ret_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#a71ee09fc7bb8a7aae1bfc66b5fae1ecd"><param name="Name" value="HG_THREAD_RETURN_TYPE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#a9ac396c51af5fad92b48dbb2242dfbfd"><param name="Name" value="hg_thread_setaffinity"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#a8ff857bbeaa608cdd396e40262f5812d"><param name="Name" value="hg_thread_setspecific"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#abc703946f52c13c2ad4784a2e4e8f36f"><param name="Name" value="hg_thread_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__thread__work.html"><param name="Name" value="hg_thread_work"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__thread__work.html#aae0451ea0670c3aae12b9895cf17ffe6"><param name="Name" value="args"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__thread__work.html#a3e7e37a0e6bcfa52d8726eb6bda08de8"><param name="Name" value="func"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__thread__work.html#aca6ab2ab102b5df33ded9c36a8a264c0"><param name="Name" value="HG_QUEUE_ENTRY"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#abca3c19ceaf1101dd3e7ce71f35641ce"><param name="Name" value="hg_thread_yield"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__time.html"><param name="Name" value="hg_time"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__time.html#aec7baab45a8185ef0cff8c327039ccc2"><param name="Name" value="tv_sec"></OBJECT>
@@ -495,7 +558,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__time_8h.html#aa7a85559fb92ca8af9404647f35fc06a"><param name="Name" value="hg_time_to_double"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1babc9d5f5eaff63159147f3f66791924d9"><param name="Name" value="HG_TIMEOUT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a9df3438040fd06f1c8908a4f5f454bde"><param name="Name" value="HG_Trigger"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html#a0402f96a9b66f2e134fa59b3632b9503"><param name="Name" value="HG_UTIL_ERROR_DEFAULT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html#a482fa6903bb047690d4cefd2d1a17a41"><param name="Name" value="HG_UTIL_LOG_DEBUG"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html#a0559813092fbb0b8ffc8b5baa30bbcb7"><param name="Name" value="HG_UTIL_LOG_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html#ad0acae4730ff0cef90500de4d7b0b6de"><param name="Name" value="HG_UTIL_LOG_WARNING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#aca73b248af7207e27e636dc7d430ed11"><param name="Name" value="HG_VERSION"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#adf4576bc51655bd2b9b9c94610c032d4"><param name="Name" value="HG_Version_get"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#acaf41a353d48332aa4cb8c5b4fd9fb8a"><param name="Name" value="host_name"></OBJECT>
@@ -512,18 +577,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a105121ed12694327fc21ea6551dab535"><param name="Name" value="initialize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__string__object.html#ac7bf135153ab7b21c42e20d43aa80c47"><param name="Name" value="is_const"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__string__object.html#aec26b377cf27f63752ab99dfc67db1b2"><param name="Name" value="is_owned"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#af9109b7ad99e88194ba4d963eb27d8de"><param name="Name" value="LIST_EMPTY"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ab2252d819fe7a435e86e3dd72579bcde"><param name="Name" value="LIST_ENTRY"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a09ef74ea05bd10f1fe9d495c42e1b6c1"><param name="Name" value="LIST_FIRST"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a6cd1536d05f15a56ebd2b4388eaf02ea"><param name="Name" value="LIST_FOREACH"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a12287bf14b46b1dcaa2952a36fcb129f"><param name="Name" value="LIST_HEAD"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a0b0bbf5fbaeab84585b027b824f45be6"><param name="Name" value="LIST_HEAD_INITIALIZER"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a304b5b7f7bdcba2793eaba9c890991c3"><param name="Name" value="LIST_INIT"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#aab62f53d4c94ab67bf7c4dc5c7670f64"><param name="Name" value="LIST_INSERT_AFTER"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a73d12127b84f84215eb03a4fb20feebb"><param name="Name" value="LIST_INSERT_BEFORE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ad80d8d658fdb46a9f7cc81cb2ae54885"><param name="Name" value="LIST_INSERT_HEAD"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a886a9f74bb2b3f9c5edcaf77f00d06d0"><param name="Name" value="LIST_NEXT"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a4f60a3fedbebc5ef6edded99062dd98d"><param name="Name" value="LIST_REMOVE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info__bulk.html#a25ac2cab56a0bb6c8f3206c7773266c1"><param name="Name" value="local_handle"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum_8h.html"><param name="Name" value="mchecksum.h"></OBJECT>
   <UL>
@@ -548,10 +601,12 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structmchecksum__class.html#acc4c458ee12aa1d6767adc010c053ff1"><param name="Name" value="reset"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structmchecksum__class.html#acc943309c60d3820f4602f37c950887f"><param name="Name" value="update"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc16_8h.html"><param name="Name" value="mchecksum_crc16.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc16_8h.html#a92313901602901f0ed873baf6667e8f8"><param name="Name" value="mchecksum_crc16.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc16_8h.html#a92313901602901f0ed873baf6667e8f8"><param name="Name" value="mchecksum_crc16_init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__zlib_8h.html#a35e2b4d84bb2f5daf7fc445855f8ccd2"><param name="Name" value="mchecksum_crc32_init"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc64_8h.html"><param name="Name" value="mchecksum_crc64.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc32c_8h.html#a6ef793a34ff2b8d20a7f3e78dc9d3390"><param name="Name" value="mchecksum_crc32c.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc32c_8h.html#a6ef793a34ff2b8d20a7f3e78dc9d3390"><param name="Name" value="mchecksum_crc32c_init"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc64_8h.html#ac3a41f3df50ce067f67eafafc1e1f3d2"><param name="Name" value="mchecksum_crc64.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__crc64_8h.html#ac3a41f3df50ce067f67eafafc1e1f3d2"><param name="Name" value="mchecksum_crc64_init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum_8h.html#a1f4e13d631e400fcdb39b021a7e76d36"><param name="Name" value="mchecksum_destroy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__error_8h.html"><param name="Name" value="mchecksum_error.h"></OBJECT>
@@ -572,7 +627,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum_8h.html#ac5e91d69e2cec2551e29906d73d3cc39"><param name="Name" value="MCHECKSUM_NOFINALIZE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum_8h.html#a9ddcb6f5f1bde1b931880347da0ab425"><param name="Name" value="MCHECKSUM_OBJECT_NULL"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum_8h.html#a4c920e7bb61215aeb589e42ba6f49c28"><param name="Name" value="mchecksum_object_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__private_8h.html"><param name="Name" value="mchecksum_private.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__private_8h.html#ad0b2f613313fbfe93bc740831d3b4932"><param name="Name" value="mchecksum_private.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum_8h.html#a273aee4e76527c20be6d9892e6223e09"><param name="Name" value="mchecksum_reset"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__error_8h.html#a254f2914699826a459de24989c82f859"><param name="Name" value="MCHECKSUM_SUCCESS"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mchecksum__error_8h.html#a1541b8588f932303c95a73cf61fe40b7"><param name="Name" value="MCHECKSUM_TRUE"></OBJECT>
@@ -601,7 +656,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a92502142b44c7107f460feef6148fe93"><param name="Name" value="HG_Addr_self"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ac6d6e0f9abd6d026e70e3473a612da45"><param name="Name" value="HG_Addr_to_string"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a57bf105275b209045336615ff8f0e342"><param name="Name" value="HG_Cancel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a74feaaa076fd272232b78f8d6028c718"><param name="Name" value="HG_Class_get_input_eager_size"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ae6315d908949e87b4aa41bfc139a4d60"><param name="Name" value="HG_Class_get_name"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#afeb55d18acac76e9db55f06faee2de07"><param name="Name" value="HG_Class_get_output_eager_size"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a73d49843a7da836cdbfbb3cc62daa701"><param name="Name" value="HG_Class_get_protocol"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a3db1f47732210cb7c6e2a582cb007e0f"><param name="Name" value="HG_Context_create"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a99e6ff9d5cc29c2cfe5c5995b5d84955"><param name="Name" value="HG_Context_destroy"></OBJECT>
@@ -617,23 +674,42 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#aa07ac577b23065e02220d064821e0fa0"><param name="Name" value="HG_Get_input"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a6f94be3a4b212cda28040a53308a7326"><param name="Name" value="HG_Get_output"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a8d5c5000047da3db2c12f6196f687c4a"><param name="Name" value="HG_Init"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a5eabc4203cd9936e658d3eb0e740f9bd"><param name="Name" value="HG_Init_na"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#af495a5215a035a9be959026b3ca28771"><param name="Name" value="HG_Init_na"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a2bf2fe101198fbbe0df37fc5306d0639"><param name="Name" value="HG_Progress"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a3514afb5eb3996124fdc52c1f10c9c0b"><param name="Name" value="HG_Ref_incr"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a45674372caf61f467524e124301f5409"><param name="Name" value="HG_Register"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#ae2d2fbe93d9ab69dd6e8d511681d622b"><param name="Name" value="HG_Register_data"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a2b36b379837f20c6cff36783a515feed"><param name="Name" value="HG_Register_name"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a7d4d9e40416a66f0c693e1903fecc304"><param name="Name" value="HG_Registered"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a94da447f0f468bb64f0459f2a66676ff"><param name="Name" value="HG_Registered_data"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a50e8af669092c486ffa6d34816e8bb46"><param name="Name" value="HG_Registered_disable_response"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a31d96eab1f06dd84b415787c79c50e5b"><param name="Name" value="HG_Respond"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#a9df3438040fd06f1c8908a4f5f454bde"><param name="Name" value="HG_Trigger"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury_8h.html#adf4576bc51655bd2b9b9c94610c032d4"><param name="Name" value="HG_Version_get"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html"><param name="Name" value="mercury_atomic.h"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a233e28e55ee0e5eec66f8b703569a0e8"><param name="Name" value="hg_atomic_and32"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#ad45e089e4ade7397ce7e4450d80b300b"><param name="Name" value="hg_atomic_cas32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a8d8c41d5d0a49de8d2fedbaeb5b603ef"><param name="Name" value="hg_atomic_cas64"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a204e0a11261259ea289e0134547088b4"><param name="Name" value="hg_atomic_decr32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a1e3bbdc2538c22d70d2673b984b414f8"><param name="Name" value="hg_atomic_decr64"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a57321e03cb8ad36dab026be90baa6b91"><param name="Name" value="hg_atomic_fence"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#abc5c35a19ff9968f55298e4831dc691a"><param name="Name" value="hg_atomic_get32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a3f3cd85b7a8082548b0c95d238bb27cd"><param name="Name" value="hg_atomic_get64"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a11d3ef817bdf3b9ccdeb0e5453a226c3"><param name="Name" value="hg_atomic_incr32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a4bb1971105007610a57ec359f87e6751"><param name="Name" value="hg_atomic_incr64"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#aa6a5a48f1b46b13730fd6d49ce558f07"><param name="Name" value="hg_atomic_or32"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a056b12b706aaf20025953afe40ded7d8"><param name="Name" value="hg_atomic_set32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a77bab8388b5e097885467aa4e2bdbd90"><param name="Name" value="hg_atomic_set64"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic_8h.html#a580c10fa10f68b49e7e2a0f9fbaa8c37"><param name="Name" value="hg_atomic_xor32"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html"><param name="Name" value="mercury_atomic_queue.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#ab005e1597120a093774962b070a1765a"><param name="Name" value="hg_atomic_queue_dequeue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#a1558ff96a97ad90698c2d12a9caa2d5e"><param name="Name" value="hg_atomic_queue_enqueue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#a95dc4f7316c30f3b564659adf07e5034"><param name="Name" value="hg_atomic_queue_init"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__atomic__queue_8h.html#a18d89aa5907bd09b6ec4e6beb472f77f"><param name="Name" value="hg_queue_is_empty"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__bulk_8h.html"><param name="Name" value="mercury_bulk.h"></OBJECT>
   <UL>
@@ -656,7 +732,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ade95839e5ea81de105a0471274deb167"><param name="Name" value="HG_Core_addr_self"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a56a9f4bd3d301a27742b5e53e0ce5ff6"><param name="Name" value="HG_Core_addr_to_string"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#af97b814f0b9de2d0bacaf3af46d79359"><param name="Name" value="HG_Core_cancel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a00f57b4b1e9b3a23c1e3c3533374d76c"><param name="Name" value="HG_Core_class_get_input_eager_size"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ad65a986c86e5f23d75f07a1e121deb3f"><param name="Name" value="HG_Core_class_get_na"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aceb42f43d128a53b24fa6430168a8fbf"><param name="Name" value="HG_Core_class_get_name"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a5075501e988ba9d495003d411283f821"><param name="Name" value="HG_Core_class_get_output_eager_size"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aa2f83c2efaa4c84b5a8f622ef67c944f"><param name="Name" value="HG_Core_class_get_protocol"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a62910c80c92971e15e607b14e7db41d9"><param name="Name" value="HG_Core_context_create"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a50be40edf2cb1ee88e9da5d5174a58d7"><param name="Name" value="HG_Core_context_destroy"></OBJECT>
@@ -669,27 +748,36 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a7e714d556849f6b5afb843d0b4c460d2"><param name="Name" value="HG_Core_get_input"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a5347c28d17c45ce0b463f7078c5d6237"><param name="Name" value="HG_Core_get_output"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a76f6513c934759ff64ff327ad2abfc9d"><param name="Name" value="HG_Core_init"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a2e40873d851945dc0c2cec65aca96210"><param name="Name" value="HG_Core_init_na"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a6beeef14fb9ff3fd59578398b385f07a"><param name="Name" value="HG_Core_init_na"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ac211650e3980baa72b737488ebf06a5a"><param name="Name" value="HG_Core_progress"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a266f5e730b014ac27ea05e809ce0f67b"><param name="Name" value="HG_Core_ref_incr"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aaebe5630c224b192b7f40114e4dd7f51"><param name="Name" value="HG_Core_register"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ae11ac8828cc33cc87af7b6bbf3a5f6e8"><param name="Name" value="HG_Core_register_data"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#ada1f168ca330bcd809a019cb23aeb673"><param name="Name" value="HG_Core_registered"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#a64d424eea32582f3367c28826226c5b7"><param name="Name" value="HG_Core_registered_data"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#aeebf92a204b5799271c0e49d5464c97d"><param name="Name" value="HG_Core_registered_disable_response"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#af0cc8b2a2593a20362c1e295c9ed42c5"><param name="Name" value="HG_Core_respond"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__core_8h.html#af950978669f933b7fdcc518067c33561"><param name="Name" value="HG_Core_trigger"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html"><param name="Name" value="mercury_error.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#a75bc6434427f0eaf73858e8c8588e397"><param name="Name" value="HG_LOG_DEBUG"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#aa68e938980066a56d8644ab63abde922"><param name="Name" value="HG_LOG_ERROR"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#ae44a1aacf10d471f0826271468a245dd"><param name="Name" value="HG_LOG_WARNING"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#ac3ddd7847000f1cf2a7ca15fad547a20"><param name="Name" value="HG_LOG_DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#aa8a369f94cede33d6434e1191b39157e"><param name="Name" value="HG_LOG_ERROR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__error_8h.html#a927f020d18f9dd97223b6d2485141df2"><param name="Name" value="HG_LOG_WARNING"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html"><param name="Name" value="mercury_event.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#a57c2da9f99b2898b110564065faf9900"><param name="Name" value="hg_event_create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#afd374677485b86ba3ab80168982118bc"><param name="Name" value="hg_event_destroy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#a7e289231674f70a0cbb60a438ee27507"><param name="Name" value="hg_event_get"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__event_8h.html#ada44d6460f3ea58e179b1b31e8da9b07"><param name="Name" value="hg_event_set"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#a60e7918ea0513cb4872a263f7ddd0058"><param name="Name" value="MERCURY_GEN_CALLBACK_STUB"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#afd5dfb5a42f74522bbc720e5f4d90dfd"><param name="Name" value="MERCURY_GEN_FALSE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#a38f5dbbbf5cbda333abb41d9fbbb11d0"><param name="Name" value="MERCURY_GEN_LOG_MESSAGE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#ad2f13b28061f94d2d2f409c830b5a624"><param name="Name" value="MERCURY_GEN_RPC_STUB"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html#ab779e08af0e25e6854c45e7d505a6d7a"><param name="Name" value="MERCURY_GEN_TRUE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hash__string_8h.html"><param name="Name" value="mercury_hash_string.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hash__string_8h.html#a6fa716b93b325793b55adb9aada8a025"><param name="Name" value="mercury_hash_string.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hash__table_8h.html"><param name="Name" value="mercury_hash_table.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hash__table_8h.html#ae68c23541f5e86168ee73be13d7d6b38"><param name="Name" value="hg_hash_table_entry_t"></OBJECT>
@@ -722,7 +810,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a61051f1d8c7c5f224bd365839e93a507"><param name="Name" value="HG_Hl_finalize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a9c00fbb2ddce908728624d8cfb6e5881"><param name="Name" value="HG_Hl_forward_wait"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a3383dfb919e7978dd9ec40f296db383f"><param name="Name" value="HG_Hl_init"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a54336d455c88925246062d56124431dc"><param name="Name" value="HG_Hl_init_na"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#a97ea920e2f2d4af53661bb136c4b4e96"><param name="Name" value="HG_Hl_init_na"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl_8h.html#ad250741e0ad46c8f796c4f2537ae7153"><param name="Name" value="HG_REQUEST_CLASS_DEFAULT"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__hl__macros_8h.html"><param name="Name" value="mercury_hl_macros.h"></OBJECT>
@@ -765,28 +853,52 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html"><param name="Name" value="mercury_list.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a27ba5871f714804a58776491c56ed48b"><param name="Name" value="hg_list_data"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a74e977ae5db5b34c033823f022519a61"><param name="Name" value="hg_list_entry_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a5e980fcb00f847e795eb05c8b21282a3"><param name="Name" value="hg_list_equal_func_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a7e4321e8ab141c7a13106ca20176ae50"><param name="Name" value="hg_list_find_data"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a243577cc21210323a0715d81c1b03a9b"><param name="Name" value="hg_list_first"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aae9e2774fb5d2ff6536bd3306cc32b1d"><param name="Name" value="hg_list_free"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#af179821ac36e3dcc02608285b0b0b61f"><param name="Name" value="hg_list_insert_after"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#ad2d79a572851189370faa51d8bf62d07"><param name="Name" value="hg_list_insert_before"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#af451088899fc79a7a90d42376ffabea5"><param name="Name" value="hg_list_insert_head"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a25f66f05a36561e202a1ee5ee9cc9e80"><param name="Name" value="hg_list_is_empty"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a335b6fecb492f56c3ed45d58e853df8d"><param name="Name" value="hg_list_new"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#abcdd6710cea6675faf99a15e48258f2c"><param name="Name" value="hg_list_next"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a6412140f602d1502e1a0ee57c9a79be1"><param name="Name" value="HG_LIST_NULL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aa2b042b50ff87d6e0bbb077bb00cd14d"><param name="Name" value="hg_list_remove_data"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a8bb35010ee9f6f2de9c9a671ba283b7a"><param name="Name" value="hg_list_remove_entry"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a4b133b5079a1e4da853b778d3cb6964a"><param name="Name" value="hg_list_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a6b57237ef9728a7d2fe4d93b6445db03"><param name="Name" value="hg_list_value_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a94589d879381c6262c6070bbbd5445dc"><param name="Name" value="HG_LIST_ENTRY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a82603fde8b2ece647c0b52b2c5f53775"><param name="Name" value="HG_LIST_FIRST"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aaf601d6709563c1fb2808402da7a6a15"><param name="Name" value="HG_LIST_FOREACH"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aa47012396f12fa8e25c118265aad2ff9"><param name="Name" value="HG_LIST_HEAD"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aedfa714fb51863acd77258e3529b6a84"><param name="Name" value="HG_LIST_HEAD_DECL"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#af7bd4c16e6874384093de14b5cb6c96e"><param name="Name" value="HG_LIST_HEAD_INIT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a78664afeb7465cb297a473421352c672"><param name="Name" value="HG_LIST_HEAD_INITIALIZER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#ad56edfd738d545de8dee2816eab30c14"><param name="Name" value="HG_LIST_INIT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a84ffd2643d3d0d450b2c6b74fc002780"><param name="Name" value="HG_LIST_INSERT_AFTER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a7a66b1bb3bf77e768342d37bdb5481ff"><param name="Name" value="HG_LIST_INSERT_BEFORE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aa8e6fd56becdfb0ce206d8f37de2a402"><param name="Name" value="HG_LIST_INSERT_HEAD"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#aef71aaf244454cb7b71df14e924916c8"><param name="Name" value="HG_LIST_IS_EMPTY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a5b6d9bca76ad3bcbbef586867c4f1329"><param name="Name" value="HG_LIST_NEXT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__list_8h.html#a87e7960ba45477130ba9387e7631d46b"><param name="Name" value="HG_LIST_REMOVE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html"><param name="Name" value="mercury_log.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ab54cc3fcaa165aafeb2809ed1664ebd4"><param name="Name" value="hg_log_set_func"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ae0dc8ed6202917e2ed9c4405c098e7f0"><param name="Name" value="hg_log_set_stream_debug"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a40a524febc3de4cf2667362c9fce7c62"><param name="Name" value="hg_log_set_stream_error"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ab6989434e0ddca9c1ce5e4d8276328f3"><param name="Name" value="hg_log_set_stream_warning"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a72141b454b3b01e611ecab71c0b9709ea81bbc1ffe6a48c11659c65c43f70aa99"><param name="Name" value="HG_LOG_TYPE_DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a72141b454b3b01e611ecab71c0b9709ea8565b65ab4b73927f3bd76f881180c54"><param name="Name" value="HG_LOG_TYPE_ERROR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a72141b454b3b01e611ecab71c0b9709eaf8cede266fc7d972777198f7c1d25f4c"><param name="Name" value="HG_LOG_TYPE_WARNING"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ac857876896be1523c2079c5cf48be837"><param name="Name" value="hg_log_write"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#a8b6a773471cf655d2a7e81e5b5c4f85b"><param name="Name" value="HG_LOG_WRITE_DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#ab4f65e8d40de9e146305de540ed0def8"><param name="Name" value="HG_LOG_WRITE_ERROR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__log_8h.html#aeb3fd3b6e27d01ee8cad9047a1cdba29"><param name="Name" value="HG_LOG_WRITE_WARNING"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__macros_8h.html"><param name="Name" value="mercury_macros.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__macros_8h.html#af5160d1e184be0d44e4eedaf10df3e31"><param name="Name" value="hg_proc_void"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__macros_8h.html#af7650362cfe9544f79e2b4f053bd0395"><param name="Name" value="MERCURY_REGISTER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html"><param name="Name" value="mercury_poll.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#aa31fc6c6921725c6f2af63f2d8191ef5"><param name="Name" value="hg_poll_add"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a960c52003d4cfff26e6aa0e74f28f5ba"><param name="Name" value="hg_poll_cb_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a7d9dcc766804e32e4784ebd4f56590c1"><param name="Name" value="hg_poll_create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a9c06ed7430aeb551a3bd0ba517bbfade"><param name="Name" value="hg_poll_destroy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#afe4fd2641f7f6b836819747c6f3fa998"><param name="Name" value="hg_poll_get_fd"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#aa7234ca04b19e3dbb65153e574e2bc62"><param name="Name" value="hg_poll_remove"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a82a4d722e7637929fb1fae2c1d2d939e"><param name="Name" value="hg_poll_set_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a0685ed661e611da3001c99747a4d4fb0"><param name="Name" value="hg_poll_wait"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#a753e9d063f18c7b459d5654e6f686627"><param name="Name" value="HG_POLLIN"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__poll_8h.html#af6eedc34a39074574e5a0e9bd418fd54"><param name="Name" value="HG_POLLOUT"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__private_8h.html"><param name="Name" value="mercury_private.h"></OBJECT>
   <UL>
@@ -796,13 +908,14 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html"><param name="Name" value="mercury_proc.h"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a48fe93cfebeb69686bb5ed85a4415171"><param name="Name" value="HG_CHECKSUM_MAX_SIZE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a3804e494ed8493de4b80eb586a57a5f1"><param name="Name" value="hg_proc_buf_alloc"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a428ccf330a707d458fed13247c7e2967"><param name="Name" value="hg_proc_buf_free"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a76b5a0235f57d0f55501e8a8aa70f6eb"><param name="Name" value="hg_proc_buf_memcpy"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6f593169a4e7ec0f27ffb05183007d25"><param name="Name" value="hg_proc_create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a67f49f8d938cc3b1df4c7a1ba6ccb701"><param name="Name" value="hg_proc_buf_memcpy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a7da74701a3e772779b07975408b93ec7"><param name="Name" value="hg_proc_create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a645e25b0aee48a4973ce45b3899ae3d1"><param name="Name" value="hg_proc_create_set"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a75948c706e17dde7443071f5db07ab2d"><param name="Name" value="hg_proc_flush"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a617fbd9dac39f86d3d8afcb2cbd46187"><param name="Name" value="hg_proc_free"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a1cf9716e133dbb4374012f8a6c25fd11"><param name="Name" value="hg_proc_get_buf_ptr"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a80abddcdab673cb05b5613f69df4cee6"><param name="Name" value="hg_proc_get_class"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ac19187217546265147fbfaaca37c0a53"><param name="Name" value="hg_proc_get_extra_buf"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a314cb23529006d1fc13668b51783f3a3"><param name="Name" value="hg_proc_get_extra_size"></OBJECT>
@@ -811,26 +924,28 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6ccd2a8a3930fdf666974506148fd9dc"><param name="Name" value="hg_proc_get_size_left"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a09c6fd841915acb0393afc174cd36ca9"><param name="Name" value="hg_proc_get_size_used"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#aae026966f1666380e8edf7aa179881b2"><param name="Name" value="hg_proc_hg_bool_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#afc8b89fad315d70d74b272c5197e4c00"><param name="Name" value="hg_proc_hg_bulk_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8bc1c9c703b6ac04ca0c68e9ccdf3b99"><param name="Name" value="hg_proc_hg_bulk_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a0f5e8896a776fabefdd5c5426dc489af"><param name="Name" value="hg_proc_hg_id_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a7f3da56cc100d1a3ab5be0be9f15c951"><param name="Name" value="hg_proc_hg_int16_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a82ce829112268cc76e4463a50d9a46bd"><param name="Name" value="hg_proc_hg_int32_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8ec86f29d550a645da3b648f7458d256"><param name="Name" value="hg_proc_hg_int64_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a2d0be34c477ebc09bdfb0362467e3d6d"><param name="Name" value="hg_proc_hg_int8_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a09ffb9a2e311656c25ba2b8f1c367337"><param name="Name" value="hg_proc_hg_int16_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#adc626089fcb68fb4ef97d371ed05d895"><param name="Name" value="hg_proc_hg_int32_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ac145b84a74f9f3c960aed01ed95c72b9"><param name="Name" value="hg_proc_hg_int64_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a19dcead0ad7e373b427b0c20a1fe8c58"><param name="Name" value="hg_proc_hg_int8_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#ac41cb095a4942a33dd7d90fd238bef07"><param name="Name" value="hg_proc_hg_ptr_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#abbfa5af70e046582ac8dd4c3cb5c9474"><param name="Name" value="hg_proc_hg_size_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#adafce970d9ab9995a45b4728bfdeedd6"><param name="Name" value="hg_proc_hg_uint16_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a4539c9f7ba0e3225b3348a2ceb5a1e10"><param name="Name" value="hg_proc_hg_uint32_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a2fb97cf0f77c49c9a3e14ba79c380815"><param name="Name" value="hg_proc_hg_uint64_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#af24220a7557916a011a8bd5a2b0476bf"><param name="Name" value="hg_proc_hg_uint8_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#aa73411a6932b6c5dda36e4acdc995ee9"><param name="Name" value="hg_proc_hg_uint16_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a351e796f43edd5d4d556779036120ccb"><param name="Name" value="hg_proc_hg_uint32_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a2036c5e811f4d1958c53af1b86520284"><param name="Name" value="hg_proc_hg_uint64_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a5724018b5e48cfde8188b026aee67b38"><param name="Name" value="hg_proc_hg_uint8_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a054fb66168196ca340ebf2c4cbb797f2"><param name="Name" value="HG_PROC_INLINE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a400be8861f1211c9425bf983cf630fde"><param name="Name" value="hg_proc_int16_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#abb2256b04b6a30c89eeda6e2c0091e6d"><param name="Name" value="hg_proc_int32_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a7598451347c8e667df5fef74e9d32160"><param name="Name" value="hg_proc_int64_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a4725826d3be5b5a10c0b3dd7889dca0f"><param name="Name" value="hg_proc_int8_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6d35c13c497161ea454655d2ce342bad"><param name="Name" value="hg_proc_memcpy"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a9cd7db1292247ea90cdac056659edd9e"><param name="Name" value="hg_proc_raw"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8541db7b7c8ab698a5b7774cb168a54c"><param name="Name" value="hg_proc_set_buf_ptr"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a6a9686a3aff0cd187ccc8cfc4d4e94e8"><param name="Name" value="hg_proc_raw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a76435fe31846fd54f97aca6d6f879d93"><param name="Name" value="hg_proc_reset"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a9ec79e2a5ba3c2d0ccbe2c15f297b6db"><param name="Name" value="hg_proc_restore_ptr"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#aad720b315153f23bbd7d4a95b85bc0fd"><param name="Name" value="hg_proc_save_ptr"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a041827c813425b536399242659ad4d21"><param name="Name" value="hg_proc_set_extra_buf_is_mine"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a017c3d477d4af8f778e876e9922fd180"><param name="Name" value="hg_proc_set_size"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc_8h.html#a8e0d997b9982f64b82655c0319e49429"><param name="Name" value="hg_proc_uint16_t"></OBJECT>
@@ -844,12 +959,16 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a07c25468707de0b96065ddd76992c1af"><param name="Name" value="HG_GET_MINOR"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#aced6b6fca90b7cfbf845c0c2bc454f6c"><param name="Name" value="HG_GET_PATCH"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a6e8c8d7058d40f491595962b16b54bd3"><param name="Name" value="HG_IDENTIFIER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#ac2707f7bf52a3bd8807ef7c78a314253"><param name="Name" value="HG_PROC_HEADER_BULK_EXTRA"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a11117683fae254ba135c0a0cf74f0cfb"><param name="Name" value="HG_PROC_HEADER_INLINE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#af0468ae2b0f0b8140a55239b3fd3a793"><param name="Name" value="HG_PROC_HEADER_NO_RESPONSE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#adc6445d45edebfddf9b7a1261773eb6f"><param name="Name" value="hg_proc_header_request"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a0060deb64d202237c47d4104926975d5"><param name="Name" value="hg_proc_header_request_finalize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a8798668b62332e267c710f3a38523d2b"><param name="Name" value="hg_proc_header_request_get_size"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#afc83894de562cb2e1a609c97b2957d4a"><param name="Name" value="hg_proc_header_request_init"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a50fd598a717738d88764acf96506e179"><param name="Name" value="hg_proc_header_request_init"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a915deb778908caeec8e63e866b221d6f"><param name="Name" value="hg_proc_header_request_verify"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a364a880b80e30124c71a7bc359fa9d16"><param name="Name" value="hg_proc_header_response"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a01e818878c6f2bb90788cadd5766285e"><param name="Name" value="hg_proc_header_response_finalize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#aff3f84fd8cb1a1bfed21afe5401e92b6"><param name="Name" value="hg_proc_header_response_get_size"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a9e091d80a4788ad35cf24e230976652f"><param name="Name" value="hg_proc_header_response_init"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__header_8h.html#a919b90af082c5ce2ec2042e91494cf3b"><param name="Name" value="hg_proc_header_response_verify"></OBJECT>
@@ -859,26 +978,27 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html"><param name="Name" value="mercury_proc_string.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#aaebfdcc83bed89aae1cb88905024dfd9"><param name="Name" value="hg_const_string_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#ace95026eb3061081eeab6d6e49d915be"><param name="Name" value="hg_proc_hg_const_string_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#a8de11b8425f813e428efd65fef3dee69"><param name="Name" value="hg_proc_hg_string_object_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#ab0b4a90759cd422e9792c8dc77637512"><param name="Name" value="hg_proc_hg_string_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#af4fddd8074051d0ee7eec27922b1d71a"><param name="Name" value="hg_proc_hg_const_string_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#a015e72e20794ea59b882b8c70806586d"><param name="Name" value="hg_proc_hg_string_object_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#aebd22a9367a73dd241663a3dc033ae77"><param name="Name" value="hg_proc_hg_string_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#a0959f1e0623a5dae1ddd8a854c819611"><param name="Name" value="HG_PROC_STRING_INLINE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__proc__string_8h.html#ac797939785b3f0d0cfa2812d999290db"><param name="Name" value="hg_string_t"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html"><param name="Name" value="mercury_queue.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a0cf2a9b2b40276e353eed5f2f86f48b8"><param name="Name" value="hg_queue_free"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a18d89aa5907bd09b6ec4e6beb472f77f"><param name="Name" value="hg_queue_is_empty"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a8d623467d5139b38b2d2a6f1b484ab1c"><param name="Name" value="hg_queue_new"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a9770092d36b6f24c7ef0699b76dd6a0c"><param name="Name" value="HG_QUEUE_NULL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a463eb1a6b1b54910a3c082561d41e8b2"><param name="Name" value="hg_queue_peek_head"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a74fa3d3d99b67dcd61b0260871a1fc19"><param name="Name" value="hg_queue_peek_tail"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ab5e5ed14f7fb5b3b22f0384164268a67"><param name="Name" value="hg_queue_pop_head"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ada3920eaecf393b1a38bddf671dfe307"><param name="Name" value="hg_queue_pop_tail"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a0fd9519d670037473546265acc205902"><param name="Name" value="hg_queue_push_head"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a079637628218e02c9091e416c5d44715"><param name="Name" value="hg_queue_push_tail"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#af341f4c38e837e8c1c7d28d334a71cbe"><param name="Name" value="hg_queue_t"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#aef5a559c1b0167a46c2120b77bd9e8d2"><param name="Name" value="hg_queue_value_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ab482469a25ad0944bd59ad681b2deeb5"><param name="Name" value="HG_QUEUE_ENTRY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a4ffaf25429c52845de7e897ccc4da91b"><param name="Name" value="HG_QUEUE_FIRST"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#aafe4c5543660abf1fa233b339584c345"><param name="Name" value="HG_QUEUE_FOREACH"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a571ecc70b361fd8585f9c7a00bef09a1"><param name="Name" value="HG_QUEUE_HEAD"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#abef5bfc5316d3904bf805c7da168510b"><param name="Name" value="HG_QUEUE_HEAD_DECL"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a1ea455ed8e227a9c006af278b0ccb242"><param name="Name" value="HG_QUEUE_HEAD_INIT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#adba6b05a1da368bb4eaedb0ca485f391"><param name="Name" value="HG_QUEUE_HEAD_INITIALIZER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ad7b24fe927f6ff361e6004cb89ad5103"><param name="Name" value="HG_QUEUE_INIT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ab2311132b7695fac5c8b8c04fc4a019e"><param name="Name" value="HG_QUEUE_IS_EMPTY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#ae7997114ccc7fc1a3315d208ec3abafd"><param name="Name" value="HG_QUEUE_NEXT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#aaf19a5d7a8c8657d838249d7fc260a9c"><param name="Name" value="HG_QUEUE_POP_HEAD"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#a4c26683b98d42961fc2db0e9e1b437aa"><param name="Name" value="HG_QUEUE_PUSH_TAIL"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__queue_8h.html#af0a1a84461c5f2c24d348ee75fed027d"><param name="Name" value="HG_QUEUE_REMOVE"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__macros_8h.html#af7650362cfe9544f79e2b4f053bd0395"><param name="Name" value="MERCURY_REGISTER"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html"><param name="Name" value="mercury_request.h"></OBJECT>
@@ -892,6 +1012,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#aab9c5102a844759cbd4ccdb2fb35ab1e"><param name="Name" value="hg_request_get_data"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a3ca20810dc8fc7bebf851fcd14543efe"><param name="Name" value="hg_request_init"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a120d6528f9ffb4df8bbff827eaa19299"><param name="Name" value="hg_request_progress_func_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a58c322c98c5adfadbeae3c369ff5c2fd"><param name="Name" value="hg_request_reset"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#aecfe8d32ee5ab07fc74f4ba8baacf85d"><param name="Name" value="hg_request_set_data"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a472f39cbebcf8b6573694eafce287661"><param name="Name" value="hg_request_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__request_8h.html#a242f71e211ede19597e36e7235fb79cd"><param name="Name" value="hg_request_trigger_func_t"></OBJECT>
@@ -907,40 +1028,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__string__object_8h.html#a0b3f114e2542c52c73d7316e474d7167"><param name="Name" value="hg_string_object_init_const_char"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__string__object_8h.html#a16ebd3c0f1e1d7721b3c119bac9d0191"><param name="Name" value="hg_string_object_swap"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__string__object_8h.html#aa57e1d427e55c98f8b16078a064aa131"><param name="Name" value="hg_string_object_t"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html"><param name="Name" value="mercury_sys_queue.h"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a397683d7a6c4c6c1c0879de8e0b8fa9a"><param name="Name" value="_TAILQ_ENTRY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a9d932e6c433aff92a2c8239a658ea121"><param name="Name" value="_TAILQ_HEAD"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#af9109b7ad99e88194ba4d963eb27d8de"><param name="Name" value="LIST_EMPTY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ab2252d819fe7a435e86e3dd72579bcde"><param name="Name" value="LIST_ENTRY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a09ef74ea05bd10f1fe9d495c42e1b6c1"><param name="Name" value="LIST_FIRST"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a6cd1536d05f15a56ebd2b4388eaf02ea"><param name="Name" value="LIST_FOREACH"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a12287bf14b46b1dcaa2952a36fcb129f"><param name="Name" value="LIST_HEAD"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a0b0bbf5fbaeab84585b027b824f45be6"><param name="Name" value="LIST_HEAD_INITIALIZER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a304b5b7f7bdcba2793eaba9c890991c3"><param name="Name" value="LIST_INIT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#aab62f53d4c94ab67bf7c4dc5c7670f64"><param name="Name" value="LIST_INSERT_AFTER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a73d12127b84f84215eb03a4fb20feebb"><param name="Name" value="LIST_INSERT_BEFORE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ad80d8d658fdb46a9f7cc81cb2ae54885"><param name="Name" value="LIST_INSERT_HEAD"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a886a9f74bb2b3f9c5edcaf77f00d06d0"><param name="Name" value="LIST_NEXT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a4f60a3fedbebc5ef6edded99062dd98d"><param name="Name" value="LIST_REMOVE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#afe4852d23c85543fafc53ad409461750"><param name="Name" value="TAILQ_CONCAT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a810e7f81aa8b4dff25b0f926bbed2e92"><param name="Name" value="TAILQ_EMPTY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a63fafbdfc3cd97aa73e9f45ead6ab502"><param name="Name" value="TAILQ_ENTRY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a4a2b0498dada4546112b7effb28e2531"><param name="Name" value="TAILQ_FIRST"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a55c43a8ad3736d75a9c3afdf982968ca"><param name="Name" value="TAILQ_FOREACH"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a7359a1beb0f421eb28411368577497bc"><param name="Name" value="TAILQ_FOREACH_REVERSE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a4abce769a262e090c1f601605b9d6c76"><param name="Name" value="TAILQ_HEAD"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#abf8c1f052689c438c2addc340f21524a"><param name="Name" value="TAILQ_HEAD_INITIALIZER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a449d224023780e46253b83b61e0a50a9"><param name="Name" value="TAILQ_INIT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#af972e33f5eacef659ee0bf0a13ca518c"><param name="Name" value="TAILQ_INSERT_AFTER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ac6a41e17dbc7d8df1f8b353a036754ff"><param name="Name" value="TAILQ_INSERT_BEFORE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#af0f99e8f322ea4eef2d9deaa505239a6"><param name="Name" value="TAILQ_INSERT_HEAD"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a512bee16b46f601078c96c776d2648c3"><param name="Name" value="TAILQ_INSERT_TAIL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ac9154a9aebb3c15a3f2356349a1cc14f"><param name="Name" value="TAILQ_LAST"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ac54b4986d96cdabcea9f5d96a575f65b"><param name="Name" value="TAILQ_NEXT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a524f93a0c21c390683fab4c27e840a10"><param name="Name" value="TAILQ_PREV"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#aaae87ca18c28066e1a96221e762d1209"><param name="Name" value="TAILQ_REMOVE"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html"><param name="Name" value="mercury_thread.h"></OBJECT>
   <UL>
@@ -962,6 +1049,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#a9ac396c51af5fad92b48dbb2242dfbfd"><param name="Name" value="hg_thread_setaffinity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#a8ff857bbeaa608cdd396e40262f5812d"><param name="Name" value="hg_thread_setspecific"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#abc703946f52c13c2ad4784a2e4e8f36f"><param name="Name" value="hg_thread_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread_8h.html#abca3c19ceaf1101dd3e7ce71f35641ce"><param name="Name" value="hg_thread_yield"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__condition_8h.html"><param name="Name" value="mercury_thread_condition.h"></OBJECT>
   <UL>
@@ -986,7 +1074,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#a38575a02b7ad9ff114de1e7f50e1d11d"><param name="Name" value="hg_thread_pool_destroy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#a2b26ad1c68a52f18b7289e9e74f79c11"><param name="Name" value="hg_thread_pool_init"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#a7180a49fe5245886b7ad4cabc4daac79"><param name="Name" value="hg_thread_pool_post"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#ab0753a4ad75988fa8172dc21ee0ccd20"><param name="Name" value="hg_thread_pool_post"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b"><param name="Name" value="hg_thread_pool_t"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__time_8h.html"><param name="Name" value="mercury_time.h"></OBJECT>
@@ -1004,13 +1092,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html"><param name="Name" value="mercury_types.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a4aa92b8a72bcf7a1465561ed07055243"><param name="Name" value="HG_ADDR_NULL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a3fb4d796458103fbc306c24b150aea07"><param name="Name" value="hg_addr_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a6d3e6cbcdc462cf6223709f7ecfb3ff1"><param name="Name" value="hg_addr_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a37aa368874d181a12ba0ff7169fec2f6"><param name="Name" value="HG_BULK_NULL"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#ac3c31a991f842e135e547daee1bf7d81a218eebb97fd77ba11a4ca2831f9c5673"><param name="Name" value="HG_BULK_PULL"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#ac3c31a991f842e135e547daee1bf7d81ab787cee4a24048f775d83429957fb1ca"><param name="Name" value="HG_BULK_PUSH"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a9b3ad132f4c124d778a4eafad3fc40cb"><param name="Name" value="HG_BULK_READ_ONLY"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#aee7af22a2f1248bd2a5fc13061ff9d60"><param name="Name" value="HG_BULK_READWRITE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a9c6a30105e34660e3417a00c7e852101"><param name="Name" value="hg_bulk_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812"><param name="Name" value="hg_bulk_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2031319746c173de3d88694e8154b527"><param name="Name" value="HG_BULK_WRITE_ONLY"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba082d69345f3b1b7ce755a60619e75c0a"><param name="Name" value="HG_CANCELED"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2d3f9c5c29a2c9727470f3f0330cf626a0cecd26ba4cd6113c8710cd9eced737e"><param name="Name" value="HG_CB_BULK"></OBJECT>
@@ -1023,12 +1111,13 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0005c35bfc1220783ac3e1bf1eb7e678"><param name="Name" value="hg_class_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a318ec156e4de2f0850cfb07ff83442ce"><param name="Name" value="hg_context_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af19f339d321cd7cfa47904191b62c73ea284fb5b608a5c8d89279c92462a8b3b3"><param name="Name" value="HG_CRC16"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af19f339d321cd7cfa47904191b62c73ea581da39e66f7218cd1f3fc220091ec11"><param name="Name" value="HG_CRC32"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af19f339d321cd7cfa47904191b62c73ea13cf118b2b76689f85a73a6c6d70e002"><param name="Name" value="HG_CRC64"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44aa281d106ff8e87dc3527e9291c5b28fcd"><param name="Name" value="HG_DECODE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44aae4656e02d1fc141f95501f5355733ccc"><param name="Name" value="HG_ENCODE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44aa5ebbaebc8d331fbe6c0f89050ae96255"><param name="Name" value="HG_FREE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a7726f901cab9638b080d4b9bdaf10ef8"><param name="Name" value="HG_HANDLE_NULL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#aca546b2eac0b9c17112f6cd55f6e602f"><param name="Name" value="hg_handle_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#aacf08af4368af10a0fb5f23cfd224614"><param name="Name" value="hg_handle_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a2efc47df4b6329c0c7290001bf42f7e6"><param name="Name" value="hg_id_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1baee162a6c05d0682dcb2c525b48c0d04e"><param name="Name" value="HG_INVALID_PARAM"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#af7bbe6aaaa33ae7d204580f163cf72ab"><param name="Name" value="HG_MAX_IDLE_TIME"></OBJECT>
@@ -1038,20 +1127,26 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba5796fd1b4b4637dfcd8c592cdd17ee6c"><param name="Name" value="HG_NOMEM_ERROR"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a9a6880fa648124dc951079786be6c8d7"><param name="Name" value="HG_OP_ID_IGNORE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a76ae448b23dd29e5f2cfed35fd0ad6ff"><param name="Name" value="HG_OP_ID_NULL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a1de1680602a6dbf234a637a008ca8c57"><param name="Name" value="hg_op_id_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a9bacf50ba781f43f7880ff205365778a"><param name="Name" value="hg_op_id_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1baa508d2f25e990b0475ea58846cf32019"><param name="Name" value="HG_OTHER_ERROR"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#abdf6db27ea06522ea6a12e18e0bf5b9c"><param name="Name" value="hg_proc_cb_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a1671ed6f05dc05400bf4f92333674c51"><param name="Name" value="HG_PROC_NULL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a3b6b4b6542f8be50787a450434578c37"><param name="Name" value="hg_proc_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a84fa83f9e32feba27f54627b9f897e1e"><param name="Name" value="hg_proc_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba4f336860a972faf59e8e1c4a4b2ccec6"><param name="Name" value="HG_PROTOCOL_ERROR"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4"><param name="Name" value="hg_return_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a434521e1c11ba4f7155b7ebc3bc25f9e"><param name="Name" value="hg_rpc_cb_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1ba702153577cde686dc426a89817e201ea"><param name="Name" value="HG_SIZE_ERROR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#adef3591d63572c2d8e6290bb269f5077"><param name="Name" value="HG_SIZE_MAX"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c"><param name="Name" value="hg_size_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1baf5d6933323384e7dcbdc266c47c4ea95"><param name="Name" value="HG_SUCCESS"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__types_8h.html#a0e2dd4174074b21aa042c2ee9400fc1babc9d5f5eaff63159147f3f66791924d9"><param name="Name" value="HG_TIMEOUT"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html"><param name="Name" value="mercury_util_error.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html#a482fa6903bb047690d4cefd2d1a17a41"><param name="Name" value="HG_UTIL_LOG_DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html#a0559813092fbb0b8ffc8b5baa30bbcb7"><param name="Name" value="HG_UTIL_LOG_ERROR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__util__error_8h.html#ad0acae4730ff0cef90500de4d7b0b6de"><param name="Name" value="HG_UTIL_LOG_WARNING"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#ab0571b0360b0b240b7e5bfee9495e83c"><param name="Name" value="msg_get_max_expected_size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a52629f43a4852126e43e244b9e77a31c"><param name="Name" value="msg_get_max_tag"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#aec35084c3330497f6d376835b4354225"><param name="Name" value="msg_get_max_unexpected_size"></OBJECT>
@@ -1090,6 +1185,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a8760fc6fb571ee7223e74f0418de9ef5"><param name="Name" value="NA_Get"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#adbab1ea59e53e4c6c48685a57d415b17"><param name="Name" value="NA_Get_class_name"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#abe5294b7a190c1e2b05b4ab30d430e71"><param name="Name" value="NA_Get_class_protocol"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a6147edc286acbdd423b0aa402507120d"><param name="Name" value="NA_Get_poll_fd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a524ab9cab3f81a71fe0ae19ba3c766c9"><param name="Name" value="NA_Initialize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a554cd55c4a7b289a6015ab1b0f7623ccab3b0d4aaa7e615aa8271f64f8613c466"><param name="Name" value="NA_INVALID_PARAM"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#adc7ef6c663e7609aaa57c2f266bdd9c6"><param name="Name" value="NA_Is_listening"></OBJECT>
@@ -1108,6 +1204,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a6ad07fb9a9bff3670e8a96c51a662fd1"><param name="Name" value="NA_MEM_READWRITE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#afb759230877c98f6c526be98ef53426c"><param name="Name" value="NA_Mem_register"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a89058ea8ce0705862477136619ba067c"><param name="Name" value="NA_Mem_unpublish"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a046cd71a40f1426b24aff19bbc2ba338"><param name="Name" value="NA_MEM_WRITE_ONLY"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a91d122ea6fdab28f478d54969ac9612a"><param name="Name" value="NA_Msg_get_max_expected_size"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a0418c39a9201bae5ac037cc58e78f140"><param name="Name" value="NA_Msg_get_max_tag"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a1e46cdc461dbaadcdbadfd7d2662fe5c"><param name="Name" value="NA_Msg_get_max_unexpected_size"></OBJECT>
@@ -1117,6 +1214,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a8702d75eb6b157ec965a680e0ac63a07"><param name="Name" value="NA_Msg_send_unexpected"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a554cd55c4a7b289a6015ab1b0f7623cca3c97eceff21c6e8680ec36d0b3e2dd79"><param name="Name" value="NA_NOMEM_ERROR"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a65bd6af99378b6e77ca83e9ac40f280e"><param name="Name" value="na_offset_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a919d6e8e92bfef7298dfb47bf65ab632"><param name="Name" value="NA_Op_create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a88ad35894056efe94243ab7d244d256a"><param name="Name" value="NA_Op_destroy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a5857f5a255d78a2189aeb489bb466d73"><param name="Name" value="NA_OP_ID_IGNORE"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a4655d06c983193fc34dfc435ad72f731"><param name="Name" value="NA_OP_ID_NULL"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a9ddbd097a74d80c2e9df2a351104ade0"><param name="Name" value="na_op_id_t"></OBJECT>
@@ -1144,7 +1243,15 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a554cd55c4a7b289a6015ab1b0f7623ccaebc7886da50171d9e89cea8792a538e6"><param name="Name" value="NA_ALIGNMENT_ERROR"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a4f0f6368976f6c592fba0ce7b0981277"><param name="Name" value="NA_Cancel"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a554cd55c4a7b289a6015ab1b0f7623ccab8cd49ca8fcebae74080ebb9f9dc392b"><param name="Name" value="NA_CANCELED"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a40bcdfb4032324649e4e55251e4957cd"><param name="Name" value="na_cb_completion_add"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a03955ab5566d539fe9e3fcc66a845843"><param name="Name" value="na_cb_completion_add"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html"><param name="Name" value="na_cb_completion_data"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#aafc02513cea5bb1ee1a0ddb2b2f1904d"><param name="Name" value="callback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#a16cfb48110cd73f9284b1dd415136cf5"><param name="Name" value="callback_info"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#a27c01ad2f201ff07d0c9e917017d2495"><param name="Name" value="HG_QUEUE_ENTRY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#ad3580f9dcf4037414e16f738fe2e1855"><param name="Name" value="plugin_callback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#acee8113d1f2089b77a28e4146cc95045"><param name="Name" value="plugin_callback_args"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a6794c7af731e6510376872b3a2371392a36163d32bbc740ac85a199797d664f1f"><param name="Name" value="NA_CB_GET"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__info.html"><param name="Name" value="na_cb_info"></OBJECT>
   <UL>
@@ -1171,8 +1278,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a6794c7af731e6510376872b3a2371392a5462d4c79d65d64c149c7ae3e003c856"><param name="Name" value="NA_CB_SEND_UNEXPECTED"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#ac52d7afaeb07133c927ac54349ff66f7"><param name="Name" value="na_cb_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a0e87b43a6c14b8a16321a5bba86b52a5"><param name="Name" value="na_cb_type_t"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__cci_8h.html"><param name="Name" value="na_cci.h"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__cci_8h.html#ac48a4e5c9ed44057470f1bd7470c205d"><param name="Name" value="NA_CCI_Get_port_name"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html"><param name="Name" value="na_class"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a423420e65335f447528d5da912e96dd7"><param name="Name" value="addr_dup"></OBJECT>
@@ -1188,7 +1293,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#afdeaedd5bb7c1fdfa8486e617601675f"><param name="Name" value="context_destroy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a488b25b3d3f0800fecedf8ce31f740d9"><param name="Name" value="finalize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a93c136bd57a31f002a18ce90a24bc8e8"><param name="Name" value="get"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#ac9b21936a2688b977d3de7a04595587b"><param name="Name" value="hg_class"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a01d1e886552f6e58126c7ba7305679ad"><param name="Name" value="get_poll_fd"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a105121ed12694327fc21ea6551dab535"><param name="Name" value="initialize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a6864a5e551eb9288a442886b7650baa2"><param name="Name" value="mem_deregister"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a5848780b5171cf22f93ea1ea60df5068"><param name="Name" value="mem_handle_create"></OBJECT>
@@ -1207,6 +1312,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a59ea6b794130b463825d3960d9633486"><param name="Name" value="msg_recv_unexpected"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a6f94f142d04b0c81c0c68dd3e47463b7"><param name="Name" value="msg_send_expected"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a771ceff60c660dd4a54224453a46784f"><param name="Name" value="msg_send_unexpected"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a888a24a286022b09c122ca691840fca6"><param name="Name" value="op_create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a142d71d1cfdf691d13b7cfe76d8d7863"><param name="Name" value="op_destroy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#add85e4ee53030e9a0eb9f951fb224ba8"><param name="Name" value="private_data"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a00e8891becf67ccb362ca64cb75d3215"><param name="Name" value="progress"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a349b817c8414cf39814a1eddc4ddbe14"><param name="Name" value="put"></OBJECT>
@@ -1214,7 +1321,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#aea0919d7d5b83546d66ee8f91f723efd"><param name="Name" value="na_class_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__context.html"><param name="Name" value="na_context"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#aaef49c34a936a3205004adfe2923f304"><param name="Name" value="hg_class"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__context.html#a377936bbb32b68e117b80d9a19a2e68c"><param name="Name" value="plugin_context"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#ac52d710992c9920ffd1c62cde083a077"><param name="Name" value="NA_Context_create"></OBJECT>
@@ -1222,30 +1328,28 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a1b1f046db890684610f69205be4013c9"><param name="Name" value="na_context_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html"><param name="Name" value="na_error.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a86a58a822f3cfbfbe83afeca94922fac"><param name="Name" value="NA_LOG_DEBUG"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a90cb0e360cb200e2ea72feeeae540e99"><param name="Name" value="NA_LOG_ERROR"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a7a8ce1318fc92f71eff2c2b128bbac5b"><param name="Name" value="NA_LOG_WARNING"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a79c1b5558d3f7a01ce14aa2d77ee85e5"><param name="Name" value="NA_LOG_DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a7d074d455631c34ae7810e9ff7cf7cd5"><param name="Name" value="NA_LOG_ERROR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a9fff0da7a20fdc2196f4a1c6e1376ac8"><param name="Name" value="NA_LOG_WARNING"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#af5afa89251d70b2fdcced0791b509d70"><param name="Name" value="NA_Error_to_string"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#ade11e366257b364039e3eee94d17c384"><param name="Name" value="na_ext_init"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a616ed5aaafd646bcaadbee7c944b61ff"><param name="Name" value="NA_Finalize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a8760fc6fb571ee7223e74f0418de9ef5"><param name="Name" value="NA_Get"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#adbab1ea59e53e4c6c48685a57d415b17"><param name="Name" value="NA_Get_class_name"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#abe5294b7a190c1e2b05b4ab30d430e71"><param name="Name" value="NA_Get_class_protocol"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a6147edc286acbdd423b0aa402507120d"><param name="Name" value="NA_Get_poll_fd"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html"><param name="Name" value="na_info"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#ac56c8e9ea3adfdb73cc9b985a21abbf4"><param name="Name" value="class_name"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#acaf41a353d48332aa4cb8c5b4fd9fb8a"><param name="Name" value="host_name"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#ac8e806efb50f074f8c6bbff28dfab2c6"><param name="Name" value="port"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#af431911e5290cbaf8d468ec2b47ce73c"><param name="Name" value="port_name"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#afc2b8ef252783c754297deaec80f6656"><param name="Name" value="protocol_name"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a524ab9cab3f81a71fe0ae19ba3c766c9"><param name="Name" value="NA_Initialize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a554cd55c4a7b289a6015ab1b0f7623ccab3b0d4aaa7e615aa8271f64f8613c466"><param name="Name" value="NA_INVALID_PARAM"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#adc7ef6c663e7609aaa57c2f266bdd9c6"><param name="Name" value="NA_Is_listening"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a86a58a822f3cfbfbe83afeca94922fac"><param name="Name" value="NA_LOG_DEBUG"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a90cb0e360cb200e2ea72feeeae540e99"><param name="Name" value="NA_LOG_ERROR"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a7a8ce1318fc92f71eff2c2b128bbac5b"><param name="Name" value="NA_LOG_WARNING"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a79c1b5558d3f7a01ce14aa2d77ee85e5"><param name="Name" value="NA_LOG_DEBUG"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a7d074d455631c34ae7810e9ff7cf7cd5"><param name="Name" value="NA_LOG_ERROR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__error_8h.html#a9fff0da7a20fdc2196f4a1c6e1376ac8"><param name="Name" value="NA_LOG_WARNING"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#abeec8d8f4ada33eeb9a2f704681d42ab"><param name="Name" value="NA_MAX_IDLE_TIME"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a0a8bb2038b6d2df2222a3308f94d8893"><param name="Name" value="NA_Mem_deregister"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a170e1b463ab1ab4020176bf07ff48c1a"><param name="Name" value="NA_Mem_handle_create"></OBJECT>
@@ -1261,6 +1365,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a6ad07fb9a9bff3670e8a96c51a662fd1"><param name="Name" value="NA_MEM_READWRITE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#afb759230877c98f6c526be98ef53426c"><param name="Name" value="NA_Mem_register"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a89058ea8ce0705862477136619ba067c"><param name="Name" value="NA_Mem_unpublish"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a046cd71a40f1426b24aff19bbc2ba338"><param name="Name" value="NA_MEM_WRITE_ONLY"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na__mpi_8h.html"><param name="Name" value="na_mpi.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na__mpi_8h.html#a764054a9ed79a660880e27053f48c819"><param name="Name" value="NA_MPI_Get_port_name"></OBJECT>
@@ -1277,16 +1382,18 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a8702d75eb6b157ec965a680e0ac63a07"><param name="Name" value="NA_Msg_send_unexpected"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a554cd55c4a7b289a6015ab1b0f7623cca3c97eceff21c6e8680ec36d0b3e2dd79"><param name="Name" value="NA_NOMEM_ERROR"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a65bd6af99378b6e77ca83e9ac40f280e"><param name="Name" value="na_offset_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a919d6e8e92bfef7298dfb47bf65ab632"><param name="Name" value="NA_Op_create"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a88ad35894056efe94243ab7d244d256a"><param name="Name" value="NA_Op_destroy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a5857f5a255d78a2189aeb489bb466d73"><param name="Name" value="NA_OP_ID_IGNORE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a4655d06c983193fc34dfc435ad72f731"><param name="Name" value="NA_OP_ID_NULL"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a9ddbd097a74d80c2e9df2a351104ade0"><param name="Name" value="na_op_id_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na_8h.html#a554cd55c4a7b289a6015ab1b0f7623ccafa8b9955f8a93f86b71ec696d7ef3c09"><param name="Name" value="NA_PERMISSION_ERROR"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#aee028e27e1e91f7e7438db0cb44244ac"><param name="Name" value="na_plugin_cb_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a86ac05fcd8777ba978aa9cb3d3f37df7"><param name="Name" value="na_plugin_cb_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a5c0cf369e8c9393cec4a9bb82021d92e"><param name="Name" value="na_plugin_context_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html"><param name="Name" value="na_private.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a40bcdfb4032324649e4e55251e4957cd"><param name="Name" value="na_cb_completion_add"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#aee028e27e1e91f7e7438db0cb44244ac"><param name="Name" value="na_plugin_cb_t"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a03955ab5566d539fe9e3fcc66a845843"><param name="Name" value="na_cb_completion_add"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a86ac05fcd8777ba978aa9cb3d3f37df7"><param name="Name" value="na_plugin_cb_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#a5c0cf369e8c9393cec4a9bb82021d92e"><param name="Name" value="na_plugin_context_t"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="na__private_8h.html#ac00ffe56121fa3710b47075be6140e72"><param name="Name" value="NA_UNUSED"></OBJECT>
   </UL>
@@ -1310,20 +1417,20 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__hash__table__iter.html#a4d22ac0865eedabed21ebb9c6375bcbd"><param name="Name" value="next_chain"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__hash__table__iter.html#a235cfcddf699de5b511835a78a29fde2"><param name="Name" value="next_entry"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info__bulk.html#a265d006c435856d2955e1e4d2fe9ee6f"><param name="Name" value="op"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a888a24a286022b09c122ca691840fca6"><param name="Name" value="op_create"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a142d71d1cfdf691d13b7cfe76d8d7863"><param name="Name" value="op_destroy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html#a5da124664591cdd8191c60ecb1869054"><param name="Name" value="op_id"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__completion__entry.html#abf3d9fd388b92790e5a6f46e54431e1a"><param name="Name" value="op_type"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info__bulk.html#ab99b7460ac3612cec7b3fa753b9a5950"><param name="Name" value="origin_handle"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__header__response.html#a294bd64139793669f0950b44408e38a5"><param name="Name" value="padding"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#ad3580f9dcf4037414e16f738fe2e1855"><param name="Name" value="plugin_callback"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__completion__data.html#acee8113d1f2089b77a28e4146cc95045"><param name="Name" value="plugin_callback_args"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__context.html#a377936bbb32b68e117b80d9a19a2e68c"><param name="Name" value="plugin_context"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#ac8e806efb50f074f8c6bbff28dfab2c6"><param name="Name" value="port"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#af431911e5290cbaf8d468ec2b47ce73c"><param name="Name" value="port_name"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#add85e4ee53030e9a0eb9f951fb224ba8"><param name="Name" value="private_data"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a00e8891becf67ccb362ca64cb75d3215"><param name="Name" value="progress"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__header__request.html#acbacd280024cb8ef1647822f24633577"><param name="Name" value="protocol"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__info.html#afc2b8ef252783c754297deaec80f6656"><param name="Name" value="protocol_name"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__class.html#a349b817c8414cf39814a1eddc4ddbe14"><param name="Name" value="put"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#aee3550c9617ddf21d71c62de734ad123"><param name="Name" value="request_max_tag"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__class.html#a5c52d94a21c883e98053c3a7bbe10845"><param name="Name" value="request_tag"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structmchecksum__class.html#acc4c458ee12aa1d6767adc010c053ff1"><param name="Name" value="reset"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info.html#aef26c97b62ddb3cd11c0e3bc268c0a9b"><param name="Name" value="ret"></OBJECT>
   <UL>
@@ -1334,23 +1441,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__segment.html#a90ef8e4775b09aa4e638ad1239e0a11b"><param name="Name" value="size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__info__recv__unexpected.html#ad9df8feaa4f6449b7ea09c6dacd8835b"><param name="Name" value="source"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structna__cb__info__recv__unexpected.html#ad72a19fc877741322bf6f4c1a69681e0"><param name="Name" value="tag"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#afe4852d23c85543fafc53ad409461750"><param name="Name" value="TAILQ_CONCAT"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a810e7f81aa8b4dff25b0f926bbed2e92"><param name="Name" value="TAILQ_EMPTY"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a63fafbdfc3cd97aa73e9f45ead6ab502"><param name="Name" value="TAILQ_ENTRY"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a4a2b0498dada4546112b7effb28e2531"><param name="Name" value="TAILQ_FIRST"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a55c43a8ad3736d75a9c3afdf982968ca"><param name="Name" value="TAILQ_FOREACH"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a7359a1beb0f421eb28411368577497bc"><param name="Name" value="TAILQ_FOREACH_REVERSE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a4abce769a262e090c1f601605b9d6c76"><param name="Name" value="TAILQ_HEAD"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#abf8c1f052689c438c2addc340f21524a"><param name="Name" value="TAILQ_HEAD_INITIALIZER"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a449d224023780e46253b83b61e0a50a9"><param name="Name" value="TAILQ_INIT"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#af972e33f5eacef659ee0bf0a13ca518c"><param name="Name" value="TAILQ_INSERT_AFTER"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ac6a41e17dbc7d8df1f8b353a036754ff"><param name="Name" value="TAILQ_INSERT_BEFORE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#af0f99e8f322ea4eef2d9deaa505239a6"><param name="Name" value="TAILQ_INSERT_HEAD"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a512bee16b46f601078c96c776d2648c3"><param name="Name" value="TAILQ_INSERT_TAIL"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ac9154a9aebb3c15a3f2356349a1cc14f"><param name="Name" value="TAILQ_LAST"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#ac54b4986d96cdabcea9f5d96a575f65b"><param name="Name" value="TAILQ_NEXT"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#a524f93a0c21c390683fab4c27e840a10"><param name="Name" value="TAILQ_PREV"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="mercury__sys__queue_8h.html#aaae87ca18c28066e1a96221e762d1209"><param name="Name" value="TAILQ_REMOVE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__time.html#aec7baab45a8185ef0cff8c327039ccc2"><param name="Name" value="tv_sec"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__time.html#a0368163419ac8069e64b40b4adfe3a97"><param name="Name" value="tv_usec"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structhg__cb__info.html#a64421781cc88afb6c2b7b448fd6f184a"><param name="Name" value="type"></OBJECT>
