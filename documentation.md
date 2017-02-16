@@ -134,7 +134,7 @@ are used internally. There should not be any need for using them directly.
 ### Available Plugins
 
 * _BMI_: The BMI library itself is no longer under active feature development
-  beyond basic maintenance, but the the BMI Mercury NA plugin provides a very stable
+  beyond basic maintenance, but the BMI Mercury NA plugin provides a very stable
   and reasonably performant option for IP networks when used with BMI's TCP method *Technical notes*:
     * Low CPU consumption (e.g., idles without busy spinning or using threads)
     * Supports dynamic client connection and disconnection.
@@ -155,6 +155,8 @@ are used internally. There should not be any need for using them directly.
     * Low CPU consumption (e.g., idles without busy spinning or using threads), with the exception of the TCP CCI plugin, see below.
     * Supports dynamic client connection and disconnection.
     * RMA (for Mercury bulk operations) is implemented natively on transports that support it.
+    * Some CCI transport plugins create threads internally to assist in
+      connection management or communication progress.
     * CCI/Verbs is stable and performant.
     * CCI/SM (shared memory) is stable and performant.
     * CCI/TCP is stable, but consumes significant CPU and may not perform as well as BMI/TCP.
