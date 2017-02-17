@@ -133,34 +133,61 @@ are used internally. There should not be any need for using them directly.
 
 ### Available Plugins
 
-* _BMI_: The BMI library itself is no longer under active feature development
+* __BMI:__ The BMI library itself is no longer under active feature development
   beyond basic maintenance, but the BMI Mercury NA plugin provides a very stable
-  and reasonably performant option for IP networks when used with BMI's TCP method *Technical notes*:
-    * Low CPU consumption (e.g., idles without busy spinning or using threads)
-    * Supports dynamic client connection and disconnection.
-    * RMA (for Mercury bulk operations) is emulated via point to point messaging.
-    * Does *not* support initializing multiple instances simultaneously.
-    * Other BMI methods besides TCP are not supported.
-    * For general BMI information see http://ieeexplore.ieee.org/abstract/document/1420118/
-* _MPI_: MPI implementations are widely available for nearly any platform, and the MPI Mercury NA plugin provides a convenient option for prototyping and functionality testing. It is not optimized for performance, however, and it has some practical limitations when used for persistent services.  *Technical notes*:
-    * Clients can connect to a server dynamically only if the underlying MPI implementation supports `MPI_Comm_connect()`
-    * RMA (for Mercury bulk operations) is emulated via point to point messaging (note: MPI window creation requires collective coordination and is not a good fit for RPC use).
-    * Significant CPU consumption (progress function iteratively polls pending operations for completion).
-* _SM_: This is the integrated shared memory NA plugin included with Mercury.  Plugin is stable and shows good performance, but it is only applicable local node communication.  The eventual goal of this plugin is to provide a transparent shortcut for other NA plugins when they connect to local services, but it is also useful as a primary transport for single-node services. *Technical notes*:
-    * Supports dynamic client connection and disconnection.
-    * Low CPU consumption (e.g., idles without busy spinning or using threads)
-    * RMA (for Mercury bulk operations) is implemented natively through cross-memory attach ([CMA][cma]) on Linux, and there are fallback methods for other platforms as well. See this
-  [page]({% post_url 2017-01-30-shared-memory %}) for design details.
-  * _CCI_: This is the most mature NA plugin available for general purpose use, but some transport plugins within CCI are more robust than others.  *Technical notes*:
-    * Low CPU consumption (e.g., idles without busy spinning or using threads), with the exception of the TCP CCI plugin, see below.
-    * Supports dynamic client connection and disconnection.
-    * RMA (for Mercury bulk operations) is implemented natively on transports that support it.
-    * Some CCI transport plugins create threads internally to assist in
-      connection management or communication progress.
-    * CCI/Verbs is stable and performant.
-    * CCI/SM (shared memory) is stable and performant.
-    * CCI/TCP is stable, but consumes significant CPU and may not perform as well as BMI/TCP.
-    * CCI/uGNI is currently being updated to operate on newer Cray<sup>®</sup> Gemini/Aries interconnect deployments and should be considered unstable at this time.
+  and reasonably performant option for IP networks when used with BMI's TCP
+  method. <br/>
+  *Technical notes:*
+  * Low CPU consumption (e.g., idles without busy spinning or using threads).
+  * Supports dynamic client connection and disconnection.
+  * RMA (for Mercury bulk operations) is emulated via point to point messaging.
+  * Does *not* support initializing multiple instances simultaneously.
+  * Other BMI methods besides TCP are not supported.
+  * For general BMI information see this [paper](http://ieeexplore.ieee.org/abstract/document/1420118/).
+
+* __MPI:__ MPI implementations are widely available for nearly any platform, and
+  the MPI Mercury NA plugin provides a convenient option for prototyping and
+  functionality testing. It is not optimized for performance, however, and it
+  has some practical limitations when used for persistent services. <br/>
+  *Technical notes:*
+  * Clients can connect to a server dynamically only if the underlying MPI 
+    implementation supports `MPI_Comm_connect()`.
+  * RMA (for Mercury bulk operations) is emulated via point to point messaging
+    (note: MPI window creation requires collective coordination and is not a
+    good fit for RPC use).
+  * Significant CPU consumption (progress function iteratively polls pending
+    operations for completion).
+
+* __SM:__ This is the integrated shared memory NA plugin included with Mercury.
+  Plugin is stable and shows good performance, but it is only applicable local
+  node communication.  The eventual goal of this plugin is to provide a
+  transparent shortcut for other NA plugins when they connect to local services,
+  but it is also useful as a primary transport for single-node services. <br/>
+  *Technical notes:*
+  * Supports dynamic client connection and disconnection.
+  * Low CPU consumption (e.g., idles without busy spinning or using threads).
+  * RMA (for Mercury bulk operations) is implemented natively through
+    cross-memory attach ([CMA][cma]) on Linux, and there are fallback methods
+    for other platforms as well. See this [page]({% post_url 2017-01-30-shared-memory %})
+    for design details.
+
+* __CCI:__ This is the most mature NA plugin available for general purpose use,
+  but some transport plugins within CCI are more robust than others. <br/>
+  *Technical notes:*
+  * Low CPU consumption (e.g., idles without busy spinning or using threads),
+    with the exception of the TCP CCI plugin, see below.
+  * Supports dynamic client connection and disconnection.
+  * RMA (for Mercury bulk operations) is implemented natively on transports
+    that support it.
+  * Some CCI transport plugins create threads internally to assist in connection
+    management or communication progress.
+  * CCI/Verbs is stable and performant.
+  * CCI/SM (shared memory) is stable and performant.
+  * CCI/TCP is stable, but consumes significant CPU and may not perform as well
+    as BMI/TCP.
+  * CCI/uGNI is currently being updated to operate on newer Cray<sup>®</sup>
+    Aries interconnect deployments and should be considered unstable at this
+    time.
 
 Below is a table summarizing the protocols and expected format for each plugin
 ([ ] means optional).
