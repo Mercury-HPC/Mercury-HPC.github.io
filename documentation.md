@@ -171,7 +171,7 @@ are used internally. There should not be any need for using them directly.
     for other platforms as well. See this [page]({% post_url 2017-01-30-shared-memory %})
     for design details.
 
-* __CCI:__ This is the most mature NA plugin available for general purpose use,
+* __CCI:__ This NA plugin is available for general purpose use,
   but some transport plugins within CCI are more robust than others. <br/>
   *Technical notes:*
   * Low CPU consumption (e.g., idles without busy spinning or using threads),
@@ -189,6 +189,24 @@ are used internally. There should not be any need for using them directly.
     Aries interconnect deployments and should be considered unstable at this
     time.
 
+* __OFI:__ (*master branch only*) The NA libfabric plugin is also available for general purpose use,
+but some providers (libfabric transport plugins) are still in an early development
+state. The plugin currently supports sockets/psm2/verbs/gni providers. <br/>
+  *Technical notes:*
+  * Low CPU consumption (e.g., idles without busy spinning or using threads),
+    is only available with the tcp/sockets provider for now.
+  * Connection-less and use reliable datagrams.
+  * RMA (for Mercury bulk operations) is implemented natively on transports
+    that support it.
+  * The tcp/sockets transport plugin creates a progress thread internally.
+  * ofi/sockets should be considered the most stable transport.
+  * ofi/psm2 can be used on Intel<sup>®</sup> Omni-Path interconnect.
+  * ofi/verbs is not thread-safe and requires a global lock to be internally
+    acquired when accessing the libfabric API, hence should be considered as experimental.
+  * ofi/gni support within the plugin is still experimental but can already be
+    used on Cray<sup>®</sup> systems with Gemini/Aries interconnect.
+
+
 Below is a table summarizing the protocols and expected format for each plugin
 ([ ] means optional).
 
@@ -198,6 +216,7 @@ bmi    | tcp                  | `bmi+tcp[://<hostname>:<port>]`| `[bmi+]tcp://<h
 mpi    | dynamic, static[<sup>2</sup>](#mpi_static)  | `mpi+<protocol>` | `[mpi+]<protocol>://<port>`
 na     | sm                   | `na+sm[://<PID>/<ID>]`         | `[na+]sm://<PID>/<ID>`
 cci    | tcp, verbs, gni <br/> sm | `cci+<protocol>[://<hostname>:<port>]`[<sup>3</sup>](#cci_config) <br/> `cci+sm[://<PID>/<ID>]` | `[cci+]<protocol>://<hostname>:<port>` <br/> `[cci+]sm://<cci shmem path>/<PID>/<ID>`[<sup>4</sup>](#cci_sm_config)
+ofi    | tcp, psm2, verbs, gni | `ofi+<protocol>[://<hostname>:<port>]` | `[ofi+]<protocol>://<hostname>:<port>`
 
 <a name="init_format"><sup>1</sup></a> When not being initialized in listening mode, the
 port specification should be elided.
@@ -205,9 +224,11 @@ port specification should be elided.
 <a name="mpi_static"><sup>2</sup></a> MPI static mode requires all mercury processes to
 be started in the same mpirun invocation.
 
-<a name="cci_config"><sup>3</sup></a> Note that CCI ignores for now the hostname that is passed. Instead please use a `cci.ini` file as well as the `CCI_CONFIG` environment
-variable to select the network interface to use. See the CCI `README` files for more
-details.
+<a name="cci_config"><sup>3</sup></a> Note that when using the 0.9.0 release tarball
+CCI ignores the hostname that is passed, this is fixed in later revisions.
+The workaround is to use a `cci.ini` file as well as
+the `CCI_CONFIG` environment variable to select the network interface to use.
+See the CCI `README` files for more details.
 
 <a name="cci_sm_config"><sup>4</sup></a> The default CCI config uses `/tmp/cci/sm/<hostname>`.
 This is not configurable on a per-endpoint basis. When in doubt, use
