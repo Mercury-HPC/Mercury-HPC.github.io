@@ -28,7 +28,7 @@ thousands of clients.
 <pre style="border: 0; padding: 0; overflow-x: visible;">
 <table><colgroup><col style="width: 33%" /><col style="width: 33%" /><col style="width: 33%" /></colgroup><tbody><tr>
 <td>
-<figure><img width="80%" src="/assets/anl_logo.png" alt="ANL Logo" /></figure>
+<figure><img width="100%" src="/assets/anl_logo.svg" alt="ANL Logo" /></figure>
 </td>
 <td>
 <figure><img width="60%" src="/assets/intel_logo.svg" alt="Intel Logo" /></figure>

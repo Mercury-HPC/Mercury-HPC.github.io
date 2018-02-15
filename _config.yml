@@ -21,7 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://mercury-hpc.github.io" # the base hostname & protocol for your site
 github_username:  mercury-hpc
 google_analytics: UA-98228964-1
-gems:
+plugins:
   - jekyll-feed
 
 # Build settings
