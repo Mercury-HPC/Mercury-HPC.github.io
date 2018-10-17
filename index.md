@@ -17,7 +17,6 @@ Mercury is partially supported by DOE Office of Science Advanced
 Scientific Computing Research (ASCR) research and by NSF Directorate
 for Computer &amp; Information Science &amp; Engineering (CISE)
 Division of Computing and Communication Foundations (CCF) core
-program funding. Mercury is also part of the
-<a href="http://www.mcs.anl.gov/research/projects/mochi/">Mochi</a>
-project.
+program funding. Mercury is part of the
+<a href="http://www.mcs.anl.gov/research/projects/mochi/">Mochi</a> project.
 
