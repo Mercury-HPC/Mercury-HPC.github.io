@@ -14,11 +14,7 @@ There are three mailing lists described below that users may wish to subscribe t
 
 * [mercury-devel@lists.mcs.anl.gov](mailto:mercury-devel@lists.mcs.anl.gov) [[subscribe](https://lists.mcs.anl.gov/mailman/listinfo/mercury-devel)]
 
-  This mailing list is available for Mercury developers to discuss implementation of new and existing features, NA plugins, etc. Developers must subscribe before they can send e-mails to the list. This list also gets tickets issued from trac.
-
-* [mercury-commits@lists.mcs.anl.gov](mailto:mercury-commits@lists.mcs.anl.gov) [[subscribe](https://lists.mcs.anl.gov/mailman/listinfo/mercury-commits)]
-
-  This list gets e-mails issued from commits pushed to the branches of Git repository.
+  This mailing list is available for Mercury developers to discuss implementation of new and existing features, NA plugins, etc. Developers must subscribe before they can send e-mails to the list.
 
 ## Issue Tracking
 
@@ -29,7 +25,7 @@ Current and past issues can be found on:
 If your issue is not listed, you may first check that the latest build passes by
 looking at the Travis continuous integration service:
 
-* Platform | Result
+Platform | Result
 -------- | ------
 Linux x86_64    | [![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury)
 
@@ -45,7 +41,7 @@ We welcome all contributions to Mercury!
 * Feedback on using Mercury and suggestions for improvements
 
 Please feel free to send any of the above to the mercury development mailing
-list.
+list or create an issue/pull request directly on GitHub.
 
 <p>
 We have many things planned for Mercury and limited developer time available;

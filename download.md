@@ -6,20 +6,17 @@ permalink: /download/
 
 Mercury is distributed under a [BSD-like license][license].
 
-## Releases
+## Releases [![Latest version][mercury-release-svg]][mercury-release-link]
 
 Filename                           | Date       | Size    | Arch | Type
+---------------------------------- | ---------- | ------- | ---- | -----------
+[mercury-1.0.0rc1.tar.bz2][1.0.0rc1] | 2018-10-xx | x kB  | Any  | Source .bz2
 ---------------------------------- | ---------- | ------- | ---- | -----------
 [mercury-0.9.0.tar.bz2][0.9.0]     | 2017-01-25 | 392 kB  | Any  | Source .bz2
 
 Older releases are available [here][ftp]. Releases can also be accessed
 through [GitHub][gh-releases], beware that generated tarballs accessible from
 the *"Source code"* link do not include mchecksum/kwsys submodules.
-
-[license]: https://github.com/mercury-hpc/mercury/blob/master/COPYING
-[0.9.0]: https://github.com/mercury-hpc/mercury/releases/download/v0.9.0/mercury-0.9.0.tar.bz2
-[ftp]: ftp://ftp.mcs.anl.gov/pub/mercury/releases/
-[gh-releases]: https://github.com/mercury-hpc/mercury/releases
 
 ## Current development distribution
 
@@ -30,3 +27,11 @@ To get the source (read-only access), simply run:
 {% highlight bash %}
 git clone --recurse-submodules https://github.com/mercury-hpc/mercury.git 
 {% endhighlight %}
+
+[mercury-release-svg]: https://img.shields.io/github/release/mercury-hpc/mercury.svg
+[mercury-release-link]: https://github.com/mercury-hpc/mercury/releases/latest
+[license]: https://github.com/mercury-hpc/mercury/blob/master/COPYING
+[1.0.0rc1]: https://github.com/mercury-hpc/mercury/releases/download/v1.0.0/mercury-1.0.0rc1.tar.bz2
+[0.9.0]: https://github.com/mercury-hpc/mercury/releases/download/v0.9.0/mercury-0.9.0.tar.bz2
+[ftp]: ftp://ftp.mcs.anl.gov/pub/mercury/releases/
+[gh-releases]: https://github.com/mercury-hpc/mercury/releases
