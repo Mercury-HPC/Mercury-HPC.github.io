@@ -208,8 +208,7 @@ __OFI:__ (*as of v1.0.0*) The NA OFI/libfabric plugin is available for general
     an early development state. The plugin currently supports tcp, verbs, psm2
     and gni transports. <br/>
   *Technical notes:*
-  * Low CPU consumption (i.e., idles without busy spinning), is only available with tcp and gni transports for now.
-  * As a result, the tcp and gni transport plugins create a progress thread internally.
+  * Low CPU consumption (i.e., idles without busy spinning) if supported by the libfabric provider. At present, the `sockets` and `gni` providers accomplish this by using internal progress threads.
   * Connection-less and uses reliable datagrams.
   * RMA (for Mercury bulk operations) is implemented natively on transports
     that support it (i.e., verbs, psm2 and gni).
