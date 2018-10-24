@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting started with Mchecksum"
-date:   2016-11-23 14:14:34
+date:   2018-10-24 16:06:01
 categories: documentation
 ---
 
@@ -63,14 +63,14 @@ int mchecksum_update(mchecksum_object_t checksum, const void *data, size_t size)
 
 ## Available Plugins
 
-Below is a list of the currently available plugins as well as the corresponding
-initialization string that must be passed to the `mchecksum_init()` call.
+Below is a list of the currently available plugins as well as corresponding
+initialization strings that must be passed to the `mchecksum_init()` call.
 Note that
 CRC32 and ADLER32 are available through the [ZLIB](http://www.zlib.net/) library and CRC32C is available
 with and without SSE4.2 optimization.
 When using the [ISA-L](https://github.com/01org/isa-l) library, improved
-performance can be achieved for CRC16 and CRC32C by using the `PCLMULQDQ` CPU
-instruction (when supported).
+performance can be achieved for CRC16, CRC32C and CRC64 by using the `PCLMULQDQ`
+CPU instruction (when supported).
 
 Plugin | Initialization Format
 ------ | ---------------------
@@ -82,7 +82,8 @@ ADLER32| `adler32`
 
 ## Performance Comparison
 
-Below is a performance comparison of the hash methods defined through mchecksum.
+Below is a performance comparison of the hash methods defined through mchecksum,
+using non-SSE/SSE/ISA-L (v2.24.0) versions. 
 
 <figure>
   <img src="/assets/mchecksum.svg" alt="mchecksum performance comparison" width="90%">
