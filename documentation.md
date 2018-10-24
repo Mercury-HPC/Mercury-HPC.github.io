@@ -244,7 +244,7 @@ plugin | protocol             | initialization format[<sup>1</sup>](#init_format
 bmi    | tcp                  | `bmi+tcp[://<hostname,IP>:<port>]`
 mpi    | dynamic, static[<sup>2</sup>](#mpi_static)  | `mpi+<protocol>`
 na     | sm                   | `na+sm`
-ofi    | tcp <br/> verbs <br/> psm2 <br/> gni | `ofi+tcp[://<hostname,IP,interface name>:<port>]` <br/> `ofi+verbs[://<hostname,IP,interface name>:<port>]`[<sup>3</sup>](#ofi_verbs_config) <br/> `ofi+psm2`[<sup>4</sup>](#ofi_psm2_config) <br/> `ofi+gni://<hostname,IP,interface name>` [<sup>5</sup>](#ofi_gni_config)
+ofi    | tcp <br/> verbs <br/> psm2 <br/> gni | `ofi+tcp[://<hostname,IP,interface name>:<port>]` <br/> `ofi+verbs[://<hostname,IP,interface name>:<port>]`[<sup>3</sup>](#ofi_verbs_config) <br/> `ofi+psm2`[<sup>4</sup>](#ofi_psm2_config) <br/> `ofi+gni[://<hostname,IP,interface name>]` [<sup>5</sup>](#ofi_gni_config)
 cci[<sup>6</sup>](#cci_config) | tcp <br/> verbs <br/> sm | `cci+tcp[://<hostname,IP,interface name>:<port>]` <br/> `cci+verbs[://<hostname,IP,interface name>:<port>]` <br/> `cci+sm[://<PID>/<ID>]`
 
 <a name="init_format"><sup>1</sup></a> When not being initialized in listening mode,  the port specification can be elided.
@@ -259,7 +259,8 @@ command `fi_info` for provider name `verbs;ofi_rxm` (e.g., `mlx5_0`).
 <a name="ofi_psm2_config"><sup>4</sup></a> Any hostname or port being passed will be ignored.
 
 <a name="ofi_gni_config"><sup>5</sup></a> No port information needs to be passed,
-the most common interface name is `ipogif0`.
+the most common interface name is `ipogif0`, which will be used by default if
+no hostname is passed.
 
 <a name="cci_config"><sup>6</sup></a> Note that a `cci.ini` file as well as
 the `CCI_CONFIG` environment variable can be provided to select the network interface to use. See the CCI `README` files for more details.
