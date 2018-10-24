@@ -193,7 +193,8 @@ main(void)
     hg_bulk_t bulk_handle;
 
     /* Create new HG bulk handle */
-    HG_Bulk_create(hg_class, buffer_ptrs, buffer_sizes, &hg_bulk_handle);
+    HG_Bulk_create(hg_class, buffer_ptrs, buffer_sizes,
+                   &hg_bulk_handle);
     /* Create new HG handle */
     HG_Create(hg_context, target, rpc_id, &hg_handle);
     /* Encode RPC and bulk handle */
@@ -241,8 +242,9 @@ rpc_cb(hg_handle_t handle)
     /* Setup handles etc */
     ...
     /* Start the transfer */
-    HG_bulk_transfer(context, bulk_cb, bulk_cb_args, HG_BULK_PULL, origin_addr,
-        origin_handle, origin_offset, local_handle, local_offset, size, &op_id);
+    HG_bulk_transfer(context, bulk_cb, bulk_cb_args, HG_BULK_PULL,
+                     origin_addr, origin_handle, origin_offset,
+                     local_handle, local_offset, size, &op_id);
     /* No progress after timeout */
     ...
     /* Cancel operation */
@@ -308,7 +310,8 @@ Cancellation of HG operations can only be realized by first supporting
 cancellation at the NA layer. Cancellation is supported via the
 following call:
 
-    na_return_t NA_Cancel(na_class_t *na_class, na_context_t *context, na_op_id_t op_id);
+    na_return_t NA_Cancel(na_class_t *na_class, na_context_t *context,
+                          na_op_id_t op_id);
 
 An additional `cancel` callback is added to the NA layer that allows
 plugin developers to support cancellation of non-blocking operations.
