@@ -29,7 +29,7 @@ The BoF is organized by:
 
 We have a series of talks followed by a longer discussion:
 * Introduction -- Jerome Soumagne
-* Mochi and Mercury -- Matthieu Dorier (Argonne National Laboratory) / Jerome Soumagne
+* Mochi and Mercury -- Matthieu Dorier (Argonne National Laboratory) and Jerome Soumagne
 * DAOS -- Johann Lombardi
 * SOS -- Chad Wood (University of Oregon)
 * Dataspaces -- Philip Davis (Rutgers University) and Manish Parashar
