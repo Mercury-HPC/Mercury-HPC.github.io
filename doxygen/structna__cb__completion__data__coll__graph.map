@@ -1,5 +1,5 @@
 <map id="na_cb_completion_data" name="na_cb_completion_data">
-<area shape="rect" id="node2" href="$structna__cb__info.html" title="na_cb_info" alt="" coords="150,95,235,121"/>
-<area shape="rect" id="node3" href="$structna__cb__info__recv__unexpected.html" title="na_cb_info_recv_unexpected" alt="" coords="5,5,196,32"/>
-<area shape="rect" id="node4" href="$structna__cb__info__lookup.html" title="na_cb_info_lookup" alt="" coords="221,5,351,32"/>
+<area shape="rect" id="node2" href="$structna__cb__info.html" title="na_cb_info" alt="" coords="165,95,257,121"/>
+<area shape="rect" id="node3" href="$structna__cb__info__recv__unexpected.html" title="na_cb_info_recv_unexpected" alt="" coords="5,5,216,32"/>
+<area shape="rect" id="node4" href="$structna__cb__info__lookup.html" title="na_cb_info_lookup" alt="" coords="241,5,383,32"/>
 </map>

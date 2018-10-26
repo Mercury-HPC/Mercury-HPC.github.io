@@ -1,6 +1,3 @@
 <map id="mercury_core.h" name="mercury_core.h">
-<area shape="rect" id="node2" href="$mercury_8h.html" title="mercury.h" alt="" coords="83,80,163,107"/>
-<area shape="rect" id="node3" href="$mercury__hl_8h.html" title="mercury_hl.h" alt="" coords="5,155,103,181"/>
-<area shape="rect" id="node5" href="$mercury__macros_8h.html" title="mercury_macros.h" alt="" coords="127,155,258,181"/>
-<area shape="rect" id="node4" href="$mercury__hl__macros_8h.html" title="mercury_hl_macros.h" alt="" coords="50,229,197,256"/>
+<area shape="rect" id="node2" href="$mercury__private_8h.html" title="mercury_private.h" alt="" coords="5,80,147,107"/>
 </map>

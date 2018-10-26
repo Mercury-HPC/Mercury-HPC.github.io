@@ -1,9 +1,9 @@
 <map id="mercury_macros.h" name="mercury_macros.h">
-<area shape="rect" id="node2" href="$mercury_8h.html" title="mercury.h" alt="" coords="101,80,181,107"/>
-<area shape="rect" id="node7" href="$mercury__proc_8h.html" title="mercury_proc.h" alt="" coords="239,80,351,107"/>
-<area shape="rect" id="node3" href="$mercury__core_8h.html" title="mercury_core.h" alt="" coords="5,155,117,181"/>
-<area shape="rect" id="node4" href="$mercury__types_8h.html" title="mercury_types.h" alt="" coords="117,229,235,256"/>
-<area shape="rect" id="node6" href="$na_8h.html" title="na.h" alt="" coords="38,229,85,256"/>
-<area shape="rect" id="node8" href="$mercury__error_8h.html" title="mercury_error.h" alt="" coords="275,229,389,256"/>
-<area shape="rect" id="node9" href="$mercury__bulk_8h.html" title="mercury_bulk.h" alt="" coords="193,155,303,181"/>
+<area shape="rect" id="node2" href="$mercury_8h.html" title="mercury.h" alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node6" href="$mercury__proc_8h.html" title="mercury_proc.h" alt="" coords="249,155,371,181"/>
+<area shape="rect" id="node10" href="$mercury__proc__bulk_8h.html" title="mercury_proc_bulk.h" alt="" coords="116,80,275,107"/>
+<area shape="rect" id="node3" href="$mercury__types_8h.html" title="mercury_types.h" alt="" coords="73,229,203,256"/>
+<area shape="rect" id="node4" href="$mercury__core__types_8h.html" title="mercury_core_types.h" alt="" coords="21,304,188,331"/>
+<area shape="rect" id="node7" href="$mercury__error_8h.html" title="mercury_error.h" alt="" coords="213,304,338,331"/>
+<area shape="rect" id="node11" href="$mercury__bulk_8h.html" title="mercury_bulk.h" alt="" coords="99,155,222,181"/>
 </map>

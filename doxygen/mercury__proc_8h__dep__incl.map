@@ -1,5 +1,6 @@
 <map id="mercury_proc.h" name="mercury_proc.h">
-<area shape="rect" id="node2" href="$mercury__macros_8h.html" title="mercury_macros.h" alt="" coords="13,87,144,114"/>
-<area shape="rect" id="node4" href="$mercury__proc__string_8h.html" title="proc_extra/mercury\l_proc_string.h" alt="" coords="169,80,303,121"/>
-<area shape="rect" id="node3" href="$mercury__hl__macros_8h.html" title="mercury_hl_macros.h" alt="" coords="5,169,152,196"/>
+<area shape="rect" id="node2" href="$mercury__macros_8h.html" title="mercury_macros.h" alt="" coords="15,169,158,196"/>
+<area shape="rect" id="node4" href="$mercury__proc__bulk_8h.html" title="mercury_proc_bulk.h" alt="" coords="66,87,225,114"/>
+<area shape="rect" id="node5" href="$mercury__proc__string_8h.html" title="proc_extra/mercury\l_proc_string.h" alt="" coords="249,80,399,121"/>
+<area shape="rect" id="node3" href="$mercury__hl__macros_8h.html" title="mercury_hl_macros.h" alt="" coords="5,244,168,271"/>
 </map>

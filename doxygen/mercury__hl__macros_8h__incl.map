@@ -1,11 +1,11 @@
 <map id="mercury_hl_macros.h" name="mercury_hl_macros.h">
-<area shape="rect" id="node2" href="$mercury__hl_8h.html" title="mercury_hl.h" alt="" coords="511,80,609,107"/>
-<area shape="rect" id="node9" href="$mercury__macros_8h.html" title="mercury_macros.h" alt="" coords="356,80,487,107"/>
-<area shape="rect" id="node3" href="$mercury_8h.html" title="mercury.h" alt="" coords="389,155,469,181"/>
-<area shape="rect" id="node6" href="$mercury__bulk_8h.html" title="mercury_bulk.h" alt="" coords="510,229,621,256"/>
-<area shape="rect" id="node7" href="$mercury__request_8h.html" title="mercury_request.h" alt="" coords="597,155,728,181"/>
-<area shape="rect" id="node4" href="$mercury__core_8h.html" title="mercury_core.h" alt="" coords="373,229,485,256"/>
-<area shape="rect" id="node5" href="$mercury__types_8h.html" title="mercury_types.h" alt="" coords="438,304,557,331"/>
-<area shape="rect" id="node10" href="$mercury__proc_8h.html" title="mercury_proc.h" alt="" coords="189,155,301,181"/>
-<area shape="rect" id="node11" href="$mercury__error_8h.html" title="mercury_error.h" alt="" coords="235,229,349,256"/>
+<area shape="rect" id="node2" href="$mercury__hl_8h.html" title="mercury_hl.h" alt="" coords="201,80,308,107"/>
+<area shape="rect" id="node8" href="$mercury__macros_8h.html" title="mercury_macros.h" alt="" coords="353,80,495,107"/>
+<area shape="rect" id="node3" href="$mercury_8h.html" title="mercury.h" alt="" coords="254,155,341,181"/>
+<area shape="rect" id="node5" href="$mercury__bulk_8h.html" title="mercury_bulk.h" alt="" coords="192,229,315,256"/>
+<area shape="rect" id="node6" href="$mercury__request_8h.html" title="mercury_request.h" alt="" coords="28,155,172,181"/>
+<area shape="rect" id="node4" href="$mercury__types_8h.html" title="mercury_types.h" alt="" coords="229,304,360,331"/>
+<area shape="rect" id="node9" href="$mercury__proc_8h.html" title="mercury_proc.h" alt="" coords="428,229,551,256"/>
+<area shape="rect" id="node13" href="$mercury__proc__bulk_8h.html" title="mercury_proc_bulk.h" alt="" coords="365,155,523,181"/>
+<area shape="rect" id="node10" href="$mercury__error_8h.html" title="mercury_error.h" alt="" coords="384,304,509,331"/>
 </map>
