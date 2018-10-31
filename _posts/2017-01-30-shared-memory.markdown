@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  "Shared-memory plugin for Mercury"
-date:   2017-01-30 14:31:03
+date:   2018-10-29 17:40:10
 categories: documentation
 ---
 
 Mercury defines a network abstraction layer that allows definition of plugins
-for high-speed networks. In the case of intranode communication, an efficient
-way of accessing memory between processes must be used (e.g., through shared
-memory).
+for high-speed networks. In the case of intra-node communication, the most
+efficient way of accessing memory between processes is to use shared-memory.
 
 ## Introduction
 
@@ -18,7 +17,7 @@ high-speed networks by providing two types of messaging: _small messaging_
 Small messages fall into two categories: unexpected and expected. Large
 transfers use a one-sided mechanism for efficient access to remote memory,
 enabling transfers to be made without intermediate copy.
-The interface currently provides implementations for BMI, MPI, and CCI, which
+The interface currently provides implementations for BMI, MPI, CCI and OFI libfabric, which
 are themselves abstractions on top of the common HPC network protocols.
 When doing communication locally on the same node between separate processes,
 it is desirable to bypass the loopback network interface and directly
@@ -30,10 +29,10 @@ requires explicit use of the CCI external library; it uses a connection thread i
 CCI only provides RMA registration per contiguous segment region which prevents
 users from transferring non-contiguous regions in one single RMA operation.
 
-It is also worth noting that other libraries such as libfabric may also support
-shared memory optimization in the future, though having an independent shared
-memory plugin that can be used with other transports at the same time, in a
-transparent manner, (and than can provide optimal performance)
+It is also worth noting that other libraries such as libfabric support
+shared memory optimization, though having an independent shared-memory plugin
+that can be used with other transports at the same time, in a
+transparent manner, (and that can provide optimal performance)
 is an important feature for mercury.
 
 This document assumes that the reader already has knowledge of Mercury and its
@@ -44,8 +43,8 @@ referenced under the GitHub issue [#75].
 
 The design of this plugin follows three main requirements:
 
-- Reuse existing shared memory technology and concepts to the degree possible;
-- Make progress on conventional and shared memory communication simultaneously
+- Reuse existing shared-memory technology and concepts to the degree possible;
+- Make progress on conventional and shared-memory communication simultaneously
   without busy waiting;
 - Use plugin transparently (i.e., ability to use the same address for both
   conventional and shared memory communication).
@@ -64,8 +63,8 @@ For short messages, we use an mmap'ed POSIX shared memory object combined to a
 signaling interface that allows either party to be notified when a new message
 has been written into the shared memory space. One region is created per
 listening interface that allows processes to post short messages, by first
-reserving a buffer (_atomically_) in the mmap'ed shared memory object and then
-signaling to the destination that it has been copied (in a non blocking manner).
+reserving a buffer _atomically_ in the mmap'ed shared memory object and then
+signaling the destination that it has been copied (in a non blocking manner).
 This requires a 2-way signaling channel (based on either an `eventfd` or a named
 pipe if the former is not available)
 per process/connection (`eventfd` descriptors can be exchanged over
@@ -114,67 +113,57 @@ the `epoll()`/`poll()`/`kqueue()` system calls.
 When one file descriptor _wakes up_, the NA layer can then determine which
 plugin that file descriptor belongs to and enter the corresponding
 progress functions to complete the operation.
-When the NA plugins supports it (e.g., SM, CCI), progress can be
+When the NA plugins supports it (e.g., SM, CCI, OFI), progress can be
 made without any latency overhead, which would otherwise be introduced by
 entering multiple `NA_Progress()` calls in order to do busy polling.
 
 ## Transparent Use
 
-Transparent use is essential for a shared-memory plugin as users cannot pay
-the cost of adding an explicit condition to switch between local and remote
-operations (both in terms of performance and convenience).
-One simple way of adding transparent shared-memory operations is to
-determine shared memory address information on lookup calls, which will in
-turn drive subsequent mercury calls to use or not use the shared memory NA
-plugin class. Multiple solutions can be used to actually determine whether an
-address is local or not, although the most simple solution
-consists of using the addressing convention that is provided by the NA layer,
-i.e., retrieve the corresponding hostname and determine whether that hostname
-is a local hostname. Other solutions are considered as well.
-A mode to completely disable that plugin can also be provided through a
-CMake option.
+Transparent use is essential for a shared-memory plugin as
+adding an explicit condition to switch between local and remote
+operations is not always reasonable, both in terms of performance and
+convenience.
+This mode of operation can be enabled within Mercury through the CMake option
+`MERCURY_USE_SM_ROUTING`.
+
+When enabled, Mercury internally creates a separate NA SM class and makes
+progress on that class as well as on the requested class (e.g., OFI, CCI).
+Local node detection is enabled by generating a UUID for the node and storing
+that UUID in the `NA_SM_TMP_DIRECTORY/NA_SM_SHM_PREFIX` directory. When a lookup
+call is issued, the string passed is parsed and the UUID compared with the
+locally stored UUID.
 
 ## Performance
 
 Below is a performance comparison of the shared-memory plugin when using both
-polling and busy waiting mechanisms. The first plot shows the RPC performance
+wait and busy spin mechanisms. The first plot shows the RPC performance
 compared to existing plugins when using one single RPC in-flight:
 
 <figure>
-  <img src="/assets/shared-memory/rpc-1.svg" alt="1 RPC in-flight" width="80%">
+  <img src="/assets/shared-memory/rpc_rate1.svg" alt="1 RPC in-flight" width="80%">
 </figure>
 
 The second plot shows the RPC performance
 compared to existing plugins when using 16 RPCs in-flight:
 
 <figure>
-  <img src="/assets/shared-memory/rpc-16.svg" alt="16 RPCs in-flight" width="80%">
+  <img src="/assets/shared-memory/rpc_rate16.svg" alt="16 RPCs in-flight" width="80%">
 </figure>
 
-The third plot shows the bulk transfer performance
-compared to existing plugins when doing a 16 MB contiguous transfer:
+The third plot shows the RPC with pull bulk transfer performance
+compared to existing plugins with various transfer sizes:
 
 <figure>
-  <img src="/assets/shared-memory/contiguous.svg" alt="Contiguous" width="80%">
+  <img src="/assets/shared-memory/write_bw1.svg" alt="Write Bandwidth" width="80%">
 </figure>
 
-The fourth plot shows the bulk transfer performance
-compared to existing plugins when doing a 16 MB non-contiguous transfer of
-1024 pieces:
+The fourth plot shows the RPC with push bulk transfer performance
+compared to existing plugins with various transfer sizes:
 
 <figure>
-  <img src="/assets/shared-memory/non-contiguous.svg" alt="Contiguous" width="80%">
+  <img src="/assets/shared-memory/read_bw1.svg" alt="Read Bandwidth" width="80%">
 </figure>
 
-
-## Conclusion and Future work
-Implementation of a first version of this shared memory plugin has been done and
-provides good performance results. No threads are used internally and progress
-is made in a non blocking manner without busy polling. RMA transfers of non
-contiguous memory segments (i.e., scatter/gather operations) are also supported.
-
-Implementation of transparent use features is still
-on going and has not been completed yet.
 
 [#75]: https://github.com/mercury-hpc/mercury/issues/75
 [cma]: https://lwn.net/Articles/405284/

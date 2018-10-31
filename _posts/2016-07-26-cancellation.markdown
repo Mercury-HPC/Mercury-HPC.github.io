@@ -365,6 +365,7 @@ lookup operations. Lookup is an operation that can involve additional
 connection steps depending on the NA plugin involved and deferred
 connection/asynchronous lookup execution scenarios must be properly
 supported in order to support cancellation for these operations.
-Cancellation of BMI/MPI one-sided operations must also be improved.
+Cancellation of BMI/MPI one-sided operations could also be improved, though is
+not a priority at this point.
 
 [#34]: <https://github.com/mercury-hpc/mercury/issues/34>
