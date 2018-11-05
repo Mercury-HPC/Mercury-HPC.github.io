@@ -136,32 +136,43 @@ locally stored UUID.
 ## Performance
 
 Below is a performance comparison of the shared-memory plugin when using both
-wait and busy spin mechanisms. The first plot shows the RPC performance
-compared to existing plugins when using one single RPC in-flight:
+wait and busy spin mechanisms, CCI v2.2, libfabric v1.7.0a1 and mercury v1.0.0.
+The following plot shows the RPC average time with one RPC in flight:
 
 <figure>
-  <img src="/assets/shared-memory/rpc_rate1.svg" alt="1 RPC in-flight" width="80%">
+  <img src="/assets/shared-memory/rpc_time1.svg" alt="RPC time 1" width="80%">
 </figure>
 
-The second plot shows the RPC performance
-compared to existing plugins when using 16 RPCs in-flight:
+Same plot but with 16 RPCs in-flight:
 
 <figure>
-  <img src="/assets/shared-memory/rpc_rate16.svg" alt="16 RPCs in-flight" width="80%">
+  <img src="/assets/shared-memory/rpc_time16.svg" alt="RPC time 16" width="80%">
 </figure>
 
-The third plot shows the RPC with pull bulk transfer performance
+The following plot shows the RPC with *pull* bulk transfer performance
 compared to existing plugins with various transfer sizes:
 
 <figure>
-  <img src="/assets/shared-memory/write_bw1.svg" alt="Write Bandwidth" width="80%">
+  <img src="/assets/shared-memory/write_bw1.svg" alt="Write Bandwidth 1" width="80%">
 </figure>
 
-The fourth plot shows the RPC with push bulk transfer performance
+Same plot but with 16 RPCs in-flight:
+
+<figure>
+  <img src="/assets/shared-memory/write_bw16.svg" alt="Write Bandwidth 16" width="80%">
+</figure>
+
+The following plot shows the RPC with *push* bulk transfer performance
 compared to existing plugins with various transfer sizes:
 
 <figure>
-  <img src="/assets/shared-memory/read_bw1.svg" alt="Read Bandwidth" width="80%">
+  <img src="/assets/shared-memory/read_bw1.svg" alt="Read Bandwidth 1" width="80%">
+</figure>
+
+Same plot but with 16 RPCs in-flight:
+
+<figure>
+  <img src="/assets/shared-memory/read_bw16.svg" alt="Read Bandwidth 16" width="80%">
 </figure>
 
 

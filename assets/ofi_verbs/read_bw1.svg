@@ -252,7 +252,7 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 <g fill="none" color="black" stroke="black" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="gray" stroke="currentColor" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='gray' stroke-dasharray='2,4' class="gridline"  d='M530.8,342.4 L530.8,99.1 M530.8,63.1 L530.8,54.1  '/></g>
+	<path stroke='gray' stroke-dasharray='2,4' class="gridline"  d='M530.8,342.4 L530.8,54.1  '/></g>
 <g fill="none" color="gray" stroke="gray" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -265,7 +265,7 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 <g fill="none" color="black" stroke="black" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="gray" stroke="currentColor" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='gray' stroke-dasharray='2,4' class="gridline"  d='M575.0,342.4 L575.0,99.1 M575.0,63.1 L575.0,54.1  '/></g>
+	<path stroke='gray' stroke-dasharray='2,4' class="gridline"  d='M575.0,342.4 L575.0,54.1  '/></g>
 <g fill="none" color="gray" stroke="gray" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -289,18 +289,18 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(331.7,31.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Mercury RPC Read (server push) Benchmark - 1 handle (cooley)</tspan></text>
+		<text><tspan font-family="Arial" >Mercury RPC w/Bulk Push Benchmark - 1 handle (cooley)</tspan></text>
 	</g>
 </g>
-	<g id="gnuplot_plot_1" ><title>OFI TCP (lo)</title>
+	<g id="gnuplot_plot_1" ><title>OFI TCP</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="gnuplot_plot_1_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_1')">
-	<g transform="translate(279.4,76.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >OFI TCP (lo)</tspan></text>
+	<g transform="translate(254.5,76.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Arial" >OFI TCP</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 86, 180, 233)'  d='M287.7,72.1 L329.9,72.1  '/>	</g>
+	<path stroke='rgb( 86, 180, 233)'  d='M262.8,72.1 L305.0,72.1  '/>	</g>
 	<path stroke='rgb( 86, 180, 233)'  d='M230.3,342.4 L243.3,331.6 L265.4,313.4 L287.5,295.3 L309.6,279.9 L331.8,261.1 L353.9,244.0 L376.0,227.2
 		L398.1,210.7 L420.2,195.7 L442.3,181.4 L464.4,171.5 L486.5,163.7 L508.7,158.5 L530.8,155.4 L552.9,153.5
 		L575.0,160.0  '/>	<use xlink:href='#gpPt7' transform='translate(243.3,331.6) scale(5.40)' color='rgb( 86, 180, 233)'/>
@@ -320,19 +320,19 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<use xlink:href='#gpPt7' transform='translate(552.9,153.5) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt7' transform='translate(575.0,160.0) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<g id="gnuplot_plot_1_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_1')">
-	<use xlink:href='#gpPt7' transform='translate(308.8,72.1) scale(5.40)' color='rgb( 86, 180, 233)'/>
+	<use xlink:href='#gpPt7' transform='translate(283.9,72.1) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	</g>
 </g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>OFI verbs</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="gnuplot_plot_2_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_2')">
-	<g transform="translate(279.4,94.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+	<g transform="translate(254.5,94.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >OFI verbs</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 158, 115)'  d='M287.7,90.1 L329.9,90.1  '/>	</g>
+	<path stroke='rgb(  0, 158, 115)'  d='M262.8,90.1 L305.0,90.1  '/>	</g>
 	<path stroke='rgb(  0, 158, 115)'  d='M161.5,342.4 L177.0,329.6 L199.1,311.7 L221.2,293.3 L243.3,275.5 L265.4,258.1 L287.5,240.3 L309.6,222.7
 		L331.8,205.0 L353.9,188.1 L376.0,172.3 L398.1,158.1 L420.2,144.5 L442.3,133.5 L464.4,125.5 L486.5,120.2
 		L508.7,117.2 L530.8,116.4 L552.9,114.4 L575.0,114.0  '/>	<use xlink:href='#gpPt7' transform='translate(177.0,329.6) scale(5.40)' color='rgb(  0, 158, 115)'/>
@@ -355,19 +355,19 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<use xlink:href='#gpPt7' transform='translate(552.9,114.4) scale(5.40)' color='rgb(  0, 158, 115)'/>
 	<use xlink:href='#gpPt7' transform='translate(575.0,114.0) scale(5.40)' color='rgb(  0, 158, 115)'/>
 	<g id="gnuplot_plot_2_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_2')">
-	<use xlink:href='#gpPt7' transform='translate(308.8,90.1) scale(5.40)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt7' transform='translate(283.9,90.1) scale(5.40)' color='rgb(  0, 158, 115)'/>
 	</g>
 </g>
 	</g>
-	<g id="gnuplot_plot_3" ><title>OFI TCP busy spin (lo)</title>
+	<g id="gnuplot_plot_3" ><title>OFI TCP busy spin</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="gnuplot_plot_3_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_3')">
-	<g transform="translate(520.8,76.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >OFI TCP busy spin (lo)</tspan></text>
+	<g transform="translate(471.0,76.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Arial" >OFI TCP busy spin</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 86, 180, 233)'  d='M529.1,72.1 L571.3,72.1  '/>	</g>
+	<path stroke='rgb( 86, 180, 233)'  d='M479.3,72.1 L521.5,72.1  '/>	</g>
 	<path stroke='rgb( 86, 180, 233)'  d='M224.6,342.4 L243.3,327.4 L265.4,308.9 L287.5,290.9 L309.6,274.6 L331.8,255.5 L353.9,239.3 L376.0,222.4
 		L398.1,205.7 L420.2,191.1 L442.3,178.7 L464.4,166.9 L486.5,158.2 L508.7,152.4 L530.8,148.3 L552.9,146.9
 		L575.0,148.3  '/>	<use xlink:href='#gpPt6' transform='translate(243.3,327.4) scale(5.40)' color='rgb( 86, 180, 233)'/>
@@ -387,19 +387,19 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<use xlink:href='#gpPt6' transform='translate(552.9,146.9) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt6' transform='translate(575.0,148.3) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<g id="gnuplot_plot_3_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_3')">
-	<use xlink:href='#gpPt6' transform='translate(550.2,72.1) scale(5.40)' color='rgb( 86, 180, 233)'/>
+	<use xlink:href='#gpPt6' transform='translate(500.4,72.1) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	</g>
 </g>
 	</g>
 	<g id="gnuplot_plot_4" ><title>OFI verbs busy spin</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g id="gnuplot_plot_4_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_4')">
-	<g transform="translate(520.8,94.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+	<g transform="translate(471.0,94.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >OFI verbs busy spin</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0, 158, 115)'  d='M529.1,90.1 L571.3,90.1  '/>	</g>
+	<path stroke='rgb(  0, 158, 115)'  d='M479.3,90.1 L521.5,90.1  '/>	</g>
 	<path stroke='rgb(  0, 158, 115)'  d='M160.1,342.4 L177.0,328.6 L199.1,310.9 L221.2,292.4 L243.3,274.7 L265.4,257.3 L287.5,239.2 L309.6,221.5
 		L331.8,204.7 L353.9,187.7 L376.0,172.0 L398.1,157.5 L420.2,144.2 L442.3,133.4 L464.4,125.1 L486.5,119.9
 		L508.7,116.9 L530.8,115.3 L552.9,114.4 L575.0,114.0  '/>	<use xlink:href='#gpPt6' transform='translate(177.0,328.6) scale(5.40)' color='rgb(  0, 158, 115)'/>
@@ -422,7 +422,7 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<use xlink:href='#gpPt6' transform='translate(552.9,114.4) scale(5.40)' color='rgb(  0, 158, 115)'/>
 	<use xlink:href='#gpPt6' transform='translate(575.0,114.0) scale(5.40)' color='rgb(  0, 158, 115)'/>
 	<g id="gnuplot_plot_4_keyentry" visibility="visible" onclick="gnuplot_svg.toggleVisibility(evt,'gnuplot_plot_4')">
-	<use xlink:href='#gpPt6' transform='translate(550.2,90.1) scale(5.40)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt6' transform='translate(500.4,90.1) scale(5.40)' color='rgb(  0, 158, 115)'/>
 	</g>
 </g>
 	</g>

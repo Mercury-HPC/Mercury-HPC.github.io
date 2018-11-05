@@ -61,7 +61,11 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
+	<path stroke='black'  d='M80.2,313.5 L84.7,313.5 M575.0,313.5 L570.5,313.5 M80.2,296.5 L84.7,296.5 M575.0,296.5 L570.5,296.5
+		M80.2,284.5 L84.7,284.5 M575.0,284.5 L570.5,284.5 M80.2,275.2 L84.7,275.2 M575.0,275.2 L570.5,275.2
+		M80.2,267.6 L84.7,267.6 M575.0,267.6 L570.5,267.6 M80.2,261.2 L84.7,261.2 M575.0,261.2 L570.5,261.2
+		M80.2,255.6 L84.7,255.6 M575.0,255.6 L570.5,255.6 M80.2,250.7 L84.7,250.7 M575.0,250.7 L570.5,250.7
+		 '/></g>
 <g fill="none" color="black" stroke="black" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="gray" stroke="currentColor" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
@@ -74,7 +78,11 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
+	<path stroke='black'  d='M80.2,217.4 L84.7,217.4 M575.0,217.4 L570.5,217.4 M80.2,200.4 L84.7,200.4 M575.0,200.4 L570.5,200.4
+		M80.2,188.4 L84.7,188.4 M575.0,188.4 L570.5,188.4 M80.2,179.1 L84.7,179.1 M575.0,179.1 L570.5,179.1
+		M80.2,171.5 L84.7,171.5 M575.0,171.5 L570.5,171.5 M80.2,165.1 L84.7,165.1 M575.0,165.1 L570.5,165.1
+		M80.2,159.5 L84.7,159.5 M575.0,159.5 L570.5,159.5 M80.2,154.6 L84.7,154.6 M575.0,154.6 L570.5,154.6
+		 '/></g>
 <g fill="none" color="black" stroke="black" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="gray" stroke="currentColor" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
@@ -87,16 +95,20 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
+	<path stroke='black'  d='M80.2,121.3 L84.7,121.3 M575.0,121.3 L570.5,121.3 M80.2,104.3 L84.7,104.3 M575.0,104.3 L570.5,104.3
+		M80.2,92.3 L84.7,92.3 M575.0,92.3 L570.5,92.3 M80.2,83.0 L84.7,83.0 M575.0,83.0 L570.5,83.0
+		M80.2,75.4 L84.7,75.4 M575.0,75.4 L570.5,75.4 M80.2,69.0 L84.7,69.0 M575.0,69.0 L570.5,69.0
+		M80.2,63.4 L84.7,63.4 M575.0,63.4 L570.5,63.4 M80.2,58.5 L84.7,58.5 M575.0,58.5 L570.5,58.5
+		 '/></g>
 <g fill="none" color="black" stroke="black" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="gray" stroke="currentColor" stroke-width="0.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='gray' stroke-dasharray='2,4' class="gridline"  d='M80.2,121.3 L575.0,121.3  '/></g>
+	<path stroke='gray' stroke-dasharray='2,4' class="gridline"  d='M80.2,54.1 L575.0,54.1  '/></g>
 <g fill="none" color="gray" stroke="gray" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M80.2,121.3 L89.2,121.3 M575.0,121.3 L566.0,121.3  '/>	<g transform="translate(71.9,125.2)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 2x10</tspan><tspan font-family="Arial"  font-size="9.6" dy="-6.00px">6</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
+	<path stroke='black'  d='M80.2,54.1 L89.2,54.1 M575.0,54.1 L566.0,54.1  '/>	<g transform="translate(71.9,58.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+		<text><tspan font-family="Arial" > 1x10</tspan><tspan font-family="Arial"  font-size="9.6" dy="-6.00px">7</tspan><tspan font-size="12.0" dy="6.00"></tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -222,7 +234,7 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 	<path stroke='black'  d='M80.2,54.1 L80.2,342.4 L575.0,342.4 L575.0,54.1 L80.2,54.1 Z  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(17.0,198.3) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >RPC rate (calls/s)</tspan></text>
+		<text><tspan font-family="Arial" >RPC Rate (Calls / Seconds)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -232,7 +244,7 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(327.6,31.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Mercury RPC Rate Benchmark - 1 handle (Intel(R) Core(TM) i7-8850H CPU)</tspan></text>
+		<text><tspan font-family="Arial" >Mercury RPC Benchmark - 1 handle (Intel(R) Core(TM) i7-8850H CPU)</tspan></text>
 	</g>
 </g>
 	<g id="gnuplot_plot_1" ><title>OFI TCP (lo)</title>
