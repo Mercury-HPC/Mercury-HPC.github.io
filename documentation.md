@@ -167,20 +167,23 @@ are used internally. There should not be any need for using them directly.
 __BMI:__ The BMI library itself is no longer under active feature development
   beyond basic maintenance, but the BMI Mercury NA plugin provides a very stable
   and reasonably performant option for IP networks when used with BMI's TCP
-  method. <br/>
-  *Technical notes:*
+  method.
+
+*Technical notes:*
   * Low CPU consumption (i.e., idles without busy spinning or using threads).
   * Supports dynamic client connection and disconnection.
   * RMA (for Mercury bulk operations) is emulated via point-to-point messaging.
   * Does *not* support initializing multiple instances simultaneously.
   * Other BMI methods besides TCP are not supported.
   * For general BMI information see this [paper](http://ieeexplore.ieee.org/abstract/document/1420118/).
+
 <hr />
 __MPI:__ MPI implementations are widely available for nearly any platform, and
   the MPI Mercury NA plugin provides a convenient option for prototyping and
   functionality testing. It is not optimized for performance, however, and it
-  has some practical limitations when used for persistent services. <br/>
-  *Technical notes:*
+  has some practical limitations when used for persistent services.
+
+*Technical notes:*
   * Clients can connect to a server dynamically only if the underlying MPI 
     implementation supports `MPI_Comm_connect()`.
   * RMA (for Mercury bulk operations) is emulated via point-to-point messaging
@@ -194,8 +197,9 @@ __SM:__ (*as of v0.9.0*) This is the integrated shared memory NA plugin included
   node communication.  The eventual goal of this plugin is to provide a
   transparent shortcut for other NA plugins when they connect to local services
   using the `auto_sm` initialization option (see section [shared-memory][shared-memory] for more details),
-  but it is also useful as a primary transport for single-node services. <br/>
-  *Technical notes:*
+  but it is also useful as a primary transport for single-node services.
+
+*Technical notes:*
   * Supports dynamic client connection and disconnection.
   * Low CPU consumption (i.e., idles without busy spinning or using threads).
   * RMA (for Mercury bulk operations) is implemented natively through
@@ -206,13 +210,14 @@ __SM:__ (*as of v0.9.0*) This is the integrated shared memory NA plugin included
 __OFI:__ (*as of v1.0.0*) The NA OFI/libfabric plugin is available for general
     purpose use, but some providers (libfabric transport plugins) are still in
     an early development state. The plugin currently supports tcp, verbs, psm2
-    and gni transports. <br/>
-  *Technical notes:*
-  * Low CPU consumption (i.e., idles without busy spinning) if supported by the libfabric provider. At present, the `sockets` and `gni` providers accomplish this by using internal progress threads.
+    and gni transports. See this [page][libfabric] for design details.
+
+*Technical notes:*
+  * Low CPU consumption (i.e., idles without busy spinning) is supported by all libfabric providers. At present, the `sockets`, `psm2` and `gni` providers accomplish this by using internal progress threads.
   * Connection-less and uses reliable datagrams.
   * RMA (for Mercury bulk operations) is implemented natively on transports
     that support it (i.e., verbs, psm2 and gni).
-  * ofi/tcp (`sockets` provider) should be considered the most stable transport.
+  * ofi/tcp (`sockets` provider) should be considered the most stable transport, although emulates some of the operations.
   * ofi/verbs (`verbs;rxm` provider) is stable and uses the RxM layer to emulate connection-less endpoints.
   * ofi/psm2 (`psm2` provider) is stable and can be used on Intel<sup>®</sup> Omni-Path interconnect.
   * ofi/gni (`gni` provider) support within the plugin is stable and can be
@@ -221,8 +226,9 @@ __OFI:__ (*as of v1.0.0*) The NA OFI/libfabric plugin is available for general
     communication between separate jobs is required (see section [DRC credentials][DRC credentials]).
 <hr />
 __CCI:__ (*deprecated*) This NA plugin is still available for general purpose use,
-  but is now deprecated as CCI itself is no longer actively maintained. Some transport plugins within CCI are more robust than others. <br/>
-  *Technical notes:*
+  but is now deprecated as CCI itself is no longer actively maintained. Some transport plugins within CCI are more robust than others.
+
+*Technical notes:*
   * Low CPU consumption (i.e., idles without busy spinning or using threads),
     with the exception of the TCP CCI plugin, see below.
   * Supports dynamic client connection and disconnection.
@@ -809,4 +815,6 @@ Below is a list of more advanced topics and documentation items:
 [cancellation]: {% post_url 2016-07-26-cancellation %}
 [progress modes]: {% post_url 2018-10-22-progress-modes %}
 [drc credentials]: {% post_url 2018-10-22-drc-credentials %}
+[libfabric]: {% post_url 2018-11-02-libfabric %}
+
 
