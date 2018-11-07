@@ -239,8 +239,9 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb( 86, 180, 233)'  d='M246.2,72.1 L288.4,72.1  '/>	</g>
-	<path stroke='rgb( 86, 180, 233)'  d='M80.2,319.3 L142.1,319.3 L173.0,320.2 L203.9,319.4 L234.8,319.6 L265.8,320.2 L296.7,320.4 L327.6,323.7
-		L358.5,324.6 L389.5,336.6 L420.4,337.5 L425.5,342.4  '/>	<use xlink:href='#gpPt7' transform='translate(142.1,319.3) scale(5.40)' color='rgb( 86, 180, 233)'/>
+	<path stroke='rgb( 86, 180, 233)'  d='M80.2,323.0 L142.1,319.3 L173.0,320.2 L203.9,319.4 L234.8,319.6 L265.8,320.2 L296.7,320.4 L327.6,323.7
+		L358.5,324.6 L389.5,336.6 L420.4,337.5 L425.5,342.4  '/>	<use xlink:href='#gpPt7' transform='translate(80.2,323.0) scale(5.40)' color='rgb( 86, 180, 233)'/>
+	<use xlink:href='#gpPt7' transform='translate(142.1,319.3) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt7' transform='translate(173.0,320.2) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt7' transform='translate(203.9,319.4) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt7' transform='translate(234.8,319.6) scale(5.40)' color='rgb( 86, 180, 233)'/>
@@ -264,9 +265,10 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 159,   0)'  d='M246.2,90.1 L288.4,90.1  '/>	</g>
-	<path stroke='rgb(230, 159,   0)'  d='M80.2,190.9 L142.1,190.9 L173.0,189.7 L203.9,190.1 L234.8,189.2 L265.8,189.5 L296.7,189.7 L327.6,189.8
+	<path stroke='rgb(230, 159,   0)'  d='M80.2,193.5 L142.1,190.9 L173.0,189.7 L203.9,190.1 L234.8,189.2 L265.8,189.5 L296.7,189.7 L327.6,189.8
 		L358.5,190.5 L389.5,192.6 L420.4,195.7 L451.3,232.5 L482.2,244.2 L513.2,256.1 L544.1,266.7 L575.0,282.4
-		 '/>	<use xlink:href='#gpPt7' transform='translate(142.1,190.9) scale(5.40)' color='rgb(230, 159,   0)'/>
+		 '/>	<use xlink:href='#gpPt7' transform='translate(80.2,193.5) scale(5.40)' color='rgb(230, 159,   0)'/>
+	<use xlink:href='#gpPt7' transform='translate(142.1,190.9) scale(5.40)' color='rgb(230, 159,   0)'/>
 	<use xlink:href='#gpPt7' transform='translate(173.0,189.7) scale(5.40)' color='rgb(230, 159,   0)'/>
 	<use xlink:href='#gpPt7' transform='translate(203.9,190.1) scale(5.40)' color='rgb(230, 159,   0)'/>
 	<use xlink:href='#gpPt7' transform='translate(234.8,189.2) scale(5.40)' color='rgb(230, 159,   0)'/>
@@ -295,8 +297,9 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb( 86, 180, 233)'  d='M454.4,72.1 L496.6,72.1  '/>	</g>
-	<path stroke='rgb( 86, 180, 233)'  d='M80.2,286.9 L142.1,286.9 L173.0,287.0 L203.9,286.8 L234.8,286.7 L265.8,286.9 L296.7,287.0 L327.6,287.6
-		L358.5,287.8 L389.5,307.9 L420.4,309.4 L449.8,342.4  '/>	<use xlink:href='#gpPt6' transform='translate(142.1,286.9) scale(5.40)' color='rgb( 86, 180, 233)'/>
+	<path stroke='rgb( 86, 180, 233)'  d='M80.2,288.2 L142.1,286.9 L173.0,287.0 L203.9,286.8 L234.8,286.7 L265.8,286.9 L296.7,287.0 L327.6,287.6
+		L358.5,287.8 L389.5,307.9 L420.4,309.4 L449.8,342.4  '/>	<use xlink:href='#gpPt6' transform='translate(80.2,288.2) scale(5.40)' color='rgb( 86, 180, 233)'/>
+	<use xlink:href='#gpPt6' transform='translate(142.1,286.9) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt6' transform='translate(173.0,287.0) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt6' transform='translate(203.9,286.8) scale(5.40)' color='rgb( 86, 180, 233)'/>
 	<use xlink:href='#gpPt6' transform='translate(234.8,286.7) scale(5.40)' color='rgb( 86, 180, 233)'/>
@@ -320,9 +323,10 @@ onclick="gnuplot_svg.toggleCoordBox(evt)"  onmousemove="gnuplot_svg.moveCoordBox
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(230, 159,   0)'  d='M454.4,90.1 L496.6,90.1  '/>	</g>
-	<path stroke='rgb(230, 159,   0)'  d='M80.2,144.7 L142.1,144.7 L173.0,144.5 L203.9,143.7 L234.8,143.2 L265.8,143.8 L296.7,145.3 L327.6,146.2
+	<path stroke='rgb(230, 159,   0)'  d='M80.2,145.9 L142.1,144.7 L173.0,144.5 L203.9,143.7 L234.8,143.2 L265.8,143.8 L296.7,145.3 L327.6,146.2
 		L358.5,151.4 L389.5,160.9 L420.4,162.8 L451.3,205.4 L482.2,218.4 L513.2,234.8 L544.1,247.7 L575.0,268.8
-		 '/>	<use xlink:href='#gpPt6' transform='translate(142.1,144.7) scale(5.40)' color='rgb(230, 159,   0)'/>
+		 '/>	<use xlink:href='#gpPt6' transform='translate(80.2,145.9) scale(5.40)' color='rgb(230, 159,   0)'/>
+	<use xlink:href='#gpPt6' transform='translate(142.1,144.7) scale(5.40)' color='rgb(230, 159,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(173.0,144.5) scale(5.40)' color='rgb(230, 159,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(203.9,143.7) scale(5.40)' color='rgb(230, 159,   0)'/>
 	<use xlink:href='#gpPt6' transform='translate(234.8,143.2) scale(5.40)' color='rgb(230, 159,   0)'/>
