@@ -40,7 +40,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">mercury_header.h File Reference</div>  </div>
@@ -68,54 +67,24 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__header.html">hg_header</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a4b0d60e19cfddf2130ceb7231002f0f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a> { <a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8a1822d6566485ad6737be05aeaef8c08c">HG_UNDEF</a>, 
-<a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8acdcc4378e1cf024613311b6dcaaabad6">HG_INPUT</a>, 
-<a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8a4fa8697a166fd7bc27657a115e716b78">HG_OUTPUT</a>
- }</td></tr>
-<tr class="separator:a4b0d60e19cfddf2130ceb7231002f0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa9e7d694a47b8d8d0e548259afd1722d"><td class="memItemLeft" align="right" valign="top">static HG_INLINE size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#aa9e7d694a47b8d8d0e548259afd1722d">hg_header_get_size</a> (<a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a> op)</td></tr>
+<tr class="memitem:aa9e7d694a47b8d8d0e548259afd1722d"><td class="memItemLeft" align="right" valign="top">static HG_INLINE size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#aa9e7d694a47b8d8d0e548259afd1722d">hg_header_get_size</a> (<a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a> op)</td></tr>
 <tr class="memdesc:aa9e7d694a47b8d8d0e548259afd1722d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size reserved for header (separate user data stored in payload).  <a href="#aa9e7d694a47b8d8d0e548259afd1722d">More...</a><br /></td></tr>
 <tr class="separator:aa9e7d694a47b8d8d0e548259afd1722d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa27264aea158d680cd595c136438d970"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#aa27264aea158d680cd595c136438d970">hg_header_init</a> (struct <a class="el" href="structhg__header.html">hg_header</a> *<a class="el" href="structhg__header.html">hg_header</a>, <a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a> op)</td></tr>
+<tr class="memitem:aa27264aea158d680cd595c136438d970"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#aa27264aea158d680cd595c136438d970">hg_header_init</a> (struct <a class="el" href="structhg__header.html">hg_header</a> *<a class="el" href="structhg__header.html">hg_header</a>, <a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a> op)</td></tr>
 <tr class="memdesc:aa27264aea158d680cd595c136438d970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize RPC header.  <a href="#aa27264aea158d680cd595c136438d970">More...</a><br /></td></tr>
 <tr class="separator:aa27264aea158d680cd595c136438d970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf09f4b25ef900dc711916a36f74cdf"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#a5bf09f4b25ef900dc711916a36f74cdf">hg_header_finalize</a> (struct <a class="el" href="structhg__header.html">hg_header</a> *<a class="el" href="structhg__header.html">hg_header</a>)</td></tr>
 <tr class="memdesc:a5bf09f4b25ef900dc711916a36f74cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize RPC header.  <a href="#a5bf09f4b25ef900dc711916a36f74cdf">More...</a><br /></td></tr>
 <tr class="separator:a5bf09f4b25ef900dc711916a36f74cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc3da580d5dbaaec211f01f77cdfdaad"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#adc3da580d5dbaaec211f01f77cdfdaad">hg_header_reset</a> (struct <a class="el" href="structhg__header.html">hg_header</a> *<a class="el" href="structhg__header.html">hg_header</a>, <a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a> op)</td></tr>
+<tr class="memitem:adc3da580d5dbaaec211f01f77cdfdaad"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#adc3da580d5dbaaec211f01f77cdfdaad">hg_header_reset</a> (struct <a class="el" href="structhg__header.html">hg_header</a> *<a class="el" href="structhg__header.html">hg_header</a>, <a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a> op)</td></tr>
 <tr class="memdesc:adc3da580d5dbaaec211f01f77cdfdaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset RPC header.  <a href="#adc3da580d5dbaaec211f01f77cdfdaad">More...</a><br /></td></tr>
 <tr class="separator:adc3da580d5dbaaec211f01f77cdfdaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1907ff9e9879d69072a780c69c85574"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__header_8h.html#ac1907ff9e9879d69072a780c69c85574">hg_header_proc</a> (<a class="el" href="mercury__core__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44a">hg_proc_op_t</a> op, void *buf, size_t buf_size, struct <a class="el" href="structhg__header.html">hg_header</a> *<a class="el" href="structhg__header.html">hg_header</a>)</td></tr>
 <tr class="memdesc:ac1907ff9e9879d69072a780c69c85574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process private information for sending/receiving RPC.  <a href="#ac1907ff9e9879d69072a780c69c85574">More...</a><br /></td></tr>
 <tr class="separator:ac1907ff9e9879d69072a780c69c85574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a4b0d60e19cfddf2130ceb7231002f0f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b0d60e19cfddf2130ceb7231002f0f8">&#9670;&nbsp;</a></span>hg_op_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4b0d60e19cfddf2130ceb7231002f0f8a1822d6566485ad6737be05aeaef8c08c"></a>HG_UNDEF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4b0d60e19cfddf2130ceb7231002f0f8acdcc4378e1cf024613311b6dcaaabad6"></a>HG_INPUT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4b0d60e19cfddf2130ceb7231002f0f8a4fa8697a166fd7bc27657a115e716b78"></a>HG_OUTPUT&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="mercury__header_8h_source.html#l00021">21</a> of file <a class="el" href="mercury__header_8h_source.html">mercury_header.h</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aa9e7d694a47b8d8d0e548259afd1722d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9e7d694a47b8d8d0e548259afd1722d">&#9670;&nbsp;</a></span>hg_header_get_size()</h2>
@@ -129,7 +98,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static HG_INLINE size_t hg_header_get_size </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>&#160;</td>
           <td class="paramname"><em>op</em></td><td>)</td>
           <td></td>
         </tr>
@@ -144,7 +113,7 @@ Functions</h2></td></tr>
 <p>Get size reserved for header (separate user data stored in payload). </p>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative size value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__header_8h_source.html#l00088">88</a> of file <a class="el" href="mercury__header_8h_source.html">mercury_header.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__header_8h_source.html#l00081">81</a> of file <a class="el" href="mercury__header_8h_source.html">mercury_header.h</a>.</p>
 
 </div>
 </div>
@@ -163,7 +132,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>&#160;</td>
           <td class="paramname"><em>op</em>&#160;</td>
         </tr>
         <tr>
@@ -226,7 +195,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>&#160;</td>
           <td class="paramname"><em>op</em>&#160;</td>
         </tr>
         <tr>

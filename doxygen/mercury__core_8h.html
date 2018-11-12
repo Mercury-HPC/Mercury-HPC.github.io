@@ -127,9 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac7deaeda84b771b30bd074fcb4ea0848"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ac7deaeda84b771b30bd074fcb4ea0848">HG_Core_cleanup</a> (void)</td></tr>
 <tr class="memdesc:ac7deaeda84b771b30bd074fcb4ea0848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up all temporary files that were created in previous HG instances.  <a href="#ac7deaeda84b771b30bd074fcb4ea0848">More...</a><br /></td></tr>
 <tr class="separator:ac7deaeda84b771b30bd074fcb4ea0848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc37556a821e9eb7f9fa55aee2172f60"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#afc37556a821e9eb7f9fa55aee2172f60">HG_Core_set_more_data_callback</a> (struct hg_core_class *hg_core_class, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*more_data_acquire_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*done_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>)), void(*more_data_release_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>))</td></tr>
-<tr class="memdesc:afc37556a821e9eb7f9fa55aee2172f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback that will be triggered when additional data needs to be transferred and HG_Core_set_more_data() has been called, usually when the eager message size is exceeded.  <a href="#afc37556a821e9eb7f9fa55aee2172f60">More...</a><br /></td></tr>
-<tr class="separator:afc37556a821e9eb7f9fa55aee2172f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1833c21012f09dd3e56707c41a917f"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a3b1833c21012f09dd3e56707c41a917f">HG_Core_set_more_data_callback</a> (struct hg_core_class *hg_core_class, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*more_data_acquire_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>, <a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*done_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>)), void(*more_data_release_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>))</td></tr>
+<tr class="memdesc:a3b1833c21012f09dd3e56707c41a917f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback that will be triggered when additional data needs to be transferred and HG_Core_set_more_data() has been called, usually when the eager message size is exceeded.  <a href="#a3b1833c21012f09dd3e56707c41a917f">More...</a><br /></td></tr>
+<tr class="separator:a3b1833c21012f09dd3e56707c41a917f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49b405885601ef60f6bce609833724a7"><td class="memItemLeft" align="right" valign="top">HG_EXPORT const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a49b405885601ef60f6bce609833724a7">HG_Core_class_get_name</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
 <tr class="memdesc:a49b405885601ef60f6bce609833724a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the name of the given class.  <a href="#a49b405885601ef60f6bce609833724a7">More...</a><br /></td></tr>
 <tr class="separator:a49b405885601ef60f6bce609833724a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,6 +238,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7275a8f70a17c2ea3684b514fdd1b6ee"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a7275a8f70a17c2ea3684b514fdd1b6ee">HG_Core_ref_incr</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
 <tr class="memdesc:a7275a8f70a17c2ea3684b514fdd1b6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment ref count on handle.  <a href="#a7275a8f70a17c2ea3684b514fdd1b6ee">More...</a><br /></td></tr>
 <tr class="separator:a7275a8f70a17c2ea3684b514fdd1b6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d6af1c2bce93e3e6da0528183ad2d4"><td class="memItemLeft" align="right" valign="top">HG_EXPORT hg_int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a72d6af1c2bce93e3e6da0528183ad2d4">HG_Core_ref_get</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
+<tr class="memdesc:a72d6af1c2bce93e3e6da0528183ad2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve ref count from handle.  <a href="#a72d6af1c2bce93e3e6da0528183ad2d4">More...</a><br /></td></tr>
+<tr class="separator:a72d6af1c2bce93e3e6da0528183ad2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1eee46af775d7f549600199ebfa7ba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ab1eee46af775d7f549600199ebfa7ba9">HG_Core_set_data</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, void *data, void(*free_callback)(void *))</td></tr>
 <tr class="memdesc:ab1eee46af775d7f549600199ebfa7ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows upper layers to attach data to an existing HG handle.  <a href="#ab1eee46af775d7f549600199ebfa7ba9">More...</a><br /></td></tr>
 <tr class="separator:ab1eee46af775d7f549600199ebfa7ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -616,8 +619,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afc37556a821e9eb7f9fa55aee2172f60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc37556a821e9eb7f9fa55aee2172f60">&#9670;&nbsp;</a></span>HG_Core_set_more_data_callback()</h2>
+<a id="a3b1833c21012f09dd3e56707c41a917f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1833c21012f09dd3e56707c41a917f">&#9670;&nbsp;</a></span>HG_Core_set_more_data_callback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -631,7 +634,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*done_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>))&#160;</td>
+          <td class="paramtype"><a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>, <a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*done_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>))&#160;</td>
           <td class="paramname"><em>more_data_acquire_callback</em>, </td>
         </tr>
         <tr>
@@ -1962,6 +1965,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
+
+</div>
+</div>
+<a id="a72d6af1c2bce93e3e6da0528183ad2d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d6af1c2bce93e3e6da0528183ad2d4">&#9670;&nbsp;</a></span>HG_Core_ref_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HG_EXPORT hg_int32_t HG_Core_ref_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve ref count from handle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] HG handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Non-negative value or negative if the handle is not valid </dd></dl>
 
 </div>
 </div>

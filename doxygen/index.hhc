@@ -918,6 +918,7 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Destroy"><param name="Local" value="mercury_8h.html#ae3fb23a033dbaed9bb02cf5f94e3ee8d"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Reset"><param name="Local" value="mercury_8h.html#ac9ba37e8190873a37e602ca5648f7b4c"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Ref_incr"><param name="Local" value="mercury_8h.html#a3514afb5eb3996124fdc52c1f10c9c0b"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Ref_get"><param name="Local" value="mercury_8h.html#a4aedd58fddf7bf4a6404637e67853475"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Get_info"><param name="Local" value="mercury_8h.html#ad62216c12243dda1b555c0e9fdafda5f"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Set_data"><param name="Local" value="mercury_8h.html#a5e237da6cc77c677b8df14e7dd1c9f05"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Get_data"><param name="Local" value="mercury_8h.html#aecdc7ba6e709f88ec62f15d3b7ed74a3"><param name="ImageNumber" value="11"></OBJECT>
@@ -1008,7 +1009,7 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_init_opt"><param name="Local" value="mercury__core_8h.html#aed45f2a50cab29b37a85027de8c5f1cf"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_finalize"><param name="Local" value="mercury__core_8h.html#a2d23b68876f4e7c29dc20d07a27e8ed2"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_cleanup"><param name="Local" value="mercury__core_8h.html#ac7deaeda84b771b30bd074fcb4ea0848"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_set_more_data_callback"><param name="Local" value="mercury__core_8h.html#afc37556a821e9eb7f9fa55aee2172f60"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_set_more_data_callback"><param name="Local" value="mercury__core_8h.html#a3b1833c21012f09dd3e56707c41a917f"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_class_get_name"><param name="Local" value="mercury__core_8h.html#a49b405885601ef60f6bce609833724a7"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_class_get_protocol"><param name="Local" value="mercury__core_8h.html#a032c211b62ab83fe68e009b2c133a02b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_class_is_listening"><param name="Local" value="mercury__core_8h.html#a4ca5349c3af370a7a0ed8eea9557f0bf"><param name="ImageNumber" value="11"></OBJECT>
@@ -1045,6 +1046,7 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_destroy"><param name="Local" value="mercury__core_8h.html#ab63445d2674abb053410bc5a545bc16c"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_reset"><param name="Local" value="mercury__core_8h.html#ad4a422e455900ffaa4dc9c4ce1c58daf"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_ref_incr"><param name="Local" value="mercury__core_8h.html#a7275a8f70a17c2ea3684b514fdd1b6ee"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_ref_get"><param name="Local" value="mercury__core_8h.html#a72d6af1c2bce93e3e6da0528183ad2d4"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_set_data"><param name="Local" value="mercury__core_8h.html#ab1eee46af775d7f549600199ebfa7ba9"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_get_data"><param name="Local" value="mercury__core_8h.html#a53614fd13219d25ba4dc0a4ebdf986ad"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_Core_get_info"><param name="Local" value="mercury__core_8h.html#ac4ac1ef345a97e1f09632c36946d8787"><param name="ImageNumber" value="11"></OBJECT>
@@ -1131,6 +1133,12 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_CB_RESPOND"><param name="Local" value="mercury__core__types_8h.html#a2d3f9c5c29a2c9727470f3f0330cf626ae2177e5604434fcaf23f88005441d8d6"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_CB_BULK"><param name="Local" value="mercury__core__types_8h.html#a2d3f9c5c29a2c9727470f3f0330cf626a0cecd26ba4cd6113c8710cd9eced737e"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="hg_op_t"><param name="Local" value="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_UNDEF"><param name="Local" value="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8a1822d6566485ad6737be05aeaef8c08c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_INPUT"><param name="Local" value="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8acdcc4378e1cf024613311b6dcaaabad6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_OUTPUT"><param name="Local" value="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8a4fa8697a166fd7bc27657a115e716b78"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="hg_proc_op_t"><param name="Local" value="mercury__core__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44a"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_ENCODE"><param name="Local" value="mercury__core__types_8h.html#a2d27dce1d31058c8b938c8e6911ba44aae4656e02d1fc141f95501f5355733ccc"><param name="ImageNumber" value="11"></OBJECT>
@@ -1160,12 +1168,6 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="output"><param name="Local" value="structhg__header.html#af743988c4d1a0562987b91197519b135"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="msg"><param name="Local" value="structhg__header.html#ab4f95f39f79751429d93d74c77a4b39b"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="op"><param name="Local" value="structhg__header.html#ae824fb331adac594666ab061b0f910bb"><param name="ImageNumber" value="11"></OBJECT>
-        </UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="hg_op_t"><param name="Local" value="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8"><param name="ImageNumber" value="1"></OBJECT>
-        <UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_UNDEF"><param name="Local" value="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8a1822d6566485ad6737be05aeaef8c08c"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_INPUT"><param name="Local" value="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8acdcc4378e1cf024613311b6dcaaabad6"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="HG_OUTPUT"><param name="Local" value="mercury__header_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8a4fa8697a166fd7bc27657a115e716b78"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="hg_header_get_size"><param name="Local" value="mercury__header_8h.html#aa9e7d694a47b8d8d0e548259afd1722d"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="hg_header_init"><param name="Local" value="mercury__header_8h.html#aa27264aea158d680cd595c136438d970"><param name="ImageNumber" value="11"></OBJECT>

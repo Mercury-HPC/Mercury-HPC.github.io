@@ -195,6 +195,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3514afb5eb3996124fdc52c1f10c9c0b"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury_8h.html#a3514afb5eb3996124fdc52c1f10c9c0b">HG_Ref_incr</a> (<a class="el" href="mercury__types_8h.html#aacf08af4368af10a0fb5f23cfd224614">hg_handle_t</a> hg_handle)</td></tr>
 <tr class="memdesc:a3514afb5eb3996124fdc52c1f10c9c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment ref count on handle.  <a href="#a3514afb5eb3996124fdc52c1f10c9c0b">More...</a><br /></td></tr>
 <tr class="separator:a3514afb5eb3996124fdc52c1f10c9c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aedd58fddf7bf4a6404637e67853475"><td class="memItemLeft" align="right" valign="top">HG_EXPORT hg_int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury_8h.html#a4aedd58fddf7bf4a6404637e67853475">HG_Ref_get</a> (<a class="el" href="mercury__types_8h.html#aacf08af4368af10a0fb5f23cfd224614">hg_handle_t</a> handle)</td></tr>
+<tr class="memdesc:a4aedd58fddf7bf4a6404637e67853475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve ref count from handle.  <a href="#a4aedd58fddf7bf4a6404637e67853475">More...</a><br /></td></tr>
+<tr class="separator:a4aedd58fddf7bf4a6404637e67853475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62216c12243dda1b555c0e9fdafda5f"><td class="memItemLeft" align="right" valign="top">HG_EXPORT const struct <a class="el" href="structhg__info.html">hg_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury_8h.html#ad62216c12243dda1b555c0e9fdafda5f">HG_Get_info</a> (<a class="el" href="mercury__types_8h.html#aacf08af4368af10a0fb5f23cfd224614">hg_handle_t</a> handle)</td></tr>
 <tr class="memdesc:ad62216c12243dda1b555c0e9fdafda5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get info from handle.  <a href="#ad62216c12243dda1b555c0e9fdafda5f">More...</a><br /></td></tr>
 <tr class="separator:ad62216c12243dda1b555c0e9fdafda5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1890,6 +1893,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
+
+</div>
+</div>
+<a id="a4aedd58fddf7bf4a6404637e67853475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aedd58fddf7bf4a6404637e67853475">&#9670;&nbsp;</a></span>HG_Ref_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HG_EXPORT hg_int32_t HG_Ref_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mercury__types_8h.html#aacf08af4368af10a0fb5f23cfd224614">hg_handle_t</a>&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve ref count from handle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] HG handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Non-negative value or negative if the handle is not valid </dd></dl>
 
 </div>
 </div>
