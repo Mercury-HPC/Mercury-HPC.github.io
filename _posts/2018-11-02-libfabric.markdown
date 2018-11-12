@@ -118,7 +118,7 @@ Same plot but with 16 RPCs in-flight:
 <hr/>
 ### Aries `gni`
 
-Performance is measured between two Haswell nodes on Nersc's [cori](http://www.nersc.gov/users/computational-systems/cori/) system using the interface `ipogif0` with uGNI v6.0.14.0.
+Performance is measured between two Haswell nodes (debug queue in exclusive mode) on Nersc's [cori](http://www.nersc.gov/users/computational-systems/cori/) system using the interface `ipogif0` with uGNI v6.0.14.0.
 The following plot shows the RPC average time
 compared to `ofi+tcp` when using one single RPC in-flight:
 
