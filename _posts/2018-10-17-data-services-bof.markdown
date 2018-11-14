@@ -27,13 +27,17 @@ The BoF is organized by:
 
 # Agenda
 
-We have a series of talks followed by a longer discussion:
-* Introduction -- Jerome Soumagne
-* Mochi and Mercury -- Matthieu Dorier (Argonne National Laboratory) and Jerome Soumagne
-* DAOS -- Johann Lombardi
-* SOS -- Chad Wood (University of Oregon)
-* Dataspaces -- Philip Davis (Rutgers University) and Manish Parashar
+* Introduction and Mercury [[slides][intro_slides]] -- Jerome Soumagne
+* Mochi [[slides][mochi_slides]] -- Matthieu Dorier (Argonne National Laboratory)
+* DAOS [[slides][daos_slides]] -- Johann Lombardi
+* SOS [[slides][sos_slides]] -- Chad Wood (University of Oregon)
+* Dataspaces [[slides][dataspaces_slides]] -- Philip Davis (Rutgers University) and Manish Parashar
 * Panel and discussion
 
-
 [SC18-bof]: https://sc18.supercomputing.org/presentation/?id=bof166&sess=sess423
+[intro_slides]: /assets/SC18_BOF/SC18_BOF_Intro_mercury.pdf
+[mochi_slides]: /assets/SC18_BOF/SC18_BOF_mochi.pdf
+[daos_slides]: /assets/SC18_BOF/SC18_BOF_DAOS.pdf
+[sos_slides]: /assets/SC18_BOF/SC18_BOF_SOS.pdf
+[dataspaces_slides]: /assets/SC18_BOF/SC18_BOF_dataspaces.pdf
+
