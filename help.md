@@ -19,18 +19,12 @@ There are three mailing lists described below that users may wish to subscribe t
 ## Issue Tracking
 
 Current and past issues can be found on:
+[https://github.com/mercury-hpc/mercury/issues](https://github.com/mercury-hpc/mercury/issues)
 
-* [https://github.com/mercury-hpc/mercury/issues](https://github.com/mercury-hpc/mercury/issues)
-
-If your issue is not listed, you may first check that the latest build passes by
-looking at the Travis continuous integration service:
-
-Platform | Result
--------- | ------
-Linux x86_64    | [![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury)
-
-Or for more details you may also look at the continuous and/or nightly builds
-that are reported to the CDash Dashboard: <a href="http://cdash.hdfgroup.org/index.php?project=Mercury"><img src="http://cdash.hdfgroup.org/images/cdash.gif" alt="alt text" style="width: 24px"/></a>
+You may check that the latest build passes by
+looking at the Travis continuous integration service
+[![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury).
+Or for more details you may also look at what the build tests have reported to the CDash Dashboard <a href="http://cdash.hdfgroup.org/index.php?project=Mercury"><img src="http://cdash.hdfgroup.org/images/cdash.gif" alt="alt text" style="width: 24px"/></a>.
 
 ## Contribute
 
@@ -42,11 +36,11 @@ We welcome all contributions to Mercury!
 
 Please feel free to send any of the above to the mercury development mailing
 list or create an issue/pull request directly on GitHub.
-
-<p>
 We have many things planned for Mercury and limited developer time available;
 contact us if you want to learn more about RPC on HPC systems or if
-you are looking for an interesting project to contribute to. We require the
+you are looking for an interesting project to contribute to.
+<p>
+We require the
 following Contributor License Agreement (<a href="ftp://ftp.mcs.anl.gov/pub/mercury/documents/mercury_cla.docx">CLA</a>) to be filled out and sent
 to:
 <script language="JavaScript">

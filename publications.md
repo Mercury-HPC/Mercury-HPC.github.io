@@ -22,6 +22,7 @@ Software Sustainability and Productivity Challenges (CSESSP) Workshop, Oct 2015.
 
 ## Past Presentations
 
+* SC18 BoF, Sep 2018. [[slides]({% post_url 2018-10-17-data-services-bof %})]
 * Nersc CS Seminar, Jun 2017. [[slides][slides_june17_lbnl]]
 * Intel F2F, Jul 2016. [[slides][slides_july16_intel]]
 * INRIA Joint-lab Workshop, Nov 2013. [[slides][slides_inria]]
@@ -35,7 +36,7 @@ Software Sustainability and Productivity Challenges (CSESSP) Workshop, Oct 2015.
 ## Users
 
 * K. Mu, J. Soumagne, H. Tang, S. Byna, Q. Koziol, and R. Warren, <b>A Server-managed Transparent Object Storage Abstraction for HPC</b>, IEEE International Conference on Cluster Computing, Sep 2018.
-[DOI]
+[[DOI] (https://doi.org/10.1109/CLUSTER.2018.00063)]
 [[paper](https://sdm.lbl.gov/pdc/pubs/201809_Cluster2018-PDCBufMap.pdf)]
 
 * H. Tang, S. Byna, F. Tessier, T. Wang, B. Dong, J. Mu, Q. Koziol, J. Soumagne, V. Vishwanath, J. Liu, and R. Warren, <b>Toward Scalable and Asynchronous Object-centric Data Management for HPC</b>, 18th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing, May 2018.

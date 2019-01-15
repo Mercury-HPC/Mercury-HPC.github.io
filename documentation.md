@@ -44,7 +44,7 @@ mechanism.
 
 The _network abstraction_ (NA) layer is internally used by both the RPC layer
 and the bulk layer (it is therefore not expected to be directly used by
-a regular mercury user, who may directly jump to the [RPC layer](#rpc-layer) section).
+a regular mercury user, see the [RPC layer](#rpc-layer) section instead).
 It provides a minimal set of function calls that abstract the underlying network
 fabric and that can be used to provide:
 *target address lookup*, *point-to-point messaging* with both unexpected and
@@ -62,7 +62,7 @@ can be easily added and selected at runtime.
 
 Typically, the first step consists of
 initializing the NA interface and selecting an underlying plugin that will be
-used. This can be done either at the NA level or at the HG level (see the
+used. This can be either done at the NA level or at the HG level (see the
 [RPC layer](#rpc-layer) section).
 Initializing the NA interface with a specified `info_string`
 results in the creation of a new `na_class_t` object. Please refer to
@@ -281,8 +281,10 @@ plugin | protocol             | lookup format
 bmi    | tcp                  | `bmi+tcp://<hostname or IP>:<port>`
 mpi    | dynamic <br/> static | `mpi+dynamic://<MPI port name>` <br/> `mpi+static://<MPI rank>`
 na     | sm                   | `na+sm://<PID>/<SM ID>`
-ofi    | tcp <br/> verbs <br/> psm2 <br/> gni | `ofi+sockets://fi_sockaddr_in://<IP>:<port>` <br/> `ofi+verbs;ofi_rxm://fi_sockaddr_in://<IP>:<port>` <br/> `ofi+psm2://fi_addr_psmx2://<EP native address>` <br/> `ofi+gni://fi_addr_gni://<EP native address>`
+ofi    | tcp <br/> verbs <br/> psm2 <br/> gni | `ofi+sockets://fi_sockaddr_in://<IP>:<port>` [<sup>1</sup>](#ofi_lookup_format) <br/> `ofi+verbs;ofi_rxm://fi_sockaddr_in://<IP>:<port>` [<sup>1</sup>](#ofi_lookup_format) <br/> `ofi+psm2://fi_addr_psmx2://<EP native address>` [<sup>1</sup>](#ofi_lookup_format) <br/> `ofi+gni://fi_addr_gni://<EP native address>` [<sup>1</sup>](#ofi_lookup_format)
 cci    | tcp <br/> verbs <br/> sm | `cci+tcp://<IP>:<port>` <br/> `cci+verbs://<IP>:<port>` <br/> `cci+sm://<PID>/<SM ID>`
+
+<a name="ofi_lookup_format"><sup>1</sup></a> Since v1.0.1, the `fi_sockaddr_in://`, `fi_addr_psmx2://` and `fi_addr_gni://` portion of the string is no longer present.
 
 ## RPC Layer
 

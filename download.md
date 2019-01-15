@@ -11,12 +11,10 @@ Mercury is distributed under a [BSD-like license][license].
 Filename                           | Date       | Size    | Arch | Type
 ---------------------------------- | ---------- | ------- | ---- | -----------
 [mercury-1.0.0.tar.bz2][1.0.0] | 2018-11-12 | 577 kB  | Any  | Source .bz2
----------------------------------- | ---------- | ------- | ---- | -----------
-[mercury-0.9.0.tar.bz2][0.9.0]     | 2017-01-25 | 383 kB  | Any  | Source .bz2
 
-Older releases are available [here][ftp]. Releases can also be accessed
-through [GitHub][gh-releases], beware that generated tarballs accessible from
-the *"Source code"* link do not include mchecksum/kwsys submodules.
+Releases can also be accessed through [GitHub][gh-releases], beware that
+generated tarballs accessible from the *"Source code"* link do not include
+mchecksum/kwsys submodules. Older releases are also available [here][ftp]. 
 
 ## Current development distribution
 
