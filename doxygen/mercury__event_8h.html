@@ -49,11 +49,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;mercury_util_config.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__util__error_8h_source.html">mercury_util_error.h</a>&quot;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mercury_event.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mercury__event_8h__incl.png" border="0" usemap="#util_2mercury__event_8h" alt=""/></div>
 <map name="util_2mercury__event_8h" id="util_2mercury__event_8h">
+<area shape="rect" id="node3" href="mercury__util__error_8h.html" title="mercury_util_error.h" alt="" coords="67,80,221,107"/>
 </map>
 </div>
 </div>
@@ -67,12 +72,12 @@ Functions</h2></td></tr>
 <tr class="memitem:afd374677485b86ba3ab80168982118bc"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__event_8h.html#afd374677485b86ba3ab80168982118bc">hg_event_destroy</a> (int fd)</td></tr>
 <tr class="memdesc:afd374677485b86ba3ab80168982118bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy an event object.  <a href="#afd374677485b86ba3ab80168982118bc">More...</a><br /></td></tr>
 <tr class="separator:afd374677485b86ba3ab80168982118bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada44d6460f3ea58e179b1b31e8da9b07"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__event_8h.html#ada44d6460f3ea58e179b1b31e8da9b07">hg_event_set</a> (int fd)</td></tr>
-<tr class="memdesc:ada44d6460f3ea58e179b1b31e8da9b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify for event.  <a href="#ada44d6460f3ea58e179b1b31e8da9b07">More...</a><br /></td></tr>
-<tr class="separator:ada44d6460f3ea58e179b1b31e8da9b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e289231674f70a0cbb60a438ee27507"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__event_8h.html#a7e289231674f70a0cbb60a438ee27507">hg_event_get</a> (int fd, hg_util_bool_t *notified)</td></tr>
-<tr class="memdesc:a7e289231674f70a0cbb60a438ee27507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get event notification.  <a href="#a7e289231674f70a0cbb60a438ee27507">More...</a><br /></td></tr>
-<tr class="separator:a7e289231674f70a0cbb60a438ee27507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35067fb352a224fab450166648f3426"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__event_8h.html#ab35067fb352a224fab450166648f3426">hg_event_set</a> (int fd)</td></tr>
+<tr class="memdesc:ab35067fb352a224fab450166648f3426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify for event.  <a href="#ab35067fb352a224fab450166648f3426">More...</a><br /></td></tr>
+<tr class="separator:ab35067fb352a224fab450166648f3426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fcd4c2e218c4afacb2704b34a94315f"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__event_8h.html#a5fcd4c2e218c4afacb2704b34a94315f">hg_event_get</a> (int fd, hg_util_bool_t *notified)</td></tr>
+<tr class="memdesc:a5fcd4c2e218c4afacb2704b34a94315f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get event notification.  <a href="#a5fcd4c2e218c4afacb2704b34a94315f">More...</a><br /></td></tr>
+<tr class="separator:a5fcd4c2e218c4afacb2704b34a94315f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a57c2da9f99b2898b110564065faf9900"></a>
@@ -124,20 +129,28 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ada44d6460f3ea58e179b1b31e8da9b07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada44d6460f3ea58e179b1b31e8da9b07">&#9670;&nbsp;</a></span>hg_event_set()</h2>
+<a id="ab35067fb352a224fab450166648f3426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35067fb352a224fab450166648f3426">&#9670;&nbsp;</a></span>hg_event_set()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_UTIL_EXPORT int hg_event_set </td>
+          <td class="memname">static HG_UTIL_INLINE int hg_event_set </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>fd</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Notify for event. </p>
@@ -151,14 +164,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e289231674f70a0cbb60a438ee27507"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e289231674f70a0cbb60a438ee27507">&#9670;&nbsp;</a></span>hg_event_get()</h2>
+<a id="a5fcd4c2e218c4afacb2704b34a94315f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fcd4c2e218c4afacb2704b34a94315f">&#9670;&nbsp;</a></span>hg_event_get()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_UTIL_EXPORT int hg_event_get </td>
+          <td class="memname">static HG_UTIL_INLINE int hg_event_get </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
@@ -175,6 +191,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get event notification. </p>

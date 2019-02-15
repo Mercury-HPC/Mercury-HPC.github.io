@@ -69,12 +69,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a75bbad429e465907a62a309b5fd81b28"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__spin_8h.html#a75bbad429e465907a62a309b5fd81b28">hg_thread_spin_init</a> (<a class="el" href="mercury__thread__spin_8h.html#a616380a8267bd7cbcaca32499602ef70">hg_thread_spin_t</a> *lock)</td></tr>
-<tr class="memdesc:a75bbad429e465907a62a309b5fd81b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the spin lock.  <a href="#a75bbad429e465907a62a309b5fd81b28">More...</a><br /></td></tr>
-<tr class="separator:a75bbad429e465907a62a309b5fd81b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808b2035ac27e3d72a23a9784d903743"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__spin_8h.html#a808b2035ac27e3d72a23a9784d903743">hg_thread_spin_destroy</a> (<a class="el" href="mercury__thread__spin_8h.html#a616380a8267bd7cbcaca32499602ef70">hg_thread_spin_t</a> *lock)</td></tr>
-<tr class="memdesc:a808b2035ac27e3d72a23a9784d903743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the spin lock.  <a href="#a808b2035ac27e3d72a23a9784d903743">More...</a><br /></td></tr>
-<tr class="separator:a808b2035ac27e3d72a23a9784d903743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54a82f8ba12e26689de2edd9dea819c"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__spin_8h.html#ad54a82f8ba12e26689de2edd9dea819c">hg_thread_spin_init</a> (<a class="el" href="mercury__thread__spin_8h.html#a616380a8267bd7cbcaca32499602ef70">hg_thread_spin_t</a> *lock)</td></tr>
+<tr class="memdesc:ad54a82f8ba12e26689de2edd9dea819c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the spin lock.  <a href="#ad54a82f8ba12e26689de2edd9dea819c">More...</a><br /></td></tr>
+<tr class="separator:ad54a82f8ba12e26689de2edd9dea819c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55dc80461c8965ecfe1d9a216272ed5"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__spin_8h.html#ac55dc80461c8965ecfe1d9a216272ed5">hg_thread_spin_destroy</a> (<a class="el" href="mercury__thread__spin_8h.html#a616380a8267bd7cbcaca32499602ef70">hg_thread_spin_t</a> *lock)</td></tr>
+<tr class="memdesc:ac55dc80461c8965ecfe1d9a216272ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the spin lock.  <a href="#ac55dc80461c8965ecfe1d9a216272ed5">More...</a><br /></td></tr>
+<tr class="separator:ac55dc80461c8965ecfe1d9a216272ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eaf089fa1d1e48a7189b6d4a067efe3"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__spin_8h.html#a7eaf089fa1d1e48a7189b6d4a067efe3">hg_thread_spin_lock</a> (<a class="el" href="mercury__thread__spin_8h.html#a616380a8267bd7cbcaca32499602ef70">hg_thread_spin_t</a> *lock)</td></tr>
 <tr class="memdesc:a7eaf089fa1d1e48a7189b6d4a067efe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the spin lock.  <a href="#a7eaf089fa1d1e48a7189b6d4a067efe3">More...</a><br /></td></tr>
 <tr class="separator:a7eaf089fa1d1e48a7189b6d4a067efe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,28 +103,20 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a75bbad429e465907a62a309b5fd81b28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75bbad429e465907a62a309b5fd81b28">&#9670;&nbsp;</a></span>hg_thread_spin_init()</h2>
+<a id="ad54a82f8ba12e26689de2edd9dea819c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54a82f8ba12e26689de2edd9dea819c">&#9670;&nbsp;</a></span>hg_thread_spin_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static HG_UTIL_INLINE int hg_thread_spin_init </td>
+          <td class="memname">HG_UTIL_EXPORT int hg_thread_spin_init </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__thread__spin_8h.html#a616380a8267bd7cbcaca32499602ef70">hg_thread_spin_t</a> *&#160;</td>
           <td class="paramname"><em>lock</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Initialize the spin lock. </p>
@@ -136,32 +128,22 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00084">84</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
-
 </div>
 </div>
-<a id="a808b2035ac27e3d72a23a9784d903743"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a808b2035ac27e3d72a23a9784d903743">&#9670;&nbsp;</a></span>hg_thread_spin_destroy()</h2>
+<a id="ac55dc80461c8965ecfe1d9a216272ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55dc80461c8965ecfe1d9a216272ed5">&#9670;&nbsp;</a></span>hg_thread_spin_destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static HG_UTIL_INLINE int hg_thread_spin_destroy </td>
+          <td class="memname">HG_UTIL_EXPORT int hg_thread_spin_destroy </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__thread__spin_8h.html#a616380a8267bd7cbcaca32499602ef70">hg_thread_spin_t</a> *&#160;</td>
           <td class="paramname"><em>lock</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Destroy the spin lock. </p>
@@ -172,8 +154,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00101">101</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +190,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00118">118</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00084">84</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
 
 </div>
 </div>
@@ -247,7 +227,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00143">143</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00109">109</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +264,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00160">160</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__spin_8h_source.html#l00126">126</a> of file <a class="el" href="mercury__thread__spin_8h_source.html">mercury_thread_spin.h</a>.</p>
 
 </div>
 </div>

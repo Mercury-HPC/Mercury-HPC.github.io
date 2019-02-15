@@ -1,6 +1,9 @@
 <map id="hg_cb_info" name="hg_cb_info">
-<area shape="rect" id="node2" href="$structhg__cb__info__bulk.html" title="hg_cb_info_bulk" alt="" coords="5,5,132,32"/>
-<area shape="rect" id="node3" href="$structhg__cb__info__respond.html" title="hg_cb_info_respond" alt="" coords="156,5,307,32"/>
-<area shape="rect" id="node4" href="$structhg__cb__info__forward.html" title="hg_cb_info_forward" alt="" coords="331,5,481,32"/>
-<area shape="rect" id="node5" href="$structhg__cb__info__lookup.html" title="hg_cb_info_lookup" alt="" coords="505,5,648,32"/>
+<area shape="rect" id="node2" href="$structhg__cb__info__bulk.html" title="hg_cb_info_bulk" alt="" coords="5,184,132,211"/>
+<area shape="rect" id="node3" href="$structhg__cb__info__respond.html" title="hg_cb_info_respond" alt="" coords="156,184,307,211"/>
+<area shape="rect" id="node4" href="$structhg__handle.html" title="hg_handle" alt="" coords="273,95,363,121"/>
+<area shape="rect" id="node7" href="$structhg__cb__info__forward.html" title="hg_cb_info_forward" alt="" coords="331,184,481,211"/>
+<area shape="rect" id="node5" href="$structhg__core__handle.html" title="hg_core_handle" alt="" coords="196,5,320,32"/>
+<area shape="rect" id="node6" href="$structhg__info.html" title="hg_info" alt="" coords="344,5,415,32"/>
+<area shape="rect" id="node8" href="$structhg__cb__info__lookup.html" title="hg_cb_info_lookup" alt="" coords="505,184,648,211"/>
 </map>

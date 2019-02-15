@@ -48,13 +48,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="mercury__core__types_8h_source.html">mercury_core_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__core__header_8h_source.html">mercury_core_header.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__error_8h_source.html">mercury_error.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="na_8h_source.html">na.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mercury_core.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mercury__core_8h__incl.png" border="0" usemap="#mercury__core_8h" alt=""/></div>
 <map name="mercury__core_8h" id="mercury__core_8h">
-<area shape="rect" id="node2" href="mercury__core__types_8h.html" title="mercury_core_types.h" alt="" coords="48,80,215,107"/>
-<area shape="rect" id="node4" href="na_8h.html" title="na.h" alt="" coords="165,155,215,181"/>
+<area shape="rect" id="node2" href="mercury__core__types_8h.html" title="mercury_core_types.h" alt="" coords="178,155,345,181"/>
+<area shape="rect" id="node7" href="mercury__core__header_8h.html" title="mercury_core_header.h" alt="" coords="206,80,381,107"/>
+<area shape="rect" id="node8" href="mercury__error_8h.html" title="mercury_error.h" alt="" coords="5,80,131,107"/>
+<area shape="rect" id="node9" href="na_8h.html" title="na.h" alt="" coords="381,155,432,181"/>
+<area shape="rect" id="node4" href="na__types_8h.html" title="na_types.h" alt="" coords="245,229,339,256"/>
+<area shape="rect" id="node10" href="na__error_8h.html" title="na_error.h" alt="" coords="363,229,450,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -62,7 +69,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="mercury__core_8h__dep__incl.png" border="0" usemap="#mercury__core_8hdep" alt=""/></div>
 <map name="mercury__core_8hdep" id="mercury__core_8hdep">
-<area shape="rect" id="node2" href="mercury__private_8h.html" title="mercury_private.h" alt="" coords="5,80,147,107"/>
+<area shape="rect" id="node2" href="mercury_8h.html" title="mercury.h" alt="" coords="90,80,177,107"/>
+<area shape="rect" id="node6" href="mercury__private_8h.html" title="mercury_private.h" alt="" coords="201,80,343,107"/>
+<area shape="rect" id="node3" href="mercury__hl_8h.html" title="mercury_hl.h" alt="" coords="5,155,112,181"/>
+<area shape="rect" id="node5" href="mercury__macros_8h.html" title="mercury_macros.h" alt="" coords="137,155,279,181"/>
+<area shape="rect" id="node4" href="mercury__hl__macros_8h.html" title="mercury_hl_macros.h" alt="" coords="52,229,215,256"/>
 </map>
 </div>
 </div>
@@ -79,6 +90,16 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__core__cb__info__respond.html">hg_core_cb_info_respond</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__core__cb__info.html">hg_core_cb_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__core__class.html">hg_core_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__core__context.html">hg_core_context</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__core__addr.html">hg_core_addr</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__core__rpc__info.html">hg_core_rpc_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__core__handle.html">hg_core_handle</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -98,13 +119,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a685a2b87f24d69fa08968a05e237ad28"><td class="memItemLeft" align="right" valign="top">typedef struct hg_core_class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a></td></tr>
+<tr class="memitem:a685a2b87f24d69fa08968a05e237ad28"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structhg__core__class.html">hg_core_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a></td></tr>
 <tr class="separator:a685a2b87f24d69fa08968a05e237ad28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23d059fbb67bc9bc9b5de0688681a37b"><td class="memItemLeft" align="right" valign="top">typedef struct hg_core_context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a></td></tr>
+<tr class="memitem:a23d059fbb67bc9bc9b5de0688681a37b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structhg__core__context.html">hg_core_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a></td></tr>
 <tr class="separator:a23d059fbb67bc9bc9b5de0688681a37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc1b6688347fc18e85a81d360bb9ca5"><td class="memItemLeft" align="right" valign="top">typedef struct hg_core_addr *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a></td></tr>
+<tr class="memitem:aefc1b6688347fc18e85a81d360bb9ca5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structhg__core__addr.html">hg_core_addr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a></td></tr>
 <tr class="separator:aefc1b6688347fc18e85a81d360bb9ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcec0d47741ccfd4d60321edceb64daa"><td class="memItemLeft" align="right" valign="top">typedef struct hg_core_handle *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a></td></tr>
+<tr class="memitem:adcec0d47741ccfd4d60321edceb64daa"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structhg__core__handle.html">hg_core_handle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a></td></tr>
 <tr class="separator:adcec0d47741ccfd4d60321edceb64daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac11df0b1476b12e57ce09795601b3beb"><td class="memItemLeft" align="right" valign="top">typedef struct hg_core_op_id *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ac11df0b1476b12e57ce09795601b3beb">hg_core_op_id_t</a></td></tr>
 <tr class="separator:ac11df0b1476b12e57ce09795601b3beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,109 +142,109 @@ Functions</h2></td></tr>
 <tr class="memitem:aed45f2a50cab29b37a85027de8c5f1cf"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aed45f2a50cab29b37a85027de8c5f1cf">HG_Core_init_opt</a> (const char *na_info_string, hg_bool_t na_listen, const struct <a class="el" href="structhg__init__info.html">hg_init_info</a> *<a class="el" href="structhg__init__info.html">hg_init_info</a>)</td></tr>
 <tr class="memdesc:aed45f2a50cab29b37a85027de8c5f1cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Mercury layer with options provided by init_info.  <a href="#aed45f2a50cab29b37a85027de8c5f1cf">More...</a><br /></td></tr>
 <tr class="separator:aed45f2a50cab29b37a85027de8c5f1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d23b68876f4e7c29dc20d07a27e8ed2"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a2d23b68876f4e7c29dc20d07a27e8ed2">HG_Core_finalize</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
+<tr class="memitem:a2d23b68876f4e7c29dc20d07a27e8ed2"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a2d23b68876f4e7c29dc20d07a27e8ed2">HG_Core_finalize</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
 <tr class="memdesc:a2d23b68876f4e7c29dc20d07a27e8ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize the Mercury layer.  <a href="#a2d23b68876f4e7c29dc20d07a27e8ed2">More...</a><br /></td></tr>
 <tr class="separator:a2d23b68876f4e7c29dc20d07a27e8ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7deaeda84b771b30bd074fcb4ea0848"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ac7deaeda84b771b30bd074fcb4ea0848">HG_Core_cleanup</a> (void)</td></tr>
 <tr class="memdesc:ac7deaeda84b771b30bd074fcb4ea0848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up all temporary files that were created in previous HG instances.  <a href="#ac7deaeda84b771b30bd074fcb4ea0848">More...</a><br /></td></tr>
 <tr class="separator:ac7deaeda84b771b30bd074fcb4ea0848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1833c21012f09dd3e56707c41a917f"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a3b1833c21012f09dd3e56707c41a917f">HG_Core_set_more_data_callback</a> (struct hg_core_class *hg_core_class, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*more_data_acquire_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>, <a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*done_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>)), void(*more_data_release_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>))</td></tr>
+<tr class="memitem:a3b1833c21012f09dd3e56707c41a917f"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a3b1833c21012f09dd3e56707c41a917f">HG_Core_set_more_data_callback</a> (struct <a class="el" href="structhg__core__class.html">hg_core_class</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*more_data_acquire_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>, <a class="el" href="mercury__core__types_8h.html#a4b0d60e19cfddf2130ceb7231002f0f8">hg_op_t</a>, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*done_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>)), void(*more_data_release_callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>))</td></tr>
 <tr class="memdesc:a3b1833c21012f09dd3e56707c41a917f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback that will be triggered when additional data needs to be transferred and HG_Core_set_more_data() has been called, usually when the eager message size is exceeded.  <a href="#a3b1833c21012f09dd3e56707c41a917f">More...</a><br /></td></tr>
 <tr class="separator:a3b1833c21012f09dd3e56707c41a917f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49b405885601ef60f6bce609833724a7"><td class="memItemLeft" align="right" valign="top">HG_EXPORT const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a49b405885601ef60f6bce609833724a7">HG_Core_class_get_name</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:a49b405885601ef60f6bce609833724a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the name of the given class.  <a href="#a49b405885601ef60f6bce609833724a7">More...</a><br /></td></tr>
-<tr class="separator:a49b405885601ef60f6bce609833724a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a032c211b62ab83fe68e009b2c133a02b"><td class="memItemLeft" align="right" valign="top">HG_EXPORT const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a032c211b62ab83fe68e009b2c133a02b">HG_Core_class_get_protocol</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:a032c211b62ab83fe68e009b2c133a02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the protocol of the given class.  <a href="#a032c211b62ab83fe68e009b2c133a02b">More...</a><br /></td></tr>
-<tr class="separator:a032c211b62ab83fe68e009b2c133a02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ca5349c3af370a7a0ed8eea9557f0bf"><td class="memItemLeft" align="right" valign="top">HG_EXPORT hg_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a4ca5349c3af370a7a0ed8eea9557f0bf">HG_Core_class_is_listening</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:a4ca5349c3af370a7a0ed8eea9557f0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether class is listening or not.  <a href="#a4ca5349c3af370a7a0ed8eea9557f0bf">More...</a><br /></td></tr>
-<tr class="separator:a4ca5349c3af370a7a0ed8eea9557f0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24dab8be2b368363b7a7126149fdeb7c"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="na_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a24dab8be2b368363b7a7126149fdeb7c">HG_Core_class_get_na</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:a24dab8be2b368363b7a7126149fdeb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying NA class.  <a href="#a24dab8be2b368363b7a7126149fdeb7c">More...</a><br /></td></tr>
-<tr class="separator:a24dab8be2b368363b7a7126149fdeb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c1fa21ce884a06082cf2795313c21b1"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a2c1fa21ce884a06082cf2795313c21b1">HG_Core_class_get_input_eager_size</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:a2c1fa21ce884a06082cf2795313c21b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the maximum eager size for sending RPC inputs.  <a href="#a2c1fa21ce884a06082cf2795313c21b1">More...</a><br /></td></tr>
-<tr class="separator:a2c1fa21ce884a06082cf2795313c21b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0fa9b7c1cd310266176950d246db327"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ac0fa9b7c1cd310266176950d246db327">HG_Core_class_get_output_eager_size</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:ac0fa9b7c1cd310266176950d246db327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the maximum eager size for sending RPC outputs.  <a href="#ac0fa9b7c1cd310266176950d246db327">More...</a><br /></td></tr>
-<tr class="separator:ac0fa9b7c1cd310266176950d246db327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb3484c65a4b98368fc14bac08ab529"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aafb3484c65a4b98368fc14bac08ab529">HG_Core_class_set_data</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, void *data, void(*free_callback)(void *))</td></tr>
-<tr class="memdesc:aafb3484c65a4b98368fc14bac08ab529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate user data to class.  <a href="#aafb3484c65a4b98368fc14bac08ab529">More...</a><br /></td></tr>
-<tr class="separator:aafb3484c65a4b98368fc14bac08ab529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50dca5976f1bc444d3440deab535e6e6"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a50dca5976f1bc444d3440deab535e6e6">HG_Core_class_get_data</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:a50dca5976f1bc444d3440deab535e6e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve previously associated data from a given class.  <a href="#a50dca5976f1bc444d3440deab535e6e6">More...</a><br /></td></tr>
-<tr class="separator:a50dca5976f1bc444d3440deab535e6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabb1d7f8aa517df6d105dcab0b3fbcab"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aabb1d7f8aa517df6d105dcab0b3fbcab">HG_Core_context_create</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
+<tr class="memitem:ad40ad1bf75fd5c8ba0515097ddf3ff56"><td class="memItemLeft" align="right" valign="top">static HG_INLINE const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ad40ad1bf75fd5c8ba0515097ddf3ff56">HG_Core_class_get_name</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
+<tr class="memdesc:ad40ad1bf75fd5c8ba0515097ddf3ff56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the name of the given class.  <a href="#ad40ad1bf75fd5c8ba0515097ddf3ff56">More...</a><br /></td></tr>
+<tr class="separator:ad40ad1bf75fd5c8ba0515097ddf3ff56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604738b044311ad7ca931a98e182f40c"><td class="memItemLeft" align="right" valign="top">static HG_INLINE const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a604738b044311ad7ca931a98e182f40c">HG_Core_class_get_protocol</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
+<tr class="memdesc:a604738b044311ad7ca931a98e182f40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the protocol of the given class.  <a href="#a604738b044311ad7ca931a98e182f40c">More...</a><br /></td></tr>
+<tr class="separator:a604738b044311ad7ca931a98e182f40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c842822afc4cf9a5cff3ea73484c12"><td class="memItemLeft" align="right" valign="top">static HG_INLINE hg_bool_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ae8c842822afc4cf9a5cff3ea73484c12">HG_Core_class_is_listening</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
+<tr class="memdesc:ae8c842822afc4cf9a5cff3ea73484c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether class is listening or not.  <a href="#ae8c842822afc4cf9a5cff3ea73484c12">More...</a><br /></td></tr>
+<tr class="separator:ae8c842822afc4cf9a5cff3ea73484c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1decc1778f09b53864f194814241cc58"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="na__types_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a1decc1778f09b53864f194814241cc58">HG_Core_class_get_na</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
+<tr class="memdesc:a1decc1778f09b53864f194814241cc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying NA class.  <a href="#a1decc1778f09b53864f194814241cc58">More...</a><br /></td></tr>
+<tr class="separator:a1decc1778f09b53864f194814241cc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860243c631305726adaac68f7a1b40b5"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a860243c631305726adaac68f7a1b40b5">HG_Core_class_get_input_eager_size</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
+<tr class="memdesc:a860243c631305726adaac68f7a1b40b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the maximum eager size for sending RPC inputs.  <a href="#a860243c631305726adaac68f7a1b40b5">More...</a><br /></td></tr>
+<tr class="separator:a860243c631305726adaac68f7a1b40b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bf7671130651c0ea9dc28aa60108a0a"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a7bf7671130651c0ea9dc28aa60108a0a">HG_Core_class_get_output_eager_size</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
+<tr class="memdesc:a7bf7671130651c0ea9dc28aa60108a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the maximum eager size for sending RPC outputs.  <a href="#a7bf7671130651c0ea9dc28aa60108a0a">More...</a><br /></td></tr>
+<tr class="separator:a7bf7671130651c0ea9dc28aa60108a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2de669cb17d92631865132f031a54a8"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#af2de669cb17d92631865132f031a54a8">HG_Core_class_set_data</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, void *data, void(*free_callback)(void *))</td></tr>
+<tr class="memdesc:af2de669cb17d92631865132f031a54a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate user data to class.  <a href="#af2de669cb17d92631865132f031a54a8">More...</a><br /></td></tr>
+<tr class="separator:af2de669cb17d92631865132f031a54a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9289bb1acff5199af99ea5d25906a2bd"><td class="memItemLeft" align="right" valign="top">static HG_INLINE void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a9289bb1acff5199af99ea5d25906a2bd">HG_Core_class_get_data</a> (const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
+<tr class="memdesc:a9289bb1acff5199af99ea5d25906a2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve previously associated data from a given class.  <a href="#a9289bb1acff5199af99ea5d25906a2bd">More...</a><br /></td></tr>
+<tr class="separator:a9289bb1acff5199af99ea5d25906a2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb1d7f8aa517df6d105dcab0b3fbcab"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aabb1d7f8aa517df6d105dcab0b3fbcab">HG_Core_context_create</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>)</td></tr>
 <tr class="memdesc:aabb1d7f8aa517df6d105dcab0b3fbcab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new context.  <a href="#aabb1d7f8aa517df6d105dcab0b3fbcab">More...</a><br /></td></tr>
 <tr class="separator:aabb1d7f8aa517df6d105dcab0b3fbcab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a998e5b4fddb248cb0a222d60ca73e357"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a998e5b4fddb248cb0a222d60ca73e357">HG_Core_context_create_id</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, hg_uint8_t id)</td></tr>
+<tr class="memitem:a998e5b4fddb248cb0a222d60ca73e357"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a998e5b4fddb248cb0a222d60ca73e357">HG_Core_context_create_id</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, hg_uint8_t id)</td></tr>
 <tr class="memdesc:a998e5b4fddb248cb0a222d60ca73e357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new context with a user-defined context identifier.  <a href="#a998e5b4fddb248cb0a222d60ca73e357">More...</a><br /></td></tr>
 <tr class="separator:a998e5b4fddb248cb0a222d60ca73e357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9727c8cb3144008b09b244da6776e10e"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a9727c8cb3144008b09b244da6776e10e">HG_Core_context_destroy</a> (<a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
 <tr class="memdesc:a9727c8cb3144008b09b244da6776e10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a context created by <a class="el" href="mercury__core_8h.html#aabb1d7f8aa517df6d105dcab0b3fbcab" title="Create a new context. ">HG_Core_context_create()</a>.  <a href="#a9727c8cb3144008b09b244da6776e10e">More...</a><br /></td></tr>
 <tr class="separator:a9727c8cb3144008b09b244da6776e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af18208db3a71be7ca495f0cffaf085be"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#af18208db3a71be7ca495f0cffaf085be">HG_Core_context_get_class</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
-<tr class="memdesc:af18208db3a71be7ca495f0cffaf085be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the class used to create the given context.  <a href="#af18208db3a71be7ca495f0cffaf085be">More...</a><br /></td></tr>
-<tr class="separator:af18208db3a71be7ca495f0cffaf085be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc0a4ce1cb4795f5ae123a1cdf346d33"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="na_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#afc0a4ce1cb4795f5ae123a1cdf346d33">HG_Core_context_get_na</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
-<tr class="memdesc:afc0a4ce1cb4795f5ae123a1cdf346d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the underlying NA context.  <a href="#afc0a4ce1cb4795f5ae123a1cdf346d33">More...</a><br /></td></tr>
-<tr class="separator:afc0a4ce1cb4795f5ae123a1cdf346d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0bf1fc405a2e5165d9a6af13afab09d"><td class="memItemLeft" align="right" valign="top">HG_EXPORT hg_uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ad0bf1fc405a2e5165d9a6af13afab09d">HG_Core_context_get_id</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
-<tr class="memdesc:ad0bf1fc405a2e5165d9a6af13afab09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve context ID from context.  <a href="#ad0bf1fc405a2e5165d9a6af13afab09d">More...</a><br /></td></tr>
-<tr class="separator:ad0bf1fc405a2e5165d9a6af13afab09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08261fa19f1db7d8c6e4550a8b8e5096"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a08261fa19f1db7d8c6e4550a8b8e5096">HG_Core_context_set_data</a> (<a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context, void *data, void(*free_callback)(void *))</td></tr>
-<tr class="memdesc:a08261fa19f1db7d8c6e4550a8b8e5096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate user data to context.  <a href="#a08261fa19f1db7d8c6e4550a8b8e5096">More...</a><br /></td></tr>
-<tr class="separator:a08261fa19f1db7d8c6e4550a8b8e5096"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2eebf14abf1464d11fc06a88dd4df1"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a8d2eebf14abf1464d11fc06a88dd4df1">HG_Core_context_get_data</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
-<tr class="memdesc:a8d2eebf14abf1464d11fc06a88dd4df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve previously associated data from a given context.  <a href="#a8d2eebf14abf1464d11fc06a88dd4df1">More...</a><br /></td></tr>
-<tr class="separator:a8d2eebf14abf1464d11fc06a88dd4df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79303f34ca12b55972882b3749db293b"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a79303f34ca12b55972882b3749db293b">HG_Core_context_get_class</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
+<tr class="memdesc:a79303f34ca12b55972882b3749db293b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the class used to create the given context.  <a href="#a79303f34ca12b55972882b3749db293b">More...</a><br /></td></tr>
+<tr class="separator:a79303f34ca12b55972882b3749db293b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3a3017a97c8ce7d87d68eaa7fb9931"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="na__types_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a0c3a3017a97c8ce7d87d68eaa7fb9931">HG_Core_context_get_na</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
+<tr class="memdesc:a0c3a3017a97c8ce7d87d68eaa7fb9931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the underlying NA context.  <a href="#a0c3a3017a97c8ce7d87d68eaa7fb9931">More...</a><br /></td></tr>
+<tr class="separator:a0c3a3017a97c8ce7d87d68eaa7fb9931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a4a67cf127c7fef3ca24f3572287ff"><td class="memItemLeft" align="right" valign="top">static HG_INLINE hg_uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a58a4a67cf127c7fef3ca24f3572287ff">HG_Core_context_get_id</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
+<tr class="memdesc:a58a4a67cf127c7fef3ca24f3572287ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve context ID from context.  <a href="#a58a4a67cf127c7fef3ca24f3572287ff">More...</a><br /></td></tr>
+<tr class="separator:a58a4a67cf127c7fef3ca24f3572287ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa551efc7b6ae8f7e50b74f4cf9a55f02"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aa551efc7b6ae8f7e50b74f4cf9a55f02">HG_Core_context_set_data</a> (<a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context, void *data, void(*free_callback)(void *))</td></tr>
+<tr class="memdesc:aa551efc7b6ae8f7e50b74f4cf9a55f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate user data to context.  <a href="#aa551efc7b6ae8f7e50b74f4cf9a55f02">More...</a><br /></td></tr>
+<tr class="separator:aa551efc7b6ae8f7e50b74f4cf9a55f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973b6b2581fd55344aa1260df7d59558"><td class="memItemLeft" align="right" valign="top">static HG_INLINE void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a973b6b2581fd55344aa1260df7d59558">HG_Core_context_get_data</a> (const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context)</td></tr>
+<tr class="memdesc:a973b6b2581fd55344aa1260df7d59558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve previously associated data from a given context.  <a href="#a973b6b2581fd55344aa1260df7d59558">More...</a><br /></td></tr>
+<tr class="separator:a973b6b2581fd55344aa1260df7d59558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b513baba631d9e0f2e684370d8cd5bd"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a2b513baba631d9e0f2e684370d8cd5bd">HG_Core_context_set_handle_create_callback</a> (<a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context, <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>(*callback)(<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>, void *), void *arg)</td></tr>
 <tr class="memdesc:a2b513baba631d9e0f2e684370d8cd5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to be called on HG core handle creation.  <a href="#a2b513baba631d9e0f2e684370d8cd5bd">More...</a><br /></td></tr>
 <tr class="separator:a2b513baba631d9e0f2e684370d8cd5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7afa25c36059aacebcaf19c7d053710a"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a7afa25c36059aacebcaf19c7d053710a">HG_Core_context_post</a> (<a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context, unsigned int request_count, hg_bool_t repost)</td></tr>
 <tr class="memdesc:a7afa25c36059aacebcaf19c7d053710a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post requests associated to context in order to receive incoming RPCs.  <a href="#a7afa25c36059aacebcaf19c7d053710a">More...</a><br /></td></tr>
 <tr class="separator:a7afa25c36059aacebcaf19c7d053710a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a405d187a6b29cba6252bcf65ee42f886"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a405d187a6b29cba6252bcf65ee42f886">HG_Core_register</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id, <a class="el" href="mercury__core_8h.html#ad794ceaa41cd41a812be84fc4619573a">hg_core_rpc_cb_t</a> rpc_cb)</td></tr>
+<tr class="memitem:a405d187a6b29cba6252bcf65ee42f886"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a405d187a6b29cba6252bcf65ee42f886">HG_Core_register</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id, <a class="el" href="mercury__core_8h.html#ad794ceaa41cd41a812be84fc4619573a">hg_core_rpc_cb_t</a> rpc_cb)</td></tr>
 <tr class="memdesc:a405d187a6b29cba6252bcf65ee42f886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamically register an RPC ID as well as the RPC callback executed when the RPC request ID is received.  <a href="#a405d187a6b29cba6252bcf65ee42f886">More...</a><br /></td></tr>
 <tr class="separator:a405d187a6b29cba6252bcf65ee42f886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a426a897b973e740ce89f5fdf0b1531b5"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a426a897b973e740ce89f5fdf0b1531b5">HG_Core_deregister</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id)</td></tr>
+<tr class="memitem:a426a897b973e740ce89f5fdf0b1531b5"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a426a897b973e740ce89f5fdf0b1531b5">HG_Core_deregister</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id)</td></tr>
 <tr class="memdesc:a426a897b973e740ce89f5fdf0b1531b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deregister RPC ID.  <a href="#a426a897b973e740ce89f5fdf0b1531b5">More...</a><br /></td></tr>
 <tr class="separator:a426a897b973e740ce89f5fdf0b1531b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd52bc2a89e4ffbf1c2a968daaae7d71"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#afd52bc2a89e4ffbf1c2a968daaae7d71">HG_Core_registered</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id, hg_bool_t *flag)</td></tr>
+<tr class="memitem:afd52bc2a89e4ffbf1c2a968daaae7d71"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#afd52bc2a89e4ffbf1c2a968daaae7d71">HG_Core_registered</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id, hg_bool_t *flag)</td></tr>
 <tr class="memdesc:afd52bc2a89e4ffbf1c2a968daaae7d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether <a class="el" href="mercury__core_8h.html#a405d187a6b29cba6252bcf65ee42f886" title="Dynamically register an RPC ID as well as the RPC callback executed when the RPC request ID is receiv...">HG_Core_register()</a> has been called.  <a href="#afd52bc2a89e4ffbf1c2a968daaae7d71">More...</a><br /></td></tr>
 <tr class="separator:afd52bc2a89e4ffbf1c2a968daaae7d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57b22cbb7e84c3df2e5249ecb1d921ef"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a57b22cbb7e84c3df2e5249ecb1d921ef">HG_Core_register_data</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id, void *data, void(*free_callback)(void *))</td></tr>
+<tr class="memitem:a57b22cbb7e84c3df2e5249ecb1d921ef"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a57b22cbb7e84c3df2e5249ecb1d921ef">HG_Core_register_data</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id, void *data, void(*free_callback)(void *))</td></tr>
 <tr class="memdesc:a57b22cbb7e84c3df2e5249ecb1d921ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register and associate user data to registered function.  <a href="#a57b22cbb7e84c3df2e5249ecb1d921ef">More...</a><br /></td></tr>
 <tr class="separator:a57b22cbb7e84c3df2e5249ecb1d921ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf11ceb2e563a5379a73b8490def9ca4"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#abf11ceb2e563a5379a73b8490def9ca4">HG_Core_registered_data</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id)</td></tr>
+<tr class="memitem:abf11ceb2e563a5379a73b8490def9ca4"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#abf11ceb2e563a5379a73b8490def9ca4">HG_Core_registered_data</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id)</td></tr>
 <tr class="memdesc:abf11ceb2e563a5379a73b8490def9ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether <a class="el" href="mercury__core_8h.html#a57b22cbb7e84c3df2e5249ecb1d921ef" title="Register and associate user data to registered function. ">HG_Core_register_data()</a> has been called and return associated data.  <a href="#abf11ceb2e563a5379a73b8490def9ca4">More...</a><br /></td></tr>
 <tr class="separator:abf11ceb2e563a5379a73b8490def9ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27091ab051c7d76cafd9d1d5b7747ccf"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a27091ab051c7d76cafd9d1d5b7747ccf">HG_Core_addr_lookup</a> (<a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context, <a class="el" href="mercury__core_8h.html#a2021415a118b84feaea40a6709f388ab">hg_core_cb_t</a> callback, void *arg, const char *name, <a class="el" href="mercury__core_8h.html#ac11df0b1476b12e57ce09795601b3beb">hg_core_op_id_t</a> *op_id)</td></tr>
 <tr class="memdesc:a27091ab051c7d76cafd9d1d5b7747ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lookup an addr from a peer address/name.  <a href="#a27091ab051c7d76cafd9d1d5b7747ccf">More...</a><br /></td></tr>
 <tr class="separator:a27091ab051c7d76cafd9d1d5b7747ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad0fd197a4fac0d5dd883b49bafcf450"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aad0fd197a4fac0d5dd883b49bafcf450">HG_Core_addr_create</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class)</td></tr>
-<tr class="memdesc:aad0fd197a4fac0d5dd883b49bafcf450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a HG core address.  <a href="#aad0fd197a4fac0d5dd883b49bafcf450">More...</a><br /></td></tr>
-<tr class="separator:aad0fd197a4fac0d5dd883b49bafcf450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9151a1e385285c0d0e71a49afff420a"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ad9151a1e385285c0d0e71a49afff420a">HG_Core_addr_free</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
+<tr class="memitem:a81857c2056644cfb72bae9e7d8ddc314"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a81857c2056644cfb72bae9e7d8ddc314">HG_Core_addr_create</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> *addr)</td></tr>
+<tr class="memdesc:a81857c2056644cfb72bae9e7d8ddc314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a HG core address.  <a href="#a81857c2056644cfb72bae9e7d8ddc314">More...</a><br /></td></tr>
+<tr class="separator:a81857c2056644cfb72bae9e7d8ddc314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9151a1e385285c0d0e71a49afff420a"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ad9151a1e385285c0d0e71a49afff420a">HG_Core_addr_free</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
 <tr class="memdesc:ad9151a1e385285c0d0e71a49afff420a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the addr from the list of peers.  <a href="#ad9151a1e385285c0d0e71a49afff420a">More...</a><br /></td></tr>
 <tr class="separator:ad9151a1e385285c0d0e71a49afff420a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8970a505b5a32dc7503fb432e6bdaf7f"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a8970a505b5a32dc7503fb432e6bdaf7f">HG_Core_addr_set_na</a> (<a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> core_addr, <a class="el" href="na_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a> na_addr)</td></tr>
-<tr class="memdesc:a8970a505b5a32dc7503fb432e6bdaf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the underlying NA address to a HG address.  <a href="#a8970a505b5a32dc7503fb432e6bdaf7f">More...</a><br /></td></tr>
-<tr class="separator:a8970a505b5a32dc7503fb432e6bdaf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3602b65fe446a62322ced87cc2af2454"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="na_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a3602b65fe446a62322ced87cc2af2454">HG_Core_addr_get_na</a> (<a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
-<tr class="memdesc:a3602b65fe446a62322ced87cc2af2454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying NA address from an HG address.  <a href="#a3602b65fe446a62322ced87cc2af2454">More...</a><br /></td></tr>
-<tr class="separator:a3602b65fe446a62322ced87cc2af2454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38478e05de0b4c5cc40475bc5fb5a65d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="na_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a38478e05de0b4c5cc40475bc5fb5a65d">HG_Core_addr_get_na_class</a> (<a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
-<tr class="memdesc:a38478e05de0b4c5cc40475bc5fb5a65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying NA class from an HG address.  <a href="#a38478e05de0b4c5cc40475bc5fb5a65d">More...</a><br /></td></tr>
-<tr class="separator:a38478e05de0b4c5cc40475bc5fb5a65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c3192581c8cb6e8ec842c01b43bd003"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a2c3192581c8cb6e8ec842c01b43bd003">HG_Core_addr_self</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> *addr)</td></tr>
+<tr class="memitem:a5ddaa3809bd8bac9560a1d0b06dcc20c"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a5ddaa3809bd8bac9560a1d0b06dcc20c">HG_Core_addr_set_na</a> (<a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> core_addr, <a class="el" href="na__types_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a> na_addr)</td></tr>
+<tr class="memdesc:a5ddaa3809bd8bac9560a1d0b06dcc20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the underlying NA address to a HG address.  <a href="#a5ddaa3809bd8bac9560a1d0b06dcc20c">More...</a><br /></td></tr>
+<tr class="separator:a5ddaa3809bd8bac9560a1d0b06dcc20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596a325230d680f10712cc3c410dc53f"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="na__types_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a596a325230d680f10712cc3c410dc53f">HG_Core_addr_get_na</a> (<a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
+<tr class="memdesc:a596a325230d680f10712cc3c410dc53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying NA address from an HG address.  <a href="#a596a325230d680f10712cc3c410dc53f">More...</a><br /></td></tr>
+<tr class="separator:a596a325230d680f10712cc3c410dc53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa482fed8d3022ffe8fa9c4f3f3fc99ee"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="na__types_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aa482fed8d3022ffe8fa9c4f3f3fc99ee">HG_Core_addr_get_na_class</a> (<a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
+<tr class="memdesc:aa482fed8d3022ffe8fa9c4f3f3fc99ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the underlying NA class from an HG address.  <a href="#aa482fed8d3022ffe8fa9c4f3f3fc99ee">More...</a><br /></td></tr>
+<tr class="separator:aa482fed8d3022ffe8fa9c4f3f3fc99ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3192581c8cb6e8ec842c01b43bd003"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a2c3192581c8cb6e8ec842c01b43bd003">HG_Core_addr_self</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> *addr)</td></tr>
 <tr class="memdesc:a2c3192581c8cb6e8ec842c01b43bd003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access self address.  <a href="#a2c3192581c8cb6e8ec842c01b43bd003">More...</a><br /></td></tr>
 <tr class="separator:a2c3192581c8cb6e8ec842c01b43bd003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa48c03acc388642132744cf59c64a13b"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aa48c03acc388642132744cf59c64a13b">HG_Core_addr_dup</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> *new_addr)</td></tr>
+<tr class="memitem:aa48c03acc388642132744cf59c64a13b"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aa48c03acc388642132744cf59c64a13b">HG_Core_addr_dup</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> *new_addr)</td></tr>
 <tr class="memdesc:aa48c03acc388642132744cf59c64a13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicate an existing HG abstract address.  <a href="#aa48c03acc388642132744cf59c64a13b">More...</a><br /></td></tr>
 <tr class="separator:aa48c03acc388642132744cf59c64a13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c41a6c64993225319382ca2f67fb4dc"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a1c41a6c64993225319382ca2f67fb4dc">HG_Core_addr_to_string</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *hg_core_class, char *buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *buf_size, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
+<tr class="memitem:a1c41a6c64993225319382ca2f67fb4dc"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a1c41a6c64993225319382ca2f67fb4dc">HG_Core_addr_to_string</a> (<a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *<a class="el" href="structhg__core__class.html">hg_core_class</a>, char *buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *buf_size, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr)</td></tr>
 <tr class="memdesc:a1c41a6c64993225319382ca2f67fb4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an addr to a string (returned string includes the terminating null byte '\0').  <a href="#a1c41a6c64993225319382ca2f67fb4dc">More...</a><br /></td></tr>
 <tr class="separator:a1c41a6c64993225319382ca2f67fb4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a73a82b3d48b7f222187bf891fe98b0"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a5a73a82b3d48b7f222187bf891fe98b0">HG_Core_create</a> (<a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *context, <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> addr, <a class="el" href="mercury__core__types_8h.html#acf6f2a6a769bec3eb2e488bc035f8fd0">hg_id_t</a> id, <a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> *handle)</td></tr>
@@ -241,24 +262,27 @@ Functions</h2></td></tr>
 <tr class="memitem:a72d6af1c2bce93e3e6da0528183ad2d4"><td class="memItemLeft" align="right" valign="top">HG_EXPORT hg_int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a72d6af1c2bce93e3e6da0528183ad2d4">HG_Core_ref_get</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
 <tr class="memdesc:a72d6af1c2bce93e3e6da0528183ad2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve ref count from handle.  <a href="#a72d6af1c2bce93e3e6da0528183ad2d4">More...</a><br /></td></tr>
 <tr class="separator:a72d6af1c2bce93e3e6da0528183ad2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1eee46af775d7f549600199ebfa7ba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ab1eee46af775d7f549600199ebfa7ba9">HG_Core_set_data</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, void *data, void(*free_callback)(void *))</td></tr>
-<tr class="memdesc:ab1eee46af775d7f549600199ebfa7ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows upper layers to attach data to an existing HG handle.  <a href="#ab1eee46af775d7f549600199ebfa7ba9">More...</a><br /></td></tr>
-<tr class="separator:ab1eee46af775d7f549600199ebfa7ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53614fd13219d25ba4dc0a4ebdf986ad"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a53614fd13219d25ba4dc0a4ebdf986ad">HG_Core_get_data</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
-<tr class="memdesc:a53614fd13219d25ba4dc0a4ebdf986ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows upper layers to retrieve data from an existing HG handle.  <a href="#a53614fd13219d25ba4dc0a4ebdf986ad">More...</a><br /></td></tr>
-<tr class="separator:a53614fd13219d25ba4dc0a4ebdf986ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4ac1ef345a97e1f09632c36946d8787"><td class="memItemLeft" align="right" valign="top">HG_EXPORT const struct <a class="el" href="structhg__core__info.html">hg_core_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ac4ac1ef345a97e1f09632c36946d8787">HG_Core_get_info</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
-<tr class="memdesc:ac4ac1ef345a97e1f09632c36946d8787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get info from handle.  <a href="#ac4ac1ef345a97e1f09632c36946d8787">More...</a><br /></td></tr>
-<tr class="separator:ac4ac1ef345a97e1f09632c36946d8787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a429db4b78e0924ed1d89dccd3e1e880a"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a429db4b78e0924ed1d89dccd3e1e880a">HG_Core_set_target_id</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, hg_uint8_t id)</td></tr>
-<tr class="memdesc:a429db4b78e0924ed1d89dccd3e1e880a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set target context ID that will receive and process the RPC request (ID is defined on target context creation, see <a class="el" href="mercury__core_8h.html#a998e5b4fddb248cb0a222d60ca73e357" title="Create a new context with a user-defined context identifier. ">HG_Core_context_create_id()</a>).  <a href="#a429db4b78e0924ed1d89dccd3e1e880a">More...</a><br /></td></tr>
-<tr class="separator:a429db4b78e0924ed1d89dccd3e1e880a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe21aaa29885d7c3f3d4097c811f47c9"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#afe21aaa29885d7c3f3d4097c811f47c9">HG_Core_get_input</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, void **in_buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *in_buf_size)</td></tr>
-<tr class="memdesc:afe21aaa29885d7c3f3d4097c811f47c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get input buffer from handle that can be used for serializing/deserializing parameters.  <a href="#afe21aaa29885d7c3f3d4097c811f47c9">More...</a><br /></td></tr>
-<tr class="separator:afe21aaa29885d7c3f3d4097c811f47c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec5cfc5f57ba00cd2184511f4dc88fb9"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aec5cfc5f57ba00cd2184511f4dc88fb9">HG_Core_get_output</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, void **out_buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *out_buf_size)</td></tr>
-<tr class="memdesc:aec5cfc5f57ba00cd2184511f4dc88fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output buffer from handle that can be used for serializing/deserializing parameters.  <a href="#aec5cfc5f57ba00cd2184511f4dc88fb9">More...</a><br /></td></tr>
-<tr class="separator:aec5cfc5f57ba00cd2184511f4dc88fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b79ae63faa9ab40571f83284b1a94a4"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a4b79ae63faa9ab40571f83284b1a94a4">HG_Core_set_data</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, void *data, void(*free_callback)(void *))</td></tr>
+<tr class="memdesc:a4b79ae63faa9ab40571f83284b1a94a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows upper layers to attach data to an existing HG handle.  <a href="#a4b79ae63faa9ab40571f83284b1a94a4">More...</a><br /></td></tr>
+<tr class="separator:a4b79ae63faa9ab40571f83284b1a94a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61252e350074d9554385ca718b852f15"><td class="memItemLeft" align="right" valign="top">static HG_INLINE void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a61252e350074d9554385ca718b852f15">HG_Core_get_data</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
+<tr class="memdesc:a61252e350074d9554385ca718b852f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows upper layers to retrieve data from an existing HG handle.  <a href="#a61252e350074d9554385ca718b852f15">More...</a><br /></td></tr>
+<tr class="separator:a61252e350074d9554385ca718b852f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a172845aebca7e615c67e30d7f56b3"><td class="memItemLeft" align="right" valign="top">static HG_INLINE const struct <a class="el" href="structhg__core__info.html">hg_core_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a17a172845aebca7e615c67e30d7f56b3">HG_Core_get_info</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
+<tr class="memdesc:a17a172845aebca7e615c67e30d7f56b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get info from handle.  <a href="#a17a172845aebca7e615c67e30d7f56b3">More...</a><br /></td></tr>
+<tr class="separator:a17a172845aebca7e615c67e30d7f56b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29bcac5c27daddba815d40cae8285df"><td class="memItemLeft" align="right" valign="top">static HG_INLINE const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#aa29bcac5c27daddba815d40cae8285df">HG_Core_get_rpc_data</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle)</td></tr>
+<tr class="memdesc:aa29bcac5c27daddba815d40cae8285df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows upper layers to retrieve cached RPC data from an existing HG handle.  <a href="#aa29bcac5c27daddba815d40cae8285df">More...</a><br /></td></tr>
+<tr class="separator:aa29bcac5c27daddba815d40cae8285df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47c3a49758e9de5bc4444483f688dc21"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a47c3a49758e9de5bc4444483f688dc21">HG_Core_set_target_id</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, hg_uint8_t id)</td></tr>
+<tr class="memdesc:a47c3a49758e9de5bc4444483f688dc21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set target context ID that will receive and process the RPC request (ID is defined on target context creation, see <a class="el" href="mercury__core_8h.html#a998e5b4fddb248cb0a222d60ca73e357" title="Create a new context with a user-defined context identifier. ">HG_Core_context_create_id()</a>).  <a href="#a47c3a49758e9de5bc4444483f688dc21">More...</a><br /></td></tr>
+<tr class="separator:a47c3a49758e9de5bc4444483f688dc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6367f26e5d3a343b137388e64291cd1"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#ad6367f26e5d3a343b137388e64291cd1">HG_Core_get_input</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, void **in_buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *in_buf_size)</td></tr>
+<tr class="memdesc:ad6367f26e5d3a343b137388e64291cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get input buffer from handle that can be used for serializing/deserializing parameters.  <a href="#ad6367f26e5d3a343b137388e64291cd1">More...</a><br /></td></tr>
+<tr class="separator:ad6367f26e5d3a343b137388e64291cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fae8527d0ef488b8d9066e2e687a206"><td class="memItemLeft" align="right" valign="top">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a6fae8527d0ef488b8d9066e2e687a206">HG_Core_get_output</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, void **out_buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *out_buf_size)</td></tr>
+<tr class="memdesc:a6fae8527d0ef488b8d9066e2e687a206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output buffer from handle that can be used for serializing/deserializing parameters.  <a href="#a6fae8527d0ef488b8d9066e2e687a206">More...</a><br /></td></tr>
+<tr class="separator:a6fae8527d0ef488b8d9066e2e687a206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04d51366c142f74222298d5b475af194"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__core_8h.html#a04d51366c142f74222298d5b475af194">HG_Core_forward</a> (<a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a> handle, <a class="el" href="mercury__core_8h.html#a2021415a118b84feaea40a6709f388ab">hg_core_cb_t</a> callback, void *arg, hg_uint8_t flags, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> payload_size)</td></tr>
 <tr class="memdesc:a04d51366c142f74222298d5b475af194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward a call using an existing HG handle.  <a href="#a04d51366c142f74222298d5b475af194">More...</a><br /></td></tr>
 <tr class="separator:a04d51366c142f74222298d5b475af194"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,7 +312,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00068">68</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00072">72</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +328,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00069">69</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00073">73</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +344,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00070">70</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00074">74</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +360,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00071">71</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00075">75</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +376,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00074">74</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00078">78</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +392,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00075">75</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00079">79</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -380,12 +404,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct hg_core_class <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a></td>
+          <td class="memname">typedef struct <a class="el" href="structhg__core__class.html">hg_core_class</a> <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00020">20</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00024">24</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -396,12 +420,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct hg_core_context <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a></td>
+          <td class="memname">typedef struct <a class="el" href="structhg__core__context.html">hg_core_context</a> <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00021">21</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00025">25</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -412,12 +436,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct hg_core_addr* <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a></td>
+          <td class="memname">typedef struct <a class="el" href="structhg__core__addr.html">hg_core_addr</a>* <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00022">22</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00026">26</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -428,12 +452,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct hg_core_handle* <a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a></td>
+          <td class="memname">typedef struct <a class="el" href="structhg__core__handle.html">hg_core_handle</a>* <a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00023">23</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00027">27</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -449,7 +473,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00024">24</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00028">28</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +489,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00060">60</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00064">64</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +505,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00061">61</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l00065">65</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -590,7 +614,7 @@ Functions</h2></td></tr>
 <p>Finalize the Mercury layer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
@@ -628,7 +652,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_set_more_data_callback </td>
           <td>(</td>
-          <td class="paramtype">struct hg_core_class *&#160;</td>
+          <td class="paramtype">struct <a class="el" href="structhg__core__class.html">hg_core_class</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em>, </td>
         </tr>
         <tr>
@@ -655,7 +679,7 @@ Functions</h2></td></tr>
 <p>This allows upper layers to manually transfer data using bulk transfers for example. The done_callback argument allows the upper layer to notify back once the data has been successfully acquired. The release callback allows the upper layer to release resources that were allocated when acquiring the data.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">more_data_acquire_callback</td><td>[IN] pointer to acquire function callback </td></tr>
     <tr><td class="paramname">more_data_release_callback</td><td>[IN] pointer to release function callback</td></tr>
   </table>
@@ -665,176 +689,239 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a49b405885601ef60f6bce609833724a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49b405885601ef60f6bce609833724a7">&#9670;&nbsp;</a></span>HG_Core_class_get_name()</h2>
+<a id="ad40ad1bf75fd5c8ba0515097ddf3ff56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40ad1bf75fd5c8ba0515097ddf3ff56">&#9670;&nbsp;</a></span>HG_Core_class_get_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT const char* HG_Core_class_get_name </td>
+          <td class="memname">static HG_INLINE const char * HG_Core_class_get_name </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obtain the name of the given class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the name of the class, or NULL if not a valid class </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01013">1013</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a032c211b62ab83fe68e009b2c133a02b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a032c211b62ab83fe68e009b2c133a02b">&#9670;&nbsp;</a></span>HG_Core_class_get_protocol()</h2>
+<a id="a604738b044311ad7ca931a98e182f40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604738b044311ad7ca931a98e182f40c">&#9670;&nbsp;</a></span>HG_Core_class_get_protocol()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT const char* HG_Core_class_get_protocol </td>
+          <td class="memname">static HG_INLINE const char * HG_Core_class_get_protocol </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obtain the protocol of the given class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the protocol of the class, or NULL if not a valid class </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01026">1026</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a4ca5349c3af370a7a0ed8eea9557f0bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ca5349c3af370a7a0ed8eea9557f0bf">&#9670;&nbsp;</a></span>HG_Core_class_is_listening()</h2>
+<a id="ae8c842822afc4cf9a5cff3ea73484c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c842822afc4cf9a5cff3ea73484c12">&#9670;&nbsp;</a></span>HG_Core_class_is_listening()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT hg_bool_t HG_Core_class_is_listening </td>
+          <td class="memname">static HG_INLINE hg_bool_t HG_Core_class_is_listening </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Test whether class is listening or not. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_TRUE if listening or HG_FALSE if not, or not a valid class </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01039">1039</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a24dab8be2b368363b7a7126149fdeb7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24dab8be2b368363b7a7126149fdeb7c">&#9670;&nbsp;</a></span>HG_Core_class_get_na()</h2>
+<a id="a1decc1778f09b53864f194814241cc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1decc1778f09b53864f194814241cc58">&#9670;&nbsp;</a></span>HG_Core_class_get_na()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="na_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a>* HG_Core_class_get_na </td>
+          <td class="memname">static HG_INLINE <a class="el" href="na__types_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a> * HG_Core_class_get_na </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obtain the underlying NA class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to NA class or NULL if not a valid class </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01052">1052</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a2c1fa21ce884a06082cf2795313c21b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c1fa21ce884a06082cf2795313c21b1">&#9670;&nbsp;</a></span>HG_Core_class_get_input_eager_size()</h2>
+<a id="a860243c631305726adaac68f7a1b40b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860243c631305726adaac68f7a1b40b5">&#9670;&nbsp;</a></span>HG_Core_class_get_input_eager_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> HG_Core_class_get_input_eager_size </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> HG_Core_class_get_input_eager_size </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obtain the maximum eager size for sending RPC inputs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the maximum size, or 0 if hg_core_class is not a valid class or XDR is being used </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the maximum size, or 0 if <a class="el" href="structhg__core__class.html">hg_core_class</a> is not a valid class or XDR is being used </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01080">1080</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
-<a id="ac0fa9b7c1cd310266176950d246db327"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0fa9b7c1cd310266176950d246db327">&#9670;&nbsp;</a></span>HG_Core_class_get_output_eager_size()</h2>
+<a id="a7bf7671130651c0ea9dc28aa60108a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bf7671130651c0ea9dc28aa60108a0a">&#9670;&nbsp;</a></span>HG_Core_class_get_output_eager_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> HG_Core_class_get_output_eager_size </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> HG_Core_class_get_output_eager_size </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obtain the maximum eager size for sending RPC outputs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the maximum size, or 0 if hg_core_class is not a valid class or XDR is being used </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the maximum size, or 0 if <a class="el" href="structhg__core__class.html">hg_core_class</a> is not a valid class or XDR is being used </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01098">1098</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
-<a id="aafb3484c65a4b98368fc14bac08ab529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafb3484c65a4b98368fc14bac08ab529">&#9670;&nbsp;</a></span>HG_Core_class_set_data()</h2>
+<a id="af2de669cb17d92631865132f031a54a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2de669cb17d92631865132f031a54a8">&#9670;&nbsp;</a></span>HG_Core_class_set_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_class_set_data </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_class_set_data </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em>, </td>
@@ -857,13 +944,18 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Associate user data to class. </p>
 <p>When <a class="el" href="mercury__core_8h.html#a2d23b68876f4e7c29dc20d07a27e8ed2" title="Finalize the Mercury layer. ">HG_Core_finalize()</a> is called, free_callback (if defined) is called to free the associated data.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">data</td><td>[IN] pointer to user data </td></tr>
     <tr><td class="paramname">free_callback</td><td>[IN] pointer to function</td></tr>
   </table>
@@ -871,32 +963,44 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01116">1116</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a50dca5976f1bc444d3440deab535e6e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50dca5976f1bc444d3440deab535e6e6">&#9670;&nbsp;</a></span>HG_Core_class_get_data()</h2>
+<a id="a9289bb1acff5199af99ea5d25906a2bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9289bb1acff5199af99ea5d25906a2bd">&#9670;&nbsp;</a></span>HG_Core_class_get_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT void* HG_Core_class_get_data </td>
+          <td class="memname">static HG_INLINE void * HG_Core_class_get_data </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
           <td class="paramname"><em>hg_core_class</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve previously associated data from a given class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to user data or NULL if not set or any error has occurred </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01133">1133</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -920,7 +1024,7 @@ Functions</h2></td></tr>
 <p>Must be destroyed by calling <a class="el" href="mercury__core_8h.html#a9727c8cb3144008b09b244da6776e10e" title="Destroy a context created by HG_Core_context_create(). ">HG_Core_context_destroy()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class</td></tr>
   </table>
   </dd>
 </dl>
@@ -955,10 +1059,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a new context with a user-defined context identifier. </p>
-<p>The context identifier can be used to route RPC requests to specific contexts by using <a class="el" href="mercury__core_8h.html#a429db4b78e0924ed1d89dccd3e1e880a" title="Set target context ID that will receive and process the RPC request (ID is defined on target context ...">HG_Core_set_target_id()</a>. Context must be destroyed by calling <a class="el" href="mercury__core_8h.html#a9727c8cb3144008b09b244da6776e10e" title="Destroy a context created by HG_Core_context_create(). ">HG_Core_context_destroy()</a>.</p>
+<p>The context identifier can be used to route RPC requests to specific contexts by using <a class="el" href="mercury__core_8h.html#a47c3a49758e9de5bc4444483f688dc21" title="Set target context ID that will receive and process the RPC request (ID is defined on target context ...">HG_Core_set_target_id()</a>. Context must be destroyed by calling <a class="el" href="mercury__core_8h.html#a9727c8cb3144008b09b244da6776e10e" title="Destroy a context created by HG_Core_context_create(). ">HG_Core_context_destroy()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">id</td><td>[IN] context ID</td></tr>
   </table>
   </dd>
@@ -994,20 +1098,28 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af18208db3a71be7ca495f0cffaf085be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af18208db3a71be7ca495f0cffaf085be">&#9670;&nbsp;</a></span>HG_Core_context_get_class()</h2>
+<a id="a79303f34ca12b55972882b3749db293b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79303f34ca12b55972882b3749db293b">&#9670;&nbsp;</a></span>HG_Core_context_get_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a>* HG_Core_context_get_class </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> * HG_Core_context_get_class </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve the class used to create the given context. </p>
@@ -1019,22 +1131,32 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the associated class </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01146">1146</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="afc0a4ce1cb4795f5ae123a1cdf346d33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc0a4ce1cb4795f5ae123a1cdf346d33">&#9670;&nbsp;</a></span>HG_Core_context_get_na()</h2>
+<a id="a0c3a3017a97c8ce7d87d68eaa7fb9931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3a3017a97c8ce7d87d68eaa7fb9931">&#9670;&nbsp;</a></span>HG_Core_context_get_na()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="na_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a>* HG_Core_context_get_na </td>
+          <td class="memname">static HG_INLINE <a class="el" href="na__types_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a> * HG_Core_context_get_na </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve the underlying NA context. </p>
@@ -1046,22 +1168,32 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the associated context </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01159">1159</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="ad0bf1fc405a2e5165d9a6af13afab09d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0bf1fc405a2e5165d9a6af13afab09d">&#9670;&nbsp;</a></span>HG_Core_context_get_id()</h2>
+<a id="a58a4a67cf127c7fef3ca24f3572287ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a4a67cf127c7fef3ca24f3572287ff">&#9670;&nbsp;</a></span>HG_Core_context_get_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT hg_uint8_t HG_Core_context_get_id </td>
+          <td class="memname">static HG_INLINE hg_uint8_t HG_Core_context_get_id </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve context ID from context. </p>
@@ -1073,16 +1205,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative integer (max value of 255) or 0 if no ID has been set </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01187">1187</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a08261fa19f1db7d8c6e4550a8b8e5096"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08261fa19f1db7d8c6e4550a8b8e5096">&#9670;&nbsp;</a></span>HG_Core_context_set_data()</h2>
+<a id="aa551efc7b6ae8f7e50b74f4cf9a55f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa551efc7b6ae8f7e50b74f4cf9a55f02">&#9670;&nbsp;</a></span>HG_Core_context_set_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_context_set_data </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_context_set_data </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -1105,6 +1242,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Associate user data to context. </p>
@@ -1119,22 +1261,32 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01200">1200</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a8d2eebf14abf1464d11fc06a88dd4df1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d2eebf14abf1464d11fc06a88dd4df1">&#9670;&nbsp;</a></span>HG_Core_context_get_data()</h2>
+<a id="a973b6b2581fd55344aa1260df7d59558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973b6b2581fd55344aa1260df7d59558">&#9670;&nbsp;</a></span>HG_Core_context_get_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT void* HG_Core_context_get_data </td>
+          <td class="memname">static HG_INLINE void * HG_Core_context_get_data </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="mercury__core_8h.html#a23d059fbb67bc9bc9b5de0688681a37b">hg_core_context_t</a> *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve previously associated data from a given context. </p>
@@ -1145,6 +1297,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to user data or NULL if not set or any error has occurred </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01217">1217</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -1181,7 +1335,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set callback to be called on HG core handle creation. </p>
-<p>Handles are created both on <a class="el" href="mercury__core_8h.html#a5a73a82b3d48b7f222187bf891fe98b0" title="Initiate a new HG RPC using the specified function ID and the local/remote target defined by addr...">HG_Core_create()</a> and <a class="el" href="mercury__core_8h.html#a7afa25c36059aacebcaf19c7d053710a" title="Post requests associated to context in order to receive incoming RPCs. ">HG_Core_context_post()</a> calls. This allows upper layers to create and attach data to a handle (using <a class="el" href="mercury__core_8h.html#ab1eee46af775d7f549600199ebfa7ba9" title="Allows upper layers to attach data to an existing HG handle. ">HG_Core_set_data()</a>) and later retrieve it using <a class="el" href="mercury__core_8h.html#a53614fd13219d25ba4dc0a4ebdf986ad" title="Allows upper layers to retrieve data from an existing HG handle. ">HG_Core_get_data()</a>.</p>
+<p>Handles are created both on <a class="el" href="mercury__core_8h.html#a5a73a82b3d48b7f222187bf891fe98b0" title="Initiate a new HG RPC using the specified function ID and the local/remote target defined by addr...">HG_Core_create()</a> and <a class="el" href="mercury__core_8h.html#a7afa25c36059aacebcaf19c7d053710a" title="Post requests associated to context in order to receive incoming RPCs. ">HG_Core_context_post()</a> calls. This allows upper layers to create and attach data to a handle (using <a class="el" href="mercury__core_8h.html#a4b79ae63faa9ab40571f83284b1a94a4" title="Allows upper layers to attach data to an existing HG handle. ">HG_Core_set_data()</a>) and later retrieve it using <a class="el" href="mercury__core_8h.html#a61252e350074d9554385ca718b852f15" title="Allows upper layers to retrieve data from an existing HG handle. ">HG_Core_get_data()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">context</td><td>[IN] pointer to HG core context </td></tr>
@@ -1275,7 +1429,7 @@ Functions</h2></td></tr>
 <p>Dynamically register an RPC ID as well as the RPC callback executed when the RPC request ID is received. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">id</td><td>[IN] ID to use to register RPC </td></tr>
     <tr><td class="paramname">rpc_cb</td><td>[IN] RPC callback</td></tr>
   </table>
@@ -1315,7 +1469,7 @@ Functions</h2></td></tr>
 <p>Further requests with RPC ID will return an error, it is therefore up to the user to make sure that all requests for that RPC ID have been treated before it is unregistered.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">id</td><td>[IN] registered function ID</td></tr>
   </table>
   </dd>
@@ -1359,7 +1513,7 @@ Functions</h2></td></tr>
 <p>Indicate whether <a class="el" href="mercury__core_8h.html#a405d187a6b29cba6252bcf65ee42f886" title="Dynamically register an RPC ID as well as the RPC callback executed when the RPC request ID is receiv...">HG_Core_register()</a> has been called. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">id</td><td>[IN] function ID </td></tr>
     <tr><td class="paramname">flag</td><td>[OUT] pointer to boolean</td></tr>
   </table>
@@ -1411,7 +1565,7 @@ Functions</h2></td></tr>
 <p>When <a class="el" href="mercury__core_8h.html#a2d23b68876f4e7c29dc20d07a27e8ed2" title="Finalize the Mercury layer. ">HG_Core_finalize()</a> is called, free_callback (if defined) is called to free the registered data.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">id</td><td>[IN] registered function ID </td></tr>
     <tr><td class="paramname">data</td><td>[IN] pointer to data </td></tr>
     <tr><td class="paramname">free_callback</td><td>[IN] pointer to function</td></tr>
@@ -1451,7 +1605,7 @@ Functions</h2></td></tr>
 <p>Indicate whether <a class="el" href="mercury__core_8h.html#a57b22cbb7e84c3df2e5249ecb1d921ef" title="Register and associate user data to registered function. ">HG_Core_register_data()</a> has been called and return associated data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">id</td><td>[IN] registered function ID</td></tr>
   </table>
   </dd>
@@ -1520,18 +1674,28 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aad0fd197a4fac0d5dd883b49bafcf450"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad0fd197a4fac0d5dd883b49bafcf450">&#9670;&nbsp;</a></span>HG_Core_addr_create()</h2>
+<a id="a81857c2056644cfb72bae9e7d8ddc314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81857c2056644cfb72bae9e7d8ddc314">&#9670;&nbsp;</a></span>HG_Core_addr_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> HG_Core_addr_create </td>
+          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_addr_create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#a685a2b87f24d69fa08968a05e237ad28">hg_core_class_t</a> *&#160;</td>
-          <td class="paramname"><em>hg_core_class</em></td><td>)</td>
+          <td class="paramname"><em>hg_core_class</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1539,11 +1703,12 @@ Functions</h2></td></tr>
 <p>Create a HG core address. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class</td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname">new_addr</td><td>[OUT] pointer to abstract address</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>created abstract HG core address or HG_CORE_ADDR_NULL if failed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
 
 </div>
 </div>
@@ -1576,7 +1741,7 @@ Functions</h2></td></tr>
 <p>Free the addr from the list of peers. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">addr</td><td>[IN] abstract address</td></tr>
   </table>
   </dd>
@@ -1585,14 +1750,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8970a505b5a32dc7503fb432e6bdaf7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8970a505b5a32dc7503fb432e6bdaf7f">&#9670;&nbsp;</a></span>HG_Core_addr_set_na()</h2>
+<a id="a5ddaa3809bd8bac9560a1d0b06dcc20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ddaa3809bd8bac9560a1d0b06dcc20c">&#9670;&nbsp;</a></span>HG_Core_addr_set_na()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT void HG_Core_addr_set_na </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_addr_set_na </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a>&#160;</td>
           <td class="paramname"><em>core_addr</em>, </td>
@@ -1600,7 +1768,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="na_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="na__types_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a>&#160;</td>
           <td class="paramname"><em>na_addr</em>&#160;</td>
         </tr>
         <tr>
@@ -1609,33 +1777,49 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the underlying NA address to a HG address. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">core_addr</td><td>[IN] abstract address that not set NA address before </td></tr>
-    <tr><td class="paramname">na_addr</td><td>[IN] abstract NA addr </td></tr>
+    <tr><td class="paramname">na_addr</td><td>[IN] abstract NA addr</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01230">1230</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
-<a id="a3602b65fe446a62322ced87cc2af2454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3602b65fe446a62322ced87cc2af2454">&#9670;&nbsp;</a></span>HG_Core_addr_get_na()</h2>
+<a id="a596a325230d680f10712cc3c410dc53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596a325230d680f10712cc3c410dc53f">&#9670;&nbsp;</a></span>HG_Core_addr_get_na()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="na_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a> HG_Core_addr_get_na </td>
+          <td class="memname">static HG_INLINE <a class="el" href="na__types_8h.html#a25334bdf78c48e59f0609ebc78a04ee8">na_addr_t</a> HG_Core_addr_get_na </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a>&#160;</td>
           <td class="paramname"><em>addr</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obtain the underlying NA address from an HG address. </p>
@@ -1647,22 +1831,32 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>abstract NA addr or NA_ADDR_NULL if not a valid HG address </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01245">1245</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a38478e05de0b4c5cc40475bc5fb5a65d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38478e05de0b4c5cc40475bc5fb5a65d">&#9670;&nbsp;</a></span>HG_Core_addr_get_na_class()</h2>
+<a id="aa482fed8d3022ffe8fa9c4f3f3fc99ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa482fed8d3022ffe8fa9c4f3f3fc99ee">&#9670;&nbsp;</a></span>HG_Core_addr_get_na_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="na_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a>* HG_Core_addr_get_na_class </td>
+          <td class="memname">static HG_INLINE <a class="el" href="na__types_8h.html#aea0919d7d5b83546d66ee8f91f723efd">na_class_t</a> * HG_Core_addr_get_na_class </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#aefc1b6688347fc18e85a81d360bb9ca5">hg_core_addr_t</a>&#160;</td>
           <td class="paramname"><em>addr</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obtain the underlying NA class from an HG address. </p>
@@ -1673,6 +1867,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to NA class or NULL if not a valid HG address </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01258">1258</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -1706,7 +1902,7 @@ Functions</h2></td></tr>
 <p>Address must be freed with <a class="el" href="mercury__core_8h.html#ad9151a1e385285c0d0e71a49afff420a" title="Free the addr from the list of peers. ">HG_Core_addr_free()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">addr</td><td>[OUT] pointer to abstract address</td></tr>
   </table>
   </dd>
@@ -1751,7 +1947,7 @@ Functions</h2></td></tr>
 <p>The duplicated address can be stored for later use and the origin address be freed safely. The duplicated address must be freed with <a class="el" href="mercury__core_8h.html#ad9151a1e385285c0d0e71a49afff420a" title="Free the addr from the list of peers. ">HG_Core_addr_free()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">addr</td><td>[IN] abstract address </td></tr>
     <tr><td class="paramname">new_addr</td><td>[OUT] pointer to abstract address</td></tr>
   </table>
@@ -1803,7 +1999,7 @@ Functions</h2></td></tr>
 <p>If buf is NULL, the address is not converted and only the required size of the buffer is returned. If the input value passed through buf_size is too small, HG_SIZE_ERROR is returned and the buf_size output is set to the minimum size required.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_core_class</td><td>[IN] pointer to HG core class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__core__class.html">hg_core_class</a></td><td>[IN] pointer to HG core class </td></tr>
     <tr><td class="paramname">buf</td><td>[IN/OUT] pointer to destination buffer </td></tr>
     <tr><td class="paramname">buf_size</td><td>[IN/OUT] pointer to buffer size </td></tr>
     <tr><td class="paramname">addr</td><td>[IN] abstract address</td></tr>
@@ -1995,14 +2191,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab1eee46af775d7f549600199ebfa7ba9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1eee46af775d7f549600199ebfa7ba9">&#9670;&nbsp;</a></span>HG_Core_set_data()</h2>
+<a id="a4b79ae63faa9ab40571f83284b1a94a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b79ae63faa9ab40571f83284b1a94a4">&#9670;&nbsp;</a></span>HG_Core_set_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_set_data </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_set_data </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
@@ -2025,6 +2224,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Allows upper layers to attach data to an existing HG handle. </p>
@@ -2039,26 +2243,36 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01271">1271</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a53614fd13219d25ba4dc0a4ebdf986ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53614fd13219d25ba4dc0a4ebdf986ad">&#9670;&nbsp;</a></span>HG_Core_get_data()</h2>
+<a id="a61252e350074d9554385ca718b852f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61252e350074d9554385ca718b852f15">&#9670;&nbsp;</a></span>HG_Core_get_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* HG_Core_get_data </td>
+          <td class="memname">static HG_INLINE void * HG_Core_get_data </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Allows upper layers to retrieve data from an existing HG handle. </p>
-<p>Only valid if <a class="el" href="mercury__core_8h.html#ab1eee46af775d7f549600199ebfa7ba9" title="Allows upper layers to attach data to an existing HG handle. ">HG_Core_set_data()</a> has been previously called.</p>
+<p>Only valid if <a class="el" href="mercury__core_8h.html#a4b79ae63faa9ab40571f83284b1a94a4" title="Allows upper layers to attach data to an existing HG handle. ">HG_Core_set_data()</a> has been previously called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td>[IN] HG handle</td></tr>
@@ -2067,22 +2281,32 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to user data or NULL if not set or any error has occurred </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01288">1288</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="ac4ac1ef345a97e1f09632c36946d8787"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4ac1ef345a97e1f09632c36946d8787">&#9670;&nbsp;</a></span>HG_Core_get_info()</h2>
+<a id="a17a172845aebca7e615c67e30d7f56b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a172845aebca7e615c67e30d7f56b3">&#9670;&nbsp;</a></span>HG_Core_get_info()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT const struct <a class="el" href="structhg__core__info.html">hg_core_info</a>* HG_Core_get_info </td>
+          <td class="memname">static HG_INLINE const struct <a class="el" href="structhg__core__info.html">hg_core_info</a> * HG_Core_get_info </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get info from handle. </p>
@@ -2095,16 +2319,59 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to info or NULL in case of failure </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01301">1301</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="a429db4b78e0924ed1d89dccd3e1e880a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a429db4b78e0924ed1d89dccd3e1e880a">&#9670;&nbsp;</a></span>HG_Core_set_target_id()</h2>
+<a id="aa29bcac5c27daddba815d40cae8285df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa29bcac5c27daddba815d40cae8285df">&#9670;&nbsp;</a></span>HG_Core_get_rpc_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_set_target_id </td>
+          <td class="memname">static HG_INLINE const void * HG_Core_get_rpc_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allows upper layers to retrieve cached RPC data from an existing HG handle. </p>
+<p>Only valid if <a class="el" href="mercury__core_8h.html#a57b22cbb7e84c3df2e5249ecb1d921ef" title="Register and associate user data to registered function. ">HG_Core_register_data()</a> has been previously called.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>[IN] HG handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to user data or NULL if not set or any error has occurred </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01314">1314</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
+</div>
+</div>
+<a id="a47c3a49758e9de5bc4444483f688dc21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47c3a49758e9de5bc4444483f688dc21">&#9670;&nbsp;</a></span>HG_Core_set_target_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_set_target_id </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
@@ -2121,6 +2388,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set target context ID that will receive and process the RPC request (ID is defined on target context creation, see <a class="el" href="mercury__core_8h.html#a998e5b4fddb248cb0a222d60ca73e357" title="Create a new context with a user-defined context identifier. ">HG_Core_context_create_id()</a>). </p>
@@ -2133,16 +2405,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01327">1327</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="afe21aaa29885d7c3f3d4097c811f47c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe21aaa29885d7c3f3d4097c811f47c9">&#9670;&nbsp;</a></span>HG_Core_get_input()</h2>
+<a id="ad6367f26e5d3a343b137388e64291cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6367f26e5d3a343b137388e64291cd1">&#9670;&nbsp;</a></span>HG_Core_get_input()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_get_input </td>
+          <td class="memname">static HG_INLINE <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_get_input </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
@@ -2165,6 +2442,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get input buffer from handle that can be used for serializing/deserializing parameters. </p>
@@ -2178,16 +2460,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01342">1342</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
+
 </div>
 </div>
-<a id="aec5cfc5f57ba00cd2184511f4dc88fb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec5cfc5f57ba00cd2184511f4dc88fb9">&#9670;&nbsp;</a></span>HG_Core_get_output()</h2>
+<a id="a6fae8527d0ef488b8d9066e2e687a206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fae8527d0ef488b8d9066e2e687a206">&#9670;&nbsp;</a></span>HG_Core_get_output()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_get_output </td>
+          <td class="memname"><a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a> HG_Core_get_output </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__core_8h.html#adcec0d47741ccfd4d60321edceb64daa">hg_core_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
@@ -2210,6 +2497,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get output buffer from handle that can be used for serializing/deserializing parameters. </p>
@@ -2222,6 +2514,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>HG_SUCCESS or corresponding HG error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__core_8h_source.html#l01371">1371</a> of file <a class="el" href="mercury__core_8h_source.html">mercury_core.h</a>.</p>
 
 </div>
 </div>
@@ -2329,7 +2623,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Respond back to the origin. </p>
-<p>The output buffer, which can be used to encode the response, must first be queried using <a class="el" href="mercury__core_8h.html#aec5cfc5f57ba00cd2184511f4dc88fb9" title="Get output buffer from handle that can be used for serializing/deserializing parameters. ">HG_Core_get_output()</a>. After completion, the user callback is placed into a completion queue and can be triggered using <a class="el" href="mercury__core_8h.html#ae2045b16b90ab6f5fa2c2f5796c80365" title="Execute at most max_count callbacks. ">HG_Core_trigger()</a>.</p>
+<p>The output buffer, which can be used to encode the response, must first be queried using <a class="el" href="mercury__core_8h.html#a6fae8527d0ef488b8d9066e2e687a206" title="Get output buffer from handle that can be used for serializing/deserializing parameters. ">HG_Core_get_output()</a>. After completion, the user callback is placed into a completion queue and can be triggered using <a class="el" href="mercury__core_8h.html#ae2045b16b90ab6f5fa2c2f5796c80365" title="Execute at most max_count callbacks. ">HG_Core_trigger()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td>[IN] HG handle </td></tr>

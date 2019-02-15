@@ -51,9 +51,9 @@ Include dependency graph for mercury_bulk.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mercury__bulk_8h__incl.png" border="0" usemap="#mercury__bulk_8h" alt=""/></div>
 <map name="mercury__bulk_8h" id="mercury__bulk_8h">
-<area shape="rect" id="node2" href="mercury__types_8h.html" title="mercury_types.h" alt="" coords="66,80,197,107"/>
-<area shape="rect" id="node3" href="mercury__core__types_8h.html" title="mercury_core_types.h" alt="" coords="48,155,215,181"/>
-<area shape="rect" id="node5" href="na_8h.html" title="na.h" alt="" coords="165,229,215,256"/>
+<area shape="rect" id="node2" href="mercury__types_8h.html" title="mercury_types.h" alt="" coords="77,80,207,107"/>
+<area shape="rect" id="node3" href="mercury__core__types_8h.html" title="mercury_core_types.h" alt="" coords="59,155,225,181"/>
+<area shape="rect" id="node5" href="na__types_8h.html" title="na_types.h" alt="" coords="165,229,258,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -81,7 +81,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6b92caeacaefd990a87dbf85df569b89"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a6b92caeacaefd990a87dbf85df569b89">HG_Bulk_create</a> (<a class="el" href="mercury__types_8h.html#a0005c35bfc1220783ac3e1bf1eb7e678">hg_class_t</a> *hg_class, hg_uint32_t count, void **buf_ptrs, const <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *buf_sizes, hg_uint8_t flags, <a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> *handle)</td></tr>
+<tr class="memitem:a6b92caeacaefd990a87dbf85df569b89"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a6b92caeacaefd990a87dbf85df569b89">HG_Bulk_create</a> (<a class="el" href="mercury__types_8h.html#a0005c35bfc1220783ac3e1bf1eb7e678">hg_class_t</a> *<a class="el" href="structhg__class.html">hg_class</a>, hg_uint32_t count, void **buf_ptrs, const <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> *buf_sizes, hg_uint8_t flags, <a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> *handle)</td></tr>
 <tr class="memdesc:a6b92caeacaefd990a87dbf85df569b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an abstract bulk handle from specified memory segments.  <a href="#a6b92caeacaefd990a87dbf85df569b89">More...</a><br /></td></tr>
 <tr class="separator:a6b92caeacaefd990a87dbf85df569b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad23cdc73d52042630efedb8c182433a5"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#ad23cdc73d52042630efedb8c182433a5">HG_Bulk_free</a> (<a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> handle)</td></tr>
@@ -114,7 +114,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a33943def99b56b7195b69684e39cf4dc"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a33943def99b56b7195b69684e39cf4dc">HG_Bulk_serialize</a> (void *buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> buf_size, hg_bool_t request_eager, <a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> handle)</td></tr>
 <tr class="memdesc:a33943def99b56b7195b69684e39cf4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize bulk handle into a buffer.  <a href="#a33943def99b56b7195b69684e39cf4dc">More...</a><br /></td></tr>
 <tr class="separator:a33943def99b56b7195b69684e39cf4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eb0040010dddc8ff22dbf0445fb9045"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a5eb0040010dddc8ff22dbf0445fb9045">HG_Bulk_deserialize</a> (<a class="el" href="mercury__types_8h.html#a0005c35bfc1220783ac3e1bf1eb7e678">hg_class_t</a> *hg_class, <a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> *handle, const void *buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> buf_size)</td></tr>
+<tr class="memitem:a5eb0040010dddc8ff22dbf0445fb9045"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a5eb0040010dddc8ff22dbf0445fb9045">HG_Bulk_deserialize</a> (<a class="el" href="mercury__types_8h.html#a0005c35bfc1220783ac3e1bf1eb7e678">hg_class_t</a> *<a class="el" href="structhg__class.html">hg_class</a>, <a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> *handle, const void *buf, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> buf_size)</td></tr>
 <tr class="memdesc:a5eb0040010dddc8ff22dbf0445fb9045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize bulk handle from an existing buffer.  <a href="#a5eb0040010dddc8ff22dbf0445fb9045">More...</a><br /></td></tr>
 <tr class="separator:a5eb0040010dddc8ff22dbf0445fb9045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c34dfc2fd8eb2ab20800fada7d3cad7"><td class="memItemLeft" align="right" valign="top">HG_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a2c34dfc2fd8eb2ab20800fada7d3cad7">HG_Bulk_get_serialize_cached_ptr</a> (<a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> handle)</td></tr>
@@ -123,7 +123,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a047f4ee57bd2723bbd74a26ce2975505"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a047f4ee57bd2723bbd74a26ce2975505">HG_Bulk_get_serialize_cached_size</a> (<a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> handle)</td></tr>
 <tr class="memdesc:a047f4ee57bd2723bbd74a26ce2975505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to cached serialized buffer size if any was priorly set.  <a href="#a047f4ee57bd2723bbd74a26ce2975505">More...</a><br /></td></tr>
 <tr class="separator:a047f4ee57bd2723bbd74a26ce2975505"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95db5be799a4a897dbb24d4990c11487"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a95db5be799a4a897dbb24d4990c11487">HG_Bulk_set_serialize_cached_ptr</a> (<a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> handle, void *buf, <a class="el" href="na_8h.html#a76f61a0c7e7a49698ef43bb631e8e2e0">na_size_t</a> buf_size)</td></tr>
+<tr class="memitem:a95db5be799a4a897dbb24d4990c11487"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#a95db5be799a4a897dbb24d4990c11487">HG_Bulk_set_serialize_cached_ptr</a> (<a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> handle, void *buf, <a class="el" href="na__types_8h.html#a76f61a0c7e7a49698ef43bb631e8e2e0">na_size_t</a> buf_size)</td></tr>
 <tr class="memdesc:a95db5be799a4a897dbb24d4990c11487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set cached pointer to serialization buffer.  <a href="#a95db5be799a4a897dbb24d4990c11487">More...</a><br /></td></tr>
 <tr class="separator:a95db5be799a4a897dbb24d4990c11487"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac202f2259a982480e3e0cfc99daa9e02"><td class="memItemLeft" align="right" valign="top">HG_EXPORT <a class="el" href="mercury__core__types_8h.html#a7b8f193fe4cab9e5496c4703ff4168c4">hg_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__bulk_8h.html#ac202f2259a982480e3e0cfc99daa9e02">HG_Bulk_transfer</a> (<a class="el" href="mercury__types_8h.html#a318ec156e4de2f0850cfb07ff83442ce">hg_context_t</a> *context, <a class="el" href="mercury__types_8h.html#a1904bbd83ac601dc3b6994992292e69d">hg_cb_t</a> callback, void *arg, <a class="el" href="mercury__types_8h.html#ac3c31a991f842e135e547daee1bf7d81">hg_bulk_op_t</a> op, <a class="el" href="mercury__types_8h.html#a6d3e6cbcdc462cf6223709f7ecfb3ff1">hg_addr_t</a> origin_addr, <a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> origin_handle, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> origin_offset, <a class="el" href="mercury__types_8h.html#a2b456fd4314828a5f51bb42078ec6812">hg_bulk_t</a> local_handle, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> local_offset, <a class="el" href="mercury__core__types_8h.html#a5528d5724aed9faea2bba91f8eb1d46c">hg_size_t</a> size, <a class="el" href="mercury__types_8h.html#a9bacf50ba781f43f7880ff205365778a">hg_op_id_t</a> *op_id)</td></tr>
@@ -243,7 +243,7 @@ Functions</h2></td></tr>
 <p>Memory allocated is then freed when <a class="el" href="mercury__bulk_8h.html#ad23cdc73d52042630efedb8c182433a5" title="Free bulk handle. ">HG_Bulk_free()</a> is called. </p><dl class="section remark"><dt>Remarks</dt><dd>If NULL is passed to buf_ptrs, i.e., <pre class="fragment">HG_Bulk_create(count, NULL, buf_sizes, flags, &amp;handle) </pre> memory for the missing buf_ptrs array will be internally allocated.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_class</td><td>[IN] pointer to HG class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__class.html">hg_class</a></td><td>[IN] pointer to HG class </td></tr>
     <tr><td class="paramname">count</td><td>[IN] number of segments </td></tr>
     <tr><td class="paramname">buf_ptrs</td><td>[IN] array of pointers </td></tr>
     <tr><td class="paramname">buf_sizes</td><td>[IN] array of sizes </td></tr>
@@ -679,7 +679,7 @@ Functions</h2></td></tr>
 <p>Deserialize bulk handle from an existing buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hg_class</td><td>[IN] pointer to HG class </td></tr>
+    <tr><td class="paramname"><a class="el" href="structhg__class.html">hg_class</a></td><td>[IN] pointer to HG class </td></tr>
     <tr><td class="paramname">handle</td><td>[OUT] abstract bulk handle </td></tr>
     <tr><td class="paramname">buf</td><td>[IN] pointer to buffer </td></tr>
     <tr><td class="paramname">buf_size</td><td>[IN] buffer size</td></tr>
@@ -765,7 +765,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="na_8h.html#a76f61a0c7e7a49698ef43bb631e8e2e0">na_size_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="na__types_8h.html#a76f61a0c7e7a49698ef43bb631e8e2e0">na_size_t</a>&#160;</td>
           <td class="paramname"><em>buf_size</em>&#160;</td>
         </tr>
         <tr>

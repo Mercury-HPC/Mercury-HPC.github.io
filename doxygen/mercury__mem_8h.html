@@ -82,12 +82,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the mapped memory region, or NULL in case of failure </dd></dl>
 </div></td></tr>
-<tr class="memitem:a089659595163bd78c2a5f71e4b04f78b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__mem_8h.html#a089659595163bd78c2a5f71e4b04f78b">hg_mem_shm_map</a> (const char *name, size_t size, hg_util_bool_t create)</td></tr>
-<tr class="memdesc:a089659595163bd78c2a5f71e4b04f78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmap a previously mapped region and close the file.  <a href="#a089659595163bd78c2a5f71e4b04f78b">More...</a><br /></td></tr>
-<tr class="separator:a089659595163bd78c2a5f71e4b04f78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c407ebc7edc73ab77f32e7512e9e403"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__mem_8h.html#a6c407ebc7edc73ab77f32e7512e9e403">hg_mem_shm_unmap</a> (const char *name, void *mem_ptr, size_t size)</td></tr>
-<tr class="memdesc:a6c407ebc7edc73ab77f32e7512e9e403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmap a previously mapped region and close the file.  <a href="#a6c407ebc7edc73ab77f32e7512e9e403">More...</a><br /></td></tr>
-<tr class="separator:a6c407ebc7edc73ab77f32e7512e9e403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f9d209fac29db23ce231f5970b0c56"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__mem_8h.html#a89f9d209fac29db23ce231f5970b0c56">hg_mem_shm_map</a> (const char *name, size_t size, hg_util_bool_t create)</td></tr>
+<tr class="memdesc:a89f9d209fac29db23ce231f5970b0c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmap a previously mapped region and close the file.  <a href="#a89f9d209fac29db23ce231f5970b0c56">More...</a><br /></td></tr>
+<tr class="separator:a89f9d209fac29db23ce231f5970b0c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d1018a5f81ab924439461752c6bcfb9"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__mem_8h.html#a2d1018a5f81ab924439461752c6bcfb9">hg_mem_shm_unmap</a> (const char *name, void *mem_ptr, size_t size)</td></tr>
+<tr class="memdesc:a2d1018a5f81ab924439461752c6bcfb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmap a previously mapped region and close the file.  <a href="#a2d1018a5f81ab924439461752c6bcfb9">More...</a><br /></td></tr>
+<tr class="separator:a2d1018a5f81ab924439461752c6bcfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a6931d0f0f3c97d28ad0baafaec382219"></a>
@@ -177,14 +177,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a089659595163bd78c2a5f71e4b04f78b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a089659595163bd78c2a5f71e4b04f78b">&#9670;&nbsp;</a></span>hg_mem_shm_map()</h2>
+<a id="a89f9d209fac29db23ce231f5970b0c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f9d209fac29db23ce231f5970b0c56">&#9670;&nbsp;</a></span>hg_mem_shm_map()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* hg_mem_shm_map </td>
+          <td class="memname">HG_UTIL_EXPORT void* hg_mem_shm_map </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -222,14 +222,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6c407ebc7edc73ab77f32e7512e9e403"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c407ebc7edc73ab77f32e7512e9e403">&#9670;&nbsp;</a></span>hg_mem_shm_unmap()</h2>
+<a id="a2d1018a5f81ab924439461752c6bcfb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1018a5f81ab924439461752c6bcfb9">&#9670;&nbsp;</a></span>hg_mem_shm_unmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int hg_mem_shm_unmap </td>
+          <td class="memname">HG_UTIL_EXPORT int hg_mem_shm_unmap </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>

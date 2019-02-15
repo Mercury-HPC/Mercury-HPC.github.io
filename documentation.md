@@ -4,7 +4,7 @@ title: Documentation
 permalink: /documentation/
 ---
 
-Documentation reflects Mercury's API as of v1.0.0 and can be used
+Documentation reflects Mercury's API as of v1.0.1 and can be used
 as an introduction to the Mercury library. Please look at the
 [see also](#see-also) section for additional documentation.
 

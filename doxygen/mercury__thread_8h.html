@@ -51,12 +51,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;mercury_util_config.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__util__error_8h_source.html">mercury_util_error.h</a>&quot;</code><br />
 <code>#include &lt;pthread.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mercury_thread.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mercury__thread_8h__incl.png" border="0" usemap="#util_2mercury__thread_8h" alt=""/></div>
 <map name="util_2mercury__thread_8h" id="util_2mercury__thread_8h">
+<area shape="rect" id="node3" href="mercury__util__error_8h.html" title="mercury_util_error.h" alt="" coords="67,80,221,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -65,7 +67,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="mercury__thread_8h__dep__incl.png" border="0" usemap="#util_2mercury__thread_8hdep" alt=""/></div>
 <map name="util_2mercury__thread_8hdep" id="util_2mercury__thread_8hdep">
 <area shape="rect" id="node2" href="mercury__atomic__queue_8h.html" title="util/mercury_atomic\l_queue.h" alt="" coords="5,80,159,121"/>
-<area shape="rect" id="node3" href="mercury__thread__pool_8h.html" title="util/mercury_thread\l_pool.h" alt="" coords="183,80,333,121"/>
+<area shape="rect" id="node4" href="mercury__thread__pool_8h.html" title="util/mercury_thread\l_pool.h" alt="" coords="183,80,333,121"/>
+<area shape="rect" id="node3" href="na__plugin_8h.html" title="na/na_plugin.h" alt="" coords="23,169,141,196"/>
 </map>
 </div>
 </div>
@@ -117,12 +120,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aa5a1fbddfc6c3b00a372e44c63a1002f"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread_8h.html#aa5a1fbddfc6c3b00a372e44c63a1002f">hg_thread_key_delete</a> (<a class="el" href="mercury__thread_8h.html#aaa39189c22e716f357e6cd3beda2186b">hg_thread_key_t</a> key)</td></tr>
 <tr class="memdesc:aa5a1fbddfc6c3b00a372e44c63a1002f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a thread-specific data key previously returned by <a class="el" href="mercury__thread_8h.html#aa58bc649074149a7f75ac4c372c28eae" title="Create a thread-specific data key visible to all threads in the process. ">hg_thread_key_create()</a>.  <a href="#aa5a1fbddfc6c3b00a372e44c63a1002f">More...</a><br /></td></tr>
 <tr class="separator:aa5a1fbddfc6c3b00a372e44c63a1002f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa40f629111103ff3581e41e02099643"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread_8h.html#afa40f629111103ff3581e41e02099643">hg_thread_getspecific</a> (<a class="el" href="mercury__thread_8h.html#aaa39189c22e716f357e6cd3beda2186b">hg_thread_key_t</a> key)</td></tr>
-<tr class="memdesc:afa40f629111103ff3581e41e02099643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value from specified key.  <a href="#afa40f629111103ff3581e41e02099643">More...</a><br /></td></tr>
-<tr class="separator:afa40f629111103ff3581e41e02099643"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ff857bbeaa608cdd396e40262f5812d"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread_8h.html#a8ff857bbeaa608cdd396e40262f5812d">hg_thread_setspecific</a> (<a class="el" href="mercury__thread_8h.html#aaa39189c22e716f357e6cd3beda2186b">hg_thread_key_t</a> key, const void *value)</td></tr>
-<tr class="memdesc:a8ff857bbeaa608cdd396e40262f5812d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value to specified key.  <a href="#a8ff857bbeaa608cdd396e40262f5812d">More...</a><br /></td></tr>
-<tr class="separator:a8ff857bbeaa608cdd396e40262f5812d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2dba11a5fd9ed6e4feec8ad42f53f7"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread_8h.html#a9c2dba11a5fd9ed6e4feec8ad42f53f7">hg_thread_getspecific</a> (<a class="el" href="mercury__thread_8h.html#aaa39189c22e716f357e6cd3beda2186b">hg_thread_key_t</a> key)</td></tr>
+<tr class="memdesc:a9c2dba11a5fd9ed6e4feec8ad42f53f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value from specified key.  <a href="#a9c2dba11a5fd9ed6e4feec8ad42f53f7">More...</a><br /></td></tr>
+<tr class="separator:a9c2dba11a5fd9ed6e4feec8ad42f53f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d59c0abec15f594ecf5cacee7c0c8f0"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread_8h.html#a1d59c0abec15f594ecf5cacee7c0c8f0">hg_thread_setspecific</a> (<a class="el" href="mercury__thread_8h.html#aaa39189c22e716f357e6cd3beda2186b">hg_thread_key_t</a> key, const void *value)</td></tr>
+<tr class="memdesc:a1d59c0abec15f594ecf5cacee7c0c8f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value to specified key.  <a href="#a1d59c0abec15f594ecf5cacee7c0c8f0">More...</a><br /></td></tr>
+<tr class="separator:a1d59c0abec15f594ecf5cacee7c0c8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaca8bb52d6fd7456775d696ddca4c70b"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread_8h.html#aaca8bb52d6fd7456775d696ddca4c70b">hg_thread_getaffinity</a> (<a class="el" href="mercury__thread_8h.html#abc703946f52c13c2ad4784a2e4e8f36f">hg_thread_t</a> thread, <a class="el" href="mercury__thread_8h.html#af3e8f73a5a9830b13e77448656be0d23">hg_cpu_set_t</a> *cpu_mask)</td></tr>
 <tr class="memdesc:aaca8bb52d6fd7456775d696ddca4c70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get affinity mask.  <a href="#aaca8bb52d6fd7456775d696ddca4c70b">More...</a><br /></td></tr>
 <tr class="separator:aaca8bb52d6fd7456775d696ddca4c70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,7 +162,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00032">32</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00033">33</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
 
 </div>
 </div>
@@ -176,7 +179,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00029">29</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00030">30</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
 
 </div>
 </div>
@@ -192,7 +195,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00030">30</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00031">31</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
 
 </div>
 </div>
@@ -208,7 +211,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00031">31</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00032">32</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +227,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00033">33</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00034">34</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
 
 </div>
 </div>
@@ -240,7 +243,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00044">44</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00045">45</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
 
 </div>
 </div>
@@ -472,20 +475,28 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afa40f629111103ff3581e41e02099643"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa40f629111103ff3581e41e02099643">&#9670;&nbsp;</a></span>hg_thread_getspecific()</h2>
+<a id="a9c2dba11a5fd9ed6e4feec8ad42f53f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2dba11a5fd9ed6e4feec8ad42f53f7">&#9670;&nbsp;</a></span>hg_thread_getspecific()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_UTIL_EXPORT void* hg_thread_getspecific </td>
+          <td class="memname">static HG_UTIL_INLINE void * hg_thread_getspecific </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__thread_8h.html#aaa39189c22e716f357e6cd3beda2186b">hg_thread_key_t</a>&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get value from specified key. </p>
@@ -497,16 +508,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to data associated to the key </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00177">177</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
+
 </div>
 </div>
-<a id="a8ff857bbeaa608cdd396e40262f5812d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ff857bbeaa608cdd396e40262f5812d">&#9670;&nbsp;</a></span>hg_thread_setspecific()</h2>
+<a id="a1d59c0abec15f594ecf5cacee7c0c8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d59c0abec15f594ecf5cacee7c0c8f0">&#9670;&nbsp;</a></span>hg_thread_setspecific()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_UTIL_EXPORT int hg_thread_setspecific </td>
+          <td class="memname">static HG_UTIL_INLINE int hg_thread_setspecific </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__thread_8h.html#aaa39189c22e716f357e6cd3beda2186b">hg_thread_key_t</a>&#160;</td>
           <td class="paramname"><em>key</em>, </td>
@@ -523,6 +539,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set value to specified key. </p>
@@ -534,6 +555,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__thread_8h_source.html#l00192">192</a> of file <a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>.</p>
 
 </div>
 </div>

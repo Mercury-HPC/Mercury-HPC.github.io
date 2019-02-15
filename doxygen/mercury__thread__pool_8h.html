@@ -52,13 +52,18 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="mercury__thread_8h_source.html">mercury_thread.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mercury__queue_8h_source.html">mercury_queue.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__thread__condition_8h_source.html">mercury_thread_condition.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__util__error_8h_source.html">mercury_util_error.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mercury_thread_pool.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mercury__thread__pool_8h__incl.png" border="0" usemap="#util_2mercury__thread__pool_8h" alt=""/></div>
 <map name="util_2mercury__thread__pool_8h" id="util_2mercury__thread__pool_8h">
-<area shape="rect" id="node2" href="mercury__thread_8h.html" title="mercury_thread.h" alt="" coords="91,95,229,121"/>
-<area shape="rect" id="node5" href="mercury__queue_8h.html" title="mercury_queue.h" alt="" coords="253,95,387,121"/>
+<area shape="rect" id="node2" href="mercury__thread_8h.html" title="mercury_thread.h" alt="" coords="125,95,263,121"/>
+<area shape="rect" id="node4" href="mercury__util__error_8h.html" title="mercury_util_error.h" alt="" coords="5,169,159,196"/>
+<area shape="rect" id="node6" href="mercury__queue_8h.html" title="mercury_queue.h" alt="" coords="515,95,649,121"/>
+<area shape="rect" id="node7" href="mercury__thread__condition_8h.html" title="mercury_thread_condition.h" alt="" coords="287,95,491,121"/>
+<area shape="rect" id="node8" href="mercury__thread__mutex_8h.html" title="mercury_thread_mutex.h" alt="" coords="285,169,471,196"/>
 </map>
 </div>
 </div>
@@ -66,12 +71,14 @@ Include dependency graph for mercury_thread_pool.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__thread__pool.html">hg_thread_pool</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhg__thread__work.html">hg_thread_work</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ab9b720370bd4f0e342f715d19992583b"><td class="memItemLeft" align="right" valign="top">typedef struct hg_thread_pool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a></td></tr>
+<tr class="memitem:ab9b720370bd4f0e342f715d19992583b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structhg__thread__pool.html">hg_thread_pool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a></td></tr>
 <tr class="separator:ab9b720370bd4f0e342f715d19992583b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -82,9 +89,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a38575a02b7ad9ff114de1e7f50e1d11d"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__pool_8h.html#a38575a02b7ad9ff114de1e7f50e1d11d">hg_thread_pool_destroy</a> (<a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a> *pool)</td></tr>
 <tr class="memdesc:a38575a02b7ad9ff114de1e7f50e1d11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the thread pool.  <a href="#a38575a02b7ad9ff114de1e7f50e1d11d">More...</a><br /></td></tr>
 <tr class="separator:a38575a02b7ad9ff114de1e7f50e1d11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0753a4ad75988fa8172dc21ee0ccd20"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__pool_8h.html#ab0753a4ad75988fa8172dc21ee0ccd20">hg_thread_pool_post</a> (<a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a> *pool, struct <a class="el" href="structhg__thread__work.html">hg_thread_work</a> *work)</td></tr>
-<tr class="memdesc:ab0753a4ad75988fa8172dc21ee0ccd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post work to the pool.  <a href="#ab0753a4ad75988fa8172dc21ee0ccd20">More...</a><br /></td></tr>
-<tr class="separator:ab0753a4ad75988fa8172dc21ee0ccd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4e99620a6f5e3abf7fb531a6a7a88e"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__pool_8h.html#a2d4e99620a6f5e3abf7fb531a6a7a88e">hg_thread_pool_post</a> (<a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a> *pool, struct <a class="el" href="structhg__thread__work.html">hg_thread_work</a> *work)</td></tr>
+<tr class="memdesc:a2d4e99620a6f5e3abf7fb531a6a7a88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post work to the pool.  <a href="#a2d4e99620a6f5e3abf7fb531a6a7a88e">More...</a><br /></td></tr>
+<tr class="separator:a2d4e99620a6f5e3abf7fb531a6a7a88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ab9b720370bd4f0e342f715d19992583b"></a>
@@ -94,12 +101,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct hg_thread_pool <a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a></td>
+          <td class="memname">typedef struct <a class="el" href="structhg__thread__pool.html">hg_thread_pool</a> <a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__pool_8h_source.html#l00017">17</a> of file <a class="el" href="mercury__thread__pool_8h_source.html">mercury_thread_pool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__pool_8h_source.html#l00019">19</a> of file <a class="el" href="mercury__thread__pool_8h_source.html">mercury_thread_pool.h</a>.</p>
 
 </div>
 </div>
@@ -169,14 +176,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab0753a4ad75988fa8172dc21ee0ccd20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0753a4ad75988fa8172dc21ee0ccd20">&#9670;&nbsp;</a></span>hg_thread_pool_post()</h2>
+<a id="a2d4e99620a6f5e3abf7fb531a6a7a88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4e99620a6f5e3abf7fb531a6a7a88e">&#9670;&nbsp;</a></span>hg_thread_pool_post()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">HG_UTIL_EXPORT int hg_thread_pool_post </td>
+          <td class="memname">static HG_UTIL_INLINE int hg_thread_pool_post </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__thread__pool_8h.html#ab9b720370bd4f0e342f715d19992583b">hg_thread_pool_t</a> *&#160;</td>
           <td class="paramname"><em>pool</em>, </td>
@@ -193,6 +203,11 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Post work to the pool. </p>
@@ -205,6 +220,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mercury__thread__pool_8h_source.html#l00075">75</a> of file <a class="el" href="mercury__thread__pool_8h_source.html">mercury_thread_pool.h</a>.</p>
 
 </div>
 </div>

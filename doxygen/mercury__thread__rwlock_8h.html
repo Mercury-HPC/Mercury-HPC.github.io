@@ -69,12 +69,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af12d93f390aff9ed795f7254ab24cb25"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__rwlock_8h.html#af12d93f390aff9ed795f7254ab24cb25">hg_thread_rwlock_init</a> (<a class="el" href="mercury__thread__rwlock_8h.html#a6b51bd5356ad11398bf967279d34a010">hg_thread_rwlock_t</a> *rwlock)</td></tr>
-<tr class="memdesc:af12d93f390aff9ed795f7254ab24cb25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the rwlock.  <a href="#af12d93f390aff9ed795f7254ab24cb25">More...</a><br /></td></tr>
-<tr class="separator:af12d93f390aff9ed795f7254ab24cb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae87a0c2207228988e8907eacc0cee40f"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__rwlock_8h.html#ae87a0c2207228988e8907eacc0cee40f">hg_thread_rwlock_destroy</a> (<a class="el" href="mercury__thread__rwlock_8h.html#a6b51bd5356ad11398bf967279d34a010">hg_thread_rwlock_t</a> *rwlock)</td></tr>
-<tr class="memdesc:ae87a0c2207228988e8907eacc0cee40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the rwlock.  <a href="#ae87a0c2207228988e8907eacc0cee40f">More...</a><br /></td></tr>
-<tr class="separator:ae87a0c2207228988e8907eacc0cee40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c99046be630de8af940551fea9d7bde"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__rwlock_8h.html#a5c99046be630de8af940551fea9d7bde">hg_thread_rwlock_init</a> (<a class="el" href="mercury__thread__rwlock_8h.html#a6b51bd5356ad11398bf967279d34a010">hg_thread_rwlock_t</a> *rwlock)</td></tr>
+<tr class="memdesc:a5c99046be630de8af940551fea9d7bde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the rwlock.  <a href="#a5c99046be630de8af940551fea9d7bde">More...</a><br /></td></tr>
+<tr class="separator:a5c99046be630de8af940551fea9d7bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3179f60c570a11732a4810d8d95ad5a"><td class="memItemLeft" align="right" valign="top">HG_UTIL_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__rwlock_8h.html#af3179f60c570a11732a4810d8d95ad5a">hg_thread_rwlock_destroy</a> (<a class="el" href="mercury__thread__rwlock_8h.html#a6b51bd5356ad11398bf967279d34a010">hg_thread_rwlock_t</a> *rwlock)</td></tr>
+<tr class="memdesc:af3179f60c570a11732a4810d8d95ad5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the rwlock.  <a href="#af3179f60c570a11732a4810d8d95ad5a">More...</a><br /></td></tr>
+<tr class="separator:af3179f60c570a11732a4810d8d95ad5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14d901ac0b2cce397e4736fd07fa7bba"><td class="memItemLeft" align="right" valign="top">static HG_UTIL_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mercury__thread__rwlock_8h.html#a14d901ac0b2cce397e4736fd07fa7bba">hg_thread_rwlock_rdlock</a> (<a class="el" href="mercury__thread__rwlock_8h.html#a6b51bd5356ad11398bf967279d34a010">hg_thread_rwlock_t</a> *rwlock)</td></tr>
 <tr class="memdesc:a14d901ac0b2cce397e4736fd07fa7bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take a read lock for the rwlock.  <a href="#a14d901ac0b2cce397e4736fd07fa7bba">More...</a><br /></td></tr>
 <tr class="separator:a14d901ac0b2cce397e4736fd07fa7bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,28 +112,20 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af12d93f390aff9ed795f7254ab24cb25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af12d93f390aff9ed795f7254ab24cb25">&#9670;&nbsp;</a></span>hg_thread_rwlock_init()</h2>
+<a id="a5c99046be630de8af940551fea9d7bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c99046be630de8af940551fea9d7bde">&#9670;&nbsp;</a></span>hg_thread_rwlock_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static HG_UTIL_INLINE int hg_thread_rwlock_init </td>
+          <td class="memname">HG_UTIL_EXPORT int hg_thread_rwlock_init </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__thread__rwlock_8h.html#a6b51bd5356ad11398bf967279d34a010">hg_thread_rwlock_t</a> *&#160;</td>
           <td class="paramname"><em>rwlock</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Initialize the rwlock. </p>
@@ -145,32 +137,22 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00148">148</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
-
 </div>
 </div>
-<a id="ae87a0c2207228988e8907eacc0cee40f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae87a0c2207228988e8907eacc0cee40f">&#9670;&nbsp;</a></span>hg_thread_rwlock_destroy()</h2>
+<a id="af3179f60c570a11732a4810d8d95ad5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3179f60c570a11732a4810d8d95ad5a">&#9670;&nbsp;</a></span>hg_thread_rwlock_destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static HG_UTIL_INLINE int hg_thread_rwlock_destroy </td>
+          <td class="memname">HG_UTIL_EXPORT int hg_thread_rwlock_destroy </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="mercury__thread__rwlock_8h.html#a6b51bd5356ad11398bf967279d34a010">hg_thread_rwlock_t</a> *&#160;</td>
           <td class="paramname"><em>rwlock</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Destroy the rwlock. </p>
@@ -181,8 +163,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00163">163</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
 
 </div>
 </div>
@@ -219,7 +199,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00178">178</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00148">148</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
 
 </div>
 </div>
@@ -256,7 +236,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00193">193</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00163">163</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +273,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00208">208</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00178">178</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
 
 </div>
 </div>
@@ -330,7 +310,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00223">223</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00193">193</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
 
 </div>
 </div>
@@ -367,7 +347,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00238">238</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00208">208</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
 
 </div>
 </div>
@@ -404,7 +384,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non-negative on success or negative on failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00253">253</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mercury__thread__rwlock_8h_source.html#l00223">223</a> of file <a class="el" href="mercury__thread__rwlock_8h_source.html">mercury_thread_rwlock.h</a>.</p>
 
 </div>
 </div>

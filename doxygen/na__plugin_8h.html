@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mercury: na/na_private.h File Reference</title>
+<title>Mercury: na/na_plugin.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,56 +48,63 @@ $(function() {
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">na_private.h File Reference</div>  </div>
+<div class="title">na_plugin.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="na_8h_source.html">na.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__atomic__queue_8h_source.html">mercury_atomic_queue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mercury__queue_8h_source.html">mercury_queue.h</a>&quot;</code><br />
-<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="mercury__thread__mutex_8h_source.html">mercury_thread_mutex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mercury__thread__condition_8h_source.html">mercury_thread_condition.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for na_private.h:</div>
+Include dependency graph for na_plugin.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="na__private_8h__incl.png" border="0" usemap="#na_2na__private_8h" alt=""/></div>
-<map name="na_2na__private_8h" id="na_2na__private_8h">
-<area shape="rect" id="node2" href="na_8h.html" title="na.h" alt="" coords="81,80,132,107"/>
-<area shape="rect" id="node5" href="mercury__queue_8h.html" title="mercury_queue.h" alt="" coords="157,80,291,107"/>
+<div class="center"><img src="na__plugin_8h__incl.png" border="0" usemap="#na_2na__plugin_8h" alt=""/></div>
+<map name="na_2na__plugin_8h" id="na_2na__plugin_8h">
+<area shape="rect" id="node2" href="na_8h.html" title="na.h" alt="" coords="140,80,191,107"/>
+<area shape="rect" id="node7" href="mercury__atomic__queue_8h.html" title="mercury_atomic_queue.h" alt="" coords="245,80,432,107"/>
+<area shape="rect" id="node13" href="mercury__queue_8h.html" title="mercury_queue.h" alt="" coords="457,80,591,107"/>
+<area shape="rect" id="node14" href="mercury__thread__mutex_8h.html" title="mercury_thread_mutex.h" alt="" coords="604,155,791,181"/>
+<area shape="rect" id="node16" href="mercury__thread__condition_8h.html" title="mercury_thread_condition.h" alt="" coords="667,80,871,107"/>
+<area shape="rect" id="node3" href="na__types_8h.html" title="na_types.h" alt="" coords="119,155,212,181"/>
+<area shape="rect" id="node6" href="na__error_8h.html" title="na_error.h" alt="" coords="7,155,94,181"/>
+<area shape="rect" id="node8" href="mercury__atomic_8h.html" title="mercury_atomic.h" alt="" coords="222,229,362,256"/>
+<area shape="rect" id="node10" href="mercury__thread_8h.html" title="mercury_thread.h" alt="" coords="366,155,503,181"/>
+<area shape="rect" id="node11" href="mercury__util__error_8h.html" title="mercury_util_error.h" alt="" coords="438,229,591,256"/>
 </map>
 </div>
 </div>
-<p><a href="na__private_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="na__plugin_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structna__info.html">na_info</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structna__context.html">na_context</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structna__cb__completion__data.html">na_cb_completion_data</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structna__class.html">na_class</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac00ffe56121fa3710b47075be6140e72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__private_8h.html#ac00ffe56121fa3710b47075be6140e72">NA_UNUSED</a></td></tr>
+<tr class="memitem:ac00ffe56121fa3710b47075be6140e72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__plugin_8h.html#ac00ffe56121fa3710b47075be6140e72">NA_UNUSED</a></td></tr>
 <tr class="separator:ac00ffe56121fa3710b47075be6140e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8c317a42292b61c93aae91e59118a46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__private_8h.html#af8c317a42292b61c93aae91e59118a46">container_of</a>(ptr,  type,  member)&#160;&#160;&#160;((type *) ((char *) ptr - offsetof(type, member)))</td></tr>
+<tr class="memitem:af8c317a42292b61c93aae91e59118a46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__plugin_8h.html#af8c317a42292b61c93aae91e59118a46">container_of</a>(ptr,  type,  member)&#160;&#160;&#160;((type *) ((char *) ptr - offsetof(type, member)))</td></tr>
 <tr class="memdesc:af8c317a42292b61c93aae91e59118a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">container_of - cast a member of a structure out to the containing structure : the pointer to the member.  <a href="#af8c317a42292b61c93aae91e59118a46">More...</a><br /></td></tr>
 <tr class="separator:af8c317a42292b61c93aae91e59118a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__private_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a,  b)&#160;&#160;&#160;(((a) &gt; (b)) ? (a) : (b))</td></tr>
+<tr class="memitem:afa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__plugin_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a,  b)&#160;&#160;&#160;(((a) &gt; (b)) ? (a) : (b))</td></tr>
 <tr class="memdesc:afa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Min/max macros.  <a href="#afa99ec4acc4ecb2dc3c2d05da15d0e3f">More...</a><br /></td></tr>
 <tr class="separator:afa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3acffbd305ee72dcd4593c0d8af64a4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__private_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a,  b)&#160;&#160;&#160;(((a) &lt; (b)) ? (a) : (b))</td></tr>
+<tr class="memitem:a3acffbd305ee72dcd4593c0d8af64a4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__plugin_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a,  b)&#160;&#160;&#160;(((a) &lt; (b)) ? (a) : (b))</td></tr>
 <tr class="separator:a3acffbd305ee72dcd4593c0d8af64a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce64e0bf8b3e05f33c4aa74162918a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__plugin_8h.html#adce64e0bf8b3e05f33c4aa74162918a1">NA_PLUGIN_OPS</a>(plugin_name)&#160;&#160;&#160;const struct <a class="el" href="structna__class__ops.html">na_class_ops</a> na_ ##plugin_name ##_class_ops_g</td></tr>
+<tr class="memdesc:adce64e0bf8b3e05f33c4aa74162918a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plugin ops definition.  <a href="#adce64e0bf8b3e05f33c4aa74162918a1">More...</a><br /></td></tr>
+<tr class="separator:adce64e0bf8b3e05f33c4aa74162918a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a86ac05fcd8777ba978aa9cb3d3f37df7"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__private_8h.html#a86ac05fcd8777ba978aa9cb3d3f37df7">na_plugin_cb_t</a>) (void *arg)</td></tr>
+<tr class="memitem:a86ac05fcd8777ba978aa9cb3d3f37df7"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__plugin_8h.html#a86ac05fcd8777ba978aa9cb3d3f37df7">na_plugin_cb_t</a>) (void *arg)</td></tr>
 <tr class="separator:a86ac05fcd8777ba978aa9cb3d3f37df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a03955ab5566d539fe9e3fcc66a845843"><td class="memItemLeft" align="right" valign="top">NA_EXPORT <a class="el" href="na_8h.html#a476998139b0ada3b36aaebf5eb048444">na_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__private_8h.html#a03955ab5566d539fe9e3fcc66a845843">na_cb_completion_add</a> (<a class="el" href="na_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a> *context, struct <a class="el" href="structna__cb__completion__data.html">na_cb_completion_data</a> *<a class="el" href="structna__cb__completion__data.html">na_cb_completion_data</a>)</td></tr>
+<tr class="memitem:a03955ab5566d539fe9e3fcc66a845843"><td class="memItemLeft" align="right" valign="top">NA_EXPORT <a class="el" href="na__types_8h.html#a476998139b0ada3b36aaebf5eb048444">na_return_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na__plugin_8h.html#a03955ab5566d539fe9e3fcc66a845843">na_cb_completion_add</a> (<a class="el" href="na__types_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a> *context, struct <a class="el" href="structna__cb__completion__data.html">na_cb_completion_data</a> *<a class="el" href="structna__cb__completion__data.html">na_cb_completion_data</a>)</td></tr>
 <tr class="memdesc:a03955ab5566d539fe9e3fcc66a845843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add callback to context completion queue.  <a href="#a03955ab5566d539fe9e3fcc66a845843">More...</a><br /></td></tr>
 <tr class="separator:a03955ab5566d539fe9e3fcc66a845843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -114,7 +121,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="na__private_8h_source.html#l00372">372</a> of file <a class="el" href="na__private_8h_source.html">na_private.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="na__plugin_8h_source.html#l00048">48</a> of file <a class="el" href="na__plugin_8h_source.html">na_plugin.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +160,7 @@ Functions</h2></td></tr>
 <p>container_of - cast a member of a structure out to the containing structure : the pointer to the member. </p>
 <p>: the type of the container struct this is embedded in. : the name of the member within the struct. </p>
 
-<p class="definition">Definition at line <a class="el" href="na__private_8h_source.html#l00383">383</a> of file <a class="el" href="na__private_8h_source.html">na_private.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="na__plugin_8h_source.html#l00059">59</a> of file <a class="el" href="na__plugin_8h_source.html">na_plugin.h</a>.</p>
 
 </div>
 </div>
@@ -185,7 +192,7 @@ Functions</h2></td></tr>
 
 <p>Min/max macros. </p>
 
-<p class="definition">Definition at line <a class="el" href="na__private_8h_source.html#l00391">391</a> of file <a class="el" href="na__private_8h_source.html">na_private.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="na__plugin_8h_source.html#l00067">67</a> of file <a class="el" href="na__plugin_8h_source.html">na_plugin.h</a>.</p>
 
 </div>
 </div>
@@ -215,7 +222,29 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="na__private_8h_source.html#l00394">394</a> of file <a class="el" href="na__private_8h_source.html">na_private.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="na__plugin_8h_source.html#l00070">70</a> of file <a class="el" href="na__plugin_8h_source.html">na_plugin.h</a>.</p>
+
+</div>
+</div>
+<a id="adce64e0bf8b3e05f33c4aa74162918a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce64e0bf8b3e05f33c4aa74162918a1">&#9670;&nbsp;</a></span>NA_PLUGIN_OPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NA_PLUGIN_OPS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">plugin_name</td><td>)</td>
+          <td>&#160;&#160;&#160;const struct <a class="el" href="structna__class__ops.html">na_class_ops</a> na_ ##plugin_name ##_class_ops_g</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plugin ops definition. </p>
+
+<p class="definition">Definition at line <a class="el" href="na__plugin_8h_source.html#l00076">76</a> of file <a class="el" href="na__plugin_8h_source.html">na_plugin.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +261,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="na__private_8h_source.html#l00033">33</a> of file <a class="el" href="na__private_8h_source.html">na_private.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="na__plugin_8h_source.html#l00026">26</a> of file <a class="el" href="na__plugin_8h_source.html">na_plugin.h</a>.</p>
 
 </div>
 </div>
@@ -244,9 +273,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">NA_EXPORT <a class="el" href="na_8h.html#a476998139b0ada3b36aaebf5eb048444">na_return_t</a> na_cb_completion_add </td>
+          <td class="memname">NA_EXPORT <a class="el" href="na__types_8h.html#a476998139b0ada3b36aaebf5eb048444">na_return_t</a> na_cb_completion_add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="na_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="na__types_8h.html#a1b1f046db890684610f69205be4013c9">na_context_t</a> *&#160;</td>
           <td class="paramname"><em>context</em>, </td>
         </tr>
         <tr>

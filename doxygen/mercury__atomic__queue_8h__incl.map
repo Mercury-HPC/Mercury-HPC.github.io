@@ -1,4 +1,5 @@
 <map id="util/mercury_atomic_queue.h" name="util/mercury_atomic_queue.h">
-<area shape="rect" id="node2" href="$mercury__atomic_8h.html" title="mercury_atomic.h" alt="" coords="9,95,149,121"/>
-<area shape="rect" id="node4" href="$mercury__thread_8h.html" title="mercury_thread.h" alt="" coords="173,95,310,121"/>
+<area shape="rect" id="node2" href="$mercury__atomic_8h.html" title="mercury_atomic.h" alt="" coords="5,95,145,121"/>
+<area shape="rect" id="node4" href="$mercury__thread_8h.html" title="mercury_thread.h" alt="" coords="169,95,307,121"/>
+<area shape="rect" id="node5" href="$mercury__util__error_8h.html" title="mercury_util_error.h" alt="" coords="163,169,316,196"/>
 </map>

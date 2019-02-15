@@ -1,4 +1,7 @@
 <map id="util/mercury_thread_pool.h" name="util/mercury_thread_pool.h">
-<area shape="rect" id="node2" href="$mercury__thread_8h.html" title="mercury_thread.h" alt="" coords="91,95,229,121"/>
-<area shape="rect" id="node5" href="$mercury__queue_8h.html" title="mercury_queue.h" alt="" coords="253,95,387,121"/>
+<area shape="rect" id="node2" href="$mercury__thread_8h.html" title="mercury_thread.h" alt="" coords="125,95,263,121"/>
+<area shape="rect" id="node4" href="$mercury__util__error_8h.html" title="mercury_util_error.h" alt="" coords="5,169,159,196"/>
+<area shape="rect" id="node6" href="$mercury__queue_8h.html" title="mercury_queue.h" alt="" coords="515,95,649,121"/>
+<area shape="rect" id="node7" href="$mercury__thread__condition_8h.html" title="mercury_thread_condition.h" alt="" coords="287,95,491,121"/>
+<area shape="rect" id="node8" href="$mercury__thread__mutex_8h.html" title="mercury_thread_mutex.h" alt="" coords="285,169,471,196"/>
 </map>
