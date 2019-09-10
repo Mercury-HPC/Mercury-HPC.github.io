@@ -24,7 +24,7 @@ Current and past issues can be found on:
 You may check that the latest build passes by
 looking at the Travis continuous integration service
 [![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury).
-Or for more details you may also look at what the build tests have reported to the CDash Dashboard <a href="http://cdash.hdfgroup.org/index.php?project=Mercury"><img src="http://cdash.hdfgroup.org/images/cdash.gif" alt="alt text" style="width: 24px"/></a>.
+Or for more details you may also look at what the build tests have reported to the CDash Dashboard <a href="https://cdash.hdfgroup.org/index.php?project=Mercury"><img src="https://cdash.hdfgroup.org/images/cdash.gif" alt="alt text" style="width: 24px"/></a>.
 
 ## Contribute
 

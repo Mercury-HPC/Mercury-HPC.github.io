@@ -19,8 +19,8 @@ gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.10.0"
-   gem "jemoji", "~> 0.10.1"
+   gem "jekyll-feed", "~> 0.11.0"
+   gem "jemoji", "~> 0.10.2"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
