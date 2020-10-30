@@ -7,9 +7,9 @@ categories: news
 
 We are very pleased to announce that the release of mercury 2.0.0 is
 now available and can be downloaded from:
-        [http://mercury-hpc.github.io/download/][downloads]
+        [https://mercury-hpc.github.io/download/][downloads]
 or
-        https://github.com/mercury-hpc/mercury/releases/tag/v2.0.0
+        [https://github.com/mercury-hpc/mercury/releases/tag/v2.0.0][github]
 
 Spack package update will also be available soon.
 
@@ -40,5 +40,6 @@ Thanks again to everyone who contributed to this release.
 
 [downloads]: {{ site.baseurl }}/download
 [documentation]: {{ site.baseurl }}/documentation
+[github]: https://github.com/mercury-hpc/mercury/releases/tag/v2.0.0
 [issues]: https://github.com/mercury-hpc/mercury/issues
 [changelog]: https://github.com/mercury-hpc/mercury/blob/v2.0.0/CHANGELOG
