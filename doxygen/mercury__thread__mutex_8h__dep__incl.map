@@ -1,6 +1,7 @@
 <map id="util/mercury_thread_mutex.h" name="util/mercury_thread_mutex.h">
-<area shape="rect" id="node2" href="$na__plugin_8h.html" title="na/na_plugin.h" alt="" coords="5,191,123,218"/>
-<area shape="rect" id="node3" href="$mercury__thread__condition_8h.html" title="util/mercury_thread\l_condition.h" alt="" coords="102,95,253,136"/>
-<area shape="rect" id="node5" href="$mercury__thread__spin_8h.html" title="util/mercury_thread\l_spin.h" alt="" coords="277,95,427,136"/>
-<area shape="rect" id="node4" href="$mercury__thread__pool_8h.html" title="util/mercury_thread\l_pool.h" alt="" coords="147,184,298,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="102,5,253,47"/>
+<area shape="rect" id="node2" href="$na__plugin_8h.html" title=" " alt="" coords="5,191,123,218"/>
+<area shape="rect" id="node3" href="$mercury__thread__condition_8h.html" title=" " alt="" coords="102,95,253,136"/>
+<area shape="rect" id="node5" href="$mercury__thread__spin_8h.html" title=" " alt="" coords="277,95,427,136"/>
+<area shape="rect" id="node4" href="$mercury__thread__pool_8h.html" title=" " alt="" coords="147,184,298,225"/>
 </map>

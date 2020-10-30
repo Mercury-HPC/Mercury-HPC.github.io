@@ -1,5 +1,6 @@
 <map id="hg_init_info" name="hg_init_info">
-<area shape="rect" id="node2" href="$structna__init__info.html" title="na_init_info" alt="" coords="5,95,104,121"/>
-<area shape="rect" id="node3" href="$structna__class.html" title="na_class" alt="" coords="129,95,207,121"/>
-<area shape="rect" id="node4" href="$structna__class__ops.html" title="na_class_ops" alt="" coords="114,5,222,32"/>
+<area shape="rect" id="node1" title="HG init info struct NB." alt="" coords="61,184,160,211"/>
+<area shape="rect" id="node2" href="$structna__init__info.html" title=" " alt="" coords="5,95,104,121"/>
+<area shape="rect" id="node3" href="$structna__class.html" title=" " alt="" coords="129,95,207,121"/>
+<area shape="rect" id="node4" href="$structna__class__ops.html" title=" " alt="" coords="114,5,222,32"/>
 </map>

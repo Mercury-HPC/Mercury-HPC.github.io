@@ -1,9 +1,10 @@
 <map id="hg_cb_info_respond" name="hg_cb_info_respond">
-<area shape="rect" id="node2" href="$structhg__handle.html" title="hg_handle" alt="" coords="176,273,265,300"/>
-<area shape="rect" id="node3" href="$structhg__core__handle.html" title="hg_core_handle" alt="" coords="40,184,164,211"/>
-<area shape="rect" id="node5" href="$structhg__core__rpc__info.html" title="hg_core_rpc_info" alt="" coords="5,273,137,300"/>
-<area shape="rect" id="node4" href="$structhg__core__info.html" title="hg_core_info" alt="" coords="49,95,155,121"/>
-<area shape="rect" id="node6" href="$structhg__info.html" title="hg_info" alt="" coords="269,184,340,211"/>
-<area shape="rect" id="node7" href="$structhg__class.html" title="hg_class" alt="" coords="251,5,329,32"/>
-<area shape="rect" id="node8" href="$structhg__context.html" title="hg_context" alt="" coords="355,95,449,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="145,363,296,389"/>
+<area shape="rect" id="node2" href="$structhg__handle.html" title=" " alt="" coords="176,273,265,300"/>
+<area shape="rect" id="node3" href="$structhg__core__handle.html" title=" " alt="" coords="40,184,164,211"/>
+<area shape="rect" id="node5" href="$structhg__core__rpc__info.html" title=" " alt="" coords="5,273,137,300"/>
+<area shape="rect" id="node4" href="$structhg__core__info.html" title=" " alt="" coords="49,95,155,121"/>
+<area shape="rect" id="node6" href="$structhg__info.html" title=" " alt="" coords="269,184,340,211"/>
+<area shape="rect" id="node7" href="$structhg__class.html" title=" " alt="" coords="251,5,329,32"/>
+<area shape="rect" id="node8" href="$structhg__context.html" title=" " alt="" coords="355,95,449,121"/>
 </map>

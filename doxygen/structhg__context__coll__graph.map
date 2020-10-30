@@ -1,7 +1,8 @@
 <map id="hg_context" name="hg_context">
-<area shape="rect" id="node2" href="$structhg__core__context.html" title="hg_core_context" alt="" coords="72,184,201,211"/>
-<area shape="rect" id="node3" href="$structna__context.html" title="na_context" alt="" coords="5,95,100,121"/>
-<area shape="rect" id="node4" href="$structhg__core__class.html" title="hg_core_class" alt="" coords="165,95,279,121"/>
-<area shape="rect" id="node6" href="$structhg__class.html" title="hg_class" alt="" coords="225,184,304,211"/>
-<area shape="rect" id="node5" href="$structna__class.html" title="na_class" alt="" coords="183,5,261,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="153,273,248,300"/>
+<area shape="rect" id="node2" href="$structhg__core__context.html" title=" " alt="" coords="72,184,201,211"/>
+<area shape="rect" id="node3" href="$structna__context.html" title=" " alt="" coords="5,95,100,121"/>
+<area shape="rect" id="node4" href="$structhg__core__class.html" title=" " alt="" coords="165,95,279,121"/>
+<area shape="rect" id="node6" href="$structhg__class.html" title=" " alt="" coords="225,184,304,211"/>
+<area shape="rect" id="node5" href="$structna__class.html" title=" " alt="" coords="183,5,261,32"/>
 </map>

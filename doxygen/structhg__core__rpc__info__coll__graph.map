@@ -1,7 +1,8 @@
 <map id="hg_core_rpc_info" name="hg_core_rpc_info">
-<area shape="rect" id="node2" href="$structhg__core__handle.html" title="hg_core_handle" alt="" coords="85,273,209,300"/>
-<area shape="rect" id="node3" href="$structhg__core__info.html" title="hg_core_info" alt="" coords="172,184,277,211"/>
-<area shape="rect" id="node4" href="$structhg__core__context.html" title="hg_core_context" alt="" coords="160,95,289,121"/>
-<area shape="rect" id="node5" href="$structhg__core__class.html" title="hg_core_class" alt="" coords="27,5,140,32"/>
-<area shape="rect" id="node6" href="$structhg__core__addr.html" title="hg_core_addr" alt="" coords="314,95,423,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,184,137,211"/>
+<area shape="rect" id="node2" href="$structhg__core__handle.html" title=" " alt="" coords="85,273,209,300"/>
+<area shape="rect" id="node3" href="$structhg__core__info.html" title=" " alt="" coords="172,184,277,211"/>
+<area shape="rect" id="node4" href="$structhg__core__context.html" title=" " alt="" coords="160,95,289,121"/>
+<area shape="rect" id="node5" href="$structhg__core__class.html" title=" " alt="" coords="168,5,281,32"/>
+<area shape="rect" id="node6" href="$structhg__core__addr.html" title=" " alt="" coords="314,95,423,121"/>
 </map>

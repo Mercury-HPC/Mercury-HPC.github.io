@@ -1,6 +1,9 @@
 <map id="mercury_proc.h" name="mercury_proc.h">
-<area shape="rect" id="node2" href="$mercury__types_8h.html" title="mercury_types.h" alt="" coords="57,80,187,107"/>
-<area shape="rect" id="node6" href="$mercury__error_8h.html" title="mercury_error.h" alt="" coords="197,155,322,181"/>
-<area shape="rect" id="node3" href="$mercury__core__types_8h.html" title="mercury_core_types.h" alt="" coords="5,155,172,181"/>
-<area shape="rect" id="node5" href="$na__types_8h.html" title="na_types.h" alt="" coords="42,229,135,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="206,5,329,32"/>
+<area shape="rect" id="node2" href="$mercury__types_8h.html" title=" " alt="" coords="77,80,207,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="232,80,303,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="327,80,397,107"/>
+<area shape="rect" id="node3" href="$mercury__core__types_8h.html" title=" " alt="" coords="59,155,225,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,229,140,256"/>
+<area shape="rect" id="node5" href="$na__types_8h.html" title=" " alt="" coords="165,229,258,256"/>
 </map>
