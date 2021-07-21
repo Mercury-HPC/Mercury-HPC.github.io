@@ -39,7 +39,7 @@ list or create an issue/pull request directly on GitHub.
 We have many things planned for Mercury and limited developer time available;
 contact us if you want to learn more about RPC on HPC systems or if
 you are looking for an interesting project to contribute to.
-<p>
+
 We require a Contributor License Agreement (CLA) to be filled out and sent
 to:
 <script language="JavaScript">
@@ -51,7 +51,6 @@ document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" +
 You may use either an [[individual CLA][indi_cla]] for your own personal
 contributions or a [[corporate CLA][indi_cla]] for contributions from your
 organization.
-</p>
 
 [indi_cla]: /assets/CLA/mercury-cla-individual-2021-07.pdf
 [corp_cla]: /assets/CLA/mercury-cla-corporate-2021-07.pdf
