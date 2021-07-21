@@ -40,8 +40,7 @@ We have many things planned for Mercury and limited developer time available;
 contact us if you want to learn more about RPC on HPC systems or if
 you are looking for an interesting project to contribute to.
 <p>
-We require the
-following Contributor License Agreement (<a href="ftp://ftp.mcs.anl.gov/pub/mercury/documents/mercury_cla.docx">CLA</a>) to be filled out and sent
+We require a Contributor License Agreement (CLA) to be filled out and sent
 to:
 <script language="JavaScript">
 var username = "mercury-legal";
@@ -49,4 +48,11 @@ var hostname = "anl.gov";
 var linktext = username + "@" + hostname;
 document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
 </script>
+You may use either an [[individual CLA][indi_cla]] for your own personal
+contributions or a [[corporate CLA][indi_cla]] for contributions from your
+organization.
 </p>
+
+[indi_cla]: /assets/CLA/mercury-cla-individual-2021-07.pdf
+[corp_cla]: /assets/CLA/mercury-cla-corporate-2021-07.pdf
+
