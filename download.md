@@ -4,9 +4,9 @@ title: Download
 permalink: /download/
 ---
 
-Mercury is distributed under a [BSD-like license][license].
+Mercury is distributed under a [BSD 3-Clause license][license].
 
-## Releases [![Latest version][mercury-release-svg]][mercury-release-link]
+## Releases
 
 Filename                           | Date       | Size    | Arch | Type
 ---------------------------------- | ---------- | ------- | ---- | -----------
@@ -14,7 +14,9 @@ Filename                           | Date       | Size    | Arch | Type
 
 Releases can also be accessed through [GitHub][gh-releases], beware that
 generated tarballs accessible from the *"Source code"* link do not include
-mchecksum/kwsys submodules. Older releases are also available [here][ftp]. 
+mchecksum/kwsys submodules.
+
+Mercury packages are also distributed through Spack: [![Spack version][spack-release-svg]][spack-release-link]
 
 ## Current development distribution
 
@@ -26,9 +28,8 @@ To get the source (read-only access), simply run:
 git clone --recurse-submodules https://github.com/mercury-hpc/mercury.git 
 {% endhighlight %}
 
-[mercury-release-svg]: https://img.shields.io/github/release/mercury-hpc/mercury.svg
-[mercury-release-link]: https://github.com/mercury-hpc/mercury/releases/latest
-[license]: https://github.com/mercury-hpc/mercury/blob/master/COPYING
+[license]: https://github.com/mercury-hpc/mercury/blob/master/LICENSE.txt
 [2.0.1]: https://github.com/mercury-hpc/mercury/releases/download/v2.0.1/mercury-2.0.1.tar.bz2
-[ftp]: ftp://ftp.mcs.anl.gov/pub/mercury/releases/
 [gh-releases]: https://github.com/mercury-hpc/mercury/releases
+[spack-release-svg]: https://img.shields.io/spack/v/mercury.svg?style=plastic
+[spack-release-link]: https://spack.readthedocs.io/en/latest/package_list.html#mercury

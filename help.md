@@ -18,13 +18,12 @@ There are three mailing lists described below that users may wish to subscribe t
 
 ## Issue Tracking
 
-Current and past issues can be found on:
-[https://github.com/mercury-hpc/mercury/issues](https://github.com/mercury-hpc/mercury/issues)
+Current and past issues can be found on: [![Issues][github-issue-svg]][github-issue-link]
 
 You may check that the latest build passes by
-looking at the Travis continuous integration service
-[![Build Status](https://travis-ci.org/mercury-hpc/mercury.svg)](https://travis-ci.org/mercury-hpc/mercury).
-Or for more details you may also look at what the build tests have reported to the CDash Dashboard <a href="https://cdash.hdfgroup.org/index.php?project=Mercury"><img src="https://cdash.hdfgroup.org/images/cdash.gif" alt="alt text" style="width: 24px"/></a>.
+looking at the CI: [![Build Status][github-ci-svg]][github-ci-link]
+
+Or for more details you may also look at what the build tests have reported onto the Dashboard: [![Dashboard][mercury-cdash-icon]{:height="22px" width="22px"}][mercury-cdash]
 
 ## Contribute
 
@@ -56,4 +55,9 @@ organization.
 
 [indi_cla]: /assets/CLA/mercury-cla-individual-2021-07.pdf
 [corp_cla]: /assets/CLA/mercury-cla-corporate-2021-07.pdf
-
+[github-issue-svg]: https://img.shields.io/github/issues/mercury-hpc/mercury
+[github-issue-link]: https://github.com/mercury-hpc/mercury/issues
+[github-ci-svg]: https://github.com/mercury-hpc/mercury/actions/workflows/ci.yml/badge.svg?branch=master
+[github-ci-link]: https://github.com/mercury-hpc/mercury/actions/workflows/ci.yml
+[mercury-cdash]: https://mercury-cdash.hdfgroup.org/index.php?project=Mercury
+[mercury-cdash-icon]: https://mercury-cdash.hdfgroup.org/img/cdash.png
