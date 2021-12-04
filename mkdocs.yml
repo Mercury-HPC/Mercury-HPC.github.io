@@ -1,0 +1,90 @@
+site_name: Mercury
+copyright: Copyright &copy; 2013 - 2021 UChicago Argonne, LLC and The HDF Group
+
+# Repository
+repo_name: mercury-hpc/mercury
+repo_url: https://github.com/mercury-hpc/mercury
+edit_uri: ""
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+  font:
+    font: false
+  language: en
+  logo: assets/images/mercury_white.png
+  favicon: assets/images/favicon.ico
+  icon:
+    repo: fontawesome/brands/github-square
+  features:
+    # - navigation.instant # Has issues
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - toc.integrate
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: date
+
+extra:
+  version:
+    default: latest
+    provider: mike
+  analytics:
+    provider: google
+    property: UA-98228964-1
+
+extra_css:
+  - stylesheets/extra.css
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition # collapsible blocks
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list # buttons, align images
+  - pymdownx.mark
+  - pymdownx.highlight # code highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets # code snippets
+  - tables # data tables
+  - footnotes # footnotes
+  - pymdownx.emoji: # icons + emojis
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - md_in_html # markdown in html
+  - def_list # definition lists
+  - pymdownx.tasklist: # task lists
+      custom_checkbox: true
+  - meta # meta tags for custom page titles and descriptions
+
+# Navigation
+nav:
+  - 'index.md'
+  - 'about.md'
+  - Releases:
+    - 'releases/download.md'
+    - 'Release Notes':
+      - 'releases/CHANGES_v2.1.0.md'
+      - 'releases/CHANGES_v2.0.1.md'
+  - User Guide:
+    - 'user/overview.md'
+    - 'user/na.md'
+    - 'user/hg.md'
+    - 'user/hg_bulk.md'
+    - 'user/hg_macros.md'
+    - 'Appendix':
+      - 'user/ofi.md'
+      - 'user/sm.md'
+      - 'user/drc.md'
+      - 'user/cancel.md'
+      - 'user/checksum.md'
+  - 'publications.md'
+  - 'help.md'
