@@ -1,8 +1,5 @@
 ---
 title: Overview
-# hide:
-  # - navigation
-  # - toc
 ---
 
 Mercury is composed of three main layers:
