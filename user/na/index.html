@@ -1,0 +1,1444 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Network Abstraction Layer - Mercury</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-98228964-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#na-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mercury" class="md-header__button md-logo" aria-label="Mercury" data-md-component="logo">
+      
+  <img src="../../assets/images/mercury_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mercury
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Network Abstraction Layer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/mercury-hpc/mercury" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mercury-hpc/mercury
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../about/" class="md-tabs__link">
+      About
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../releases/download/" class="md-tabs__link">
+        Releases
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+        User Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../publications/" class="md-tabs__link">
+      Publications
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../help/" class="md-tabs__link">
+      Help
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mercury" class="md-nav__button md-logo" aria-label="Mercury" data-md-component="logo">
+      
+  <img src="../../assets/images/mercury_white.png" alt="logo">
+
+    </a>
+    Mercury
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mercury-hpc/mercury" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mercury-hpc/mercury
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Releases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Releases" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Releases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/download/" class="md-nav__link">
+        Download
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Release Notes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/CHANGES_v2.1.0/" class="md-nav__link">
+        Release Notes v2.1.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/CHANGES_v2.0.1/" class="md-nav__link">
+        Release Notes v2.0.1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Network Abstraction Layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Network Abstraction Layer
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#na-interface" class="md-nav__link">
+    NA Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="NA Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-address-lookup" class="md-nav__link">
+    Target Address Lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-to-point-messaging" class="md-nav__link">
+    Point-to-point Messaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-memory-access" class="md-nav__link">
+    Remote Memory Access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progress-and-cancelation" class="md-nav__link">
+    Progress and Cancelation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-plugins" class="md-nav__link">
+    Available Plugins
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization-string-format" class="md-nav__link">
+    Initialization String Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ofi" class="md-nav__link">
+    OFI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ucx" class="md-nav__link">
+    UCX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sm" class="md-nav__link">
+    SM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bmi" class="md-nav__link">
+    BMI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-plugins" class="md-nav__link">
+    Deprecated Plugins
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecated Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cci" class="md-nav__link">
+    CCI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mpi" class="md-nav__link">
+    MPI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hg/" class="md-nav__link">
+        Mercury RPC Layer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hg_bulk/" class="md-nav__link">
+        Mercury Bulk Layer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hg_macros/" class="md-nav__link">
+        Mercury Serialization Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Appendix
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendix" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Appendix
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ofi/" class="md-nav__link">
+        Libfabric Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sm/" class="md-nav__link">
+        Shared-Memory Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drc/" class="md-nav__link">
+        Using Cray DRC credentials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        Cancelation and Timeouts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checksum/" class="md-nav__link">
+        MChecksum Library
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/" class="md-nav__link">
+        Publications
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/" class="md-nav__link">
+        Help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Network Abstraction Layer</h1>
+                
+                <p>The <em>network abstraction</em> (NA) layer is internally used by both the RPC layer
+and the bulk layer.
+The NA layer uses a plugin mechanism so that support for various network
+protocols can be easily added and selected at runtime.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The NA interface should not be directly used if you intend to use
+Mercury's RPC layer (HG calls). In that case, please
+directly jump to the <a href="#available-plugins">available plugins</a>
+section for a list of plugins that can be used when initializing
+Mercury&mdash;Mercury's initialization is then further described in the
+<a href="../hg/">RPC layer</a> section.</p>
+</div>
+<h2 id="na-interface">NA Interface</h2>
+<p>NA provides a minimal set of function calls that abstract the underlying network
+fabric and that can be used to provide:
+<em>target address lookup</em>, <em>point-to-point messaging</em> with both unexpected and
+expected messaging, <em>remote memory access (RMA)</em>, <em>progress</em> and <em>cancelation</em>.
+The API is non-blocking and uses a callback mechanism
+so that upper layers can provide asynchronous execution more easily: when progress
+is made (either internally or after a call to <code>NA_Progress()</code>) and an operation
+completes, the user callback is placed onto a completion queue. The callback
+can then be dequeued and separately executed after a call to <code>NA_Trigger()</code>.</p>
+<h3 id="initialization">Initialization</h3>
+<p>When using NA, the first step of a program should consist of
+initializing the NA interface and selecting an underlying plugin that will be
+used. Initializing the NA interface with a specified <code>info_string</code>
+results in the creation of a new <code>na_class_t</code> object. Please refer to
+the <a href="#available-plugins">available plugins</a> section for more information on the
+<code>info_string</code> format. Additionally, it is possible to specify whether the
+<code>na_class_t</code> object will be listening or
+not&mdash;this is the <em>only</em> time where a "server" specific behavior is defined, all
+subsequent calls do not make any distinction between a "client" and a "server"
+and instead only use the concept of <em>origin</em> and <em>target</em>. It is worth noting,
+however, that the <code>listen</code> flag may have an effect on the resources that are
+allocated and that the address passed through <code>info_string</code> will be used to
+create an endpoint that remote peers can access.</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="nf">NA_Initialize</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">info_string</span><span class="p">,</span><span class="w"> </span><span class="n">na_bool_t</span><span class="w"> </span><span class="n">listen</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>If a more specific behavior is required, the following call can also be used to
+pass specific init options.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>auth_key</code></td>
+<td>Authorization key that can be used for communication. All processes should use the same key in order to communicate.</td>
+</tr>
+<tr>
+<td><code>ip_subnet</code></td>
+<td>Preferred IP subnet to use.</td>
+</tr>
+<tr>
+<td><code>max_contexts</code></td>
+<td>Maximum number of contexts that are expected to be created.</td>
+</tr>
+<tr>
+<td><code>max_expected_size</code></td>
+<td>Max expected size hint that can be passed to control the size of unexpected messages.</td>
+</tr>
+<tr>
+<td><code>max_unexpected_size</code></td>
+<td>Max unexpected size hint that can be passed to control the size of unexpected messages.</td>
+</tr>
+<tr>
+<td><code>progress_mode</code></td>
+<td>Progress mode flag. Setting <code>NA_NO_BLOCK</code> will force busy-spin on progress and remove any wait/notification calls.</td>
+</tr>
+<tr>
+<td><code>thread_mode</code></td>
+<td>Thread mode flags. Setting <code>NA_THREAD_MODE_SINGLE</code> will relax thread-safety requirements.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">na_init_info</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">auth_key</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ip_subnet</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_uint8_t</span><span class="w"> </span><span class="n">max_contexts</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">max_unexpected_size</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">max_expected_size</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_uint32_t</span><span class="w"> </span><span class="n">progress_mode</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_uint8_t</span><span class="w"> </span><span class="n">thread_mode</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="nf">NA_Initialize_opt</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">info_string</span><span class="p">,</span><span class="w"> </span><span class="n">na_bool_t</span><span class="w"> </span><span class="n">listen</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span> <span class="nc">na_init_info</span><span class="w"> </span><span class="o">*</span><span class="n">na_init_info</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>The <code>na_class_t</code> object created from these initialization calls should later be
+released with a call to:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Finalize</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Once the interface has been initialized, a context within this plugin must be
+created, which internally creates and associates a completion queue for the
+operations:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="nf">NA_Context_create</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>It can then be destroyed using:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Context_destroy</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h3 id="target-address-lookup">Target Address Lookup</h3>
+<p>To communicate with a target, one must first get its address.
+The most convenient and safe way of doing that is by calling on the target:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Addr_self</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="o">*</span><span class="n">addr</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>And then convert that address to a string using:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Addr_to_string</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">addr</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>The string can then be exchanged to other processes through out-of-band
+mechanisms (e.g., using a file, etc),
+which can then look up the target using the function:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Addr_lookup</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="o">*</span><span class="n">addr</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>All addresses must then be freed using:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Addr_free</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">addr</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h3 id="point-to-point-messaging">Point-to-point Messaging</h3>
+<p>Point-to-point messaging in NA is always non-blocking with completion callbacks
+being executed after a call to <code>NA_Trigger()</code> (once the operation has completed
+and been placed onto the completion queue).
+NA supports two separates modes for sending and receiving messages: either
+<em>unexpected</em> or <em>expected</em>. Expected messages should always have their
+receive pre-posted. Though messages may be dropped without notification if that
+is not the case, they are usually still queued and later processed.
+Unexpected messages on the other handle never require receives to be pre-posted
+and messages are also
+allowed to be dropped (though once again plugins usually do queue them).
+Both types of messages are tagged messages that take the same arguments for sends:
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Msg_send_unexpected</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_cb_t</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">plugin_data</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">dest_addr</span><span class="p">,</span><span class="w"> </span><span class="n">na_uint8_t</span><span class="w"> </span><span class="n">dest_id</span><span class="p">,</span><span class="w"> </span><span class="n">na_tag_t</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_op_id_t</span><span class="w"> </span><span class="o">*</span><span class="n">op_id</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Msg_send_expected</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_cb_t</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">plugin_data</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">dest_addr</span><span class="p">,</span><span class="w"> </span><span class="n">na_uint8_t</span><span class="w"> </span><span class="n">dest_id</span><span class="p">,</span><span class="w"> </span><span class="n">na_tag_t</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_op_id_t</span><span class="w"> </span><span class="o">*</span><span class="n">op_id</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></p>
+<p>And only mostly differ in their receive operation:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Msg_recv_unexpected</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_cb_t</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">plugin_data</span><span class="p">,</span><span class="w"> </span><span class="n">na_op_id_t</span><span class="w"> </span><span class="o">*</span><span class="n">op_id</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Msg_recv_expected</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_cb_t</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">plugin_data</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">source_addr</span><span class="p">,</span><span class="w"> </span><span class="n">na_uint8_t</span><span class="w"> </span><span class="n">source_id</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_tag_t</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">na_op_id_t</span><span class="w"> </span><span class="o">*</span><span class="n">op_id</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>One will only match with a specific <code>source_addr</code> and <code>tag</code> while the other
+will match with <em>any</em> source and tag, which can then later be retrieved from the
+callback info.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">na_cb_info_recv_unexpected</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">actual_buf_size</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">source</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_tag_t</span><span class="w"> </span><span class="n">tag</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Note that for best performance, <code>NA_Msg_buf_alloc()</code> and <code>NA_Msg_buf_free()</code>
+may be used to allocate send and receive buffers.</p>
+<h3 id="remote-memory-access">Remote Memory Access</h3>
+<p>Remote memory access requires host memory that is desired to be
+accessed to be first registered with the NA layer. This is done in two steps,
+by first creating a handle that describes the memory buffer that is to
+be registered and calling <code>NA_Mem_register()</code> on it.</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Mem_handle_create</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">flags</span><span class="p">,</span><span class="w"> </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="o">*</span><span class="n">mem_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Mem_register</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="n">mem_handle</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Similarly, <code>NA_Mem_deregister()</code> and <code>NA_Mem_handle_free()</code> must be called
+to release resources.</p>
+<p>Once memory has been registered, the handle of the target must be serialized
+and exchanged with the peer that will initiate the RMA operation. This is done
+by calling:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Mem_handle_serialize</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="n">mem_handle</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>The peer can then deserialize the handle using:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Mem_handle_deserialize</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="o">*</span><span class="n">mem_handle</span><span class="p">,</span><span class="w"></span>
+<span class="w">                          </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">buf_size</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>And initiate an RMA operation using both the handle of the target that describes
+its remote memory and the local handle that describes its local memory:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Put</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">na_cb_t</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="n">local_mem_handle</span><span class="p">,</span><span class="w"> </span><span class="n">na_offset_t</span><span class="w"> </span><span class="n">local_offset</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="n">remote_mem_handle</span><span class="p">,</span><span class="w"> </span><span class="n">na_offset_t</span><span class="w"> </span><span class="n">remote_offset</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">data_size</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">remote_addr</span><span class="p">,</span><span class="w"> </span><span class="n">na_uint8_t</span><span class="w"> </span><span class="n">remote_id</span><span class="p">,</span><span class="w"> </span><span class="n">na_op_id_t</span><span class="w"> </span><span class="o">*</span><span class="n">op_id</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Get</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">na_cb_t</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="n">local_mem_handle</span><span class="p">,</span><span class="w"> </span><span class="n">na_offset_t</span><span class="w"> </span><span class="n">local_offset</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_mem_handle_t</span><span class="w"> </span><span class="n">remote_mem_handle</span><span class="p">,</span><span class="w"> </span><span class="n">na_offset_t</span><span class="w"> </span><span class="n">remote_offset</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">na_size_t</span><span class="w"> </span><span class="n">data_size</span><span class="p">,</span><span class="w"> </span><span class="n">na_addr_t</span><span class="w"> </span><span class="n">remote_addr</span><span class="p">,</span><span class="w"> </span><span class="n">na_uint8_t</span><span class="w"> </span><span class="n">remote_id</span><span class="p">,</span><span class="w"> </span><span class="n">na_op_id_t</span><span class="w"> </span><span class="o">*</span><span class="n">op_id</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Similar to point-to-point operations, RMA operations are non-blocking and
+use a callback-based model that is triggered after a call to <code>NA_Trigger()</code>
+when the operation completes.</p>
+<h3 id="progress-and-cancelation">Progress and Cancelation</h3>
+<p>NA progress model is always explicit and users are expected to call
+<code>NA_Progress()</code> followed by a call to <code>NA_Trigger()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Progress</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Trigger</span><span class="p">(</span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max_count</span><span class="p">,</span><span class="w"></span>
+<span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">callback_ret</span><span class="p">[],</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">actual_count</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p><code>NA_Trigger()</code> always operates on a single context while <code>NA_Progress()</code> may
+operate both on a class and a context. When progress is called, it returns
+as soon as an operation either completes or is already
+in the completion queue so that a call to <code>NA_Trigger()</code> may be done to
+empty the queue and execute the user callback.</p>
+<p>When an operation must be canceled, users are expected to call <code>NA_Cancel()</code> on
+that operation:</p>
+<div class="highlight"><pre><span></span><code><span class="n">na_return_t</span><span class="w"></span>
+<span class="nf">NA_Cancel</span><span class="p">(</span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">,</span><span class="w"> </span><span class="n">na_context_t</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">na_op_id_t</span><span class="w"> </span><span class="o">*</span><span class="n">op_id</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Cancelation is always asynchronous. When/if the operation is successfully
+canceled, it will be pushed to the completion queue with an <code>NA_CANCELED</code> error
+return code.</p>
+<h2 id="available-plugins">Available Plugins</h2>
+<p>NA supports different backend implementations. However, OFI/libfabric is the
+recommended plugin in most situations for inter-node communication, while SM
+(shared-memory) is recommended for intra-node communication.</p>
+<h3 id="summary">Summary</h3>
+<p>The table below summarizes the current list of plugins along with the transports
+that we currently support with those plugins.</p>
+<table>
+<thead>
+<tr>
+<th>Plugin / Transport</th>
+<th><code>tcp</code></th>
+<th><code>verbs</code></th>
+<th><code>shm</code></th>
+<th><code>psm2</code></th>
+<th><code>gni</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ofi</code></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="❔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2754.svg" title=":grey_question:" /></td>
+<td><img alt="❗" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2757.svg" title=":exclamation:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+</tr>
+<tr>
+<td><code>ucx</code></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="❔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2754.svg" title=":grey_question:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="❔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2754.svg" title=":grey_question:" /></td>
+</tr>
+<tr>
+<td><code>sm</code></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+</tr>
+<tr>
+<td><code>bmi</code></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Additional transports may be supported for each plugin but we do not recommend
+their use unless explicitly mentioned in the above table as they are either
+unstable or have not been tested. Transports with <img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /> are not available
+for the selected plugin. Transports with <img alt="❔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2754.svg" title=":grey_question:" /> are not supported
+but may be available in the future. Transports with <img alt="❗" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2757.svg" title=":exclamation:" /> have known issues.</p>
+</div>
+<h3 id="initialization-string-format">Initialization String Format</h3>
+<p>Below is a table summarizing the protocols and expected format for each plugin
+(<code>[ ]</code> means optional, in which case the plugin will select default hostnames and ports to use).</p>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Protocol</th>
+<th>Initialization format<a href="#init_format"><sup>1</sup></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ofi</td>
+<td>tcp <br/> verbs <br/> psm2 <br/> gni</td>
+<td><code>ofi+tcp[://&lt;hostname,IP,interface name&gt;:&lt;port&gt;]</code> <br/> <code>ofi+verbs[://[domain/]&lt;hostname,IP,interface name&gt;:&lt;port&gt;]</code><a href="#ofi_verbs_config"><sup>2</sup></a> <br/> <code>ofi+psm2</code><a href="#ofi_psm2_config"><sup>3</sup></a> <br/> <code>ofi+gni[://&lt;hostname,IP,interface name&gt;]</code> <a href="#ofi_gni_config"><sup>4</sup></a></td>
+</tr>
+<tr>
+<td>ucx</td>
+<td>all <br/> tcp <br/> rc,ud <a href="#ucx_tls"><sup>5</sup></a></td>
+<td><code>ucx+all[://[net_device/]&lt;hostname,IP,interface name&gt;:&lt;port&gt;]</code></td>
+</tr>
+<tr>
+<td>na</td>
+<td>sm</td>
+<td><code>na+sm[://&lt;shm_prefix&gt;]</code></td>
+</tr>
+<tr>
+<td>bmi</td>
+<td>tcp</td>
+<td><code>bmi+tcp[://&lt;hostname,IP&gt;:&lt;port&gt;]</code></td>
+</tr>
+<tr>
+<td>mpi</td>
+<td>dynamic, static<a href="#mpi_static"><sup>6</sup></a></td>
+<td><code>mpi+&lt;dynamic, static&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Invalid port numbers that are passed may be silently ignored by the underlying implementation in which case a new port will be automatically picked up.</p>
+<p><a name="init_format"><sup>1</sup></a> When initialized without listening, the port specification can be elided.</p>
+<p><a name="ofi_verbs_config"><sup>2</sup></a> The libfabric domain name can also be
+passed directly to select the right adapter to use. See the output generated by the
+command <code>fi_info</code> for provider name <code>verbs;ofi_rxm</code> (e.g., <code>mlx5_0</code>).</p>
+<p><a name="ofi_psm2_config"><sup>3</sup></a> Any hostname or port being passed will be ignored.</p>
+<p><a name="ofi_gni_config"><sup>4</sup></a> No port information needs to be passed,
+the most common interface name is <code>ipogif0</code>, which will be used by default if
+no hostname is passed.</p>
+<p><a name="ucx_tls"><sup>5</sup></a> Please refer to the UCX <a href="https://openucx.readthedocs.io/en/master/faq.html#which-transports-does-ucx-use">documentation</a> for a full list
+of available transports that can be used.</p>
+<p><a name="mpi_static"><sup>6</sup></a> MPI static mode requires all mercury processes to
+be started in the same mpirun invocation.</p>
+</div>
+<h3 id="ofi">OFI</h3>
+<p>(<em>as of v1.0.0</em>)
+The NA OFI/libfabric plugin is available for general
+purpose use, but some providers (libfabric transport plugins) may still be in
+an early development state. The plugin currently supports tcp, verbs, psm2
+and gni transports. See this <a href="../ofi/">page</a> for additional implementation and
+performance details.</p>
+<p><em>Technical notes:</em></p>
+<ul>
+<li>Low CPU consumption (i.e., idles without busy spinning) is supported by all
+  libfabric providers. At present, the <code>sockets</code>, <code>psm2</code> and <code>gni</code> providers accomplish this by using internal progress threads.</li>
+<li>Connection-less and uses reliable datagrams.</li>
+<li>RMA (for Mercury bulk operations) is implemented natively on transports
+  that support it (i.e., verbs, psm2 and gni).</li>
+<li>ofi/tcp (<code>tcp</code> provider) uses the RxM layer to emulate connection-less endpoints. It also emulates RMA operations.</li>
+<li>ofi/verbs (<code>verbs</code> provider) uses the RxM layer to emulate connection-less endpoints (the first message being sent may be slower).</li>
+<li>ofi/psm2 (<code>psm2</code> provider) present issues in multithreaded workflows. It may be used on Intel<sup>®</sup> Omni-Path interconnect.</li>
+<li>ofi/gni (<code>gni</code> provider) can be used on Cray<sup>®</sup> systems with Gemini/Aries interconnects. Note that
+  it requires the use of Cray<sup>®</sup> DRC to exchange credentials when
+  communication between separate jobs is required (see section on <a href="../drc/">DRC credentials</a>).</li>
+</ul>
+<p><em>Influential variables:</em></p>
+<ul>
+<li><code>RDMAV_HUGEPAGES_SAFE</code>: must be set when using hugepages in combination with <code>verbs</code> provider.</li>
+<li><code>FI_UNIVERSE_SIZE</code>: must be set when exceeding 256 peers with <code>tcp</code> or <code>verbs</code> providers.</li>
+</ul>
+<p>Please refer to the libfabric manpages for additional details for each transports.</p>
+<h3 id="ucx">UCX</h3>
+<p>(<em>as of v2.1.0</em>)
+The UCX plugin is available for general purpose use. By default and as opposed
+to other plugins, the UCX plugin is able to automatically determine which
+transport is best to be used. This is achieved by passing the <code>all</code> keyword in
+lieu of a specific transport. However, note that we are only testing the
+<code>tcp</code> and <code>verbs</code> protocols of UCX.</p>
+<p><em>Technical notes:</em></p>
+<ul>
+<li>Connection-less is currently emulated on top of connected endpoints. Therefore,
+  it is expected that the first message sent to a target will be slower than
+  subsequent messages.</li>
+<li>A thread safe enabled UCX library is required to be used unless users explicitly
+  tell NA using the <code>thread_mode</code> init option (see <a href="#initialization">above</a>)
+  that they will not access classes and contexts with more than one thread.</li>
+<li><code>NA_Addr_to_string()</code> cannot be used on non-listening processes to convert a
+   self-address to a string. This is due to the fact that UCX does not expose
+   endpoints prior to their connection.</li>
+</ul>
+<p><em>Influential variables:</em></p>
+<ul>
+<li><code>ucx_info -c -f</code> will display the default configuration. Each of these
+  variables can be overridden by the user. Note, however, that the <code>UCX_TLS</code>
+  and <code>UCX_NET_DEVICES</code> are currently overridden by the NA UCX plugin.</li>
+<li>The NA UCX plugin currently sets <code>UCX_UNIFIED_MODE</code> to true by default for
+  performance optimization as we expect all nodes of a given system to have
+  the same configuration.</li>
+</ul>
+<h3 id="sm">SM</h3>
+<p>(<em>as of v0.9.0</em>) This is the integrated shared memory NA plugin.
+Plugin is stable and provides significantly better performance for local
+node communication. The goal of this plugin is to provide a
+transparent shortcut for other NA plugins when they connect to local services
+using the <code>auto_sm</code> initialization option (see the <a href="../hg/">RPC section</a> for more details),
+but it is also useful as a primary transport for single-node services.</p>
+<p><em>Technical notes:</em></p>
+<ul>
+<li>Uses fully connection-less communication.</li>
+<li>Low CPU consumption (i.e., idles without busy spinning or using threads).</li>
+<li>RMA (for Mercury bulk operations) is implemented natively through
+    cross-memory attach (<a href="https://lwn.net/Articles/405284/">CMA</a>) on Linux, and there are fallback methods
+    for other platforms as well. See this <a href="../sm/">page</a>
+    for additional implementation and performance details.</li>
+</ul>
+<h3 id="bmi">BMI</h3>
+<p>The BMI library itself is no longer under active feature development
+beyond basic maintenance, but the NA BMI plugin provides a very stable
+and reasonably performant option for IP networks when used with BMI's TCP
+method.</p>
+<p><em>Technical notes:</em></p>
+<ul>
+<li>Low CPU consumption (i.e., idles without busy spinning or using threads).</li>
+<li>Supports dynamic client connection and disconnection.</li>
+<li>RMA (for Mercury bulk operations) is emulated via point-to-point messaging.</li>
+<li>Does <em>not</em> support initializing multiple instances simultaneously.</li>
+<li>Other BMI methods besides TCP are not supported.</li>
+<li>For general BMI information see this <a href="http://ieeexplore.ieee.org/abstract/document/1420118/">paper</a>.</li>
+</ul>
+<h2 id="deprecated-plugins">Deprecated Plugins</h2>
+<h3 id="cci">CCI</h3>
+<p>(<em>deprecated</em>) This NA plugin is no longer available for general purpose use,
+  and is now deprecated as CCI itself is no longer actively maintained.</p>
+<h3 id="mpi">MPI</h3>
+<p>MPI implementations are widely available for nearly any platform, and
+the NA MPI plugin provides a convenient option for prototyping and
+functionality testing. It is not optimized for performance, however, and it
+has some practical limitations when used for persistent services.</p>
+<p><em>Technical notes:</em></p>
+<ul>
+<li>Clients can connect to a server dynamically only if the underlying MPI 
+    implementation supports <code>MPI_Comm_connect()</code>.</li>
+<li>RMA (for Mercury bulk operations) is emulated via point-to-point messaging
+    (note: MPI window creation requires collective coordination and is not a
+    good fit for RPC use).</li>
+<li>Significant CPU consumption (progress function iteratively polls pending
+    operations for completion).</li>
+</ul>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 3, 2021</span>
+      
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Overview
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../hg/" class="md-footer__link md-footer__link--next" aria-label="Next: Mercury RPC Layer" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Mercury RPC Layer
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2013 - 2021 UChicago Argonne, LLC and The HDF Group
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
