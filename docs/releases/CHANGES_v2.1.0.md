@@ -38,7 +38,7 @@ This version brings bug fixes and updates to our v2.0.0 release.
     - Fix progress loop to reduce time calls.
     - Force per-region registration for all providers and remove deprecated FI_MR_SCALABLE type of registrations and global MR keys.
 - __[NA SM]__
-    - Refactoring and clean up of sends/cancelation/retries/rma/address keys.
+    - Refactor and clean up sends/cancelation/retries/rma/address keys.
     - Remove use of usernames from SM paths.
 - __[HG util]__
     - Prevent use of `CLOCK_MONOTONIC_COARSE` on PPC platforms and default to `CLOCK_MONOTONIC`.
