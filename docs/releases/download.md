@@ -8,7 +8,7 @@ Mercury is distributed under a [BSD 3-Clause license][license].
 
 Filename                           | Date       | Size    | Arch | Type
 ---------------------------------- | ---------- | ------- | ---- | -----------
-[mercury-2.1.0.tar.bz2][2.1.0] | 2021-12-06 | 637 kB  | Any  | Source .bz2
+[mercury-2.2.0.tar.bz2][2.2.0] | 2022-08-05 | 663 kB  | Any  | Source .bz2
 
 Note that releases can also be accessed through [GitHub][gh-releases].
 
@@ -31,7 +31,7 @@ git clone --recurse-submodules https://github.com/mercury-hpc/mercury.git
 ```
 
 [license]: https://github.com/mercury-hpc/mercury/blob/master/LICENSE.txt
-[2.1.0]: https://github.com/mercury-hpc/mercury/releases/download/v2.1.0/mercury-2.1.0.tar.bz2
+[2.2.0]: https://github.com/mercury-hpc/mercury/releases/download/v2.2.0/mercury-2.2.0.tar.bz2
 [gh-releases]: https://github.com/mercury-hpc/mercury/releases
 [spack-release-svg]: https://img.shields.io/spack/v/mercury.svg?style=plastic
 [spack-release-link]: https://spack.readthedocs.io/en/latest/package_list.html#mercury

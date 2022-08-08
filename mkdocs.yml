@@ -1,5 +1,5 @@
 site_name: Mercury
-copyright: Copyright &copy; 2013 - 2021 UChicago Argonne, LLC and The HDF Group
+copyright: Copyright &copy; 2013 - 2022 UChicago Argonne, LLC and The HDF Group
 
 # Repository
 repo_name: mercury-hpc/mercury
@@ -72,6 +72,7 @@ nav:
   - Releases:
     - 'releases/download.md'
     - 'Release Notes':
+      - 'releases/CHANGES_v2.2.0.md'
       - 'releases/CHANGES_v2.1.0.md'
       - 'releases/CHANGES_v2.0.1.md'
   - User Guide:
@@ -88,3 +89,4 @@ nav:
       - 'user/checksum.md'
   - 'publications.md'
   - 'help.md'
+
