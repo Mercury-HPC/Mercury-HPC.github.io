@@ -37,8 +37,12 @@ Or by using the `HG_Init_opt()` function, which allows for passing extra options
 | `request_post_incr` | Controls the number of requests that are incrementally posted when the initial number of requests is exhausted. <br/> Default value is: 256 |
 | `auto_sm` | Controls whether shared-memory should be automatically used when origin and target share the same node. |
 | `sm_info_string` | Overrides default init string for NA SM plugin. |
+| `checksum_level` | Control checksum level on RPC (none by default). |
 | `no_bulk_eager` | Prevents small bulk data from being automatically embedded along with the RPC request. |
 | `no_loopback` | Disables internal loopback interface that enables forwarding of RPC to self addresses. |
+| `stats` | Print RPC stats at exit. |
+| `no_multi_recv` | Disable use of multi_recv feature (`ofi` plugin only) |
+| `release_input_early` | Attempt to release input buffers as early as possible once `HG_Get_input()` has been called. |
 
 ```C
 struct hg_init_info {
@@ -48,19 +52,17 @@ struct hg_init_info {
     hg_uint32_t request_post_incr;
     hg_bool_t auto_sm;
     const char *sm_info_string;
+    hg_checksum_level_t checksum_level;
     hg_bool_t no_bulk_eager;
     hg_bool_t no_loopback;
-
-struct hg_init_info {
-    struct na_init_info na_init_info;   /* NA Init Info */
-    na_class_t *na_class;               /* NA class */
-    hg_bool_t auto_sm;                  /* Use NA SM plugin with local addrs */
-    hg_bool_t stats;                    /* (Debug) Print stats at exit */
+    hg_bool_t stats;
+    hg_bool_t no_multi_recv;
+    hg_bool_t release_input_early;
 };
 
 hg_class_t *
-HG_Init_opt(const char *na_info_string, hg_bool_t na_listen,
-            const struct hg_init_info *hg_init_info);
+HG_Init_opt2(const char *na_info_string, hg_bool_t na_listen,
+             unsigned int version, const struct hg_init_info *hg_init_info);
 ```
 
 Similar to the NA layer, the `HG_Init()` call results in the

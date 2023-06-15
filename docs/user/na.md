@@ -46,7 +46,7 @@ create an endpoint that remote peers can access.
 
 ```C
 na_class_t *
-NA_Initialize(const char *info_string, na_bool_t listen);
+NA_Initialize(const char *info_string, bool listen);
 ```
 
 If a more specific behavior is required, the following call can also be used to
@@ -54,28 +54,32 @@ pass specific init options.
 
 | Option | Description |
 |-----|----|
-| `auth_key` |  Authorization key that can be used for communication. All processes should use the same key in order to communicate. |
 | `ip_subnet` | Preferred IP subnet to use. |
-| `max_contexts` | Maximum number of contexts that are expected to be created. |
-| `max_expected_size` | Max expected size hint that can be passed to control the size of unexpected messages. |
+| `auth_key` |  Authorization key that can be used for communication. All processes should use the same key in order to communicate. |
 | `max_unexpected_size` | Max unexpected size hint that can be passed to control the size of unexpected messages. |
+| `max_expected_size` | Max expected size hint that can be passed to control the size of unexpected messages. |
 | `progress_mode` | Progress mode flag. Setting `NA_NO_BLOCK` will force busy-spin on progress and remove any wait/notification calls. |
+| `addr_format` | Preferred address format. Can be set to `NA_ADDR_IPV4`, `NA_ADDR_IPV6` or `NA_ADDR_NATIVE`. |
+| `max_contexts` | Maximum number of contexts that are expected to be created. |
 | `thread_mode` | Thread mode flags. Setting `NA_THREAD_MODE_SINGLE` will relax thread-safety requirements. |
+| `request_mem_device` | Request support for tranfers to/from memory devices (e.g., GPU, etc). |
 
 ```C
 struct na_init_info {
-    const char *auth_key;
     const char *ip_subnet;
-    na_uint8_t max_contexts;
-    na_size_t max_unexpected_size;
-    na_size_t max_expected_size;
-    na_uint32_t progress_mode;
-    na_uint8_t thread_mode;
+    const char *auth_key;
+    size_t max_unexpected_size;
+    size_t max_expected_size;
+    uint8_t progress_mode;
+    enum na_addr_format addr_format;
+    uint8_t max_contexts;
+    uint8_t thread_mode;
+    bool request_mem_device;
 };
 
 na_class_t *
-NA_Initialize_opt(const char *info_string, na_bool_t listen,
-                  const struct na_init_info *na_init_info);
+NA_Initialize_opt2(const char *info_string, bool listen, unsigned int version,
+    const struct na_init_info *na_init_info);
 ```
 
 The `na_class_t` object created from these initialization calls should later be
@@ -109,14 +113,14 @@ The most convenient and safe way of doing that is by calling on the target:
 
 ```C
 na_return_t
-NA_Addr_self(na_class_t *na_class, na_addr_t *addr);
+NA_Addr_self(na_class_t *na_class, na_addr_t **addr_p);
 ```
 
 And then convert that address to a string using:
 
 ```C
 na_return_t
-NA_Addr_to_string(na_class_t *na_class, char *buf, na_size_t buf_size, na_addr_t addr);
+NA_Addr_to_string(na_class_t *na_class, char *buf, size_t *buf_size_p, na_addr_t *addr);
 ```
 
 The string can then be exchanged to other processes through out-of-band
@@ -125,14 +129,14 @@ which can then look up the target using the function:
 
 ```C
 na_return_t
-NA_Addr_lookup(na_class_t *na_class, const char *name, na_addr_t *addr);
+NA_Addr_lookup(na_class_t *na_class, const char *name, na_addr_t **addr_p);
 ```
 
 All addresses must then be freed using:
 
 ```C
 na_return_t
-NA_Addr_free(na_class_t *na_class, na_addr_t addr);
+NA_Addr_free(na_class_t *na_class, na_addr_t *addr);
 ```
 
 ### Point-to-point Messaging
@@ -151,14 +155,14 @@ Both types of messages are tagged messages that take the same arguments for send
 ```C
 na_return_t
 NA_Msg_send_unexpected(na_class_t *na_class, na_context_t *context,
-    na_cb_t callback, void *arg, const void *buf, na_size_t buf_size,
-    void *plugin_data, na_addr_t dest_addr, na_uint8_t dest_id, na_tag_t tag,
+    na_cb_t callback, void *arg, const void *buf, size_t buf_size,
+    void *plugin_data, na_addr_t *dest_addr, uint8_t dest_id, na_tag_t tag,
     na_op_id_t *op_id);
 
 na_return_t
 NA_Msg_send_expected(na_class_t *na_class, na_context_t *context,
-    na_cb_t callback, void *arg, const void *buf, na_size_t buf_size,
-    void *plugin_data, na_addr_t dest_addr, na_uint8_t dest_id, na_tag_t tag,
+    na_cb_t callback, void *arg, const void *buf, size_t buf_size,
+    void *plugin_data, na_addr_t *dest_addr, uint8_t dest_id, na_tag_t tag,
     na_op_id_t *op_id);
 ```
 
@@ -167,13 +171,13 @@ And only mostly differ in their receive operation:
 ```C
 na_return_t
 NA_Msg_recv_unexpected(na_class_t *na_class, na_context_t *context,
-    na_cb_t callback, void *arg, void *buf, na_size_t buf_size,
+    na_cb_t callback, void *arg, void *buf, size_t buf_size,
     void *plugin_data, na_op_id_t *op_id);
 
 na_return_t
 NA_Msg_recv_expected(na_class_t *na_class, na_context_t *context,
-    na_cb_t callback, void *arg, void *buf, na_size_t buf_size,
-    void *plugin_data, na_addr_t source_addr, na_uint8_t source_id,
+    na_cb_t callback, void *arg, void *buf, size_t buf_size,
+    void *plugin_data, na_addr_t source_addr, uint8_t source_id,
     na_tag_t tag, na_op_id_t *op_id);
 ```
 
@@ -183,8 +187,8 @@ callback info.
 
 ```C
 struct na_cb_info_recv_unexpected {
-    na_size_t actual_buf_size;
-    na_addr_t source;
+    size_t actual_buf_size;
+    na_addr_t *source;
     na_tag_t tag;
 };
 ```
@@ -201,11 +205,12 @@ be registered and calling `NA_Mem_register()` on it.
 
 ```C
 na_return_t
-NA_Mem_handle_create(na_class_t *na_class, void *buf, na_size_t buf_size,
-                     unsigned long flags, na_mem_handle_t *mem_handle);
+NA_Mem_handle_create(na_class_t *na_class, void *buf, size_t buf_size,
+    unsigned long flags, na_mem_handle_t **mem_handle_p);
 
 na_return_t
-NA_Mem_register(na_class_t *na_class, na_mem_handle_t mem_handle);
+NA_Mem_register(na_class_t *na_class, na_mem_handle_t *mem_handle,
+    enum na_mem_type mem_type, uint64_t device);
 ```
 
 Similarly, `NA_Mem_deregister()` and `NA_Mem_handle_free()` must be called
@@ -217,16 +222,16 @@ by calling:
 
 ```C
 na_return_t
-NA_Mem_handle_serialize(na_class_t *na_class, void *buf, na_size_t buf_size,
-                        na_mem_handle_t mem_handle);
+NA_Mem_handle_serialize(na_class_t *na_class, void *buf, size_t buf_size,
+    na_mem_handle_t *mem_handle);
 ```
 
 The peer can then deserialize the handle using:
 
 ```C
 na_return_t
-NA_Mem_handle_deserialize(na_class_t *na_class, na_mem_handle_t *mem_handle,
-                          const void *buf, na_size_t buf_size);
+NA_Mem_handle_deserialize(na_class_t *na_class, na_mem_handle_t **mem_handle_p,
+    const void *buf, size_t buf_size);
 ```
 
 And initiate an RMA operation using both the handle of the target that describes
@@ -235,15 +240,15 @@ its remote memory and the local handle that describes its local memory:
 ```C
 na_return_t
 NA_Put(na_class_t *na_class, na_context_t *context, na_cb_t callback, void *arg,
-    na_mem_handle_t local_mem_handle, na_offset_t local_offset,
-    na_mem_handle_t remote_mem_handle, na_offset_t remote_offset,
-    na_size_t data_size, na_addr_t remote_addr, na_uint8_t remote_id, na_op_id_t *op_id);
+    na_mem_handle_t *local_mem_handle, na_offset_t local_offset,
+    na_mem_handle_t *remote_mem_handle, na_offset_t remote_offset,
+    size_t data_size, na_addr_t *remote_addr, uint8_t remote_id, na_op_id_t *op_id);
 
 na_return_t
 NA_Get(na_class_t *na_class, na_context_t *context, na_cb_t callback, void *arg,
-    na_mem_handle_t local_mem_handle, na_offset_t local_offset,
-    na_mem_handle_t remote_mem_handle, na_offset_t remote_offset,
-    na_size_t data_size, na_addr_t remote_addr, na_uint8_t remote_id, na_op_id_t *op_id);
+    na_mem_handle_t *local_mem_handle, na_offset_t local_offset,
+    na_mem_handle_t *remote_mem_handle, na_offset_t remote_offset,
+    size_t data_size, na_addr_t *remote_addr, uint8_t remote_id, na_op_id_t *op_id);
 ```
 
 Similar to point-to-point operations, RMA operations are non-blocking and
@@ -260,8 +265,7 @@ na_return_t
 NA_Progress(na_class_t *na_class, na_context_t *context, unsigned int timeout);
 
 na_return_t
-NA_Trigger(na_context_t *context, unsigned int timeout, unsigned int max_count,
-           int callback_ret[], unsigned int *actual_count);
+NA_Trigger(na_context_t *context, unsigned int max_count, unsigned int *actual_count);
 ```
 
 `NA_Trigger()` always operates on a single context while `NA_Progress()` may
@@ -293,12 +297,11 @@ recommended plugin in most situations for inter-node communication, while SM
 The table below summarizes the current list of plugins along with the transports
 that we currently support with those plugins.
 
-| Plugin / Transport | `tcp`              | `verbs`            | `shm`              | `psm2`             | `gni`              |       
-| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `ofi`              | :heavy_check_mark: | :heavy_check_mark: | :grey_question:    | :exclamation:      | :heavy_check_mark: |
-| `ucx`              | :heavy_check_mark: | :heavy_check_mark: | :grey_question:    | :x:                | :grey_question:    |
-| `sm`               | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:                |
-| `bmi`              | :heavy_check_mark: | :x:                | :x:                | :x:                | :x:                |
+| Plugin / Transport | `tcp`              | `verbs`            | `shm`              | `opx`              | `gni`              | `cxi`              |
+| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+| `ofi`              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| `ucx`              | :heavy_check_mark: | :heavy_check_mark: | :grey_question:    | :x:                | :grey_question:    | :x:                |
+| `sm`               | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                |
 
 !!! Warning
 
@@ -315,11 +318,9 @@ Below is a table summarizing the protocols and expected format for each plugin
 
 Plugin | Protocol             | Initialization format[<sup>1</sup>](#init_format)
 ------ | --------             | ---------------------
-ofi    | tcp <br/> verbs <br/> psm2 <br/> gni | `ofi+tcp[://<hostname,IP,interface name>:<port>]` <br/> `ofi+verbs[://[domain/]<hostname,IP,interface name>:<port>]`[<sup>2</sup>](#ofi_verbs_config) <br/> `ofi+psm2`[<sup>3</sup>](#ofi_psm2_config) <br/> `ofi+gni[://<hostname,IP,interface name>]` [<sup>4</sup>](#ofi_gni_config)
-ucx    | all <br/> tcp <br/> rc,ud [<sup>5</sup>](#ucx_tls) | `ucx+all[://[net_device/]<hostname,IP,interface name>:<port>]`
+ofi    | tcp <br/> verbs <br/> shm <br/> opx <br/> gni <br/> cxi | `ofi+tcp[://<hostname,IP,interface name>:<port>]` <br/> `ofi+verbs[://[MLX device/]<hostname,IP,interface name>:<port>]`[<sup>2</sup>](#ofi_verbs_config) <br/> `ofi+shm`[<sup>3</sup>](#no_config) <br/> `ofi+opx[://<HFI device>:<port>]` <br/> `ofi+gni[://<hostname,IP,interface name>]` [<sup>4</sup>](#ofi_gni_config) <br/> `ofi+cxi[://<CXI device>:<port ID>]`
+ucx    | all <br/> tcp <br/> rc,ud,dc [<sup>5</sup>](#ucx_tls) | `ucx+all[://[net_device/]<hostname,IP,interface name>:<port>]`
 na     | sm                   | `na+sm[://<shm_prefix>]`
-bmi    | tcp                  | `bmi+tcp[://<hostname,IP>:<port>]`
-mpi    | dynamic, static[<sup>6</sup>](#mpi_static)  | `mpi+<dynamic, static>`
 
 !!! note
 
@@ -329,9 +330,9 @@ mpi    | dynamic, static[<sup>6</sup>](#mpi_static)  | `mpi+<dynamic, static>`
 
     <a name="ofi_verbs_config"><sup>2</sup></a> The libfabric domain name can also be
     passed directly to select the right adapter to use. See the output generated by the
-    command `fi_info` for provider name `verbs;ofi_rxm` (e.g., `mlx5_0`).
+    command `hg_info` for provider name `verbs;ofi_rxm` (e.g., `mlx5_0`).
 
-    <a name="ofi_psm2_config"><sup>3</sup></a> Any hostname or port being passed will be ignored.
+    <a name="no_config"><sup>3</sup></a> Any hostname or port being passed will be ignored.
 
     <a name="ofi_gni_config"><sup>4</sup></a> No port information needs to be passed,
     the most common interface name is `ipogif0`, which will be used by default if
@@ -340,33 +341,39 @@ mpi    | dynamic, static[<sup>6</sup>](#mpi_static)  | `mpi+<dynamic, static>`
     <a name="ucx_tls"><sup>5</sup></a> Please refer to the UCX [documentation][ucx_tls_doc] for a full list
     of available transports that can be used.
 
-    <a name="mpi_static"><sup>6</sup></a> MPI static mode requires all mercury processes to
-    be started in the same mpirun invocation.
-
 [ucx_tls_doc]: https://openucx.readthedocs.io/en/master/faq.html#which-transports-does-ucx-use
 
 ### OFI
 
 (*as of v1.0.0*)
 The NA OFI/libfabric plugin is available for general
-purpose use, but some providers (libfabric transport plugins) may still be in
-an early development state. The plugin currently supports tcp, verbs, psm2
-and gni transports. See this [page](ofi.md) for additional implementation and
+purpose use. The plugin currently supports tcp, verbs, opx
+and cxi transports. The psm2 and gni protocols are deprecated.
+See this [page](ofi.md) for additional implementation and
 performance details.
+
+!!! attention
+
+    As of libfabric 1.18.0, tcp no longer uses the RxM layer. To force use of tcp
+    with RxM, `tcp;ofi_rxm` must be directly passed. However, it is recommended to use
+    `tcp` for improved stability and performance.
 
 *Technical notes:*
 
 * Low CPU consumption (i.e., idles without busy spinning) is supported by all
-  libfabric providers. At present, the `sockets`, `psm2` and `gni` providers accomplish this by using internal progress threads.
+  supported libfabric providers.
 * Connection-less and uses reliable datagrams.
 * RMA (for Mercury bulk operations) is implemented natively on transports
-  that support it (i.e., verbs, psm2 and gni).
-* ofi/tcp (`tcp` provider) uses the RxM layer to emulate connection-less endpoints. It also emulates RMA operations.
+  that support it.
+* ofi/tcp (`tcp` provider) may use the RxM layer to emulate connection-less endpoints. It also emulates RMA operations.
 * ofi/verbs (`verbs` provider) uses the RxM layer to emulate connection-less endpoints (the first message being sent may be slower).
-* ofi/psm2 (`psm2` provider) present issues in multithreaded workflows. It may be used on Intel<sup>®</sup> Omni-Path interconnect.
+* ofi/opx (`opx` provider) can be used on legacy Intel<sup>®</sup> Omni-Path 2 interconnect and Cornelis Omni-Path Express hardware.
 * ofi/gni (`gni` provider) can be used on Cray<sup>®</sup> systems with Gemini/Aries interconnects. Note that
   it requires the use of Cray<sup>®</sup> DRC to exchange credentials when
   communication between separate jobs is required (see section on [DRC credentials](drc.md)).
+* ofi/cxi (`cxi` provider) can be used on HPE systems with Slingshot interconnect. For systems with multiple NICs, `hwloc`
+  can be used to automatically select the closest NIC to the CPU in-use (mercury must be configured with `NA_OFI_USE_HWLOC`
+  in that case).
 
 *Influential variables:*
 
@@ -382,7 +389,7 @@ The UCX plugin is available for general purpose use. By default and as opposed
 to other plugins, the UCX plugin is able to automatically determine which
 transport is best to be used. This is achieved by passing the `all` keyword in
 lieu of a specific transport. However, note that we are only testing the
-`tcp` and `verbs` protocols of UCX.
+`tcp` and `rc,ud,dc` (verbs) protocols of UCX.
 
 *Technical notes:*
 
@@ -390,7 +397,7 @@ lieu of a specific transport. However, note that we are only testing the
   it is expected that the first message sent to a target will be slower than
   subsequent messages.
 * A thread safe enabled UCX library is required to be used unless users explicitly
-  tell NA using the `thread_mode` init option (see [above](#initialization))
+  tell NA, using the `thread_mode` init option (see [above](#initialization)),
   that they will not access classes and contexts with more than one thread.
 * `NA_Addr_to_string()` cannot be used on non-listening processes to convert a
    self-address to a string. This is due to the fact that UCX does not expose
@@ -401,9 +408,6 @@ lieu of a specific transport. However, note that we are only testing the
 * `ucx_info -c -f` will display the default configuration. Each of these
   variables can be overridden by the user. Note, however, that the `UCX_TLS`
   and `UCX_NET_DEVICES` are currently overridden by the NA UCX plugin.
-* The NA UCX plugin currently sets `UCX_UNIFIED_MODE` to true by default for
-  performance optimization as we expect all nodes of a given system to have
-  the same configuration.
 
 ### SM
 
@@ -424,22 +428,6 @@ but it is also useful as a primary transport for single-node services.
     for additional implementation and performance details.
 
 [cma]: https://lwn.net/Articles/405284/
-
-### BMI
-
-The BMI library itself is no longer under active feature development
-beyond basic maintenance, but the NA BMI plugin provides a very stable
-and reasonably performant option for IP networks when used with BMI's TCP
-method.
-
-*Technical notes:*
-
-  * Low CPU consumption (i.e., idles without busy spinning or using threads).
-  * Supports dynamic client connection and disconnection.
-  * RMA (for Mercury bulk operations) is emulated via point-to-point messaging.
-  * Does *not* support initializing multiple instances simultaneously.
-  * Other BMI methods besides TCP are not supported.
-  * For general BMI information see this [paper](http://ieeexplore.ieee.org/abstract/document/1420118/).
 
 ## Deprecated Plugins
 
@@ -464,3 +452,19 @@ has some practical limitations when used for persistent services.
     good fit for RPC use).
   * Significant CPU consumption (progress function iteratively polls pending
     operations for completion).
+
+### BMI
+
+The BMI library itself is no longer under active feature development
+beyond basic maintenance, but the NA BMI plugin provides a very stable
+and reasonably performant option for IP networks when used with BMI's TCP
+method.
+
+*Technical notes:*
+
+  * Low CPU consumption (i.e., idles without busy spinning or using threads).
+  * Supports dynamic client connection and disconnection.
+  * RMA (for Mercury bulk operations) is emulated via point-to-point messaging.
+  * Does *not* support initializing multiple instances simultaneously.
+  * Other BMI methods besides TCP are not supported.
+  * For general BMI information see this [paper](http://ieeexplore.ieee.org/abstract/document/1420118/).
