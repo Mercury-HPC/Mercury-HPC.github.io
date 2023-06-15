@@ -427,6 +427,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../releases/CHANGES_v2.3.0/" class="md-nav__link">
+        Release Notes v2.3.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../releases/CHANGES_v2.2.0/" class="md-nav__link">
         Release Notes v2.2.0
       </a>
@@ -883,12 +897,28 @@ in the NA plugin <a href="../na/#available-plugins">section</a>:</p>
 <td>Overrides default init string for NA SM plugin.</td>
 </tr>
 <tr>
+<td><code>checksum_level</code></td>
+<td>Control checksum level on RPC (none by default).</td>
+</tr>
+<tr>
 <td><code>no_bulk_eager</code></td>
 <td>Prevents small bulk data from being automatically embedded along with the RPC request.</td>
 </tr>
 <tr>
 <td><code>no_loopback</code></td>
 <td>Disables internal loopback interface that enables forwarding of RPC to self addresses.</td>
+</tr>
+<tr>
+<td><code>stats</code></td>
+<td>Print RPC stats at exit.</td>
+</tr>
+<tr>
+<td><code>no_multi_recv</code></td>
+<td>Disable use of multi_recv feature (<code>ofi</code> plugin only)</td>
+</tr>
+<tr>
+<td><code>release_input_early</code></td>
+<td>Attempt to release input buffers as early as possible once <code>HG_Get_input()</code> has been called.</td>
 </tr>
 </tbody>
 </table>
@@ -899,19 +929,17 @@ in the NA plugin <a href="../na/#available-plugins">section</a>:</p>
 <span class="w">    </span><span class="n">hg_uint32_t</span><span class="w"> </span><span class="n">request_post_incr</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">auto_sm</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">sm_info_string</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">hg_checksum_level_t</span><span class="w"> </span><span class="n">checksum_level</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">no_bulk_eager</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">no_loopback</span><span class="p">;</span><span class="w"></span>
-
-<span class="k">struct</span><span class="w"> </span><span class="nc">hg_init_info</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">na_init_info</span><span class="w"> </span><span class="n">na_init_info</span><span class="p">;</span><span class="w">   </span><span class="cm">/* NA Init Info */</span><span class="w"></span>
-<span class="w">    </span><span class="n">na_class_t</span><span class="w"> </span><span class="o">*</span><span class="n">na_class</span><span class="p">;</span><span class="w">               </span><span class="cm">/* NA class */</span><span class="w"></span>
-<span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">auto_sm</span><span class="p">;</span><span class="w">                  </span><span class="cm">/* Use NA SM plugin with local addrs */</span><span class="w"></span>
-<span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">stats</span><span class="p">;</span><span class="w">                    </span><span class="cm">/* (Debug) Print stats at exit */</span><span class="w"></span>
+<span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">stats</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">no_multi_recv</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">release_input_early</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
 <span class="n">hg_class_t</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
-<span class="nf">HG_Init_opt</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">na_info_string</span><span class="p">,</span><span class="w"> </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">na_listen</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">hg_init_info</span><span class="w"> </span><span class="o">*</span><span class="n">hg_init_info</span><span class="p">);</span><span class="w"></span>
+<span class="nf">HG_Init_opt2</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">na_info_string</span><span class="p">,</span><span class="w"> </span><span class="n">hg_bool_t</span><span class="w"> </span><span class="n">na_listen</span><span class="p">,</span><span class="w"></span>
+<span class="w">             </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">version</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">hg_init_info</span><span class="w"> </span><span class="o">*</span><span class="n">hg_init_info</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Similar to the NA layer, the <code>HG_Init()</code> call results in the
 creation of a new <code>hg_class_t</code> object. The <code>hg_class_t</code> object can later be
@@ -1094,7 +1122,7 @@ will set with an <code>HG_CANCELED</code> error return code.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 4, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 15, 2023</span>
       
     
   </small>
@@ -1156,7 +1184,7 @@ will set with an <code>HG_CANCELED</code> error return code.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2013 - 2022 UChicago Argonne, LLC and The HDF Group
+      Copyright &copy; 2013 - 2022 UChicago Argonne, LLC and The HDF Group, Copyright &copy; 2022 - 2023 Intel Corporation
     </div>
   
   

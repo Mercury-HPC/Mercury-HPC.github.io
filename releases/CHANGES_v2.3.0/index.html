@@ -13,7 +13,7 @@
     
     
       
-        <title>Release Notes v2.1.0 - Mercury</title>
+        <title>Release Notes v2.3.0 - Mercury</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Release Notes v2.1.0
+              Release Notes v2.3.0
             
           </span>
         </div>
@@ -429,34 +429,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../CHANGES_v2.3.0/" class="md-nav__link">
-        Release Notes v2.3.0
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CHANGES_v2.2.0/" class="md-nav__link">
-        Release Notes v2.2.0
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -467,12 +439,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Release Notes v2.1.0
+          Release Notes v2.3.0
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Release Notes v2.1.0
+        Release Notes v2.3.0
       </a>
       
         
@@ -520,6 +492,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGES_v2.2.0/" class="md-nav__link">
+        Release Notes v2.2.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGES_v2.1.0/" class="md-nav__link">
+        Release Notes v2.1.0
+      </a>
     </li>
   
 
@@ -805,109 +805,283 @@
                 
 
 
-  <h1>Release Notes v2.1.0</h1>
+  <h1>Release Notes v2.3.0</h1>
 
 <h2 id="summary">Summary</h2>
 <p>This version brings bug fixes and updates to our v2.0.0 release.</p>
 <h2 id="new-features">New features</h2>
 <ul>
-<li><strong>[NA UCX]</strong><ul>
-<li>Add initial support for UCX. As opposed to other plugins, the UCX plugin is able through the <code>ucx+all</code> init string to decide on which protocol to use.</li>
+<li><strong>[HG/NA]</strong><ul>
+<li>Add <code>HG_Init_opt2()</code> / <code>HG_Core_init_opt2()</code> / <code>NA_Initialize_opt2()</code> to
+safely pass updated init info while maintaining ABI compatibility between
+versions</li>
+<li>Add <code>HG_Get_na_protocol_info()</code> / <code>HG_Free_na_protocol_info()</code> and add
+<code>hg_info</code> utility for basic listing of protocols</li>
 </ul>
 </li>
-<li><strong>[NA SM]</strong><ul>
-<li>Update default addressing format to follow <code>PID-ID</code> instead of <code>PID/ID</code></li>
-<li>Allow for passing of arbitrary SM init URIs</li>
-<li>Enable support for bulk handle address binding</li>
-<li>Add <code>sm_info_string</code> field to HG init info, which allows for specific init URIs to be used for SM when <code>auto_sm</code> is enabled.</li>
+<li><strong>[HG]</strong><ul>
+<li>Add support for multi-recv operations (OFI plugin only)<ul>
+<li>Currently disable multi-recv when auto SM is on</li>
+<li>Posted recv operations are in that case decoupled from pool of RPC
+handles</li>
+<li>Add <code>release_input_early</code> init info flag to attempt to release input
+buffers early once input is decoded</li>
+<li>Add <code>HG_Release_input_buf()</code> to manually release input buffer.</li>
+<li>Add also <code>no_multi_recv</code> init info option to force disabling
+multi-recv</li>
 </ul>
 </li>
-<li><strong>[NA]</strong><ul>
-<li>Add <code>thread_mode</code> to NA init options and add <code>NA_THREAD_MODE_SINGLE</code> to relax thread-safety requirements.</li>
-<li>Add <code>na_cb_info_recv_expected</code> to return <code>actual_buf_size</code>.</li>
-<li>Add <code>na_cb_type_to_string()</code> to convert callback enum type to printable string.</li>
-</ul>
-</li>
-<li><strong>[NA IP]</strong><ul>
-<li>Add <code>na_ip_check_interface()</code> routine that can be used by plugins to select IP interface to use.</li>
-</ul>
-</li>
-<li><strong>[HG util]</strong><ul>
-<li>Add <code>hg_mem_header_alloc()</code>/<code>free()</code> calls to allocate buffers with a preceding header.</li>
-<li>Add thread annotation module for thread safety analysis.</li>
-<li>Add <code>mercury_mem_pool</code> memory pool to facilitate allocation and memory registration of a pool of buffers.</li>
-<li>Enable format argument checking on logging functions.</li>
-<li>Add <code>hg_time_from_ms()</code> and <code>hg_time_to_ms()</code> for time conversion to ms.</li>
+<li>Make use of subsys logs (<code>cls</code>, <code>ctx</code>, <code>addr</code>, <code>rpc</code>, <code>poll</code>) to control
+log output</li>
+<li>Add init info struct versioning</li>
+<li>Add <code>HG_Context_unpost()</code> / <code>HG_Core_context_unpost()</code> for optional
+2-step context shutdown</li>
 </ul>
 </li>
 <li><strong>[HG bulk]</strong><ul>
-<li>Return transfer size <code>size</code> through <code>hg_cb_info</code> and <code>hg_cb_info_bulk</code>.</li>
+<li>Update to new logging system through <code>bulk</code> subsys log.</li>
+</ul>
+</li>
+<li><strong>[HG proc]</strong><ul>
+<li>Update to new logging system through <code>proc</code> subsys log.</li>
+</ul>
+</li>
+<li><strong>[HG Test]</strong><ul>
+<li>Refactor tests to separate perf tests from unit tests</li>
+<li>Add NA/HG test common library</li>
+<li>Add <code>hg_rate</code> / <code>hg_bw_write</code> and <code>hg_bw_read</code> perf tests<ul>
+<li>Perf test now supports multi-client / multi-server workloads</li>
+</ul>
+</li>
+<li>Add <code>BUILD_TESTING_UNIT</code> and <code>BUILD_TESTING_PERF</code> CMake options</li>
+</ul>
+</li>
+<li><strong>[NA]</strong><ul>
+<li>Add support for multi-recv operations<ul>
+<li>Add <code>NA_Msg_multi_recv_unexpected()</code> and
+<code>na_cb_info_multi_recv_unexpected</code> cb info</li>
+<li>Add <code>flags</code> parameter to <code>NA_Op_create()</code> and <code>NA_Msg_buf_alloc()</code></li>
+<li>Add <code>NA_Has_opt_feature()</code> to query multi recv capability</li>
+</ul>
+</li>
+<li>Remove <code>int</code> return type from NA callbacks and return <code>void</code></li>
+<li>Remove unused <code>timeout</code> parameter from <code>NA_Trigger()</code></li>
+<li><code>NA_Addr_free()</code> / <code>NA_Mem_handle_free()</code> and <code>NA_Op_destroy()</code> now
+return <code>void</code></li>
+<li><code>na_mem_handle_t</code> and <code>na_addr_t</code> types no longer include pointer type</li>
+<li>Add support for dynamically loaded plugins<ul>
+<li>Add <code>NA_PLUGIN_PATH</code> env variable to optionally control plugin loading
+path (default is <code>NA_INSTALL_PLUGIN_DIR</code>)</li>
+<li>Add <code>NA_INSTALL_PLUGIN_DIR</code> variable to control plugin install path
+(default is lib install path)</li>
+<li>Add <code>NA_USE_DYNAMIC_PLUGINS</code> CMake option (OFF by default)</li>
+</ul>
+</li>
+<li>Add ability to query protocol info from plugins<ul>
+<li>Add <code>NA_Get_protocol_info()</code>/<code>NA_Free_protocol_info()</code> API routines</li>
+<li>Add <code>na_protocol_info</code> struct to na_types</li>
+</ul>
+</li>
+<li>Bump NA library version to 4.0.0</li>
+</ul>
+</li>
+<li><strong>[NA OFI]</strong><ul>
+<li>Add support for multi-recv operations and use <code>FI_MSG</code></li>
+<li>Allocate multi-recv buffers using hugepages when available</li>
+<li>Switch to using <code>fi_senddata()</code> with immediate data for unexpected msgs<ul>
+<li><code>NA_OFI_UNEXPECTED_TAG_MSG</code> can be set to switch back to former
+behavior that uses tagged messages instead</li>
+</ul>
+</li>
+<li>Remove support for deprecated <code>psm</code> provider</li>
+<li>Control CQ interrupt signaling with <code>FI_AFFINITY</code> (only used if thread is
+bound to a single CPU ID)</li>
+<li>Enable <code>cxi</code> provider to use <code>FI_WAIT_FD</code></li>
+<li>Add <code>NA_OFI_OP_RETRY_TIMEOUT</code> and <code>NA_OFI_OP_RETRY_PERIOD</code><ul>
+<li>Once <code>NA_OFI_OP_RETRY_TIMEOUT</code> milliseconds elapse, retry is stopped
+and operation is aborted (default is 120000ms)</li>
+<li>When <code>NA_OFI_OP_RETRY_PERIOD</code> is set, operations are retried only
+every <code>NA_OFI_OP_RETRY_PERIOD</code> milliseconds (default is 0)</li>
+</ul>
+</li>
+<li>Add support for <code>tcp</code> with and without <code>ofi_rxm</code><ul>
+<li><code>tcp</code> defaults to <code>tcp;ofi_rxm</code> for libfabric &lt; 1.18</li>
+</ul>
+</li>
+<li>Enable plugin to be built as a dynamic plugin</li>
+<li>Add support for <code>get_protocol_info</code> to query list of protocols</li>
+<li>Add support for libfabric log redirection<ul>
+<li>Requires libfabric &gt;= 1.16.0, disabled if FI_LOG_LEVEL is set</li>
+<li>Add <code>libfabric</code> log subsys (off by default)</li>
+<li>Bump FI_VERSION to 1.13 when log redirection is supported</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>[NA UCX]</strong><ul>
+<li>Attempt to disable UCX backtrace if <code>UCX_HANDLE_ERRORS</code> is not set</li>
+<li>Add support for <code>UCP_EP_PARAM_FIELD_LOCAL_SOCK_ADDR</code><ul>
+<li>With UCX &gt;= 1.13 local src address information can now be specified
+on client to use specific interface and port</li>
+</ul>
+</li>
+<li>Set <code>CM_REUSEADDR</code> by default to enable reuse of existing listener addr
+after a listener exits abnormally</li>
+<li>Attempt to reconnect EP if disconnected<ul>
+<li>This concerns cases where a peer would have reappeared after a
+previous disconnection</li>
+</ul>
+</li>
+<li>Add support for <code>get_protocol_info</code>  to query list of protocols</li>
+<li>Enable plugin to be built as a dynamic plugin</li>
+</ul>
+</li>
+<li><strong>[NA Test]</strong><ul>
+<li>Update NA test perf to use multi-recv feature</li>
+<li>Update perf test to use hugepages</li>
+<li>Add support for multi-targets and add lookup test</li>
+<li>Install perf tests if <code>BUILD_TESTING_PERF</code> is <code>ON</code></li>
+</ul>
+</li>
+<li><strong>[HG util]</strong><ul>
+<li>Change return type of <code>hg_time_less()</code> to <code>bool</code></li>
+<li>Add <code>HG_LOG_WRITE_FUNC()</code> macro to pass func/line info<ul>
+<li>Add also <code>module</code> / <code>no_return</code> parameters to hg_log_write()</li>
+</ul>
+</li>
+<li>Add support for hugepage allocations</li>
+<li>Use <code>isb</code> for <code>cpu_spinwait</code> on <code>aarch64</code></li>
+<li>Add <code>mercury_dl</code> to support dynamically loaded modules</li>
+<li>Bump HG util version to 4.0.0</li>
 </ul>
 </li>
 </ul>
 <h2 id="bug-fixes">Bug fixes</h2>
 <ul>
+<li><strong>[HG]</strong><ul>
+<li>Ensure init info version is compatible with previous versions of the struct</li>
+<li>Clean up and refactoring fixes</li>
+<li>Fix race condition in <code>hg_core_forward</code> with debug enabled</li>
+<li>Simplify RPC map and fix hashing for RPC IDs larger than 32-bit integer</li>
+<li>Refactor context pools and cleanup</li>
+<li>Fix potential leak on ack buffer</li>
+<li>Ensure list of created RPC handles is empty before closing context</li>
+<li>Bump default number of pre-allocated requests from 256 to 512 to make use
+of 2M hugepages by default</li>
+<li>Add extra error checking to prevent class mismatch</li>
+<li>Fix potential race when sending one-way RPCs to ourself</li>
+</ul>
+</li>
+<li><strong>[HG Bulk]</strong><ul>
+<li>Add extra error checking to prevent class mismatch</li>
+</ul>
+</li>
+<li><strong>[HG Test]</strong><ul>
+<li>Refactor <code>test_rpc</code> to correctly handle timeout return values</li>
+<li>Fix overflow of number of target / classes<ul>
+<li>Number of targets was limited to <code>UINT8_MAX</code></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><strong>[NA OFI]</strong><ul>
-<li>Require at least v1.7.0 of libfabric.</li>
-<li>Fix handling of completion queue events and completion of retried operations that fail.</li>
-<li>Fix progress loop to reduce time calls.</li>
-<li>Force per-region registration for all providers and remove deprecated FI_MR_SCALABLE type of registrations and global MR keys.</li>
+<li>Fix handling of extra caps to not always follow advertised caps<ul>
+<li>Ensure also that extra caps passed are honored by provider</li>
+</ul>
+</li>
+<li>Force <code>sockets</code> provider to use shared domains<ul>
+<li>This prevents a performance regression when multiple classes are
+being used (<code>FI_THREAD_DOMAIN</code> is therefore disabled for this provider)</li>
+</ul>
+</li>
+<li>Refactor unexpected and expected sends, retry of OFI operations, handling
+of RMA operations</li>
+<li>Always include <code>FI_DIRECTED_RECV</code> in primary caps</li>
+<li>Disable use of <code>FI_SOURCE</code> for most providers to reduce lookup overhead <ul>
+<li>Separate code paths for providers that do not support <code>FI_SOURCE</code></li>
+<li>Remove insert of FI addr into secondary table if <code>FI_SOURCE</code> is
+not used</li>
+</ul>
+</li>
+<li>Remove <code>NA_OFI_SOURCE_MSG</code> flag that was matching <code>FI_SOURCE_ERR</code></li>
+<li>Fix potential refcount race when sharing domains</li>
+<li>Check domain's optimal MR count if non-zero</li>
+<li>Fix potential double free of src_addr info</li>
+<li>Refactor auth key parsing code to build without extension headers</li>
+<li>Merge latest changes required for <code>opx</code> provider enablement<ul>
+<li>Pass <code>FI_COMPLETION</code> to RMA ops as flag is currently not ignored
+(<code>prov/opx</code> tmp fix)</li>
+</ul>
+</li>
+<li>Add runtime version check<ul>
+<li>Ensure that runtime version is greater than min version</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><strong>[NA SM]</strong><ul>
-<li>Refactor and clean up sends/cancelation/retries/rma/address keys.</li>
-<li>Remove use of usernames from SM paths.</li>
+<li>Fix handling of 0-size messages when no receive has been posted</li>
+<li>Fix issue where an expected msg that is no longer posted arrives<ul>
+<li>In that particular case just drop the incoming msg</li>
+</ul>
+</li>
+<li>Add perf warning message for unexpected messages without recv posted</li>
+</ul>
+</li>
+<li><strong>[NA UCX]</strong><ul>
+<li>Fix handling of UCS return types to match NA types</li>
+<li>Enforce src_addr port used for connections to be 0<ul>
+<li>This fixes a port conflict between listener and connection ports</li>
+</ul>
+</li>
+<li>Fix handling of unexpected messages without pre-posted recv</li>
+</ul>
+</li>
+<li><strong>[NA BMI]</strong><ul>
+<li>Clean up and fix some coverity warnings</li>
+</ul>
+</li>
+<li><strong>[NA MPI]</strong><ul>
+<li>Clean up and fix some coverity warnings</li>
+</ul>
+</li>
+<li><strong>[NA Test]</strong><ul>
+<li>Fix NA latency test to ensure recvs are always pre-posted</li>
+<li>Do not use MPI_Init_thread() if not needed<ul>
+<li>Fix missing return check of na_test_mpi_init()</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><strong>[HG util]</strong><ul>
-<li>Prevent use of <code>CLOCK_MONOTONIC_COARSE</code> on PPC platforms and default to <code>CLOCK_MONOTONIC</code>.</li>
-<li>Fix debug logs that were not freed at exit.</li>
-<li>Remove return value of mutex lock/unlock routines.</li>
-<li>Fix log subsys to prevent setting duplicates.</li>
-<li>Simplify handling of compiler attributes and add <code>mercury_compiler_attributes.h</code> module.</li>
-<li>Remove <code>hg_util_</code> integer types and use <code>stdint.h</code>.</li>
-<li>Remove OpenPA dependency for atomics and use built-in atomics instead (requires gcc &gt;= 4.7).</li>
+<li>Clean up logging and set log root to <code>hg_all</code><ul>
+<li><code>hg_all</code> subsys can now be set to turn on logging in all subsystems</li>
 </ul>
 </li>
-<li><strong>[HG/HG util/NA]</strong><ul>
-<li>Fix thread safety warnings and potential thread locking issues.</li>
-<li>Fix log level set routines that were not enabling the underlying log sub-system.</li>
-<li>Avoid reading system timers and optimize handling of timeouts. </li>
+<li>Set log subsys to <code>hg_all</code> if log level env is set</li>
+<li>Fixes to support WIN32 builds</li>
 </ul>
 </li>
-<li><strong>[HG bulk]</strong><ul>
-<li>Fix erroneous call to <code>NA_Mem_deregister()</code> when handle is deserialized.</li>
-<li>Correctly mark op as canceled if canceled from NA.</li>
-<li>Clean up and simplify handling of NA error return codes in callback.</li>
-<li>Minimal tracking of bulk handles that are not freed.</li>
+<li><strong>[CMake]</strong><ul>
+<li>Fix internal/external dependencies that were not correctly set</li>
+<li>Fix pkg-config entries wrongly set as public/private</li>
+<li>Ensure <code>VERSION</code>/<code>SOVERSION</code> is not set on <code>MODULE</code> libraries</li>
+<li>Allow for in-source builds (RPM support)</li>
+<li>Add <code>DL</code> lib dependency</li>
+<li>Fix object target linking on CMake &lt; 3.12</li>
+<li>Ensure we build with PIC and PIE when available</li>
 </ul>
 </li>
-<li><strong>[HG Core]</strong><ul>
-<li>Fix error handling when NA send fails during an <code>HG_Forward()</code> operation.</li>
-<li>Correctly map NA error return code back to HG error return code in user callback.</li>
-<li>Correctly print HG handle debug information.</li>
-<li>In short responses like ACKs, leave room at the front of a buffer for
-the NA header, and expect the header to be present.</li>
-<li>Fix potential issue on context destroy where handles could have been reposted while finalizing if RPCs were still in the queue.</li>
-</ul>
-</li>
-<li><strong>[General]</strong><ul>
-<li>Warning and static analysis issues were fixed.</li>
+<li><strong>[Examples]</strong><ul>
+<li>Allow examples to build without Boost support</li>
 </ul>
 </li>
 </ul>
 <h2 id="known-issues"><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Known Issues</h2>
 <ul>
 <li><strong>[NA OFI]</strong><ul>
-<li>[tcp/verbs;ofi_rxm] Using more than 256 peers requires <code>FI_UNIVERSE_SIZE</code> to be set.</li>
-<li>[tcp;ofi_rxm] Remains unstable, use <code>sockets</code> as a fallback in case of issues.<ul>
-<li><strong>Please note that libfabric v1.13.0 and v1.13.1 have address management issues with that transport. Please either downgrade to v1.12.1 (or earlier) or upgrade to v1.13.2 (or later).</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>[NA UCX]</strong><ul>
-<li><code>NA_Addr_to_string()</code> cannot be used on non-listening processes to convert a self-address to a string.</li>
+<li>[tcp/verbs;ofi_rxm] Using more than 256 peers requires <code>FI_UNIVERSE_SIZE</code>
+to be set.</li>
 </ul>
 </li>
 </ul>
@@ -917,7 +1091,7 @@ the NA header, and expect the header to be present.</li>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 6, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 15, 2023</span>
       
     
   </small>
@@ -942,7 +1116,7 @@ the NA header, and expect the header to be present.</li>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../CHANGES_v2.2.0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Release Notes v2.2.0" rel="prev">
+        <a href="../download/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Download" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -951,20 +1125,20 @@ the NA header, and expect the header to be present.</li>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Release Notes v2.2.0
+              Download
             </div>
           </div>
         </a>
       
       
         
-        <a href="../CHANGES_v2.0.1/" class="md-footer__link md-footer__link--next" aria-label="Next: Release Notes v2.0.1" rel="next">
+        <a href="../CHANGES_v2.2.0/" class="md-footer__link md-footer__link--next" aria-label="Next: Release Notes v2.2.0" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Release Notes v2.0.1
+              Release Notes v2.2.0
             </div>
           </div>
           <div class="md-footer__button md-icon">
