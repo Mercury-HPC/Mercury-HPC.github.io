@@ -56,5 +56,5 @@ you are looking for an interesting project to contribute to.
 [github-issue-link]: https://github.com/mercury-hpc/mercury/issues
 [github-ci-svg]: https://github.com/mercury-hpc/mercury/actions/workflows/ci.yml/badge.svg?branch=master
 [github-ci-link]: https://github.com/mercury-hpc/mercury/actions/workflows/ci.yml
-[mercury-cdash]: https://mercury-cdash.hdfgroup.org/index.php?project=Mercury
-[mercury-cdash-icon]: https://mercury-cdash.hdfgroup.org/img/cdash.png
+[mercury-cdash]: https://cdash.mercury.daos.io/index.php?project=Mercury
+[mercury-cdash-icon]: https://cdash.mercury.daos.io/img/cdash.svg
