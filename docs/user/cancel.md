@@ -1,5 +1,5 @@
 ---
-title:  "Cancelation and Timeouts"
+title:  "Cancellation and Timeouts"
 ---
 
 Mercury provides two separate types of transfers: RPC and bulk data. We
@@ -9,7 +9,7 @@ recovered from a canceled state.
 ## Pre-requisites
 
 Mercury has been defined as a building block for distributed services.
-In that context, adding support for cancelation of mercury operations
+In that context, adding support for cancellation of mercury operations
 is a primary requirement to provide resiliency and allow services to
 recover after a fault has occurred (e.g., node failure, etc). This
 implies reclaiming resources that canceled operations have previously
@@ -30,7 +30,7 @@ Mercury uses a callback-based mechanism that is
 built on top of the network abstraction (NA) layer’s callback mechanism.
 A callback mechanism presents two advantages compared to a traditional
 request based model: there is no explicit `wait()` control point;
-cancelation of operations can be easily done without any additional
+cancellation of operations can be easily done without any additional
 code branching.
 
 Mercury’s progress is directly driven by NA’s progress. When an NA
@@ -50,13 +50,13 @@ On completion, the user callback passed to the forward call is pushed to
 a completion queue. When an RPC forward operation completes, the *get
 output* call is passed that same handle to retrieve output arguments,
 deserializes them. Note that the handle can be safely re-used after
-completion (or cancelation) to issue another RPC to the same target.
+completion (or cancellation) to issue another RPC to the same target.
 When the user no longer needs to operate on a given handle, it can be
 explicitly destroyed; a reference count provides operation safety.
 
-## RPC cancelation
+## RPC cancellation
 
-In that context, Mercury’s RPC cancelation can be defined so that:
+In that context, Mercury’s RPC cancellation can be defined so that:
 
 -   No explicit tracking of handles is required (user calls
     `HG_Destroy()`).
@@ -65,9 +65,9 @@ In that context, Mercury’s RPC cancelation can be defined so that:
 -   Canceled handles can be reused to retry to forward a call to a
     target.
 
-When cancelation is done on an HG operation, cancelation is also done
+When cancellation is done on an HG operation, cancellation is also done
 internally on the NA operations that were involved in that HG operation.
-When this cancelation is successful and the NA operations complete with
+When this cancellation is successful and the NA operations complete with
 a canceled state, the HG callbacks associated to the NA operations are
 pushed to the completion queue. When these callbacks are executed with a
 canceled state, the actual HG operation is successfully canceled and the
@@ -75,17 +75,17 @@ state of the operation passed to the callback function indicates that
 the operation was canceled.
 
 !!! warning
-        It is important to note that cancelation is always *local*, in the
+        It is important to note that cancellation is always *local*, in the
         sense that there is no communication involved with a remote party (i.e.,
         it does not rely on the remote party being able to communicate).
 
 It is also worth noting that the main focus of our implementation of
-mercury’s RPC cancelation is the recovery from faults, and not the
-support of RPC transfer scenarios that rely on cancelation (e.g.,
+mercury’s RPC cancellation is the recovery from faults, and not the
+support of RPC transfer scenarios that rely on cancellation (e.g.,
 optimistic queries in a data service, or higher level protocol
 operations, which could theoretically also be supported).
 
-Xancelation can be supported for the following operations:
+Cancellation can be supported for the following operations:
 -   `HG_Forward()`, `HG_Respond()` (RPC operations)
 -   `HG_Bulk_transfer()` (Bulk operations)
 
@@ -105,7 +105,7 @@ We define the following calls:
 
 !!! example
 
-    _Cancelation of an RPC operation without bulk transfer involved_
+    _Cancellation of an RPC operation without bulk transfer involved_
 
     In the case described below, a handle is created and forwarded to a
     target. After reaching timeout, the current operation referenced by the
@@ -120,7 +120,7 @@ We define the following calls:
             /* Canceled */
         }
         if (cb_info->ret == HG_SUCCESS) {
-            /* Sucessfully executed */
+            /* Successfully executed */
         }
     }
 
@@ -148,7 +148,7 @@ We define the following calls:
 
 !!! example
 
-    _Cancelation of an RPC operation with bulk transfer involved_
+    _Cancellation of an RPC operation with bulk transfer involved_
 
     In that case, the RPC operation additionally involves a bulk transfer
     that is initiated by a remote target. A bulk handle that describes the
@@ -176,7 +176,7 @@ We define the following calls:
             /* Canceled */
         }
         if (cb_info->ret == HG_SUCCESS) {
-            /* Sucessfully executed */
+            /* Successfully executed */
         }
     }
 
@@ -211,9 +211,9 @@ We define the following calls:
 
 !!! example
 
-    _Cancelation of a bulk operation_
+    _Cancellation of a bulk operation_
 
-    Bulk cancelation follows a similar model. However, bulk operations are
+    Bulk cancellation follows a similar model. However, bulk operations are
     initiated by an RPC target, not by the origin. Bulk operations are
     identified by an operation ID, which gets freed when the bulk callback
     is executed.
@@ -226,7 +226,7 @@ We define the following calls:
             /* Canceled */
         }
         if (cb_info->ret == HG_SUCCESS) {
-            /* Sucessfully executed */
+            /* Successfully executed */
         }
     }
 
@@ -270,7 +270,7 @@ issue an RPC call with timeout.
             /* Canceled */
         }
         if (cb_info->ret == HG_SUCCESS) {
-            /* Sucessfully executed */
+            /* Successfully executed */
         }
         hg_request_complete(request);
     }
@@ -302,10 +302,10 @@ issue an RPC call with timeout.
     }
     ```
 
-## Cancelation in NA
+## Cancellation in NA
 
-Cancelation of HG operations can only be realized by first supporting
-cancelation at the NA layer. Cancelation is supported via the
+Cancellation of HG operations can only be realized by first supporting
+cancellation at the NA layer. Cancellation is supported via the
 following call:
 
 ```C
@@ -314,43 +314,43 @@ NA_Cancel(na_class_t *na_class, na_context_t *context, na_op_id_t op_id);
 ```
 
 An additional `cancel` callback is added to the NA layer that allows
-plugin developers to support cancelation of non-blocking operations.
+plugin developers to support cancellation of non-blocking operations.
 These include:
 
 -   `NA_Msg_send_unexpected()`, `NA_Msg_recv_unexpected()`
 -   `NA_Msg_send_expected()`, `NA_Msg_recv_expected()`
 -   `NA_Put()`, `NA_Get()`
 
-Cancelation of NA operations is internally progressed and actually
-completes when internal plugin cancelation has been successfully
+Cancellation of NA operations is internally progressed and actually
+completes when internal plugin cancellation has been successfully
 completed (which may or may not be immediate). When an NA operation is
 successfully canceled, the internal callback associated to the HG
 operation is placed onto the NA context’s completion queue with a
 `NA_CANCELED` return state.
 
-Cancelation is supported for all plugins. It is worth
+Cancellation is supported for all plugins. It is worth
 noting that BMI and MPI emulate one-sided operations (`NA_Put()`,
-`NA_Get()`) on top of two-sided operations and cancelation for these
+`NA_Get()`) on top of two-sided operations and cancellation for these
 operations is not yet supported. To emulate these operations, send/recv
 requests are sent to the remote target which may issue a send in the
-case of a get, or issue a recv in the case of a put. Cancelation of
-these operations implies cancelation at the target of the potentially
+case of a get, or issue a recv in the case of a put. Cancellation of
+these operations implies cancellation at the target of the potentially
 issued send/recv operations, which can only be done using timeouts
 (remote notification not being an option because the caller has no
 guaranty that the target is still alive).
 
-Cancelation capabilities and execution scenarios where cancelation is
+Cancellation capabilities and execution scenarios where cancellation is
 supported (i.e., not only for fault tolerance) only depend on the
-underlying NA plugins and their capabilities to support cancelation of
+underlying NA plugins and their capabilities to support cancellation of
 on-going transfers. The BMI plugin for example may not recover well from
-cancelation of transfers when using TCP and a rendez-vous protocol, as
+cancellation of transfers when using TCP and a rendez-vous protocol, as
 the TCP channel must be entirely flushed before one can do further
 communication. This may be compromising if other operations were also in
 the pipe at that time as these operations may consequently fail.
 
 ## Conclusion
 
-Adding cancelation to mercury is an important step for building
+Adding cancellation to mercury is an important step for building
 resilient services and a required component for the definition of future
 high-level mercury features such as group membership and pub/sub
 services, where fault tolerance must be considered in order to prevent

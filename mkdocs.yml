@@ -25,6 +25,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    # - navigation.footer
     - toc.integrate
 
 # Plugins
@@ -89,6 +90,7 @@ nav:
       - 'user/drc.md'
       - 'user/cancel.md'
       - 'user/checksum.md'
+      - 'user/perf.md'
   - 'publications.md'
   - 'help.md'
 

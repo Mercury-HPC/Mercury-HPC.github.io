@@ -58,7 +58,7 @@ This version brings bug fixes and updates to our v2.3.0 release.
     - Simplify parsing of some address strings
     - Bump default CQ size to have a maximum depth of 128k entries
     - Remove sockets as the only provider on macOS
-    - Remove send afer send tagged msg ordering
+    - Remove send after send tagged msg ordering
     - Ensure that `rx_ctx_bits` are not set if SEP is not used
     - Set CXI domain ops w/ slingshot 2.2 to prevent from potential memory corruptions
 - __[NA Perf]__
